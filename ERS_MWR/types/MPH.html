@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>MPH</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>MPH</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MPH.html">MPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;176</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>prod_id</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;17</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>or_log_sch</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Originator of logical schedule (I = MMCC/EECF, immediate command; M = MMC/EECF, logical schedule; J = local operator, immediate command; K = local operator, logical schedule)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>ct_log_sch</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Sequential counter of logical schedule
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>id_sch_off</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Unique identification or schedule offset
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>seq_prod_no</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Sequation number of currently generated product
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>prod_type</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Type of product (see ER-IS-EPO-GS-0201 Table 3)
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>sc_id</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spacecraft (1 = ERS-1; 2 = ERS-2)
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>beg_prod_utc</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+UTC Time of subsatellite point at beginning of product
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: if(<b>str</b>(., 24) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;, nan, <b>time</b>(<b>str</b>(.), &quot;dd-MMM-yyyy&nbsp;HH:mm:ss.SSS&quot;))</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+GOME ASCII datetime "DD-MMM-YYYY hh:mm:ss.uuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>station_id</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Station ID where data was processed (1 = KS; 2 = FS; 3 = GS; 4 = MS; 5 = ES; 6 = PS; 7 = WF; 8 = MM; 9 = TF; 10 = MI; 11 = BE; 12 = HL; 13 = SG; 14 = CM; 15 = JO)
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>pcd</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Product Confidence Data
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>gen_mph_utc</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+UTC time when MPH was generated
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: if(<b>str</b>(., 24) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;, nan, <b>time</b>(<b>str</b>(.), &quot;dd-MMM-yyyy&nbsp;HH:mm:ss.SSS&quot;))</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+GOME ASCII datetime "DD-MMM-YYYY hh:mm:ss.uuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>sph_size</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Size of specific product header in bytes
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>no_of_dsrs</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of product data set records
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>dsr_size</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Size of each product data set record in bytes
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>prod_gen_sys</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Subsystem that generated the product (0 = SARFDP1; 1 = SARFDP2; 2 = LRDPF; 3 = VMP; 4 = LRDTF)
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>obrc_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+OBRC flag (used for SAR products only; 0 = not used; 1 = OGRC data; 2 = OBRC data)
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>ref_utc</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+UTC reference time
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: if(<b>str</b>(., 24) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;, nan, <b>time</b>(<b>str</b>(.), &quot;dd-MMM-yyyy&nbsp;HH:mm:ss.SSS&quot;))</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+GOME ASCII datetime "DD-MMM-YYYY hh:mm:ss.uuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>ref_bin_tim</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference binary time of satellite clock
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>clock_step</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Step length of satellite clock
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "ns"</span>
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>proc_sw_id</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>4</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Processor software version used to generate product (format as defined by MMCC/EECF)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>thresh_tid</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Threshold table version number
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td>spare_2</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>asc_utc</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+UTC time of ascending node state vector
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: if(<b>str</b>(., 24) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;, nan, <b>time</b>(<b>str</b>(.), &quot;dd-MMM-yyyy&nbsp;HH:mm:ss.SSS&quot;))</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+GOME ASCII datetime "DD-MMM-YYYY hh:mm:ss.uuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>asc_rr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>3</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+State vector position
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 m"</span>
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>asc_rrd</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>3</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+State vector velocity
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-5 m/s"</span>
+<br /><br />
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

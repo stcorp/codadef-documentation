@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>IASI_xxx_1C v3</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>IASI_xxx_1C version 3</h1>
+<h2>IASI_xxx_1C_v3</h2>
+<p>This definition is based on version 6.6 of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and versions 6.4/6.5/6.6 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>MPHR</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MPHR_v2.html">MPHR_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3307</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>IPR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_ipr</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/IPR.html">IPR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>GEADR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_geadr</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GEADR.html">GEADR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;120</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $num_geadr &gt; 0</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>GIADR_Quality</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/IASI_GIADR_L1_QUALITY_v2.html">IASI_GIADR_L1_QUALITY_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;228346</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>GIADR_ScaleFactors</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/IASI_GIADR_L1_SCALE_FACTORS_v2.html">IASI_GIADR_L1_SCALE_FACTORS_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;84</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>VEADR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_veadr</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/VEADR.html">VEADR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;120</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $num_veadr &gt; 0</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>MDR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_mdr</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;union&nbsp;"<a class="header" href="../types/IASI_MDR_L1C_Union_v4.html">IASI_MDR_L1C_Union_v4</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;\001\000\000\002\000\000\f\353&quot; <b>and</b><br />
+<b>bytes</b>(/,20,32) == &quot;PRODUCT_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&quot; <b>and</b><br />
+<b>bytes</b>(/,552,4) == &quot;IASI&quot; <b>and</b><br />
+<b>bytes</b>(/,661,2) == &quot;1C&quot; <b>and</b><br />
+<b>bytes</b>(/,1037,5) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;3&quot; <b>and</b><br />
+<b>bytes</b>(/,1075,5) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;0&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;\001\000\000\002\000\000\f\353&quot; <b>and</b><br />
+<b>bytes</b>(/,20,32) == &quot;PRODUCT_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&quot; <b>and</b><br />
+<b>bytes</b>(/,552,4) == &quot;IASI&quot; <b>and</b><br />
+<b>bytes</b>(/,661,2) == &quot;1C&quot; <b>and</b><br />
+<b>bytes</b>(/,1037,5) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;4&quot; <b>and</b><br />
+<b>bytes</b>(/,1075,5) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;0&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;\001\000\000\002\000\000\f\353&quot; <b>and</b><br />
+<b>bytes</b>(/,20,32) == &quot;PRODUCT_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&quot; <b>and</b><br />
+<b>bytes</b>(/,552,4) == &quot;IASI&quot; <b>and</b><br />
+<b>bytes</b>(/,661,2) == &quot;1C&quot; <b>and</b><br />
+<b>bytes</b>(/,1037,5) == &quot;&nbsp;&nbsp;&nbsp;10&quot; <b>and</b><br />
+<b>bytes</b>(/,1075,5) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;0&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="IASI_xxx_1C_v3_num_ipr">num_ipr</td><td></td><td><i>$num_ipr</i> = <b>int</b>(/MPHR/TOTAL_IPR)</td></tr>
+<tr><td id="IASI_xxx_1C_v3_num_geadr">num_geadr</td><td></td><td><i>$num_geadr</i> = <b>int</b>(/MPHR/TOTAL_GEADR)</td></tr>
+<tr><td id="IASI_xxx_1C_v3_num_veadr">num_veadr</td><td></td><td><i>$num_veadr</i> = <b>int</b>(/MPHR/TOTAL_VEADR)</td></tr>
+<tr><td id="IASI_xxx_1C_v3_num_mdr">num_mdr</td><td></td><td><i>$num_mdr</i> = <b>int</b>(/MPHR/TOTAL_MDR)</td></tr>
+<tr><td id="IASI_xxx_1C_v3_mdr_bit_size">mdr_bit_size</td><td>[$num_mdr]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_mdr - 1 <b>do</b><br /><i>$mdr_bit_size</i>[<i>i</i>] = <b>bitsize</b>(/mdr[<i>i</i>])</td></tr>
+</table>
+</body>
+
+</html>

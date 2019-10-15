@@ -1,0 +1,4229 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>RA2_MWR_Level_2_SPH</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>RA2_MWR_Level_2_SPH</h1>
+<table class="top">
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/RA2_MWR_Level_2_SPH.html">RA2_MWR_Level_2_SPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2618</td></tr>
+<tr valign="top">
+<td colspan="2">
+Level 2 SPH
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td>sph_desc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;15</td></tr>
+<tr valign="top">
+<td colspan="2">
+SPH_DESCRIPTOR=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "SPH_DESCRIPTOR="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td>quote_1</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>sph_descriptor</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+SPH Descriptor ASCII string describing the product. Unused characters set to the ascii blank space character.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td>quote_2</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td>newline_char_1</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td>ra2_first_rec_time_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_FIRST_RECORD_TIME=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_FIRST_RECORD_TIME="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td>quote_3</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>ra2_first_record_time</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+UTC Time of first record in the RA2 MDS of this product
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: if(<b>str</b>(., 27) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;, nan, <b>time</b>(<b>str</b>(.), &quot;dd-MMM-yyyy&nbsp;HH:mm:ss.SSSSSS&quot;))</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT ASCII datetime "DD-MMM-YYYY hh:mm:ss.uuuuuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td>quote_4</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td>newline_char_2</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td>ra2_last_rec_time_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_LAST_RECORD_TIME=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_LAST_RECORD_TIME="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td>quote_5</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>ra2_last_record_time</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+UTC Time of last record in the RA2 MDS of this product
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: if(<b>str</b>(., 27) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;, nan, <b>time</b>(<b>str</b>(.), &quot;dd-MMM-yyyy&nbsp;HH:mm:ss.SSSSSS&quot;))</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT ASCII datetime "DD-MMM-YYYY hh:mm:ss.uuuuuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td>quote_6</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td>newline_char_3</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td>ra2_first_lat_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;14</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_FIRST_LAT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_FIRST_LAT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>ra2_first_lat</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Geodetic Latitude at the first record in the RA2 MDS. A negative value denotes south latitude, a positive value denotes North latitude
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_north"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_north" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td>ra2_first_lat_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6degN&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td>newline_char_4</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td>ra2_first_long_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;15</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_FIRST_LONG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_FIRST_LONG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>ra2_first_long</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+East geodetic longitude of the first record in the RA2 MDS. Positive values East of Greenwich, negative values west of Greenwich
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_east"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_east" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td>ra2_first_long_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6degE&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td>newline_char_5</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td>ra2_last_lat_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;13</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_LAST_LAT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_LAST_LAT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td><b>ra2_last_lat</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Geodetic Latitude at the last record in the RA2 MDS. A negative value denotes south latitude, a positive value denotes North latitude
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_north"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_north" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>25</td><td>ra2_last_lat_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6degN&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>26</td><td>newline_char_6</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>27</td><td>ra2_last_long_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;14</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_LAST_LONG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_LAST_LONG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>28</td><td><b>ra2_last_long</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+East geodetic longitude of the alst record in the RA2 MDS. Positive values East of Greenwich, negative values west of Greenwich
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_east"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_east" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>29</td><td>ra2_last_long_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6degE&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>30</td><td>newline_char_7</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>31</td><td>pass_number_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+PASS_NUMBER=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "PASS_NUMBER="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>32</td><td><b>pass_number</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Pass number from pole to pole (set to +00000 for NRT products)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>33</td><td>newline_char_7b</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>34</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;31</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>35</td><td>newline_char_8</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>36</td><td>ra2_l2_proc_flag_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;17</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_L2_PROC_FLAG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_L2_PROC_FLAG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>37</td><td><b>ra2_l2_proc_flag</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Processing errors significance flag: 1 or 0, 1 if the percentage of DSRs free of processing errors during Level 2 processing is less than the acceptable threshold.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>38</td><td>newline_char_9</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>39</td><td>ra2_l1b_proc_flag_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;18</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_L1B_PROC_FLAG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_L1B_PROC_FLAG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>40</td><td><b>ra2_l1b_proc_flag</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Processing errors significance flag. 1 or 0, 1 if the percentage of DSRs free of processing errors during Level 1B SP data block processing is less than the acceptable threshold.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>41</td><td>newline_char_10</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>42</td><td>ra2_l1b_head_flag_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_L1B_HEADER_FLAG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_L1B_HEADER_FLAG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>43</td><td><b>ra2_l1b_header_flag</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Header errors significance flag. 1 or 0, 1 if the percentage of DSRs free of processing errors during Level 1B SP Headers processing is less than the acceptable threshold.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>44</td><td>newline_char_11</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>45</td><td>ra2_l2_proc_qua_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_L2_PROCESSING_QUALITY=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_L2_PROCESSING_QUALITY="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>46</td><td><b>ra2_l2_processing_quality</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of DSRs free of processing errors during the Level 2 processing
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>47</td><td>ra2_l2_proc_qua_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>48</td><td>newline_char_12</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>49</td><td>ra2_l1b_proc_qua_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_L1B_PROCESSING_QUALITY=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_L1B_PROCESSING_QUALITY="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>50</td><td><b>ra2_l1b_processing_quality</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of DSRs free of processing errors during the Level 1B SP data block processing
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>51</td><td>ra2_l1b_proc_qua_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>52</td><td>newline_char_13</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>53</td><td>ra2_l1b_head_qua_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;23</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_L1B_HEADER_QUALITY=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_L1B_HEADER_QUALITY="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>54</td><td><b>ra2_l1b_header_quality</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of DSRs free of processing errors during the Level 1B SP Headers processing
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>55</td><td>ra2_l1b_head_qua_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>56</td><td>newline_char_14</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>57</td><td>ra2_l2_proc_thresh_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;19</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_L2_PROC_THRESH=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_L2_PROC_THRESH="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>58</td><td><b>ra2_l2_proc_thresh</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum acceptable percentage of processing errors free DSR during Level 2 processing
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>59</td><td>ra2_l2_proc_thresh_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>60</td><td>newline_char_15</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>61</td><td>ra2_l1b_proc_thresh_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_L1B_PROC_THRESH=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_L1B_PROC_THRESH="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>62</td><td><b>ra2_l1b_proc_thresh</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum acceptable percentage of processing errors free DSR during Level 1B SP datablocks processing
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>63</td><td>ra2_l1b_proc_thresh_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>64</td><td>newline_char_16</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>65</td><td>ra2_l1b_head_thresh_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_L1B_HEADER_THRESH=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_L1B_HEADER_THRESH="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>66</td><td><b>ra2_l1b_header_thresh</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum acceptable percentage of processing errors free DSR during Level 1B SP Headers processing
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>67</td><td>ra2_l1b_head_thresh_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>68</td><td>newline_char_17</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>69</td><td>ra2_flag_manoeuv_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;19</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_FLAG_MANOEUVER=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_FLAG_MANOEUVER="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>70</td><td><b>ra2_flag_manoeuver</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Orbit manoeuver indicator. Not used for FD products (set to +00000 if not used)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>71</td><td>newline_char_18</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>72</td><td>ra2_manoeuv_start_utc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_MANOEUVER_START_UTC=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_MANOEUVER_START_UTC="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>73</td><td>quote_9</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>74</td><td><b>ra2_manoeuver_start_utc</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+UTC Time of start of manoeuver. Not used for FD products (set to all blank space characters)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: if(<b>str</b>(., 27) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;, nan, <b>time</b>(<b>str</b>(.), &quot;dd-MMM-yyyy&nbsp;HH:mm:ss.SSSSSS&quot;))</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT ASCII datetime "DD-MMM-YYYY hh:mm:ss.uuuuuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>75</td><td>quote_10</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>76</td><td>newline_char_19</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>77</td><td>ra2_manoeuv_stop_utc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;23</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_MANOEUVER_STOP_UTC=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_MANOEUVER_STOP_UTC="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>78</td><td>quote_11</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>79</td><td><b>ra2_manoeuver_stop_utc</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+UTC Time of stop of manoeuver. Not used for FD products (set to all blank space characters)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: if(<b>str</b>(., 27) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;, nan, <b>time</b>(<b>str</b>(.), &quot;dd-MMM-yyyy&nbsp;HH:mm:ss.SSSSSS&quot;))</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT ASCII datetime "DD-MMM-YYYY hh:mm:ss.uuuuuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>80</td><td>quote_12</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>81</td><td>newline_char_20</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>82</td><td>spare_2</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;50</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>83</td><td>newline_char_21</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>84</td><td>ra2_rv_rfss_def_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_RV_RFSS_DEF=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_RV_RFSS_DEF="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>85</td><td><b>ra2_rv_rfss_def</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Hardware configuration for RF subsystem (A or B)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>86</td><td>newline_char_22</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>87</td><td>ra2_rv_hpa_def_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;15</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_RV_HPA_DEF=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_RV_HPA_DEF="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>88</td><td><b>ra2_rv_hpa_def</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Hardware configuration for HPA subsystem (A or B)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>89</td><td>newline_char_23</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>90</td><td>ra2_meas_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_MEASUREMENT_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_MEASUREMENT_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>91</td><td><b>ra2_measurement_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of valid measurements
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>92</td><td>ra2_meas_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>93</td><td>newline_char_24</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>94</td><td>ra2_320_band_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_320_BAND_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_320_BAND_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>95</td><td><b>ra2_320_band_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of the 320 MHz band processed
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>96</td><td>ra2_320_band_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>97</td><td>newline_char_25</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>98</td><td>ra2_80_band_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_80_BAND_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_80_BAND_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>99</td><td><b>ra2_80_band_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of the 80 MHz band processed
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>100</td><td>ra2_80_band_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>101</td><td>newline_char_26</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>102</td><td>ra2_20_band_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_20_BAND_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_20_BAND_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>103</td><td><b>ra2_20_band_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of the 20 MHz band processed
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>104</td><td>ra2_20_band_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>105</td><td>newline_char_27</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>106</td><td>ra2_ocean_ku_retrk_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;29</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_OCEAN_KU_RETRACK_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_OCEAN_KU_RETRACK_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>107</td><td><b>ra2_ocean_ku_retrack_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of valid Ku ocean retracker measurements
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>108</td><td>ra2_ocean_ku_retrk_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>109</td><td>newline_char_28</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>110</td><td>ra2_ocean_s_retrk_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_OCEAN_S_RETRACK_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_OCEAN_S_RETRACK_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>111</td><td><b>ra2_ocean_s_retrack_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of valid S ocean retracker measurements
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>112</td><td>ra2_ocean_s_retrk_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>113</td><td>newline_char_29</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>114</td><td>ra2_ice1_ku_retrk_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_ICE1_KU_RETRACK_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_ICE1_KU_RETRACK_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>115</td><td><b>ra2_ice1_ku_retrack_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of valid Ku ice1 retracker measurements
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>116</td><td>ra2_ice1_ku_retrk_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>117</td><td>newline_char_30</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>118</td><td>ra2_ice1_s_retrk_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_ICE1_S_RETRACK_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_ICE1_S_RETRACK_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>119</td><td><b>ra2_ice1_s_retrack_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of valid S ice1 retracker measurements
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>120</td><td>ra2_ice1_s_retrk_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>121</td><td>newline_char_31</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>122</td><td>ra2_ice2_ku_retrk_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_ICE2_KU_RETRACK_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_ICE2_KU_RETRACK_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>123</td><td><b>ra2_ice2_ku_retrack_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of valid Ku ice2 retracker measurements
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>124</td><td>ra2_ice2_ku_retrk_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>125</td><td>newline_char_32</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>126</td><td>ra2_ice2_s_retrk_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_ICE2_S_RETRACK_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_ICE2_S_RETRACK_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>127</td><td><b>ra2_ice2_s_retrack_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of valid S ice2 retracker measurements
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>128</td><td>ra2_ice2_s_retrk_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>129</td><td>newline_char_33</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>130</td><td>ra2_seaice_ku_retrk_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_SEAICE_KU_RETRACK_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_SEAICE_KU_RETRACK_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>131</td><td><b>ra2_seaice_ku_retrack_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of valid Ku sea/ice retracker measurements
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>132</td><td>ra2_seaice_ku_retrk_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>133</td><td>newline_char_34</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>134</td><td>ra2_peak_low_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_PEAKINESS_LOW_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_PEAKINESS_LOW_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>135</td><td><b>ra2_peakiness_low_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of peakiness low measurements
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>136</td><td>ra2_peak_low_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>137</td><td>newline_char_35</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>138</td><td>ra2_peak_high_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_PEAKINESS_HIGH_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_PEAKINESS_HIGH_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>139</td><td><b>ra2_peakiness_high_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of peakiness high measurements
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>140</td><td>ra2_peak_high_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>141</td><td>newline_char_36</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>142</td><td>mwr_bt_opt_interp_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;37</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_BT_OPTIMAL_INTERPOLATION_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_BT_OPTIMAL_INTERPOLATION_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>143</td><td><b>mwr_bt_opt_interpolation_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of optimal interpolation of MWR brightness temperatures
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>144</td><td>mwr_bt_opt_interp_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>145</td><td>newline_char_37</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>146</td><td>ra2_time_shift_midframe_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_TIME_SHIFT_MIDFRAME=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_TIME_SHIFT_MIDFRAME="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>147</td><td><b>ra2_time_shift_midframe</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Offset to apply to time tag to derive the datation of the first waveform in a source packet
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "s" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>148</td><td>ra2_time_shift_midframe_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6s&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>149</td><td>newline_char_38</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>150</td><td>ra2_time_intv_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;18</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_TIME_INTERVAL=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_TIME_INTERVAL="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>151</td><td><b>ra2_time_interval</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Time interval between two waveforms
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "s" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>152</td><td>ra2_time_intv_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6s&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>153</td><td>newline_char_39</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>154</td><td>ra2_if_mask_sel_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_IF_MASK_SEL=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_IF_MASK_SEL="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>155</td><td><b>ra2_if_mask_sel</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+IF Mask selection flag
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>156</td><td>newline_char_40</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>157</td><td>ra2_if_mask_proc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;17</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_IF_MASK_PROC=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_IF_MASK_PROC="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>158</td><td><b>ra2_if_mask_proc</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+IF shape compensation processing mode
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>159</td><td>newline_char_41</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>160</td><td>ra2_uso_sel_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_USO_SEL=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_USO_SEL="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>161</td><td><b>ra2_uso_sel</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+USO selection flag
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>162</td><td>newline_char_42</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>163</td><td>ra2_uso_proc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;13</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_USO_PROC=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_USO_PROC="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>164</td><td><b>ra2_uso_proc</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+USO compensation processing mode
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>165</td><td>newline_char_43</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>166</td><td>ave_glob_pres_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+AVERAGE_GLOBAL_PRESSURE=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "AVERAGE_GLOBAL_PRESSURE="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>167</td><td><b>average_global_pressure</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of the global pressure over ocean computed from meteo field the closest time from the first measurement. This field must be set to all zeroes.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "10 Pa"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "Pa" (multiply by 10/1)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>168</td><td>ave_glob_pres_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10Pa&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>169</td><td>newline_char_44</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>170</td><td>sol_act_ind_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
+<tr valign="top">
+<td colspan="2">
+SOLAR_ACTIVITY_INDEX=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "SOLAR_ACTIVITY_INDEX="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>171</td><td><b>solar_activity_index</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Interpolated value for the solar activity index used for the first measurement
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>172</td><td>newline_char_45</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>173</td><td>meteo_mod_ver_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+METEO_MODEL_VERSION=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "METEO_MODEL_VERSION="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>174</td><td>quote_13</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>175</td><td><b>meteo_model_version</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;50</td></tr>
+<tr valign="top">
+<td colspan="2">
+Version of the meteorological model
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>176</td><td>quote_14</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>177</td><td>newline_char_46</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>178</td><td>doris_ion_mod_ver_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;32</td></tr>
+<tr valign="top">
+<td colspan="2">
+DORIS_IONOSPHERIC_MODEL_VERSION=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "DORIS_IONOSPHERIC_MODEL_VERSION="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>179</td><td>quote_15</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>180</td><td><b>doris_ionospheric_model_version</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;50</td></tr>
+<tr valign="top">
+<td colspan="2">
+Version of the ionospheric model.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>181</td><td>quote_16</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>182</td><td>newline_char_47</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>183</td><td>spare_3</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;50</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>184</td><td>newline_char_48</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>185</td><td>mwr_first_rec_time_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_FIRST_RECORD_TIME=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_FIRST_RECORD_TIME="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>186</td><td>quote_17</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>187</td><td><b>mwr_first_record_time</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+UTC of the first record in the MWR MDS
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: if(<b>str</b>(., 27) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;, nan, <b>time</b>(<b>str</b>(.), &quot;dd-MMM-yyyy&nbsp;HH:mm:ss.SSSSSS&quot;))</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT ASCII datetime "DD-MMM-YYYY hh:mm:ss.uuuuuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>188</td><td>quote_18</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>189</td><td>newline_char_49</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>190</td><td>mwr_last_rec_time_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_LAST_RECORD_TIME=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_LAST_RECORD_TIME="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>191</td><td>quote_19</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>192</td><td><b>mwr_last_record_time</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+UTC of the last record in the MWR MDS
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: if(<b>str</b>(., 27) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;, nan, <b>time</b>(<b>str</b>(.), &quot;dd-MMM-yyyy&nbsp;HH:mm:ss.SSSSSS&quot;))</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT ASCII datetime "DD-MMM-YYYY hh:mm:ss.uuuuuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>193</td><td>quote_20</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>194</td><td>newline_char_50</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>195</td><td>mwr_first_lat_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;14</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_FIRST_LAT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_FIRST_LAT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>196</td><td><b>mwr_first_lat</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Geodetic Latitude at the first record in the MWR MDS. A negative value denotes south latitude, a positive value denotes North latitude
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_north"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_north" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>197</td><td>mwr_first_lat_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6degN&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>198</td><td>newline_char_51</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>199</td><td>mwr_first_long_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;15</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_FIRST_LONG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_FIRST_LONG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>200</td><td><b>mwr_first_long</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+East geodetic longitude of the first record in the MWR MDS. Positive values East of Greenwich, negative values west of Greenwich
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_east"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_east" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>201</td><td>mwr_first_long_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6degE&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>202</td><td>newline_char_52</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>203</td><td>mwr_last_lat_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;13</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_LAST_LAT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_LAST_LAT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>204</td><td><b>mwr_last_lat</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Geodetic Latitude at the last record in the MWR MDS. A negative value denotes south latitude, a positive value denotes North latitude
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_north"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_north" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>205</td><td>mwr_last_lat_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6degN&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>206</td><td>newline_char_53</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>207</td><td>mwr_last_long_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;14</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_LAST_LONG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_LAST_LONG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>208</td><td><b>mwr_last_long</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+East geodetic longitude of the last record in the MWR MDS. Positive values East of Greenwich, negative values west of Greenwich
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_east"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_east" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>209</td><td>mwr_last_long_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6degE&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>210</td><td>newline_char_54</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>211</td><td>mwr_l2_proc_flag_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;17</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_L2_PROC_FLAG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_L2_PROC_FLAG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>212</td><td><b>mwr_l2_proc_flag</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+1 or 0, 1 if the percentage of DSRs free of processing errors during Level 2 processing is less than the acceptable threshold.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>213</td><td>newline_char_55</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>214</td><td>mwr_l1b_proc_flag_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;18</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_L1B_PROC_FLAG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_L1B_PROC_FLAG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>215</td><td><b>mwr_l1b_proc_flag</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+1 or 0, 1 if the percentage of MWR MDSRs without errors is less than the acceptable threshold.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>216</td><td>newline_char_56</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>217</td><td>mwr_l1b_head_flag_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_L1B_HEADER_FLAG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_L1B_HEADER_FLAG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>218</td><td><b>mwr_l1b_header_flag</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+1 or 0, 1 if the number of MWR MSDRs without header reading errors is less than thhe acceptable threshold.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>219</td><td>newline_char_57</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>220</td><td>mwr_l1b_telem_flag_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;23</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_L1B_TELEMETRY_FLAG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_L1B_TELEMETRY_FLAG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>221</td><td><b>mwr_l1b_telemetry_flag</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+1 or 0, 1 if the number of MWR MSDRs without telemetry reading errors is less than thhe acceptable threshold.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>222</td><td>newline_char_58</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>223</td><td>mwr_l2_proc_qua_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_L2_PROC_QUALITY=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_L2_PROC_QUALITY="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>224</td><td><b>mwr_l2_proc_quality</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of DSRs free of processing errors during MWR Level 2 processing
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>225</td><td>mwr_l2_proc_qua_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>226</td><td>newline_char_59</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>227</td><td>mwr_l1b_proc_qua_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_L1B_PROC_QUALITY=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_L1B_PROC_QUALITY="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>228</td><td><b>mwr_l1b_proc_quality</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of processing error free MWR MDSRs during Level 1B processing
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>229</td><td>mwr_l1b_proc_qua_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>230</td><td>newline_char_60</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>231</td><td>mwr_l1b_head_qua_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_L1B_HEAD_QUALITY=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_L1B_HEAD_QUALITY="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>232</td><td><b>mwr_l1b_head_quality</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of header error free MWR MDSRs
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>233</td><td>mwr_l1b_head_qua_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>234</td><td>newline_char_61</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>235</td><td>mwr_l1b_telem_qua_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_L1B_TELEM_QUALITY=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_L1B_TELEM_QUALITY="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>236</td><td><b>mwr_l1b_telem_quality</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of telemetry error free MWR MDSRs
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>237</td><td>mwr_l1b_telem_qua_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>238</td><td>newline_char_62</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>239</td><td>mwr_l2_proc_thresh_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;19</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_L2_PROC_THRESH=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_L2_PROC_THRESH="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>240</td><td><b>mwr_l2_proc_thresh</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum percentage of DSRs free of processing errors during MWR Level 2 processing considered acceptable
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>241</td><td>mwr_l2_proc_thresh_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>242</td><td>newline_char_63</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>243</td><td>mwr_l1b_proc_thresh_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_L1B_PROC_THRESH=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_L1B_PROC_THRESH="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>244</td><td><b>mwr_l1b_proc_thresh</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum percentage of MWR MDSRs without processing errors considered acceptable
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>245</td><td>mwr_l1b_proc_thresh_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>246</td><td>newline_char_64</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>247</td><td>mwr_l1b_head_thresh_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_L1B_HEAD_THRESH=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_L1B_HEAD_THRESH="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>248</td><td><b>mwr_l1b_head_thresh</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum percentage of MWR MDSRs without header reading errors considered acceptable
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>249</td><td>mwr_l1b_head_thresh_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>250</td><td>newline_char_65</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>251</td><td>mwr_l1b_telem_thresh_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_L1B_TELEM_THRESH=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_L1B_TELEM_THRESH="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>252</td><td><b>mwr_l1b_telem_thresh</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum percentage of MWR MDSRs without telemetry reading errors considered acceptable
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>253</td><td>mwr_l1b_telem_thresh_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>254</td><td>newline_char_66</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>255</td><td>ra2_ws_opt_interp_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;37</td></tr>
+<tr valign="top">
+<td colspan="2">
+RA2_WS_OPTIMAL_INTERPOLATION_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "RA2_WS_OPTIMAL_INTERPOLATION_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>256</td><td><b>ra2_ws_optimal_interpolation_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Percentage of optimal interpolation of the RA2 altimeter wind speed at the MWR DSR time stamp
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>257</td><td>ra2_ws_opt_interp_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>258</td><td>newline_char_67</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>259</td><td>mwr_landflag_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_LANDFLAG_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_LANDFLAG_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>260</td><td><b>mwr_landflag_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+land coverage percentage
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>261</td><td>mwr_landflag_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>262</td><td>newline_char_68</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>263</td><td>mwr_seaflag_perc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+MWR_SEAFLAG_PERCENT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "MWR_SEAFLAG_PERCENT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>264</td><td><b>mwr_seaflag_percent</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+sea coverage percentage
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>265</td><td>mwr_seaflag_perc_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2%&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>266</td><td>newline_char_69</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>267</td><td>spare_4</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;50</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>268</td><td>newline_char_70</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

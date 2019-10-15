@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>SIR_L1B_OP_MDSR</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>SIR_L1B_OP_MDSR</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/SIR_L1B_OP_MDSR.html">SIR_L1B_OP_MDSR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7244</td></tr>
+<tr valign="top">
+<td colspan="2">
+SIRAL L1B IOP measurement data set record
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>time_orb_data</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>20</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;960</td></tr>
+<tr valign="top">
+<td colspan="2">
+Time and orbit data
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/SIR_L1B_OP_TIME_ORBIT_DATA.html">SIR_L1B_OP_TIME_ORBIT_DATA</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;48</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>meas_data</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>20</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;880</td></tr>
+<tr valign="top">
+<td colspan="2">
+Measurement data
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/SIR_L1B_OP_MEAS_DATA.html">SIR_L1B_OP_MEAS_DATA</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;44</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>mdsr_time</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Data record time (MDSR time stamp)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>tai_utc_diff</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+TAI - UTC Difference
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spares
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>lat</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Latitude of measurement
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-7 degrees_north"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_north" (multiply by 1/10000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>lon</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Longitude of measurement
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-7 degrees_east"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_east" (multiply by 1/10000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>alt_cog_ref_ellip</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Altitude of CoG above reference ellipsoid (interpolated value)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>inst_alt_rate</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Instantaneous altitude rate derived from orbit
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>ant_cog_dist</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Distance antenna - COG
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>uso_corr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+USO drift correction
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>dopp_corr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Doppler correction
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>range_icc</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Range internal calibration correction (CAL1)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td>spare_2</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spares
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>agc</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+AGC (corrected)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 dB"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "dB" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>agc_corr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+AGC correction
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 dB"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "dB" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>bkscat_icc</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Backscatter coefficient internal calibration correction (CAL1)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 dB"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "dB" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td>spare_3</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spares
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>dry_tropo_corr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Dry tropospheric correction
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>wet_tropo_corr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Wet tropospheric correction
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>inv_barom_corr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Inverse barometric correction
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>dyn_atm_corr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Dynamic atmospheric correction
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td><b>ion_corr_gim</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+GIM ionospheric correction
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td><b>ocean_tide_got</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Ocean Tide (Solution 1: GOT)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td><b>ocean_tide_fes</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Ocean Tide (Solution 2: FES)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>25</td><td><b>lp_ocean_tide</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Long Period Tide Height
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>26</td><td><b>nelp_ocean_tide</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Non equilibrium long period ocean tide height
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>27</td><td><b>ocean_load_tide_got</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Ocean loading tide (Solution 1: GOT)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>28</td><td><b>ocean_load_tide_fes</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Ocean loading tide (Solution 2: FES)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>29</td><td><b>sol_earth_tide</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Solid earth tide
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>30</td><td><b>geocen_pol_tide</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Geocentric polar tide
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>31</td><td><b>wind_u</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+U-component of the wind vector
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>32</td><td><b>wind_v</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+V-component of the wind vector
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mm/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>33</td><td><b>surf_type</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Surface type flag (0 = open ocean, 1 = enclosed sea, 2 = continental ice, 3 = land)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>34</td><td>spare_4</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spares
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>35</td><td><b>corr_stat_flags</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/SIR_FBR_L1B_CORR_STAT.html">SIR_FBR_L1B_CORR_STAT</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>36</td><td><b>corr_err_flags</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/SIR_FBR_L1B_CORR_ERR.html">SIR_FBR_L1B_CORR_ERR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>37</td><td>spare_5</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>38</td><td><b>wavef_data</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>20</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;5280</td></tr>
+<tr valign="top">
+<td colspan="2">
+Waveform data
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;264</td></tr>
+<tr valign="top">
+<td colspan="2">
+Waveform data
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>pow_echo_wavef</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>128</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;256</td></tr>
+<tr valign="top">
+<td colspan="2">
+Scaled power echo waveform
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>echo_scl_fact</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Echo scale factor. If max_corrected_waveform == 0 then scale_factor = 1 else scale_factor = round(65535/max_corrected_waveform)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>num_echo</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of echoes averaged
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+0 = no errors, 1 = loss of echo, 2 = run time error, 3 = echo saturation error, 7 = unknown error
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

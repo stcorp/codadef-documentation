@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>MIP_NL__1P v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>MIP_NL__1P version 1</h1>
+<h2>MIP_NL__1P_v1</h2>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH.html">MPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__1P_SPH_v0.html">MIP_NL__1P_SPH_v0</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1160</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsd</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;280</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>summary_quality_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Summary Quality ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[0]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__1P_ADSR_summary_quality_v0.html">MIP_NL__1P_ADSR_summary_quality_v0</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;57</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[0] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[0]</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>geolocation_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Geolocation ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[1]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__1P_ADSR_geolocation.html">MIP_NL__1P_ADSR_geolocation</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;69</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[1] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[1]</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>structure_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Structure ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[2]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__1P_ADSR_structure.html">MIP_NL__1P_ADSR_structure</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;50</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[2] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[2]</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>mipas_level_1b_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Calibrated Spectra MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[3]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__1P_MDSR_v1.html">MIP_NL__1P_MDSR_v1</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[3] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[3]</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>scan_information_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Scan Information ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[4]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__1P_ADSR_info_v1.html">MIP_NL__1P_ADSR_info_v1</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[4] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[4]</span>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>offset_calibration_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Offset Calibration ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[5]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__1P_ADSR_off.html">MIP_NL__1P_ADSR_off</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[5] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[5]</span>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>gain_calibration_ads_1</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Gain Calibration ADS #1
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[6]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__1P_ADSR_gain1.html">MIP_NL__1P_ADSR_gain1</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[6] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[6]</span>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>gain_calibration_ads_2</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Gain Calibration ADS #2
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[7]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__1P_ADSR_gain2.html">MIP_NL__1P_ADSR_gain2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[7] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[7]</span>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>ils_spectral_cal_gads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Instrument Line Shape (ILS) / Spectral Calibration Data (1 MDSR)
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[8]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_CS1_AX_MDSR_v1.html">MIP_CS1_AX_MDSR_v1</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[8] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[8]</span>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>los_calibration_gads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Line-Of-Sight Calibration Data (1 MDSR)
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[9]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_CL1_AX_MDSR.html">MIP_CL1_AX_MDSR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;175</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[9] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[9]</span>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>process_parameters_gads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Processing Parameters GADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[10]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_PS1_AX_MDSR_v1.html">MIP_PS1_AX_MDSR_v1</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[10] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[10]</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_NL__1P&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-MDA-GS2009_12_4&nbsp;&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_NL__1P&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-MDA-GS2009_12_4C&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_NL__1P&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-MDA-GS-2009_4/C&nbsp;&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_NL__1P&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-TN-BOM-GS-0010_5&nbsp;&nbsp;&nbsp;&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_NL__1P&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-TN-BOM-GS-0010_5A&nbsp;&nbsp;&nbsp;&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="MIP_NL__1P_v1_num_dsd">num_dsd</td><td></td><td><i>$num_dsd</i> = <b>int</b>(/mph/num_dsd)</td></tr>
+<tr><td id="MIP_NL__1P_v1_num_ds">num_ds</td><td></td><td><i>$num_ds</i> = 11</td></tr>
+<tr><td id="MIP_NL__1P_v1_ds_to_dsd_index">ds_to_dsd_index</td><td>[$num_ds]</td><td><i>$ds_to_dsd_index</i>[0] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;SUMMARY&nbsp;QUALITY&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[1] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;GEOLOCATION&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[2] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;STRUCTURE&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[3] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;MIPAS&nbsp;LEVEL-1B&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[4] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;SCAN&nbsp;INFORMATION&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[5] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;OFFSET&nbsp;CALIBRATION&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[6] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;GAIN&nbsp;CALIBRATION&nbsp;ADS#1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[7] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;GAIN&nbsp;CALIBRATION&nbsp;ADS#2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[8] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;ILS/SPECTRAL&nbsp;CAL&nbsp;GADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[9] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;LOS&nbsp;CALIBRATION&nbsp;GADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[10] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;PROCESS&nbsp;PARAMETERS&nbsp;GADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;)</td></tr>
+<tr><td id="MIP_NL__1P_v1_ds_available">ds_available</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_available</i>[<i>i</i>] = if($ds_to_dsd_index[<i>i</i>] != -1 <b>and</b> !(<b>bytes</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/filename,8) == &quot;NOT&nbsp;USED&quot; <b>or</b> <b>bytes</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/filename,7) == &quot;MISSING&quot;), 1, 0)</td></tr>
+<tr><td id="MIP_NL__1P_v1_ds_offset">ds_offset</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_offset</i>[<i>i</i>] = 8 * <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/ds_offset)</td></tr>
+<tr><td id="MIP_NL__1P_v1_num_dsr">num_dsr</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$num_dsr</i>[<i>i</i>] = <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/num_dsr)</td></tr>
+</table>
+</body>
+
+</html>

@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>MIP_FM2_AX v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>MIP_FM2_AX version 0</h1>
+<h2>MIP_FM2_AX_v0</h2>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH.html">MPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/Auxiliary_Data_SPH.html">Auxiliary_Data_SPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;98</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsd</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;280</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>initial_guess_general_data</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+GADS General
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[0]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_IG2_AX_GADS_general_v0.html">MIP_IG2_AX_GADS_general_v0</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[0] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[0]</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>pressure_profiles_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Pressure profile MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[1]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_IG2_AX_MDSR_press.html">MIP_IG2_AX_MDSR_press</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[1] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[1]</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>temperature_profiles_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Temperature profiles MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[2]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_IG2_AX_MDSR_temp.html">MIP_IG2_AX_MDSR_temp</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[2] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[2]</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>vmr_profiles_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+VMR profiles MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[3]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_IG2_AX_MDSR_vmr_v0.html">MIP_IG2_AX_MDSR_vmr_v0</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[3] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[3]</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>pt_mw_continuum_prof_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+p,T Continuum profiles MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[4]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_IG2_AX_MDSR_cont_prof.html">MIP_IG2_AX_MDSR_cont_prof</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[4] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[4]</span>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>h2o_mw_continuum_prof_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+H2O Continuum profiles MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[5]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_IG2_AX_MDSR_cont_prof.html">MIP_IG2_AX_MDSR_cont_prof</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[5] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[5]</span>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>n2o_mw_continuum_prof_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+N2O Continuum profiles MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[6]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_IG2_AX_MDSR_cont_prof.html">MIP_IG2_AX_MDSR_cont_prof</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[6] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[6]</span>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>hno3_mw_continuum_prof_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+HNO3 Continuum profiles MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[7]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_IG2_AX_MDSR_cont_prof.html">MIP_IG2_AX_MDSR_cont_prof</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[7] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[7]</span>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>ch4_mw_continuum_prof_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+CH4 Continuum profiles MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[8]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_IG2_AX_MDSR_cont_prof.html">MIP_IG2_AX_MDSR_cont_prof</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[8] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[8]</span>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>o3_mw_continuum_prof_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+O3 Continuum profiles MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[9]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_IG2_AX_MDSR_cont_prof.html">MIP_IG2_AX_MDSR_cont_prof</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[9] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[9]</span>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>no2_mw_continuum_prof_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+NO2 Continuum profiles MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[10]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_IG2_AX_MDSR_cont_prof.html">MIP_IG2_AX_MDSR_cont_prof</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[10] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[10]</span>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>forward_model_general_data</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+General data
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[11]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_FM2_AX_GADS_fc.html">MIP_FM2_AX_GADS_fc</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[11] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[11]</span>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>mw_occupation_matrix_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Data depending on occupation matrix location ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[12]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_FM2_AX_ADSR_occupation.html">MIP_FM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[12] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[12]</span>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>mw_grouping_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Microwindow grouping data ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/initial_guess_general_data[0]/num_lat_bands)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_FM2_AX_ADSR_cont.html">MIP_FM2_AX_ADSR_cont</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[13] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[13]</span>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>simulated_spectra_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Computed spectra MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/initial_guess_general_data[0]/num_lat_bands)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/mw_occupation_matrix_ads[<b>index</b>(:)]/nsim)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/forward_model_general_data[0]/ngeo)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/mw_occupation_matrix_ads[<b>index</b>(:/../..)]/nmw)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/mw_occupation_matrix_ads[<b>index</b>(:/../../..)]/mw_occ[<b>int</b>(/mw_occupation_matrix_ads[<b>index</b>(:/../../..)]/nmw) * <b>index</b>(:/..) + <b>index</b>(:)])</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_FM2_AX_MDSR_spect.html">MIP_FM2_AX_MDSR_spect</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[14] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[14]</span>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>fitted_parameters_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Values of unknown parameters MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/initial_guess_general_data[0]/num_lat_bands)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/mw_occupation_matrix_ads[<b>index</b>(:)]/nsim)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_FM2_AX_MDSR_unk.html">MIP_FM2_AX_MDSR_unk</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[15] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[15]</span>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>jacobi_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Jacobian matrices MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/initial_guess_general_data[0]/num_lat_bands)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/mw_occupation_matrix_ads[<b>index</b>(:)]/nsim)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/forward_model_general_data[0]/ngeo)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/mw_occupation_matrix_ads[<b>index</b>(:/../..)]/nmw)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/mw_occupation_matrix_ads[<b>index</b>(:/../../..)]/mw_occ[<b>int</b>(/mw_occupation_matrix_ads[<b>index</b>(:/../../..)]/nmw) * <b>index</b>(:/..) + <b>index</b>(:)])</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_FM2_AX_MDSR_jac.html">MIP_FM2_AX_MDSR_jac</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[16] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[16]</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_FM2_AX&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-MDA-GS2009_12_3H&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_FM2_AX&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-MDA-GS2009_12_3I&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_FM2_AX&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-MDA-GS2009_12_4&nbsp;&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_FM2_AX&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-MDA-GS2009_12_4C&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_FM2_AX&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-MDA-GS-2009_4/C&nbsp;&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_FM2_AX&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-ESA-GS-0177_3B&nbsp;&nbsp;&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_FM2_AX&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-ESA-GS-0177_3C&nbsp;&nbsp;&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_FM2_AX&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-ESA-GS-0177_4&nbsp;&nbsp;&nbsp;&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_FM2_AX&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-ESA-GS-0177_5&nbsp;&nbsp;&nbsp;&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_FM2_AX&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-ESA-GS-0177_5E&nbsp;&nbsp;&nbsp;&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="MIP_FM2_AX_v0_num_dsd">num_dsd</td><td></td><td><i>$num_dsd</i> = <b>int</b>(/mph/num_dsd)</td></tr>
+<tr><td id="MIP_FM2_AX_v0_num_ds">num_ds</td><td></td><td><i>$num_ds</i> = 17</td></tr>
+<tr><td id="MIP_FM2_AX_v0_ds_to_dsd_index">ds_to_dsd_index</td><td>[$num_ds]</td><td><i>$ds_to_dsd_index</i>[0] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;INITIAL&nbsp;GUESS&nbsp;GENERAL&nbsp;DATA&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[1] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;PRESSURE&nbsp;PROFILES&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[2] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;TEMPERATURE&nbsp;PROFILES&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[3] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;VMR&nbsp;PROFILES&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[4] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;PT&nbsp;MW&nbsp;CONTINUUM&nbsp;PROF&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[5] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;H2O&nbsp;MW&nbsp;CONTINUUM&nbsp;PROF&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[6] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;N2O&nbsp;MW&nbsp;CONTINUUM&nbsp;PROF&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[7] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;HNO3&nbsp;MW&nbsp;CONTINUUM&nbsp;PROF&nbsp;MDS&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[8] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CH4&nbsp;MW&nbsp;CONTINUUM&nbsp;PROF&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[9] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;O3&nbsp;MW&nbsp;CONTINUUM&nbsp;PROF&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[10] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;NO2&nbsp;MW&nbsp;CONTINUUM&nbsp;PROF&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[11] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;FORWARD&nbsp;MODEL&nbsp;GENERAL&nbsp;DATA&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[12] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;MW&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[13] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;MW&nbsp;GROUPING&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[14] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;SIMULATED&nbsp;SPECTRA&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[15] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;FITTED&nbsp;PARAMETERS&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[16] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;JACOBI&nbsp;MATRICES&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;)</td></tr>
+<tr><td id="MIP_FM2_AX_v0_ds_available">ds_available</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_available</i>[<i>i</i>] = if($ds_to_dsd_index[<i>i</i>] != -1 <b>and</b> !(<b>bytes</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/filename,8) == &quot;NOT&nbsp;USED&quot;), 1, 0)</td></tr>
+<tr><td id="MIP_FM2_AX_v0_ds_offset">ds_offset</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_offset</i>[<i>i</i>] = 8 * <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/ds_offset)</td></tr>
+<tr><td id="MIP_FM2_AX_v0_num_dsr">num_dsr</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$num_dsr</i>[<i>i</i>] = <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/num_dsr)</td></tr>
+</table>
+</body>
+
+</html>

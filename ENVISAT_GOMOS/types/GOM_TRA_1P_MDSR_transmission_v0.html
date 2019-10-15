@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOM_TRA_1P_MDSR_transmission_v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOM_TRA_1P_MDSR_transmission_v0</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GOM_TRA_1P_MDSR_transmission_v0.html">GOM_TRA_1P_MDSR_transmission_v0</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36985</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>dsr_time</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Start time of the Data Set Record
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Quality Indicator (-1 for blank MDSR, 0 otherwise)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>trans_spectra</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2336</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;9344</td></tr>
+<tr valign="top">
+<td colspan="2">
+Full transmission spectra
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: ""</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>cov</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2336</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;9344</td></tr>
+<tr valign="top">
+<td colspan="2">
+Covariance function of the full transmission
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: ""</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>scaled_back</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2336</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4672</td></tr>
+<tr valign="top">
+<td colspan="2">
+Scaled estimated central background
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "e"</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>error_back</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2336</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4672</td></tr>
+<tr valign="top">
+<td colspan="2">
+Error bar for the estimated central background
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-1 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/10)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>fp1_data</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>500</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2000</td></tr>
+<tr valign="top">
+<td colspan="2">
+Photometers engineering data (FP1)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "e"</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>fp2_data</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>500</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2000</td></tr>
+<tr valign="top">
+<td colspan="2">
+Photometers engineering data (FP2)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "e"</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>err_fp1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>50</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;100</td></tr>
+<tr valign="top">
+<td colspan="2">
+Error bar for the photometers engineering data (FP1)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-1 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/10)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>err_fp2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>50</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;100</td></tr>
+<tr valign="top">
+<td colspan="2">
+Error bar for the photometers engineering data (FP2)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-1 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/10)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>pcd_spec</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2336</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4672</td></tr>
+<tr valign="top">
+<td colspan="2">
+PCD at sample level (SP) for the spectrometers.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>pcd_fp</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+PCD at sample level (FP) for the fast photometers. The first integer refers to photometer 1, the second to photometer 2.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;64</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

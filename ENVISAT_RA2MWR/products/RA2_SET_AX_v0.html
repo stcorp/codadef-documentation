@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>RA2_SET_AX v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>RA2_SET_AX version 0</h1>
+<h2>RA2_SET_AX_v0</h2>
+<p>This definition is based on issue 4/C of product specification PO-RS-MDA-GS-2009</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH.html">MPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/Auxiliary_Data_SPH.html">Auxiliary_Data_SPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;98</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;array[<b>2</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;560</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;280</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>header</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;128</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td>n20_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+N20=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "N20="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>n20</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of values for the order 20
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td>newline_char_1</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td>n21_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+N21=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "N21="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>n21</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of values for the order 21
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td>newline_char_2</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td>n22_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+N22=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "N22="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>n22</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of values for the order 22
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td>newline_char_3</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td>n30_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+N30=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "N30="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>n30</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of values for the order 30
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td>newline_char_4</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td>n31_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+N31=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "N31="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>n31</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of values for the order 31
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td>newline_char_5</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td>n32_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+N32=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "N32="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>n32</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of values for the order 32
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td>newline_char_6</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td>n33_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+N33=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "N33="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>n33</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of values for the order 33
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td>newline_char_7</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;50</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td>newline_char_8</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>cartwright_amplitudes</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Cartwright amplitudes of the tidal constituents harmonic coefficients and amplitude [i, j]
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>coeff_n20</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/header/n20)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/RA2_SET_AX_Grid_Data_GADS.html">RA2_SET_AX_Grid_Data_GADS</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>coeff_n21</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/header/n21)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/RA2_SET_AX_Grid_Data_GADS.html">RA2_SET_AX_Grid_Data_GADS</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>coeff_n22</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/header/n22)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/RA2_SET_AX_Grid_Data_GADS.html">RA2_SET_AX_Grid_Data_GADS</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>coeff_n30</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/header/n30)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/RA2_SET_AX_Grid_Data_GADS.html">RA2_SET_AX_Grid_Data_GADS</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>coeff_n31</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/header/n31)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/RA2_SET_AX_Grid_Data_GADS.html">RA2_SET_AX_Grid_Data_GADS</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>coeff_n32</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/header/n32)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/RA2_SET_AX_Grid_Data_GADS.html">RA2_SET_AX_Grid_Data_GADS</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>coeff_n33</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/header/n33)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/RA2_SET_AX_Grid_Data_GADS.html">RA2_SET_AX_Grid_Data_GADS</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;RA2_SET_AX&quot;
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>

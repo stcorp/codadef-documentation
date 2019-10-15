@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOM_CAL_AX_GADS_nonlinearity_v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOM_CAL_AX_GADS_nonlinearity_v0</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GOM_CAL_AX_GADS_nonlinearity_v0.html">GOM_CAL_AX_GADS_nonlinearity_v0</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;295148</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>spa_gain</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>, <b>2</b>, <b>4</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;64</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spectrometer A electronic chain gain.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-3 e/ADU"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "e/ADU" (multiply by 1/1000)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>spb_gain</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>, <b>2</b>, <b>4</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;64</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spectrometer B electronic chain gain.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-3 e/ADU"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "e/ADU" (multiply by 1/1000)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>fp_gain</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>, <b>2</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16</td></tr>
+<tr valign="top">
+<td colspan="2">
+Photometers electronic chain gain dimension.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-3 e/ADU"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "e/ADU" (multiply by 1/1000)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>spec_adc_off</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>4</b>, <b>4</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;32</td></tr>
+<tr valign="top">
+<td colspan="2">
+ADC offsets for the spectrometers.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-1 ADU"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "ADU" (multiply by 1/10)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>fp_adc_off</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+ADC offset for the photometers
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-1 ADU"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "ADU" (multiply by 1/10)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>spa_ccd1_lut</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>, <b>4</b>, <b>4096</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;65536</td></tr>
+<tr valign="top">
+<td colspan="2">
+Non-linearity look-up table for SPA CCD 1.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>spa_ccd2_lut</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>, <b>4</b>, <b>4096</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;65536</td></tr>
+<tr valign="top">
+<td colspan="2">
+Non-linearity look-up table for SPA CCD 2.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>spb_ccd1_lut</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>, <b>4</b>, <b>4096</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;65536</td></tr>
+<tr valign="top">
+<td colspan="2">
+Non-linearity look-up table for SPB CCD 1.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>spb_ccd2_lut</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>, <b>4</b>, <b>4096</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;65536</td></tr>
+<tr valign="top">
+<td colspan="2">
+Non-linearity look-up table for SPB CCD 2.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>fp1_lut</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>, <b>4096</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16384</td></tr>
+<tr valign="top">
+<td colspan="2">
+Non-linearity look-up table for FP1.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>fp2_lut</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>, <b>4096</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16384</td></tr>
+<tr valign="top">
+<td colspan="2">
+Non-linearity look-up table for FP2.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>spec_det_off</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>4</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16</td></tr>
+<tr valign="top">
+<td colspan="2">
+Detection chain offset for the spectrometers
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-1 e"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "e" (multiply by 1/10)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>fp_det_off</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Detection chain offset for the fast photometers
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-1 e"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "e" (multiply by 1/10)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;32</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

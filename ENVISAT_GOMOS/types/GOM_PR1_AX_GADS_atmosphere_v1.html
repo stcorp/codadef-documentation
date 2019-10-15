@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOM_PR1_AX_GADS_atmosphere_v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOM_PR1_AX_GADS_atmosphere_v1</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GOM_PR1_AX_GADS_atmosphere_v1.html">GOM_PR1_AX_GADS_atmosphere_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;244</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>acc_grav</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Standard acceleration of gravity
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m/s2"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>p_ref</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference pressure
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "hPa"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>air_density</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Air density in standard conditions of temperature and pressure (T=288K, P=reference pressure)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "kg/m3"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>abs_ref_p</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Absolute Reference pressure
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "Pa"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>avogadro</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Avogadro number
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1/mole"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>uni_gas_const</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Universal gas constant
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "J/mole/K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>air_weight</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Molecular weight of the dry air
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "kg/mole"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>ref_p_values</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>21</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;84</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference pressure level values
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "hPa"</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>num_grid_lower</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of altitude grid points for lower part of the atmosphere
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>num_grid_upper</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of altitude grid points for upper part of the atmosphere
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>min_alt_low</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum altitude for lower part of the atmosphere
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "km"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>min_alt_upper</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum altitude for upper part of the atmosphere
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "km"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>alt_step_low</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Altitude step for lower part of the atmosphere
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "km"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>alt_step_upper</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Altitude step for upper part of the atmosphere
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "km"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>num_p_lower</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of pressure levels for lower part of the atmosphere
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>num_p_upper</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of pressure levels for upper part of the atmosphere
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>n_lev_3</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Index of the reference level for the iterative verification of hydrostaticity
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>ind_spat_res</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Index for the spatial resolution. Used only in case of ECMWF data unavailability
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>init_latlong</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Initial latitude/longitude value for the spatial grid (ref.)
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>latitude</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_north"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_north" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>longitude</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_east"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_east" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>lat_step</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference discretisation step in latitude
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "degrees_north"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>long_step</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference discretisation step in longitude
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "degrees_east"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>thr_conv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Threshold for the convergence of the iterative process
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td><b>max_iter</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum iteration number for the iterative process
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td><b>delta_angle</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Delta angle for the atmosphere zone in the occultation area
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "degrees"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td><b>trans_height</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Transition height expressed in number of atmospheric scale heights
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>25</td><td><b>size_ref_atm_prof</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Size of the reference atmospheric profile
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>26</td><td><b>first_alt_prof</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+First altitude of the profile
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "km"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>27</td><td><b>alt_step_prof</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Altitude discretisation
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "km"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>28</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;64</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

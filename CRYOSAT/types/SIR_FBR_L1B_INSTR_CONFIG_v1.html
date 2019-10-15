@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>SIR_FBR_L1B_INSTR_CONFIG_v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>SIR_FBR_L1B_INSTR_CONFIG_v1</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/SIR_FBR_L1B_INSTR_CONFIG_v1.html">SIR_FBR_L1B_INSTR_CONFIG_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Instrument configuration bit field (common to FBR and L1B MDSR)
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>rx_chain</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reception chain in use: 0 = unknown, 1 = chain 1, 2 = chain 2, 3 = both
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sir_id</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+SIRAL Identifier, 0 = Nominal, 1 = Redundant
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+spare (reserved, set to 0)
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>bandw</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Bandwidth: 0 = unknown, 1 = 320 MHz, 2 = 40 MHz
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td>spare_2</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:2</td></tr>
+<tr valign="top">
+<td colspan="2">
+spare (reserved, set to 0)
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>trk_mode</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Tracking mode: 0 = unknown, 1 = LRM, 2 = SAR, 3 = SARin
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>ext_cal</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+External calibration: 0 = no, 1 = external calibration
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td>spare_3</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+spare (reserved, set to 0)
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>loop_stat</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Loop status: 0 = closed loop, 1 = open loop
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>echo_loss</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Loss of echo (from cycle report): 0 = OK, 1 = loss of echo
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>rt_err</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Real time error (from cycle report): 0 = OK, 1 = real time computation error (computing cycle too long)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>echo_sat_err</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Echo saturation error (from cycle report): 0 = OK, 1 = echo saturation detected
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>rx_band_att</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reception band attenuation: 0 = not attenuated, 1 = attenuated
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>cycl_gen_err</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Cycle report general error: 0 = cycle report is 0, 1 = cycle report is not 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td>spare_4</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+spare (reserved, set to 0)
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td>spare_5</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+spare (reserved, set to 0)
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td>spare_6</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+spare (reserved, set to 0)
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>str_attref</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+STR_ATTREF Star Tracker data used
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td>spare_7</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1:2</td></tr>
+<tr valign="top">
+<td colspan="2">
+spare (reserved, set to 0)
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

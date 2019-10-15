@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>SCI_L0_PMTC_Settings_Block</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>SCI_L0_PMTC_Settings_Block</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/SCI_L0_PMTC_Settings_Block.html">SCI_L0_PMTC_Settings_Block</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;18</td></tr>
+<tr valign="top">
+<td colspan="2">
+PMTC Settings
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>phase</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:4</td></tr>
+<tr valign="top">
+<td colspan="2">
+PHASE identifies the current scanning phase (range 2--7).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td>multi_purpose_status_spare_0</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:2</td></tr>
+<tr valign="top">
+<td colspan="2">
+spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>ndfm</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Neutral Density Filter Mechanism. 0 = unknown position; 1 = IN (working position), 2 = OUT (home position), 3 = error (switch defect, position unknown).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>ncwm</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Nadir Calibration Window Mechanism.  0 = unknown position; 1 = OPEN (working position), 2 = CLOSED (home position), 3 = error (switch defect, position unknown).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>apsm</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Aperture Stop Mechanism.  0 = unknown position; 1 = SMALL (working position), 2 = LARGE (home position), 3 = error (switch defect, position unknown).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>wls</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:2</td></tr>
+<tr valign="top">
+<td colspan="2">
+White Light Calibration Source setting. 0 = invalid; 1 = ON; 2 = OFF; 3 = invalid.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>sls</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spectral Line Calibnration Source setting. 0 = invalid; 1 = ON; 2 = OFF; 3 = invalid.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>scanner_mode</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Scanner Mode
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>az_type</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth scan-mirror: movement applied. 0 = transition to new position; 1 = scan execution according to the phase parameters.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>az_center</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth scan-mirror: center relative scan profile flag. 0 = no centering is applied; 1 = apply centering algorithm.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>az_filter</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth scan-mirror: apply filter algorithm in the scanner position. 0 = no filtering to be applied; 1 = apply filter algorithm to control difference.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>az_invert</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth scan-mirror: invert flag. 0 = no inversion, all repetitions of the relative scan profile are identical; 1 = every second scan profile in a series of repetitions is inverted.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>az_correction</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth scan-mirror: correction typr flag. 0 = no correction; 1 = optical zero correction; 2 = correct with Earth model without yaw steering; 3 = correct with Earth model including yaw steering; 4 = Sun acquisition, switch to Sun Follower readout A; 5 = Sun acquisition, switch to Sun Follower readout B; 6 = Sun pointing using Sun Follower readout A; 7 = Sun pointing using Sun Follower readout B; 8 = Sun/moon tracking using AOCS data; 9 = Improved Sun/moon tracking using AOCS data.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>az_rel_profile</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth scan-mirror: which Relative Scan Profile is to be added to the Basic Scan Profile. 0 = no relative scan profile superposition; 1--6 = identigy relative scan profile by number.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>az_hw_constellation</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth scan-mirror: select the algorithms to be used for effective ILOS angles determination (range 1--5).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>az_basic_profile</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth Scan Mirror: defines the basic scan profile (range 0--14).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>az_repetitions</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1:4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth scan-mirror: defines the number of repetitions of the Relative Scan Profile in one Scan Phase. 0 = no repetition, one execution of the selected scan profile. 1--4095 = perform the specified number of repetitions of the scan profile.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>el_type</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Elevation scan-mirror: movement applied. 0 = transition to new position; 1 = scan execution according to the phase parameters.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>el_center</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Elevation scan-mirror: center relative scan profile flag. 0 = no centering is applied; 1 = apply centering algorithm.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>el_filter</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Elevation scan-mirror: apply filter algorithm in the scanner position. 0 = no filtering to be applied; 1 = apply filter algorithm to control difference.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>el_invert</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Elevation scan-mirror: invert flag. 0 = no inversion, all repetitions of the relative scan profile are identical; 1 = every second scan profile in a series of repetitions is inverted.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>el_correction</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Elevation scan-mirror: correction typr flag. 0 = no correction; 1 = optical zero correction; 2 = correct with Earth model without yaw steering; 3 = correct with Earth model including yaw steering; 4 = Sun acquisition, switch to Sun Follower readout A; 5 = Sun acquisition, switch to Sun Follower readout B; 6 = Sun pointing using Sun Follower readout A; 7 = Sun pointing using Sun Follower readout B; 8 = Sun/moon tracking using AOCS data; 9 = Improved Sun/moon tracking using AOCS data.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td><b>el_rel_profile</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Elevation scan-mirror: which Relative Scan Profile is to be added to the Basic Scan Profile. 0 = no relative scan profile superposition; 1--6 = identigy relative scan profile by number.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td><b>el_hw_constellation</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Elevation scan-mirror: select the algorithms to be used for effective ILOS angles determination (range 1--5).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td><b>el_basic_profile</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth Scan Mirror: defines the basic scan profile (range 0--14).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>25</td><td><b>el_repetitions</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1:4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth scan-mirror: defines the number of repetitions of the Relative Scan Profile in one Scan Phase. 0 = no repetition, one execution of the selected scan profile. 1--4095 = perform the specified number of repetitions of the scan profile.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>26</td><td><b>factors</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>6</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Integer multiplication factors which are applied to the Relative Scan Profile parameters 'angular variation', 'start accelleration', and 'end accelleration', when the Relative Scan Profile is executed. Factor i is applied to Relative Scan Profile i, with i=1..6.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

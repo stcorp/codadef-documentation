@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>ALT.OPR v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>ALT.OPR version 0</h1>
+<h2>OPR_pass_file_v0</h2>
+<p>This definition is based on version 2.3 of the RA/ATSR products Users Manual C2-MUT-A-01-IF.</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>header</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/OPR_pass_file_header.html">OPR_pass_file_header</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3960</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>data</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_records</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/OPR_pass_file_data_record.html">OPR_pass_file_data_record</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;180</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,20) == &quot;CCSD3ZF0000100000001&quot; <b>and</b><br />
+<b>bytes</b>(/,20,20) == &quot;CCSD3KS00006PASSFILE&quot; <b>and</b><br />
+<b>bytes</b>(/,180,19) == &quot;Pass_File_Name&nbsp;=&nbsp;1A&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,20) == &quot;CCSD3ZF0000100000001&quot; <b>and</b><br />
+<b>bytes</b>(/,20,20) == &quot;CCSD3KS00006PASSFILE&quot; <b>and</b><br />
+<b>bytes</b>(/,180,19) == &quot;Pass_File_Name&nbsp;=&nbsp;2A&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="OPR_pass_file_v0_num_records">num_records</td><td></td><td><i>$num_records</i> = <b>int</b>(:/header/Pass_Nbmes)</td></tr>
+</table>
+</body>
+
+</html>

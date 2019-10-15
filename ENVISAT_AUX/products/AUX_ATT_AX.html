@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>AUX_ATT_AX v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>AUX_ATT_AX version 0</h1>
+<h2>AUX_ATT_AX</h2>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH.html">MPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/Auxiliary_Data_SPH.html">Auxiliary_Data_SPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;98</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsd</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;280</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>attitude_aocs</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+AOCS Parameters GADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[0]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/AUX_ATT_AX_GADS_aocs.html">AUX_ATT_AX_GADS_aocs</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[0] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[0]</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>attitude_ra2</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+RA2 Attitude Perturbation GADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[1]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/AUX_ATT_AX_GADS_att_per.html">AUX_ATT_AX_GADS_att_per</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[1] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[1]</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>attitude_meris</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+MERIS Attitude Perturbation GADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[2]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/AUX_ATT_AX_GADS_att_per.html">AUX_ATT_AX_GADS_att_per</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[2] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[2]</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>attitude_aatsr</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+AATSR Attitude Perturbation GADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[3]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/AUX_ATT_AX_GADS_att_per.html">AUX_ATT_AX_GADS_att_per</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[3] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[3]</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>attitude_mipas</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+MIPAS Attitude Perturbation GADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[4]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/AUX_ATT_AX_GADS_att_per.html">AUX_ATT_AX_GADS_att_per</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[4] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[4]</span>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>attitude_scia</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+SCIAMACHY Attitude Perturbation GADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[5]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/AUX_ATT_AX_GADS_att_per.html">AUX_ATT_AX_GADS_att_per</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[5] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[5]</span>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>attitude_gomos</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+GOMOS Attitude Perturbation GADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[6]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/AUX_ATT_AX_GADS_att_per.html">AUX_ATT_AX_GADS_att_per</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[6] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[6]</span>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>attitude_asar</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+ASAR Attitude Perturbation GADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[7]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/AUX_ATT_AX_GADS_att_per.html">AUX_ATT_AX_GADS_att_per</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[7] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[7]</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;AUX_ATT_AX&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="AUX_ATT_AX_num_dsd">num_dsd</td><td></td><td><i>$num_dsd</i> = <b>int</b>(/mph/num_dsd)</td></tr>
+<tr><td id="AUX_ATT_AX_num_ds">num_ds</td><td></td><td><i>$num_ds</i> = 8</td></tr>
+<tr><td id="AUX_ATT_AX_ds_to_dsd_index">ds_to_dsd_index</td><td>[$num_ds]</td><td><i>$ds_to_dsd_index</i>[0] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;ATTITUDE_AOCS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[1] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;ATTITUDE_RA2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[2] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;ATTITUDE_MERIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[3] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;ATTITUDE_AATSR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[4] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;ATTITUDE_MIPAS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[5] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;ATTITUDE_SCIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[6] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;ATTITUDE_GOMOS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[7] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;ATTITUDE_ASAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;)</td></tr>
+<tr><td id="AUX_ATT_AX_ds_available">ds_available</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_available</i>[<i>i</i>] = if($ds_to_dsd_index[<i>i</i>] != -1 <b>and</b> !(<b>bytes</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/filename,8) == &quot;NOT&nbsp;USED&quot;), 1, 0)</td></tr>
+<tr><td id="AUX_ATT_AX_ds_offset">ds_offset</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_offset</i>[<i>i</i>] = 8 * <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/ds_offset)</td></tr>
+<tr><td id="AUX_ATT_AX_num_dsr">num_dsr</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$num_dsr</i>[<i>i</i>] = <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/num_dsr)</td></tr>
+</table>
+</body>
+
+</html>

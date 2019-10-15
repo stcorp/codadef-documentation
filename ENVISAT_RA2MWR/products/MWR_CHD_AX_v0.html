@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>MWR_CHD_AX v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>MWR_CHD_AX version 0</h1>
+<h2>MWR_CHD_AX_v0</h2>
+<p>This definition is based on issue 3/O of product specification PO-RS-MDA-GS-2009</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6757</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH.html">MPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/Auxiliary_Data_SPH.html">Auxiliary_Data_SPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;98</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;array[<b>4</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1120</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;280</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>thermistor_pol</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>32</b>, <b>10</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2560</td></tr>
+<tr valign="top">
+<td colspan="2">
+Thermister polynomial coefficients to evaluate on-board thermistors [thermistor no., coefficient index]
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int64</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Thermister polynomial coefficient j for thermister i
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-15"</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>spare</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>40</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;40</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>temp_var_of_ceu_board_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Temperature variation of CEU board (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>temp_var_ceu_board_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Temperature variation of CEU board (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>min_dicke_load_temp_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum Dicke load temperature (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>max_dicke_load_temp_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum Dicke load temperature (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>min_dicke_load_temp_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum Dicke load temperature (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>max_dicke_load_temp_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum Dicke load temperature (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>min_hot_load_temp_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum hot load temperature (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>max_hot_load_temp_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum hot load temperature (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>min_hot_load_temp_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum hot load temperature (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>max_hot_load_temp_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum hot load temperature (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>min_mix_load_temp_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum mixer temperature (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>max_mix_load_temp_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum mixer temperature (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>min_mix_load_temp_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum mixer temperature (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>max_mix_load_temp_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum mixer temperature (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>min_if_module_temp_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum IF module temperature (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>max_if_module_temp_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum IF module temperature (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>min_if_module_temp_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum IF module temperature (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td><b>max_if_module_temp_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum IF module temperature (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td><b>min_receiver_temp_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum receiver temperature (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td><b>max_if_module__temp_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum receiver temperature (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>25</td><td><b>min_receiver_temp_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum receiver temperature (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>26</td><td><b>max_if_module__temp_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum receiver temperature (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>27</td><td><b>min_exp_brightness_temp_channel_1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum expected brightness temperatures for channel 1
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>28</td><td><b>max_exp_brightness_temp_channel_1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum expected brightness temperatures for channel 1
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>29</td><td><b>min_exp_brightness_temp_channel_2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum expected brightness temperatures for channel 2
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>30</td><td><b>max_exp_brightness_temp_channel_2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum expected brightness temperatures for channel 2
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>31</td><td><b>spares</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>4</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spares
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>32</td><td><b>lin_coeff_gain_temp_response_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Linear coefficient for gain vs. temperature response (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-5 1/K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>33</td><td><b>quadr_coefficient_gain_temp_response_24_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Quadratic coefficient for gain vs. temperature response (24 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-5 1/K-2"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>34</td><td><b>lin_coeff_gain_tempresponse_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Linear coefficient for gain vs. temperature response (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-5 1/K"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>35</td><td><b>quadr_coeff_gain_temp_response_36_ghz</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Quadratic coefficient for gain vs. temperature response (36 GHz channel)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-5 1/K-2"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>36</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>16</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spares
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>37</td><td><b>channel_characterization_nominal_mode</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;780</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>characterization_24_ghz_0_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>characterization_24_ghz_10_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>characterization_24_ghz_20_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>characterization_24_ghz_30_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>characterization_24_ghz_40_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>characterization_36_ghz_0_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>characterization_36_ghz_10_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>characterization_36_ghz_20_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>characterization_36_ghz_30_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>characterization_36_ghz_40_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>20</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>38</td><td><b>channel_characterization_redundant_mode</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;780</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>characterization_24_ghz_0_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>characterization_24_ghz_10_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>characterization_24_ghz_20_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>characterization_24_ghz_30_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>characterization_24_ghz_40_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>characterization_36_ghz_0_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>characterization_36_ghz_10_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>characterization_36_ghz_20_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>characterization_36_ghz_30_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>characterization_36_ghz_40_degr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MWR_CHD_AX_char_info.html">MWR_CHD_AX_char_info</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>20</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MWR_CHD_AX&quot; <b>and</b><br />
+<b>bytes</b>(/,95,21) == &quot;PO-RS-MDA-GS-2009_3/O&quot;
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>

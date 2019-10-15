@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_1B_Useful_Signal_MDSR</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_1B_Useful_Signal_MDSR</h1>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Useful_Signal_MDSR.html">Level_1B_Useful_Signal_MDSR</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>start_of_observation_time</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Satellite time at start of BRC
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>observation_useful_signals</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;650</td></tr>
+<tr valign="top">
+<td colspan="2">
+Collection of useful signal strength for the observation
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mie_altitude_bin_useful_signal_info</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>25</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;225</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;9</td></tr>
+<tr valign="top">
+<td colspan="2">
+List of useful signal strength information for each Mie altitude bin
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>data_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+This field is a 1 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, and the next 4 bits are the measurementlevel validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Bin-level validity spare. Default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Measurement-level validity spare. Default 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Laser Frequency not locked 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>useful_signal</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>rayleigh_altitude_bin_useful_signal_info</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>25</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;425</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;17</td></tr>
+<tr valign="top">
+<td colspan="2">
+List of useful signal strength information for each Rayleigh altitude bins
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>data_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+This field is a 1 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, and the next 4 bits are the measurementlevel validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Bin-level validity spare. Default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Measurement-level validity spare. Default 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Laser Frequency not locked 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>useful_signal_channel_a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>useful_signal_channel_b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>measurement_useful_signal</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/sph/n_max)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;650</td></tr>
+<tr valign="top">
+<td colspan="2">
+Collection of useful signal strength for the measurement
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mie_altitude_bin_useful_signal_info</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>25</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;225</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;9</td></tr>
+<tr valign="top">
+<td colspan="2">
+List of useful signal strength information for each Mie altitude bin
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>data_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+This field is a 1 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, and the next 4 bits are the measurementlevel validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Bin-level validity spare. Default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Measurement-level validity spare. Default 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Laser Frequency not locked 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>useful_signal</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>rayleigh_altitude_bin_useful_signal_info</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>25</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;425</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;17</td></tr>
+<tr valign="top">
+<td colspan="2">
+List of useful signal strength information for each Rayleigh altitude bins
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>data_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+This field is a 1 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, and the next 4 bits are the measurementlevel validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Bin-level validity spare. Default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Measurement-level validity spare. Default 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Laser Frequency not locked 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>useful_signal_channel_a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>useful_signal_channel_b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

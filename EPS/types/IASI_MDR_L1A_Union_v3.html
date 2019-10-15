@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>IASI_MDR_L1A_Union_v3</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>IASI_MDR_L1A_Union_v3</h1>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;union&nbsp;"<a class="header" href="../types/IASI_MDR_L1A_Union_v3.html">IASI_MDR_L1A_Union_v3</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+Union of possible IASI L1a MDRs (format version 3). A definition for each of the record subclass values that are used in the field expression for this union can be found in the IASI Level 1 PFS (EUM-EPS-SYS-SPE-990003).
+<br /><br />
+<span class="attr_key">bit&nbsp;size</span><span class="attr_value">: $mdr_bit_size[<b>index</b>(.)]</span>
+<br /><br />
+<span class="attr_key">field&nbsp;expr</span><span class="attr_value">: if(<b>int</b>(:/RECORD_HEADER/INSTRUMENT_GROUP) == 8, if(<b>int</b>(:/RECORD_HEADER/RECORD_SUBCLASS) == 0, 0, 2), if(<b>int</b>(:/RECORD_HEADER/INSTRUMENT_GROUP) == 13 <b>and</b> <b>int</b>(:/RECORD_HEADER/RECORD_SUBCLASS) == 1, 1, 2))</span>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>MDR</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/IASI_MDR_L1A_v3.html">IASI_MDR_L1A_v3</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2365191</td></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Dummy</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/DMDR_v2.html">DMDR_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>Unknown</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GENERIC_RECORD.html">GENERIC_RECORD</a>"</th></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

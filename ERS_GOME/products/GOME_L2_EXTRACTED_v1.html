@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOM.LVL21_EXTRACTED v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOM.LVL21_EXTRACTED version 1</h1>
+<h2>GOME_L2_EXTRACTED_v1</h2>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">ascii&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>gsi</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/GSI2.html">GSI2</a>"</th></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>pir</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/PIR.html">PIR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;38</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td>ls1</td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string [line&nbsp;separator]</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>num_ddr</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Number of DOAS Data Records
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td>ls2</td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string [line&nbsp;separator]</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/SPH2A.html">SPH2A</a>"</th></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>ddr</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Ground pixel label
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(../num_ddr)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DDRA_v1.html">DDRA_v1</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,2) == &quot;/*&quot; <b>and</b><br />
+<b>regex</b>(&quot;&nbsp;GDP&nbsp;Level&nbsp;1&nbsp;to&nbsp;2&nbsp;Extracting&quot;, <b>bytes</b>(/,1024)) <b>and</b><br />
+<b>regex</b>(&quot;TCDO3&quot;, <b>bytes</b>(/,1024)) <b>and</b><br />
+<b>regex</b>(&quot;&nbsp;01\\.10&quot;, <b>bytes</b>(/,1024))
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>MIO_VAL_2_ v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>MIO_VAL_2_ version 0</h1>
+<h2>MIO_VAL_2_</h2>
+<p>This definition is based on version 2H of the Product Specification for L2 Products and Auxiliary Products SW-DS-DTU-GS-0001</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;bytes</th></tr>
+<tr valign="top">
+<td colspan="2">
+Uninterpreted PDF
+<br /><br />
+<span class="attr_key">bit&nbsp;size</span><span class="attr_value">: 8 * <b>filesize</b>()</span>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>substr</b>(0, 3, <b>filename</b>()) == &quot;SW_&quot; <b>and</b><br />
+<b>substr</b>(8, 10, <b>filename</b>()) == &quot;MIO_VAL_2_&quot;
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>

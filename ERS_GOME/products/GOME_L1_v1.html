@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOM.LVL13 v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOM.LVL13 version 1</h1>
+<h2>GOME_L1_v1</h2>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>pir</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/PIR.html">PIR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;38</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>fsr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/FSR1.html">FSR1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;96</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/SPH1.html">SPH1</a>"</th></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>fcd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/FCD.html">FCD</a>"</th></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>pcd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Pixel Specific Calibration Records
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/fsr/n_rec)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/PCD_v1.html">PCD_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;737</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>scr</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Sun Specific Calibration Records
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/fsr/n_sun)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/SCD.html">SCD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;512</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>mcr</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Moon Specific Calibration Records
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/fsr/n_moon)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MCD.html">MCD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;512</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>bdr</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/BDR.html">BDR</a>"</th></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,5) == &quot;E2GOM&quot; <b>and</b><br />
+<b>bytes</b>(/,16,5) == &quot;LVL10&quot; <b>and</b><br />
+<b>bytes</b>(/,134,2) == &quot;\000\000&quot; <b>and</b><br />
+<b>bytes</b>(/,146,2) == &quot;\000\001&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,5) == &quot;E2GOM&quot; <b>and</b><br />
+<b>bytes</b>(/,16,5) == &quot;LVL10&quot; <b>and</b><br />
+<b>bytes</b>(/,134,2) == &quot;\000\001&quot; <b>and</b><br />
+<b>bytes</b>(/,184,2) == &quot;\000\001&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,5) == &quot;E2GOM&quot; <b>and</b><br />
+<b>bytes</b>(/,16,5) == &quot;LVL10&quot; <b>and</b><br />
+<b>bytes</b>(/,134,2) == &quot;\000\002&quot; <b>and</b><br />
+<b>bytes</b>(/,222,2) == &quot;\000\001&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,5) == &quot;E2GOM&quot; <b>and</b><br />
+<b>bytes</b>(/,16,5) == &quot;LVL10&quot; <b>and</b><br />
+<b>bytes</b>(/,134,2) == &quot;\000\003&quot; <b>and</b><br />
+<b>bytes</b>(/,260,2) == &quot;\000\001&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="GOME_L1_v1_band_length">band_length</td><td>[10]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> 9 <b>do</b><br /><i>$band_length</i>[<i>i</i>] = <b>int</b>(/fcd/bcr[<i>i</i>]/end_band) - <b>int</b>(/fcd/bcr[<i>i</i>]/start_band) + 1</td></tr>
+<tr><td id="GOME_L1_v1_bdr_rec_size">bdr_rec_size</td><td>[10]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> 9 <b>do</b><br /><i>$bdr_rec_size</i>[<i>i</i>] = $band_length[<i>i</i>] * 16 + 64</td></tr>
+</table>
+</body>
+
+</html>

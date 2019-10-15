@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>ASA_XCA_AX v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>ASA_XCA_AX version 0</h1>
+<h2>ASA_XCA_AX_v0</h2>
+<p>This definition is based on version 4/C of product specification PO-RS-MDA-GS-2009 Vol8</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH.html">MPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/SPH_AX.html">SPH_AX</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;98</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;array[<b>1</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;280</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;280</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>gadsr</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26552</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>dsr_time</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Time of characterization
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>dsr_length</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Length of this DSR in bytes
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "bytes"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>ext_cal_im_hh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for IM mode, SLC image, HH polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>ext_cal_im_vv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for IM mode, SLC image, VV polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>ext_cal_im_pri_hh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for IM mode, Precision Image, HH polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>ext_cal_im_pri_vv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for IM mode, Precision Image, VV polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>ext_cal_im_geo_hh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for IM mode, Geocoded Image, HH polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>ext_cal_im_geo_vv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for IM mode, Geocoded Image, VV polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>ext_cal_im_med_hh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for IM mode, Medium Resolution Image, HH polarisation
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>ext_cal_im_med_vv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for IM mode, Medium Resolution Image, VV polarisation
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>ext_cal_ap_hh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, SLC image, HH polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>ext_cal_ap_vv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, SLC image, VV polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>ext_cal_ap_hv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, SLC image, HV polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>ext_cal_ap_vh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, SLC image, VH polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>ext_cal_ap_pri_hh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, Precision Image, HH polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>ext_cal_ap_pri_vv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, Precision Image, VV polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>ext_cal_ap_pri_hv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, Precision Image, HV polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>ext_cal_ap_pri_vh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, Precision Image, VH polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>ext_cal_ap_geo_hh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, Geocoded Image, HH polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>ext_cal_ap_geo_vv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, Geocoded Image, VV polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>ext_cal_ap_geo_hv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, Geocoded Image, HV polarisation
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>ext_cal_ap_geo_vh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, Geocoded Image, VH polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td><b>ext_cal_ap_med_hh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, Medium Resolution Image, HH polarisation
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td><b>ext_cal_ap_med_vv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, Medium Resolution Image, VV polarisation
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td><b>ext_cal_ap_med_hv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, Medium Resolution Image, HV polarisation
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>25</td><td><b>ext_cal_ap_med_vh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for AP mode, Medium Resolution Image, VH polarisation
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>26</td><td><b>ext_cal_wv_hh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for WV mode, HH polarisation
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>27</td><td><b>ext_cal_wv_vv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>7</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for WV mode, VV polar
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>28</td><td><b>ext_cal_ws_hh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for WS mode, detected image 111HH polar
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>29</td><td><b>ext_cal_ws_vv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for WS mode, detected image ,VV polar
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>30</td><td><b>ext_cal_gm_hh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for GM mode, HH polar
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>31</td><td><b>ext_cal_gm_vv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for GM mode, VV polar
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>32</td><td><b>elev_ang_is1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference elevation angle for IS1
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "deg"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>33</td><td><b>elev_ang_is2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference elevation angle for IS2
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "deg"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>34</td><td><b>elev_ang_is3_ss2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference elevation angle for IS3 / SS2
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "deg"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>35</td><td><b>elev_ang_is4_ss3</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference elevation angle for IS4 / SS3
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "deg"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>36</td><td><b>elev_ang_is5_ss4</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference elevation angle for IS5 / SS4
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "deg"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>37</td><td><b>elev_ang_is6_ss5</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference elevation angle for IS6 / SS5
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "deg"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>38</td><td><b>elev_ang_is7</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference elevation angle for IS7
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "deg"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>39</td><td><b>elev_ang_ss1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference elevation angle for SS1
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "deg"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>40</td><td><b>pattern_is1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>804</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3216</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Two-way Antenna Elevation Pattern Gain Table for IS1 (4*201 values)
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>41</td><td><b>pattern_is2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>804</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3216</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Two-way Antenna Elevation Pattern Gain Table for IS2 (4*201 values)
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>42</td><td><b>pattern_is3_ss2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>804</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3216</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Two-way Antenna Elevation Pattern Gain Table for IS3/SS2 (4*201 values)
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>43</td><td><b>pattern_is4_ss3</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>804</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3216</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Two-way Antenna Elevation Pattern Gain Table for IS4/SS3 (4*201 values)
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>44</td><td><b>pattern_is5_ss4</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>804</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3216</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Two-way Antenna Elevation Pattern Gain Table for IS5/SS4 (4*201 values)
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>45</td><td><b>pattern_is6_ss5</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>804</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3216</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Two-way Antenna Elevation Pattern Gain Table for IS6/SS5 (4*201 values)
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>46</td><td><b>pattern_is7</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>804</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3216</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Two-way Antenna Elevation Pattern Gain Table for IS7 (4*201 values)
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>47</td><td><b>pattern_ss1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>804</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3216</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Two-way Antenna Elevation Pattern Gain Table for SS1 (4*201 values)
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>48</td><td><b>ext_cal_ws_slc_hh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for WS mode, SLC Image HH polar
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>49</td><td><b>ext_cal_ws_slc_vv</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+External Calibration scaling factors for WS mode, SLC Image VV polar
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>50</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;ASA_XCA_AX&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="ASA_XCA_AX_v0_num_dsr">num_dsr</td><td></td><td><i>$num_dsr</i> = <b>int</b>(/dsd[0]/num_dsr)</td></tr>
+</table>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>PCD_v2</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>PCD_v2</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/PCD_v2.html">PCD_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;833</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>glr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GLR1_v2.html">GLR1_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;201</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>cr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/CR1_v2.html">CR1_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;48</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dcns_fact</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Dark Current and Noise Correction factors
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>ind_spc</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Index to Spectral Calibration Parameters
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>ind_leak</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Index to Leakage Correction Parameters
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>pol_par</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>25</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;100</td></tr>
+<tr valign="top">
+<td colspan="2">
+Polarisation Parameters (7+1 fractional polarisation values including the appropriate wavelength value, error and Chi, the angle of the plane of polarisation)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>ex_mph</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>34</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;34</td></tr>
+<tr valign="top">
+<td colspan="2">
+Extraction of Level 0 Data MPH
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>ex_sph</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>22</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
+<tr valign="top">
+<td colspan="2">
+Extraction of Level 0 Data SPH
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>ihr_sdp</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/IHR.html">IHR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;396</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>ind_spb</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>10</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+Index to the 10 Spectral Bands (-1, if the integration time of this band was not completed)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

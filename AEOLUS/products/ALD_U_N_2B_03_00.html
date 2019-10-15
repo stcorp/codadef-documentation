@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>ALD_U_N_2B v4</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>ALD_U_N_2B version 4</h1>
+<h2>ALD_U_N_2B_03_00</h2>
+<p>This definition is based on version 3.00 of IODD AE-IF-ECMWF-L2BP-0001</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Level 2B Product
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH_v2.html">MPH_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/Level_2B_SPH_03_00.html">Level_2B_SPH_03_00</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1281</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsd</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;288</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>meas_map</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Measurement Map Annotation
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[0]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Meas_Map_ADSR.html">Level_2BC_Meas_Map_ADSR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;308</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[0] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[0]</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>mie_grouping</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Mie Grouping ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[1]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Grouping_ADSR_02_30.html">Level_2BC_Grouping_ADSR_02_30</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;46</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[1] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[1]</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>rayleigh_grouping</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh Grouping ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[2]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Grouping_ADSR_02_30.html">Level_2BC_Grouping_ADSR_02_30</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;46</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[2] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[2]</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>mie_geolocation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Mie Wind Geolocation Data
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[3]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Geolocation_ADSR_02_00.html">Level_2BC_Geolocation_ADSR_02_00</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;159</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[3] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[3]</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>rayleigh_geolocation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh Wind Geolocation Data
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[4]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Geolocation_ADSR_02_00.html">Level_2BC_Geolocation_ADSR_02_00</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;159</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[4] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[4]</span>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>amd_product_confid_data</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+AMD Product Confidence Data
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[5]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2B_AMD_PCD_ADSR_02_00.html">Level_2B_AMD_PCD_ADSR_02_00</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;54</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[5] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[5]</span>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>meas_product_confid_data</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Measurement level Product Confidence Data
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[6]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2B_Meas_PCD_ADSR_03_00.html">Level_2B_Meas_PCD_ADSR_03_00</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1802</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[6] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[6]</span>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>mie_wind_prod_conf_data</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Mie Wind Product Confidence Data
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[7]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Mie_Wind_PCD_ADSR_02_00.html">Level_2BC_Mie_Wind_PCD_ADSR_02_00</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;137</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[7] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[7]</span>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>rayleigh_wind_prod_conf_data</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh Wind Product Confidence Data
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[8]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Rayleigh_Wind_PCD_ADSR_02_00.html">Level_2BC_Rayleigh_Wind_PCD_ADSR_02_00</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;58</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[8] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[8]</span>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>mie_hloswind</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Mie HLOS winds
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[9]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Mie_HLOSWind_MDSR_02_00.html">Level_2BC_Mie_HLOSWind_MDSR_02_00</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;34</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[9] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[9]</span>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>rayleigh_hloswind</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh HLOS winds
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[10]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Rayleigh_HLOSWind_MDSR_02_00.html">Level_2BC_Rayleigh_HLOSWind_MDSR_02_00</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;50</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[10] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[10]</span>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>mie_profile</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Mie Profile
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[11]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Wind_Profile_MDSR_02_00.html">Level_2BC_Wind_Profile_MDSR_02_00</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;176</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[11] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[11]</span>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>rayleigh_profile</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh Profile
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[12]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Wind_Profile_MDSR_02_00.html">Level_2BC_Wind_Profile_MDSR_02_00</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;176</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[12] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[12]</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,12) == &quot;PRODUCT=\&quot;AE_&quot; <b>and</b><br />
+<b>bytes</b>(/,17,10) == &quot;ALD_U_N_2B&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;L2B/L2C&nbsp;IODD&nbsp;Iss.&nbsp;03.00&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="ALD_U_N_2B_03_00_num_dsd">num_dsd</td><td></td><td><i>$num_dsd</i> = <b>int</b>(/mph/num_dsd)</td></tr>
+<tr><td id="ALD_U_N_2B_03_00_num_ds">num_ds</td><td></td><td><i>$num_ds</i> = 13</td></tr>
+<tr><td id="ALD_U_N_2B_03_00_ds_to_dsd_index">ds_to_dsd_index</td><td>[$num_ds]</td><td><i>$ds_to_dsd_index</i>[0] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Meas_Map_ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[1] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Mie_Grouping_ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[2] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Rayleigh_Grouping_ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[3] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Mie_Geolocation_ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[4] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Rayleigh_Geolocation_ADS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[5] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;AMD_Product_Confid_Data_ADS&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[6] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Meas_Product_Confid_Data_ADS&quot;);<br /><i>$ds_to_dsd_index</i>[7] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Mie_Wind_Prod_Conf_Data_ADS&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[8] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Rayl_Wind_Prod_Conf_Data_ADS&quot;);<br /><i>$ds_to_dsd_index</i>[9] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Mie_Wind_MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[10] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Rayleigh_Wind_MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[11] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Mie_Profile_MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[12] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Rayleigh_Profile_MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;)</td></tr>
+<tr><td id="ALD_U_N_2B_03_00_ds_available">ds_available</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_available</i>[<i>i</i>] = if($ds_to_dsd_index[<i>i</i>] != -1 <b>and</b> <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/ds_size) != 0, 1, 0)</td></tr>
+<tr><td id="ALD_U_N_2B_03_00_ds_offset">ds_offset</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_offset</i>[<i>i</i>] = 8 * <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/ds_offset)</td></tr>
+<tr><td id="ALD_U_N_2B_03_00_num_dsr">num_dsr</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$num_dsr</i>[<i>i</i>] = <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/num_dsr)</td></tr>
+</table>
+</body>
+
+</html>

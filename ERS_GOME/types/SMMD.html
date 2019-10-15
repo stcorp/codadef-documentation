@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>SMMD</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>SMMD</h1>
+<table class="top">
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/SMMD.html">SMMD</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>measurement_num</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
+<tr valign="top">
+<td colspan="2">
+Measurement Number
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>num_band</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+num_band
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td>ls1</td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string [line&nbsp;separator]</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>smgi</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/SMGI.html">SMGI</a>"</th></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>pdr</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/PDR.html">PDR</a>"</th></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>brda</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Band Data Records (ASCII)
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(../num_band)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/BRDA.html">BRDA</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

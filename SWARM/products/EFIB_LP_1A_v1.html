@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>EFIB_LP_1A v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>EFIB_LP_1A version 1</h1>
+<h2>EFIB_LP_1A_v1</h2>
+<p>This definition is based on version 3.7 (baseline 1 and 2) of the Level 1a Product Definition SW-ID-GMV-GS-0003</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>MDR_LP_SM</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr1</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MDR_LP_SM.html">MDR_LP_SM</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8272</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>MDR_LP_HM</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr2</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MDR_LP_HM_v1.html">MDR_LP_HM_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;384</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>substr</b>(0, 3, <b>filename</b>()) == &quot;SW_&quot; <b>and</b><br />
+<b>substr</b>(8, 10, <b>filename</b>()) == &quot;EFIB_LP_1A&quot; <b>and</b><br />
+<b>substr</b>(51, 2, <b>filename</b>()) == &quot;01&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>substr</b>(0, 3, <b>filename</b>()) == &quot;SW_&quot; <b>and</b><br />
+<b>substr</b>(8, 10, <b>filename</b>()) == &quot;EFIB_LP_1A&quot; <b>and</b><br />
+<b>substr</b>(51, 2, <b>filename</b>()) == &quot;02&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="EFIB_LP_1A_v1_num_dsr1">num_dsr1</td><td></td><td><i>$num_dsr1</i> = <b>unboundindex</b>(/MDR_LP_SM, <b>byteoffset</b>(.) + 2 &gt;= <b>filesize</b>() <b>or</b> <b>int</b>(./MDR_ID) != 501)</td></tr>
+<tr><td id="EFIB_LP_1A_v1_num_dsr2">num_dsr2</td><td></td><td><i>$num_dsr2</i> = <b>unboundindex</b>(/MDR_LP_HM, <b>byteoffset</b>(.) + 2 &gt;= <b>filesize</b>() <b>or</b> <b>int</b>(./MDR_ID) != 502)</td></tr>
+</table>
+</body>
+
+</html>

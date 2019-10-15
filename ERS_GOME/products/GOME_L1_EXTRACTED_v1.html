@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOM.LVL13_EXTRACTED v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOM.LVL13_EXTRACTED version 1</h1>
+<h2>GOME_L1_EXTRACTED_v1</h2>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">ascii&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>gsi</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/GSI1_v1.html">GSI1_v1</a>"</th></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>pir</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/PIR.html">PIR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;38</td></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $pir_available != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td>ls1</td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string [line&nbsp;separator]</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+<br /><br />
+<span class="attr_key">available</span><span class="attr_value">: $pir_available != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>ersi</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/ERSI.html">ERSI</a>"</th></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ersi_available != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>sfs</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/SFS.html">SFS</a>"</th></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $sfs_cdr_available != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>cdr</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<b>4</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Channel Data Records
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/CDR.html">CDR</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $sfs_cdr_available != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>efs</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/EFS.html">EFS</a>"</th></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $efs_egp_available != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>egp</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Earthshine Ground Pixels
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_egp</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/EGP_v1.html">EGP_v1</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $efs_egp_available != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>smfs</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/SMFS.html">SMFS</a>"</th></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $smfs_smmd_available != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>smmd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Sun/Moon Measurement Data
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_smmd</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/SMMD.html">SMMD</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $smfs_smmd_available != 0</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,2) == &quot;/*&quot; <b>and</b><br />
+<b>regex</b>(&quot;&nbsp;GDP&nbsp;Level&nbsp;0-to-1&nbsp;Extracting&quot;, <b>bytes</b>(/,1024))
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="GOME_L1_EXTRACTED_v1_pir_available">pir_available</td><td></td><td><i>$pir_available</i> = 1;<br /><i>$pir_available</i> = if(<b>bytes</b>(/pir,5) == &quot;E2GOM&quot;, 1, 0)</td></tr>
+<tr><td id="GOME_L1_EXTRACTED_v1_ersi_available">ersi_available</td><td></td><td><i>$ersi_available</i> = 1;<br /><i>$ersi_available</i> = if(<b>bytes</b>(/ersi,15) == &quot;ERS&nbsp;Information&quot;, 1, 0)</td></tr>
+<tr><td id="GOME_L1_EXTRACTED_v1_sfs_cdr_available">sfs_cdr_available</td><td></td><td><i>$sfs_cdr_available</i> = 1;<br /><i>$sfs_cdr_available</i> = if(<b>bytes</b>(/sfs,14) == &quot;Solar&nbsp;Spectrum&quot;, 1, 0)</td></tr>
+<tr><td id="GOME_L1_EXTRACTED_v1_efs_egp_available">efs_egp_available</td><td></td><td><i>$efs_egp_available</i> = 1;<br /><i>$efs_egp_available</i> = if(<b>bytes</b>(/efs,19) == &quot;Earthshine&nbsp;Spectrum&quot;, 1, 0)</td></tr>
+<tr><td id="GOME_L1_EXTRACTED_v1_smfs_smmd_available">smfs_smmd_available</td><td></td><td><i>$smfs_smmd_available</i> = 1;<br /><i>$smfs_smmd_available</i> = if(<b>bytes</b>(/efs,17) == &quot;Sunshine&nbsp;Spectrum&quot; <b>or</b> <b>bytes</b>(/efs,18) == &quot;Moonshine&nbsp;Spectrum&quot;, 1, 0)</td></tr>
+<tr><td id="GOME_L1_EXTRACTED_v1_num_egp">num_egp</td><td></td><td><i>$num_egp</i> = <b>int</b>(/efs/num_ground)</td></tr>
+<tr><td id="GOME_L1_EXTRACTED_v1_num_smmd">num_smmd</td><td></td><td><i>$num_smmd</i> = <b>int</b>(/smfs/num_measurements)</td></tr>
+<tr><td id="GOME_L1_EXTRACTED_v1_egp_pdr_available">egp_pdr_available</td><td></td><td><i>$egp_pdr_available</i> = 1;<br /><i>$egp_pdr_available</i> = if(<b>bytes</b>(/egp[0]/pdr,3) == &quot;PMD&quot;, 1, 0)</td></tr>
+</table>
+</body>
+
+</html>

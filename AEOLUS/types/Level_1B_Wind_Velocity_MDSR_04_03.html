@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_1B_Wind_Velocity_MDSR_04_03</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_1B_Wind_Velocity_MDSR_04_03</h1>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Wind_Velocity_MDSR_04_03.html">Level_1B_Wind_Velocity_MDSR_04_03</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>start_of_observation_time</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Satellite time at start of BRC
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>line_of_sight_wind_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flag indicating whether horizontal or line-of-sight wind is used. This flag can be set to either "true" or "false". A "true" value indicates that the line of sight wind velocity is computed, and a "false" value indicates that horizontal wind velocity is computed
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>observation_wind_profile</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;482</td></tr>
+<tr valign="top">
+<td colspan="2">
+Observation Wind Profile
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mie_reference_pulse_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Mie internal reference quality flag. This field is a 8-bit long, bit-packed field, of reference pulse validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: For Mie, peak not found 1, otherwise 0. For Rayleigh, this is always 0; Bit 3: All reference pulses corresponding to the current measurement eliminated (source packet invalid, data corruption, or laser frequency unlocked) 1, otherwise 0; Bit 4: Default 0; Bit 5: Default 0; Bit 6: Default 0; Bit 7: Default 0; Bit 8: Default 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>rayleigh_reference_pulse_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh internal reference quality flag. This field is a 8-bit long, bit-packed field, of reference pulse validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: For Rayleigh, Rayleigh response not found 1, otherwise 0; Bit 3: All reference pulses corresponding to the current measurement eliminated (source packet invalid, data corruption, or laser frequency unlocked) 1, otherwise 0; Bit 4: Default 0; Bit 5: Default 0; Bit 6: Default 0; Bit 7: Default 0; Bit 8: Default 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>mie_altitude_bin_wind_info</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>24</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;240</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+Mie altitude bin wind velocity information for each altitude
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>bin_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+This field is a 2 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, the next 4 bits are measurement-level validity information, and bits 9 to 16 provide bin signal processing validity flags. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Set to 1 if signal-to-noise below SNR_Threshold, default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Reference pulse invalid 1, otherwise 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0; Bit 9: For Mie, peak not found 1, otherwise 0. For Rayleigh, rayleigh response not found 1, otherwise 0; Bit 10: Set to 1 if the absolute wind velocity above Wind_Velocity_Threshold, default 0; Bit 11: Spare, set to 0; Bit 12: Bin was detected as ground bin, otherwise 0; Bit 13 to Bit 16: Spare, set to 0.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>wind_velocity</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Wind velocity at the altitude bin. If the Bin_Quality_Flag is non-zero (invalid), this value will be set to 0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>rayleigh_altitude_bin_wind_info</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>24</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;240</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh altitude bin wind velocity information for each altitude
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>bin_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+This field is a 2 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, the next 4 bits are measurement-level validity information, and bits 9 to 16 provide bin signal processing validity flags. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Set to 1 if signal-to-noise below SNR_Threshold, default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Reference pulse invalid 1, otherwise 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0; Bit 9: For Mie, peak not found 1, otherwise 0. For Rayleigh, rayleigh response not found 1, otherwise 0; Bit 10: Set to 1 if the absolute wind velocity above Wind_Velocity_Threshold, default 0; Bit 11: Spare, set to 0; Bit 12: Bin was detected as ground bin, otherwise 0; Bit 13 to Bit 16: Spare, set to 0.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>wind_velocity</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Wind velocity at the altitude bin. If the Bin_Quality_Flag is non-zero (invalid), this value will be set to 0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>measurement_wind_profile</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/sph/n_max)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;502</td></tr>
+<tr valign="top">
+<td colspan="2">
+List of measurement wind profiles
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mie_reference_pulse_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Mie internal reference quality flag. This field is a 8-bit long, bit-packed field, of reference pulse validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: For Mie, peak not found 1, otherwise 0. For Rayleigh, this is always 0; Bit 3: All reference pulses corresponding to the current measurement eliminated (source packet invalid, data corruption, or laser frequency unlocked) 1, otherwise 0; Bit 4: Default 0; Bit 5: Default 0; Bit 6: Default 0; Bit 7: Default 0; Bit 8: Default 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>rayleigh_reference_pulse_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh internal reference quality flag. This field is a 8-bit long, bit-packed field, of reference pulse validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: For Rayleigh, Rayleigh response not found 1, otherwise 0; Bit 3: All reference pulses corresponding to the current measurement eliminated (source packet invalid, data corruption, or laser frequency unlocked) 1, otherwise 0; Bit 4: Default 0; Bit 5: Default 0; Bit 6: Default 0; Bit 7: Default 0; Bit 8: Default 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>mie_altitude_bin_wind_info</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>24</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;240</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+Mie altitude bin wind velocity information for each altitude
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>bin_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+This field is a 2 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, the next 4 bits are measurement-level validity information, and bits 9 to 16 provide bin signal processing validity flags. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Set to 1 if signal-to-noise below SNR_Threshold, default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Reference pulse invalid 1, otherwise 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0; Bit 9: For Mie, peak not found 1, otherwise 0. For Rayleigh, rayleigh response not found 1, otherwise 0; Bit 10: Set to 1 if the absolute wind velocity above Wind_Velocity_Threshold, default 0; Bit 11: Spare, set to 0; Bit 12: Bin was detected as ground bin, otherwise 0; Bit 13 to Bit 16: Spare, set to 0.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>wind_velocity</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Wind velocity at the altitude bin. If the Bin_Quality_Flag is non-zero (invalid), this value will be set to 0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>mie_ground_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+This field is a 2 byte, bit-packed field, where the first 4 bits contain bin-level validity information, and the next 4 bits measurement-level validity information, where bits 1 to 4 and 6 to 8 are a logical OR of copies of the useful signal Data_Quality_Flag of all ground bins. Bit 9 to 12 provide bin signal processing validity flags. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Set to 1 if signal-to-noise below SNR_Threshold, default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Reference pulse invalid 1, otherwise 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0; Bit 9: For Mie, peak not found 1, otherwise 0. For Rayleigh, rayleigh response not found 1, otherwise 0; Bit 10: Set to 1 if the absolute wind velocity above Wind_Velocity_Threshold, default 0; Bit 11: For Rayleigh set to 1 if polynomial fit of errors responses was used but no valid root of the polynomial was found, otherwise 0. For Mie: spare, set to 0; Bit 12: No ground bin was detected in measurement , otherwise 0; Bit 13 to Bit 16: spare, set to 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>mie_ground_wind_velocity</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+LOS wind velocity for the accumulated signal of all ground bins. LOS value will be positive for a wind direction away from the spacecraft and negative for a wind toward the spacecraft.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>rayleigh_altitude_bin_wind_info</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>24</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;240</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh altitude bin wind velocity information for each altitude
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>bin_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+This field is a 2 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, the next 4 bits are measurement-level validity information, and bits 9 to 16 provide bin signal processing validity flags. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Set to 1 if signal-to-noise below SNR_Threshold, default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Reference pulse invalid 1, otherwise 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0; Bit 9: For Mie, peak not found 1, otherwise 0. For Rayleigh, rayleigh response not found 1, otherwise 0; Bit 10: Set to 1 if the absolute wind velocity above Wind_Velocity_Threshold, default 0; Bit 11: Spare, set to 0; Bit 12: Bin was detected as ground bin, otherwise 0; Bit 13 to Bit 16: Spare, set to 0.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>wind_velocity</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Wind velocity at the altitude bin. If the Bin_Quality_Flag is non-zero (invalid), this value will be set to 0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>rayleigh_ground_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+This field is a 2 byte, bit-packed field, where the first 4 bits contain bin-level validity information, and the next 4 bits measurement-level validity information, where bits 1 to 4 and 6 to 8 are a logical OR of copies of the useful signal Data_Quality_Flag of all ground bins. Bit 9 to 12 provide bin signal processing validity flags. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Set to 1 if signal-to-noise below SNR_Threshold, default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Reference pulse invalid 1, otherwise 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0; Bit 9: For Mie, peak not found 1, otherwise 0. For Rayleigh, rayleigh response not found 1, otherwise 0; Bit 10: Set to 1 if the absolute wind velocity above Wind_Velocity_Threshold, default 0; Bit 11: For Rayleigh set to 1 if polynomial fit of errors responses was used but no valid root of the polynomial was found, otherwise 0. For Mie: spare, set to 0; Bit 12: No ground bin was detected in measurement , otherwise 0; Bit 13 to Bit 16: spare, set to 0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>rayleigh_ground_wind_velocity</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+LOS wind velocity for the accumulated signal of all ground bins. LOS value will be positive for a wind direction away from the spacecraft and negative for a wind toward the spacecraft.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

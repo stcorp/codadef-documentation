@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOM_CAL_AX_GADS_non_uniformity_maps_v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOM_CAL_AX_GADS_non_uniformity_maps_v1</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GOM_CAL_AX_GADS_non_uniformity_maps_v1.html">GOM_CAL_AX_GADS_non_uniformity_maps_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;68037</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>first_ccd_line</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>4</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Index of the first CCD line for the spectrometer non-uniformity maps
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>spec_non_uni_width</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spectrometers non-uniformity maps width (in number of lines)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>spa1_non_uni</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>3</b>, <b>1353</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16236</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spectrometer SPA1 non-uniformity (band-level). 1353 PRNU values are provided for each band of each CCD (order upper, central, and lower bands).
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>spa2_non_uni</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>3</b>, <b>1353</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16236</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spectrometer SPA2 non-uniformity (band-level). 1353 PRNU values are provided for each band of each CCD (order upper, central, and lower bands).
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>spb1_non_uni</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>3</b>, <b>1353</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16236</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spectrometer SPB1 non-uniformity (band-level). 1353 PRNU values are provided for each band of each CCD (order upper, central, and lower bands).
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>spb2_non_uni</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>3</b>, <b>1353</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16236</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spectrometer SPB2 non-uniformity (band-level). 1353 PRNU values are provided for each band of each CCD (order upper, central, and lower bands).
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>slit_width_var</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>4</b>, <b>143</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2288</td></tr>
+<tr valign="top">
+<td colspan="2">
+Slit width variation
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>fp1_non_uni</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>14</b>, <b>14</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;392</td></tr>
+<tr valign="top">
+<td colspan="2">
+FP1 relative pixel response non-uniformity.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-4"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "" (multiply by 1/10000)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>fp2_non_uni</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>14</b>, <b>14</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;392</td></tr>
+<tr valign="top">
+<td colspan="2">
+FP2 relative pixel response non-uniformity.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-4"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "" (multiply by 1/10000)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

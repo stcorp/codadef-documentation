@@ -1,0 +1,1572 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOM_NL__2P_SPH</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOM_NL__2P_SPH</h1>
+<table class="top">
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/GOM_NL__2P_SPH.html">GOM_NL__2P_SPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;876</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td>sph_descriptor_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;15</td></tr>
+<tr valign="top">
+<td colspan="2">
+SPH_DESCRIPTOR=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "SPH_DESCRIPTOR="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td>quote_1</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>sph_descriptor</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+SPH descriptor is an ascii description of the product
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td>quote_2</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td>newline_char_1</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td>start_time_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+START_TIME=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "START_TIME="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td>quote_3</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>start_time</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+Start time of the occultation
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: if(<b>str</b>(., 27) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;, nan, <b>time</b>(<b>str</b>(.), &quot;dd-MMM-yyyy&nbsp;HH:mm:ss.SSSSSS&quot;))</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT ASCII datetime "DD-MMM-YYYY hh:mm:ss.uuuuuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td>quote_4</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td>newline_char_2</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td>stop_time_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+STOP_TIME=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "STOP_TIME="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td>quote_5</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>stop_time</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+Time of the end of the occultation
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: if(<b>str</b>(., 27) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;, nan, <b>time</b>(<b>str</b>(.), &quot;dd-MMM-yyyy&nbsp;HH:mm:ss.SSSSSS&quot;))</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT ASCII datetime "DD-MMM-YYYY hh:mm:ss.uuuuuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td>quote_6</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+quotation mark
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\""</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td>newline_char_3</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td>start_lat_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;18</td></tr>
+<tr valign="top">
+<td colspan="2">
+START_TANGENT_LAT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "START_TANGENT_LAT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>start_tangent_lat</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Latitude of the tangent point at the START_TIME. WGS84 latitude, positive = North
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_north"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_north" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td>start_lat_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6degN&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td>newline_char_4</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td>start_long_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;19</td></tr>
+<tr valign="top">
+<td colspan="2">
+START_TANGENT_LONG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "START_TANGENT_LONG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>start_tangent_long</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Longitude of the tangent point at the START_TIME. WGS84 longitude, positive = East, 0 = Greenwich
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_east"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_east" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td>start_long_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6degE&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td>newline_char_5</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td>stop_lat_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;17</td></tr>
+<tr valign="top">
+<td colspan="2">
+STOP_TANGENT_LAT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "STOP_TANGENT_LAT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td><b>stop_tangent_lat</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Latitude of the tangent point at the STOP_TIME. WGS84 latitude, positive = North
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_north"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_north" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>25</td><td>stop_lat_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6degN&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>26</td><td>newline_char_6</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>27</td><td>stop_long_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;18</td></tr>
+<tr valign="top">
+<td colspan="2">
+STOP_TANGENT_LONG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "STOP_TANGENT_LONG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>28</td><td><b>stop_tangent_long</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Longitude of the tangent point at the STOP_TIME. WGS84 longitude, positive = East, 0 = Greenwich
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 degrees_east"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "degrees_east" (multiply by 1/1000000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>29</td><td>stop_long_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-6degE&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>30</td><td>newline_char_7</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>31</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;50</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>32</td><td>newline_char_8</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>33</td><td>occ_duration_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;13</td></tr>
+<tr valign="top">
+<td colspan="2">
+OCC_DURATION=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "OCC_DURATION="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>34</td><td><b>occ_duration</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Occultation duration. Its value is the product of the values in 2 below fields SAMP_DURATION and NUM_MEASURE
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-2 s"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "s" (multiply by 1/100)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>35</td><td>occ_duration_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-2s&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>36</td><td>newline_char_9</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>37</td><td>samp_duration_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;14</td></tr>
+<tr valign="top">
+<td colspan="2">
+SAMP_DURATION=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "SAMP_DURATION="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>38</td><td><b>samp_duration</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Sampling duration
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-3 s"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "s" (multiply by 1/1000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>39</td><td>samp_duration_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-3s&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>40</td><td>newline_char_10</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>41</td><td>num_measure_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+NUM_MEASURE=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "NUM_MEASURE="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>42</td><td><b>num_measure</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of measurements
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>43</td><td>newline_char_11</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>44</td><td>ins_status_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+INS_STATUS=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "INS_STATUS="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>45</td><td><b>ins_status</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Status of the instrument redundancy definition vector + instrument configuration
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>46</td><td>newline_char_12</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>47</td><td>occ_num_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+OCC_NUM=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "OCC_NUM="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>48</td><td><b>occ_num</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Occultation number in the orbit. The counting of occultations starts from 1.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>49</td><td>newline_char_13</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>50</td><td>star_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;5</td></tr>
+<tr valign="top">
+<td colspan="2">
+STAR=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "STAR="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>51</td><td><b>star</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;13</td></tr>
+<tr valign="top">
+<td colspan="2">
+Star name
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>52</td><td>newline_char_14</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>53</td><td>star_id_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+STAR_ID=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "STAR_ID="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>54</td><td><b>star_id</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Star identifier in the star catalogue
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>55</td><td>newline_char_15</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>56</td><td>star_mag_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;9</td></tr>
+<tr valign="top">
+<td colspan="2">
+STAR_MAG=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "STAR_MAG="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>57</td><td><b>star_mag</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Star apparent magnitude
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-3"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "" (multiply by 1/1000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>58</td><td>star_mag_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-3&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>59</td><td>newline_char_16</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>60</td><td>star_temp_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+STAR_TEMP=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "STAR_TEMP="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>61</td><td><b>star_temp</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Star temperature
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-1 K"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "K" (multiply by 1/10)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>62</td><td>star_temp_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-1K&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>63</td><td>newline_char_17</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>64</td><td>star_direct_1_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;13</td></tr>
+<tr valign="top">
+<td colspan="2">
+STAR_DIRECT1=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "STAR_DIRECT1="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>65</td><td><b>star_direct_1</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;array[<b>2</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr valign="top">
+<td colspan="2">
+Star direction in the heliocentric JD2000 frame. Two float values, the right ascension of the occulted star, and the declination of the occultated star.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;15</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "degrees"</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>66</td><td>star_direct_1_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;5</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;deg&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>67</td><td>newline_char_18</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>68</td><td>star_direct_2_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;13</td></tr>
+<tr valign="top">
+<td colspan="2">
+STAR_DIRECT2=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "STAR_DIRECT2="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>69</td><td><b>star_direct_2</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;array[<b>3</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;45</td></tr>
+<tr valign="top">
+<td colspan="2">
+Star direction in the quasi-true of date frame (Cartesian).
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;15</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>70</td><td>newline_char_19</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>71</td><td>bright_limb_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+BRIGHT_LIMB=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "BRIGHT_LIMB="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>72</td><td><b>bright_limb</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Dark/bright limb flag. Set to 1 for bright limb, 0 for dark limb.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>73</td><td>newline_char_20</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>74</td><td>num_lv2proc_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+NUM_LV2PROC=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "NUM_LV2PROC="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>75</td><td><b>num_lv2proc</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of acquisitions processed by the level 2 processor
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>76</td><td>newline_char_21</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>77</td><td>spare_2</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;31</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>78</td><td>newline_char_22</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>79</td><td>ref_wave_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;15</td></tr>
+<tr valign="top">
+<td colspan="2">
+REF_WAVELENGTH=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "REF_WAVELENGTH="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>80</td><td><b>ref_wavelength</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int32 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference wavelength used for the ray tracing
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-3 nm"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "nm" (multiply by 1/1000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>81</td><td>ref_wave_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-3nm&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>82</td><td>newline_char_23</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>83</td><td>time_shift_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+TIME_SHIFT=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "TIME_SHIFT="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>84</td><td><b>time_shift</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Time shift for the ray tracing/geolocation
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-3 s"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "s" (multiply by 1/1000)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>85</td><td>time_shift_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;10-3s&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>86</td><td>newline_char_24</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>87</td><td>turb_start_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
+<tr valign="top">
+<td colspan="2">
+TURB_START=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "TURB_START="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>88</td><td><b>turb_start</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Start of the Turbulence fluctuations processing (measurement index). A value 1 indicates 'no turbulence computation was performed'
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>89</td><td>newline_char_25</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>90</td><td>turb_size_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+TURB_SIZE=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "TURB_SIZE="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>91</td><td><b>turb_size</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Size of the Turbulence fluctuations processing (number of measurements). A value 1 indicates 'no turbulence computation was performed'
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>92</td><td>newline_char_26</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>93</td><td>cc_wind_len_title</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;15</td></tr>
+<tr valign="top">
+<td colspan="2">
+CC_WIND_LENGTH=
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "CC_WIND_LENGTH="</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>94</td><td><b>cc_wind_length</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;15</td></tr>
+<tr valign="top">
+<td colspan="2">
+Length of the cross-correlation window. A value 1 indicates 'no turbulence computation was performed'
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>95</td><td>cc_wind_len_units</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "&lt;m&gt;"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>96</td><td>newline_char_27</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>97</td><td>spare_3</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;50</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>98</td><td>newline_char_28</td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;char</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+newline
+<br /><br />
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "\n"</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

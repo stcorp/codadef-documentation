@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>MIP_NL__2P v3</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>MIP_NL__2P version 3</h1>
+<h2>MIP_NL__2P_v3</h2>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH.html">MPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_SPH_v1.html">MIP_NL__2P_SPH_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;740</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsd</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;280</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>summary_quality_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Summary Quality ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[0]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_ADSR_summary_quality.html">MIP_NL__2P_ADSR_summary_quality</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[0] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[0]</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>scan_geolocation_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Scan Geolocation ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[1]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_ADSR_geolocation_v1.html">MIP_NL__2P_ADSR_geolocation_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;100</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[1] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[1]</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>dataset_structure_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Structure ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[2]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_ADSR_structure_v2.html">MIP_NL__2P_ADSR_structure_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;420</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[2] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[2]</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>scan_information_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Scan Information MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[3]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_info_v2.html">MIP_NL__2P_MDSR_info_v2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[3] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[3]</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>pt_retrieval_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+p,T and Height Correction Profiles MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[4]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_corr_v2.html">MIP_NL__2P_MDSR_corr_v2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[4] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[4]</span>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>h2o_retrieval_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[5]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_vmr1_v2.html">MIP_NL__2P_MDSR_vmr1_v2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[5] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[5]</span>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>o3_retrieval_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[6]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_vmr2_v2.html">MIP_NL__2P_MDSR_vmr2_v2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[6] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[6]</span>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>hno3_retrieval_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[7]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_vmr3_v2.html">MIP_NL__2P_MDSR_vmr3_v2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[7] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[7]</span>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>ch4_retrieval_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[8]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_vmr4_v2.html">MIP_NL__2P_MDSR_vmr4_v2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[8] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[8]</span>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>n2o_retrieval_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[9]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_vmr5_v2.html">MIP_NL__2P_MDSR_vmr5_v2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[9] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[9]</span>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>no2_retrieval_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[10]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_vmr6_v2.html">MIP_NL__2P_MDSR_vmr6_v2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[10] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[10]</span>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>f11_retrieval_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[11]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_vmr7_v2.html">MIP_NL__2P_MDSR_vmr7_v2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[11] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[11]</span>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>clno_retrieval_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[12]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_vmr8_v2.html">MIP_NL__2P_MDSR_vmr8_v2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[12] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[12]</span>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>n2o5_retrieval_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[13]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_vmr9_v2.html">MIP_NL__2P_MDSR_vmr9_v2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[13] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[13]</span>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>f12_retrieval_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[14]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_vmr10_v2.html">MIP_NL__2P_MDSR_vmr10_v2</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[14] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[14]</span>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>continuum_and_offset_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Continuum Contribution and Radiance Offset MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[15]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_MDSR_cont.html">MIP_NL__2P_MDSR_cont</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[15] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[15]</span>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>pcd_information_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+PCD Information of Individual Scans ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[16]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_ADSR_pcd.html">MIP_NL__2P_ADSR_pcd</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[16] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[16]</span>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>microwindow_occupation_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Microwindows Occupation Matrices ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[17]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_ADSR_mw_v1.html">MIP_NL__2P_ADSR_mw_v1</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[17] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[17]</span>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>residual_spectra_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Residual Spectra (mean values and standard deviation data) ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[18]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_ADSR_res.html">MIP_NL__2P_ADSR_res</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[18] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[18]</span>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td><b>processing_parameters_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Instrument and Processing Parameters ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[19]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_NL__2P_ADSR_params.html">MIP_NL__2P_ADSR_params</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[19] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[19]</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_NL__2P&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-ESA-GS-0177_6&nbsp;&nbsp;&nbsp;&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_NL__2P&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-MDA-GS-2009_5/A&nbsp;&nbsp;&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="MIP_NL__2P_v3_num_dsd">num_dsd</td><td></td><td><i>$num_dsd</i> = <b>int</b>(/mph/num_dsd)</td></tr>
+<tr><td id="MIP_NL__2P_v3_num_ds">num_ds</td><td></td><td><i>$num_ds</i> = 20</td></tr>
+<tr><td id="MIP_NL__2P_v3_ds_to_dsd_index">ds_to_dsd_index</td><td>[$num_ds]</td><td><i>$ds_to_dsd_index</i>[0] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;SUMMARY&nbsp;QUALITY&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[1] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;SCAN&nbsp;GEOLOCATION&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[2] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;DATASET&nbsp;STRUCTURE&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[3] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;SCAN&nbsp;INFORMATION&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[4] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;PT&nbsp;RETRIEVAL&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[5] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;H2O&nbsp;RETRIEVAL&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[6] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;O3&nbsp;RETRIEVAL&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[7] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;HNO3&nbsp;RETRIEVAL&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[8] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CH4&nbsp;RETRIEVAL&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[9] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;N2O&nbsp;RETRIEVAL&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[10] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;NO2&nbsp;RETRIEVAL&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[11] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F11&nbsp;RETRIEVAL&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[12] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CLNO&nbsp;RETRIEVAL&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[13] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;N2O5&nbsp;RETRIEVAL&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[14] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F12&nbsp;RETRIEVAL&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[15] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CONTINUUM&nbsp;AND&nbsp;OFFSET&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[16] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;PCD&nbsp;INFORMATION&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[17] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;MICROWINDOW&nbsp;OCCUPATION&nbsp;ADS&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[18] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;RESIDUAL&nbsp;SPECTRA&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[19] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;PROCESSING&nbsp;PARAMETERS&nbsp;ADS&nbsp;&nbsp;&nbsp;&quot;)</td></tr>
+<tr><td id="MIP_NL__2P_v3_ds_available">ds_available</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_available</i>[<i>i</i>] = if($ds_to_dsd_index[<i>i</i>] != -1 <b>and</b> !(<b>bytes</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/filename,8) == &quot;NOT&nbsp;USED&quot;), 1, 0)</td></tr>
+<tr><td id="MIP_NL__2P_v3_ds_offset">ds_offset</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_offset</i>[<i>i</i>] = 8 * <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/ds_offset)</td></tr>
+<tr><td id="MIP_NL__2P_v3_num_dsr">num_dsr</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$num_dsr</i>[<i>i</i>] = <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/num_dsr)</td></tr>
+<tr><td id="MIP_NL__2P_v3_species_count">species_count</td><td></td><td><i>$species_count</i> = 10</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_info_next_index">structure_info_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_info_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_info_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[0]/dsr_offset) != -1, <i>i</i> + 1, $structure_info_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_info_cum_num_dsr">structure_info_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_info_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[0]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_info_cum_num_dsr[<i>i</i> - 1], 0), if($structure_info_next_index[<i>i</i>] == -1, $num_dsr[3], if(<i>i</i> &gt; 0, $structure_info_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_info_next_index[<i>i</i>]]/ds_pointer[0]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[0]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[0]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_info_structure_index">info_structure_index</td><td>[$num_dsr[3]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[3] - 1 <b>do</b><br /><i>$info_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_info_cum_num_dsr</i>, $structure_info_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_pt_next_index">structure_pt_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_pt_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_pt_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[1]/dsr_offset) != -1, <i>i</i> + 1, $structure_pt_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_pt_cum_num_dsr">structure_pt_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_pt_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[1]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_pt_cum_num_dsr[<i>i</i> - 1], 0), if($structure_pt_next_index[<i>i</i>] == -1, $num_dsr[4], if(<i>i</i> &gt; 0, $structure_pt_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_pt_next_index[<i>i</i>]]/ds_pointer[1]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[1]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[1]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_pt_structure_index">pt_structure_index</td><td>[$num_dsr[4]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[4] - 1 <b>do</b><br /><i>$pt_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_pt_cum_num_dsr</i>, $structure_pt_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr1_next_index">structure_vmr1_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_vmr1_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_vmr1_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[2]/dsr_offset) != -1, <i>i</i> + 1, $structure_vmr1_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr1_cum_num_dsr">structure_vmr1_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_vmr1_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[2]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_vmr1_cum_num_dsr[<i>i</i> - 1], 0), if($structure_vmr1_next_index[<i>i</i>] == -1, $num_dsr[5], if(<i>i</i> &gt; 0, $structure_vmr1_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_vmr1_next_index[<i>i</i>]]/ds_pointer[2]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[2]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[2]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_vmr1_structure_index">vmr1_structure_index</td><td>[$num_dsr[5]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[5] - 1 <b>do</b><br /><i>$vmr1_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_vmr1_cum_num_dsr</i>, $structure_vmr1_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr2_next_index">structure_vmr2_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_vmr2_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_vmr2_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[3]/dsr_offset) != -1, <i>i</i> + 1, $structure_vmr2_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr2_cum_num_dsr">structure_vmr2_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_vmr2_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[3]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_vmr2_cum_num_dsr[<i>i</i> - 1], 0), if($structure_vmr2_next_index[<i>i</i>] == -1, $num_dsr[6], if(<i>i</i> &gt; 0, $structure_vmr2_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_vmr2_next_index[<i>i</i>]]/ds_pointer[3]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[3]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[3]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_vmr2_structure_index">vmr2_structure_index</td><td>[$num_dsr[6]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[6] - 1 <b>do</b><br /><i>$vmr2_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_vmr2_cum_num_dsr</i>, $structure_vmr2_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr3_next_index">structure_vmr3_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_vmr3_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_vmr3_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[4]/dsr_offset) != -1, <i>i</i> + 1, $structure_vmr3_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr3_cum_num_dsr">structure_vmr3_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_vmr3_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[4]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_vmr3_cum_num_dsr[<i>i</i> - 1], 0), if($structure_vmr3_next_index[<i>i</i>] == -1, $num_dsr[7], if(<i>i</i> &gt; 0, $structure_vmr3_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_vmr3_next_index[<i>i</i>]]/ds_pointer[4]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[4]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[4]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_vmr3_structure_index">vmr3_structure_index</td><td>[$num_dsr[7]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[7] - 1 <b>do</b><br /><i>$vmr3_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_vmr3_cum_num_dsr</i>, $structure_vmr3_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr4_next_index">structure_vmr4_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_vmr4_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_vmr4_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[5]/dsr_offset) != -1, <i>i</i> + 1, $structure_vmr4_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr4_cum_num_dsr">structure_vmr4_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_vmr4_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[5]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_vmr4_cum_num_dsr[<i>i</i> - 1], 0), if($structure_vmr4_next_index[<i>i</i>] == -1, $num_dsr[8], if(<i>i</i> &gt; 0, $structure_vmr4_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_vmr4_next_index[<i>i</i>]]/ds_pointer[5]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[5]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[5]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_vmr4_structure_index">vmr4_structure_index</td><td>[$num_dsr[8]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[8] - 1 <b>do</b><br /><i>$vmr4_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_vmr4_cum_num_dsr</i>, $structure_vmr4_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr5_next_index">structure_vmr5_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_vmr5_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_vmr5_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[6]/dsr_offset) != -1, <i>i</i> + 1, $structure_vmr5_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr5_cum_num_dsr">structure_vmr5_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_vmr5_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[6]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_vmr5_cum_num_dsr[<i>i</i> - 1], 0), if($structure_vmr5_next_index[<i>i</i>] == -1, $num_dsr[9], if(<i>i</i> &gt; 0, $structure_vmr5_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_vmr5_next_index[<i>i</i>]]/ds_pointer[6]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[6]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[6]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_vmr5_structure_index">vmr5_structure_index</td><td>[$num_dsr[9]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[9] - 1 <b>do</b><br /><i>$vmr5_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_vmr5_cum_num_dsr</i>, $structure_vmr5_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr6_next_index">structure_vmr6_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_vmr6_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_vmr6_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[7]/dsr_offset) != -1, <i>i</i> + 1, $structure_vmr6_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr6_cum_num_dsr">structure_vmr6_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_vmr6_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[7]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_vmr6_cum_num_dsr[<i>i</i> - 1], 0), if($structure_vmr6_next_index[<i>i</i>] == -1, $num_dsr[10], if(<i>i</i> &gt; 0, $structure_vmr6_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_vmr6_next_index[<i>i</i>]]/ds_pointer[7]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[7]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[7]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_vmr6_structure_index">vmr6_structure_index</td><td>[$num_dsr[10]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[10] - 1 <b>do</b><br /><i>$vmr6_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_vmr6_cum_num_dsr</i>, $structure_vmr6_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr7_next_index">structure_vmr7_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_vmr7_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_vmr7_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[8]/dsr_offset) != -1, <i>i</i> + 1, $structure_vmr7_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr7_cum_num_dsr">structure_vmr7_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_vmr7_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[8]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_vmr7_cum_num_dsr[<i>i</i> - 1], 0), if($structure_vmr7_next_index[<i>i</i>] == -1, $num_dsr[11], if(<i>i</i> &gt; 0, $structure_vmr7_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_vmr7_next_index[<i>i</i>]]/ds_pointer[8]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[8]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[8]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_vmr7_structure_index">vmr7_structure_index</td><td>[$num_dsr[11]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[11] - 1 <b>do</b><br /><i>$vmr7_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_vmr7_cum_num_dsr</i>, $structure_vmr7_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr8_next_index">structure_vmr8_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_vmr8_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_vmr8_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[9]/dsr_offset) != -1, <i>i</i> + 1, $structure_vmr8_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr8_cum_num_dsr">structure_vmr8_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_vmr8_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[9]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_vmr8_cum_num_dsr[<i>i</i> - 1], 0), if($structure_vmr8_next_index[<i>i</i>] == -1, $num_dsr[12], if(<i>i</i> &gt; 0, $structure_vmr8_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_vmr8_next_index[<i>i</i>]]/ds_pointer[9]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[9]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[9]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_vmr8_structure_index">vmr8_structure_index</td><td>[$num_dsr[12]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[12] - 1 <b>do</b><br /><i>$vmr8_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_vmr8_cum_num_dsr</i>, $structure_vmr8_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr9_next_index">structure_vmr9_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_vmr9_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_vmr9_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[10]/dsr_offset) != -1, <i>i</i> + 1, $structure_vmr9_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr9_cum_num_dsr">structure_vmr9_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_vmr9_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[10]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_vmr9_cum_num_dsr[<i>i</i> - 1], 0), if($structure_vmr9_next_index[<i>i</i>] == -1, $num_dsr[13], if(<i>i</i> &gt; 0, $structure_vmr9_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_vmr9_next_index[<i>i</i>]]/ds_pointer[10]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[10]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[10]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_vmr9_structure_index">vmr9_structure_index</td><td>[$num_dsr[13]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[13] - 1 <b>do</b><br /><i>$vmr9_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_vmr9_cum_num_dsr</i>, $structure_vmr9_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr10_next_index">structure_vmr10_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_vmr10_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_vmr10_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[11]/dsr_offset) != -1, <i>i</i> + 1, $structure_vmr10_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_vmr10_cum_num_dsr">structure_vmr10_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_vmr10_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[11]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_vmr10_cum_num_dsr[<i>i</i> - 1], 0), if($structure_vmr10_next_index[<i>i</i>] == -1, $num_dsr[14], if(<i>i</i> &gt; 0, $structure_vmr10_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_vmr10_next_index[<i>i</i>]]/ds_pointer[11]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[11]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[11]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_vmr10_structure_index">vmr10_structure_index</td><td>[$num_dsr[14]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[14] - 1 <b>do</b><br /><i>$vmr10_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_vmr10_cum_num_dsr</i>, $structure_vmr10_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_cont_next_index">structure_cont_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_cont_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_cont_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[12]/dsr_offset) != -1, <i>i</i> + 1, $structure_cont_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_cont_cum_num_dsr">structure_cont_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_cont_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[12]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_cont_cum_num_dsr[<i>i</i> - 1], 0), if($structure_cont_next_index[<i>i</i>] == -1, $num_dsr[11], if(<i>i</i> &gt; 0, $structure_cont_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_cont_next_index[<i>i</i>]]/ds_pointer[12]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[12]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[12]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_cont_structure_index">cont_structure_index</td><td>[$num_dsr[15]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[15] - 1 <b>do</b><br /><i>$cont_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_cont_cum_num_dsr</i>, $structure_cont_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_pcd_next_index">structure_pcd_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_pcd_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_pcd_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[13]/dsr_offset) != -1, <i>i</i> + 1, $structure_pcd_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_pcd_cum_num_dsr">structure_pcd_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_pcd_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[13]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_pcd_cum_num_dsr[<i>i</i> - 1], 0), if($structure_pcd_next_index[<i>i</i>] == -1, $num_dsr[16], if(<i>i</i> &gt; 0, $structure_pcd_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_pcd_next_index[<i>i</i>]]/ds_pointer[13]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[13]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[13]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_pcd_structure_index">pcd_structure_index</td><td>[$num_dsr[16]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[16] - 1 <b>do</b><br /><i>$pcd_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_pcd_cum_num_dsr</i>, $structure_pcd_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_mw_next_index">structure_mw_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_mw_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_mw_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[14]/dsr_offset) != -1, <i>i</i> + 1, $structure_mw_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_mw_cum_num_dsr">structure_mw_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_mw_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[14]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_mw_cum_num_dsr[<i>i</i> - 1], 0), if($structure_mw_next_index[<i>i</i>] == -1, $num_dsr[17], if(<i>i</i> &gt; 0, $structure_mw_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_mw_next_index[<i>i</i>]]/ds_pointer[14]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[14]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[14]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_mw_structure_index">mw_structure_index</td><td>[$num_dsr[17]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[17] - 1 <b>do</b><br /><i>$mw_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_mw_cum_num_dsr</i>, $structure_mw_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_res_next_index">structure_res_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_res_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_res_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[15]/dsr_offset) != -1, <i>i</i> + 1, $structure_res_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_res_cum_num_dsr">structure_res_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_res_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[15]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_res_cum_num_dsr[<i>i</i> - 1], 0), if($structure_res_next_index[<i>i</i>] == -1, $num_dsr[18], if(<i>i</i> &gt; 0, $structure_res_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_res_next_index[<i>i</i>]]/ds_pointer[15]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[15]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[15]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_res_structure_index">res_structure_index</td><td>[$num_dsr[18]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[18] - 1 <b>do</b><br /><i>$res_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_res_cum_num_dsr</i>, $structure_res_cum_num_dsr &gt; <i>i</i>)</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_param_next_index">structure_param_next_index</td><td>[$num_dsr[2]]</td><td><i>$structure_param_next_index</i>[$num_dsr[2] - 1] = -1;<br /><b>for</b> <i>i</i> = $num_dsr[2] - 2 <b>to</b> 0 <b>step</b> -1 <b>do</b><br /><i>$structure_param_next_index</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i> + 1]/ds_pointer[16]/dsr_offset) != -1, <i>i</i> + 1, $structure_param_next_index[<i>i</i> + 1])</td></tr>
+<tr><td id="MIP_NL__2P_v3_structure_param_cum_num_dsr">structure_param_cum_num_dsr</td><td>[$num_dsr[2]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[2] - 1 <b>do</b><br /><i>$structure_param_cum_num_dsr</i>[<i>i</i>] = if(<b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[16]/dsr_offset) == -1, if(<i>i</i> &gt; 0, $structure_param_cum_num_dsr[<i>i</i> - 1], 0), if($structure_param_next_index[<i>i</i>] == -1, $num_dsr[19], if(<i>i</i> &gt; 0, $structure_param_cum_num_dsr[<i>i</i> - 1], 0) + (<b>int</b>(/dataset_structure_ads[$structure_param_next_index[<i>i</i>]]/ds_pointer[16]/dsr_offset) - <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[16]/dsr_offset)) / <b>int</b>(/dataset_structure_ads[<i>i</i>]/ds_pointer[16]/dsr_length)))</td></tr>
+<tr><td id="MIP_NL__2P_v3_param_structure_index">param_structure_index</td><td>[$num_dsr[19]]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_dsr[19] - 1 <b>do</b><br /><i>$param_structure_index</i>[<i>i</i>] = <b>index</b>(<i>$structure_param_cum_num_dsr</i>, $structure_param_cum_num_dsr &gt; <i>i</i>)</td></tr>
+</table>
+</body>
+
+</html>

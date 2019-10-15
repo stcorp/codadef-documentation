@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>SAT_HKTM__ v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>SAT_HKTM__ version 0</h1>
+<h2>SAT_HKTM___v0</h2>
+<p>L0-PFS CS-ID-ACS-GS-0119 3.3</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Recorded House-Keeping Telemetry root type
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>filesize</b>() / 1131</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/AFTF.html">AFTF</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1131</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>substr</b>(0, 3, <b>filename</b>()) == &quot;CS_&quot; <b>and</b><br />
+<b>substr</b>(8, 10, <b>filename</b>()) == &quot;SAT_HKTM__&quot;
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>

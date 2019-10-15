@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GENERIC v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GENERIC version 0</h1>
+<h2>GENERIC</h2>
+<p>This definition is based on version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_records</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;union</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">field&nbsp;expr</span><span class="attr_value">: if(<b>int</b>(:/RECORD_HEADER/RECORD_CLASS) == 1, if(<b>int</b>(:/RECORD_HEADER/RECORD_SUBCLASS_VERSION) == 2, 1, 0), if(<b>int</b>(:/RECORD_HEADER/RECORD_CLASS) == 3, 2, 0))</span>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Generic</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GENERIC_RECORD.html">GENERIC_RECORD</a>"</th></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>MPHR2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MPHR_v2.html">MPHR_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3307</td></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>IPR</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/IPR.html">IPR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product has no detection rule and can not be automatically recognised.</p>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="GENERIC_num_records">num_records</td><td></td><td><i>$num_records</i> = <b>unboundindex</b>(/, <b>byteoffset</b>(.) &gt;= <b>filesize</b>())</td></tr>
+</table>
+</body>
+
+</html>

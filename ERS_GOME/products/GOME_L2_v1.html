@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOM.LVL21 v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOM.LVL21 version 1</h1>
+<h2>GOME_L2_v1</h2>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>pir</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/PIR.html">PIR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;38</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>fsr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/FSR2.html">FSR2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/SPH2.html">SPH2</a>"</th></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>ddr</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+DOAS Data Records
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/fsr/n_ddr)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/DDR_v1.html">DDR_v1</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,5) == &quot;E2GOM&quot; <b>and</b><br />
+<b>bytes</b>(/,16,5) == &quot;TCDO3&quot; <b>and</b><br />
+<b>bytes</b>(/,98,5) == &quot;01.10&quot;
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>

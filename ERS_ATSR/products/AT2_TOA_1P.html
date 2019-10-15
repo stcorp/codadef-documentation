@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>AT2_TOA_1P v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>AT2_TOA_1P version 0</h1>
+<h2>AT2_TOA_1P</h2>
+<p>This definition is based on version 3/K of the ENVISAT AATSR product specification PO-RS-MDA-GS-2009 Vol7</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH.html">MPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/AATSR_SPH_long.html">AATSR_SPH_long</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2190</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsd</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;280</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>summary_quality_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Summary Quality ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[0]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_ADSR_sq_aatsr_rec_data.html">ATS_TOA_1P_ADSR_sq_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;86</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[0] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>geolocation_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Grid pixel latitude and longtitude  topographic corrections ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[1]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_ADSR_loc_aatsr_rec_data.html">ATS_TOA_1P_ADSR_loc_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;626</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[1] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>scan_pixel_x_and_y_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Scan pixel x and y ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[2]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_ADSR_scan_aatsr_rec_data.html">ATS_TOA_1P_ADSR_scan_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;830</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[2] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>nadir_view_solar_angles_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Nadir view solar angles ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[3]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_ADSR_sa_aatsr_rec_data.html">ATS_TOA_1P_ADSR_sa_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;216</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[3] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>fward_view_solar_angles_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Forward view solar angles ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[4]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_ADSR_sa_aatsr_rec_data.html">ATS_TOA_1P_ADSR_sa_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;216</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[4] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>visible_calib_coefs_gads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Visible calibration coefficients GADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[5]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_VC1_AX_GADS_aatsr_rec_data.html">ATS_VC1_AX_GADS_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;154</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[5] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>nadir_view_scan_pix_num_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Scan and pixel number nadir view ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[6]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_ADSR_pix_aatsr_rec_data.html">ATS_TOA_1P_ADSR_pix_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2068</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[6] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>fward_view_scan_pix_num_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Scan and pixel number forward view ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[7]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_ADSR_pix_aatsr_rec_data.html">ATS_TOA_1P_ADSR_pix_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2068</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[7] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>nadir_toa_mds_11500_12500_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+12 micron nadir view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[8]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[8] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>nadir_toa_mds_10400_11300_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+11 micron nadir view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[9]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[9] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>nadir_toa_mds_03505_03895_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+3.7 micron nadir view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[10]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[10] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>nadir_toa_mds_01580_01640_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+1.6 micron nadir view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[11]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[11] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>nadir_toa_mds_00855_00875_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+0.87 micron nadir view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[12]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[12] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>nadir_toa_mds_00649_00669_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+0.67 micron nadir view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[13]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[13] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>nadir_toa_mds_00545_00565_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+0.55 micron nadir view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[14]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[14] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>fward_toa_mds_11500_12500_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+12 micron forward view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[15]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[15] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>fward_toa_mds_10400_11300_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+11 micron forward view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[16]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[16] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>fward_toa_mds_03505_03895_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+3.7 micron forward view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[17]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[17] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>fward_toa_mds_01580_01640_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+1.6 micron forward view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[18]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[18] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td><b>fward_toa_mds_00855_00875_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+0.87 micron forward view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[19]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[19] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td><b>fward_toa_mds_00649_00669_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+0.67 micron forward view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[20]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[20] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td><b>fward_toa_mds_00545_00565_nm</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+0.55 micron forward view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[21]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_brgt_aatsr_rec_data.html">ATS_TOA_1P_MDSR_brgt_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[21] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>25</td><td><b>nadir_view_confidence_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Confidence words nadir view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[22]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_conf_aatsr_rec_data.html">ATS_TOA_1P_MDSR_conf_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[22] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>26</td><td><b>fward_view_confidence_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Confidence words forward view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[23]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_conf_aatsr_rec_data.html">ATS_TOA_1P_MDSR_conf_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[23] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>27</td><td><b>nadir_view_cloud_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Cloud flag nadir view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[24]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_cl_aatsr_rec_data.html">ATS_TOA_1P_MDSR_cl_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[24] != 0</span>
+</td>
+</tr>
+<tr valign="top"><td>28</td><td><b>fward_view_cloud_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Cloud flag forward view MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[25]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ATS_TOA_1P_MDSR_cl_aatsr_rec_data.html">ATS_TOA_1P_MDSR_cl_aatsr_rec_data</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1044</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[25] != 0</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;AT2_TOA_1P&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="AT2_TOA_1P_num_dsd">num_dsd</td><td></td><td><i>$num_dsd</i> = <b>int</b>(/mph/num_dsd)</td></tr>
+<tr><td id="AT2_TOA_1P_num_ds">num_ds</td><td></td><td><i>$num_ds</i> = 26</td></tr>
+<tr><td id="AT2_TOA_1P_ds_to_dsd_index">ds_to_dsd_index</td><td>[$num_ds]</td><td><i>$ds_to_dsd_index</i>[0] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;SUMMARY_QUALITY_ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[1] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;GEOLOCATION_ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[2] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;SCAN_PIXEL_X_AND_Y_ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[3] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;NADIR_VIEW_SOLAR_ANGLES_ADS&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[4] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;FWARD_VIEW_SOLAR_ANGLES_ADS&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[5] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;VISIBLE_CALIB_COEFS_GADS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[6] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;NADIR_VIEW_SCAN_PIX_NUM_ADS&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[7] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;FWARD_VIEW_SCAN_PIX_NUM_ADS&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[8] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;11500_12500_NM_NADIR_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[9] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;10400_11300_NM_NADIR_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[10] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;03505_03895_NM_NADIR_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[11] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;01580_01640_NM_NADIR_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[12] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;00855_00875_NM_NADIR_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[13] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;00649_00669_NM_NADIR_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[14] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;00545_00565_NM_NADIR_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[15] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;11500_12500_NM_FWARD_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[16] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;10400_11300_NM_FWARD_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[17] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;03505_03895_NM_FWARD_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[18] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;01580_01640_NM_FWARD_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[19] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;00855_00875_NM_FWARD_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[20] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;00649_00669_NM_FWARD_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[21] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;00545_00565_NM_FWARD_TOA_MDS&quot;);<br /><i>$ds_to_dsd_index</i>[22] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;NADIR_VIEW_CONFIDENCE_MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[23] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;FWARD_VIEW_CONFIDENCE_MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[24] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;NADIR_VIEW_CLOUD_MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[25] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;FWARD_VIEW_CLOUD_MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;)</td></tr>
+<tr><td id="AT2_TOA_1P_ds_available">ds_available</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_available</i>[<i>i</i>] = if($ds_to_dsd_index[<i>i</i>] != -1 <b>and</b> !(<b>bytes</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/filename,8) == &quot;NOT&nbsp;USED&quot;) <b>and</b> !(<b>bytes</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/filename,7) == &quot;MISSING&quot;), 1, 0)</td></tr>
+<tr><td id="AT2_TOA_1P_ds_offset">ds_offset</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_offset</i>[<i>i</i>] = 8 * <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/ds_offset)</td></tr>
+<tr><td id="AT2_TOA_1P_num_dsr">num_dsr</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$num_dsr</i>[<i>i</i>] = <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/num_dsr)</td></tr>
+</table>
+</body>
+
+</html>

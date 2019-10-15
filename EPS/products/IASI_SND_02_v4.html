@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>IASI_SND_02 v4</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>IASI_SND_02 version 4</h1>
+<h2>IASI_SND_02_v4</h2>
+<p>This definition is based on version 9 of the IASI Level 2 Product Format Specification (PFS) document (EUM-MIS-SPE-980760) and version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>MPHR</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MPHR_v2.html">MPHR_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3307</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>IPR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_ipr</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/IPR.html">IPR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>GEADR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_geadr</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GEADR.html">GEADR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;120</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $num_geadr &gt; 0</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>GIADR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/IASI_GIADR_L2_v4.html">IASI_GIADR_L2_v4</a>"</th></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>VEADR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_veadr</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/VEADR.html">VEADR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;120</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $num_veadr &gt; 0</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>MDR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_mdr</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;union&nbsp;"<a class="header" href="../types/IASI_MDR_L2_Union_v4.html">IASI_MDR_L2_Union_v4</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;\001\000\000\002\000\000\f\353&quot; <b>and</b><br />
+<b>bytes</b>(/,20,32) == &quot;PRODUCT_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&quot; <b>and</b><br />
+<b>bytes</b>(/,552,4) == &quot;IASI&quot; <b>and</b><br />
+<b>bytes</b>(/,661,2) == &quot;02&quot; <b>and</b><br />
+<b>bytes</b>(/,1037,5) == &quot;&nbsp;&nbsp;&nbsp;11&quot; <b>and</b><br />
+<b>bytes</b>(/,1075,5) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;0&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="IASI_SND_02_v4_num_ipr">num_ipr</td><td></td><td><i>$num_ipr</i> = <b>int</b>(/MPHR/TOTAL_IPR)</td></tr>
+<tr><td id="IASI_SND_02_v4_num_geadr">num_geadr</td><td></td><td><i>$num_geadr</i> = <b>int</b>(/MPHR/TOTAL_GEADR)</td></tr>
+<tr><td id="IASI_SND_02_v4_num_veadr">num_veadr</td><td></td><td><i>$num_veadr</i> = <b>int</b>(/MPHR/TOTAL_VEADR)</td></tr>
+<tr><td id="IASI_SND_02_v4_num_mdr">num_mdr</td><td></td><td><i>$num_mdr</i> = <b>int</b>(/MPHR/TOTAL_MDR)</td></tr>
+<tr><td id="IASI_SND_02_v4_NLT">NLT</td><td></td><td><i>$NLT</i> = <b>int</b>(/GIADR/NUM_PRESSURE_LEVELS_TEMP)</td></tr>
+<tr><td id="IASI_SND_02_v4_NLQ">NLQ</td><td></td><td><i>$NLQ</i> = <b>int</b>(/GIADR/NUM_PRESSURE_LEVELS_HUMIDITY)</td></tr>
+<tr><td id="IASI_SND_02_v4_NLO">NLO</td><td></td><td><i>$NLO</i> = <b>int</b>(/GIADR/NUM_PRESSURE_LEVELS_OZONE)</td></tr>
+<tr><td id="IASI_SND_02_v4_NEW">NEW</td><td></td><td><i>$NEW</i> = <b>int</b>(/GIADR/NUM_SURFACE_EMISSIVITY_WAVELENGTHS)</td></tr>
+<tr><td id="IASI_SND_02_v4_NL_CO">NL_CO</td><td></td><td><i>$NL_CO</i> = <b>int</b>(/GIADR/FORLI_NUM_LAYERS_CO)</td></tr>
+<tr><td id="IASI_SND_02_v4_NL_HNO3">NL_HNO3</td><td></td><td><i>$NL_HNO3</i> = <b>int</b>(/GIADR/FORLI_NUM_LAYERS_HNO3)</td></tr>
+<tr><td id="IASI_SND_02_v4_NL_O3">NL_O3</td><td></td><td><i>$NL_O3</i> = <b>int</b>(/GIADR/FORLI_NUM_LAYERS_O3)</td></tr>
+<tr><td id="IASI_SND_02_v4_NL_SO2">NL_SO2</td><td></td><td><i>$NL_SO2</i> = <b>int</b>(/GIADR/BRESCIA_NUM_ALTITUDES_SO2)</td></tr>
+<tr><td id="IASI_SND_02_v4_NPCT">NPCT</td><td></td><td><i>$NPCT</i> = <b>int</b>(/GIADR/NUM_TEMPERATURE_PCS)</td></tr>
+<tr><td id="IASI_SND_02_v4_NPCW">NPCW</td><td></td><td><i>$NPCW</i> = <b>int</b>(/GIADR/NUM_WATER_VAPOUR_PCS)</td></tr>
+<tr><td id="IASI_SND_02_v4_NPCO">NPCO</td><td></td><td><i>$NPCO</i> = <b>int</b>(/GIADR/NUM_OZONE_PCS)</td></tr>
+<tr><td id="IASI_SND_02_v4_NEVA_CO">NEVA_CO</td><td></td><td><i>$NEVA_CO</i> = ($NL_CO + 1) / 2</td></tr>
+<tr><td id="IASI_SND_02_v4_NEVE_CO">NEVE_CO</td><td></td><td><i>$NEVE_CO</i> = $NEVA_CO * $NL_CO</td></tr>
+<tr><td id="IASI_SND_02_v4_NEVA_HNO3">NEVA_HNO3</td><td></td><td><i>$NEVA_HNO3</i> = ($NL_HNO3 + 1) / 2</td></tr>
+<tr><td id="IASI_SND_02_v4_NEVE_HNO3">NEVE_HNO3</td><td></td><td><i>$NEVE_HNO3</i> = $NEVA_HNO3 * $NL_HNO3</td></tr>
+<tr><td id="IASI_SND_02_v4_NEVA_O3">NEVA_O3</td><td></td><td><i>$NEVA_O3</i> = ($NL_O3 + 1) / 2</td></tr>
+<tr><td id="IASI_SND_02_v4_NEVE_O3">NEVE_O3</td><td></td><td><i>$NEVE_O3</i> = $NEVA_O3 * $NL_O3</td></tr>
+<tr><td id="IASI_SND_02_v4_NERRT">NERRT</td><td></td><td><i>$NERRT</i> = $NPCT * ($NPCT + 1) / 2</td></tr>
+<tr><td id="IASI_SND_02_v4_NERRW">NERRW</td><td></td><td><i>$NERRW</i> = $NPCW * ($NPCW + 1) / 2</td></tr>
+<tr><td id="IASI_SND_02_v4_NERRO">NERRO</td><td></td><td><i>$NERRO</i> = $NPCO * ($NPCO + 1) / 2</td></tr>
+<tr><td id="IASI_SND_02_v4_mdr_bit_size">mdr_bit_size</td><td>[$num_mdr]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_mdr - 1 <b>do</b><br /><i>$mdr_bit_size</i>[<i>i</i>] = <b>bitsize</b>(/mdr[<i>i</i>])</td></tr>
+</table>
+</body>
+
+</html>

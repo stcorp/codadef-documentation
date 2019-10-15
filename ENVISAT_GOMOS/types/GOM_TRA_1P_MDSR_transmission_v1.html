@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOM_TRA_1P_MDSR_transmission_v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOM_TRA_1P_MDSR_transmission_v1</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GOM_TRA_1P_MDSR_transmission_v1.html">GOM_TRA_1P_MDSR_transmission_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36921</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>dsr_time</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Start time of the Data Set Record
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Quality Indicator (-1 for blank MDSR, 0 otherwise)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>trans_spectra</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2336</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;9344</td></tr>
+<tr valign="top">
+<td colspan="2">
+Full transmission spectra
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: ""</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>cov</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2336</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;9344</td></tr>
+<tr valign="top">
+<td colspan="2">
+Covariance function of the full transmission
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: ""</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>scaled_back</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2336</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4672</td></tr>
+<tr valign="top">
+<td colspan="2">
+Scaled estimated central background
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "e"</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>error_back</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2336</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4672</td></tr>
+<tr valign="top">
+<td colspan="2">
+Error bar for the estimated central background
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-1 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/10)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>fp1_data</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>500</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2000</td></tr>
+<tr valign="top">
+<td colspan="2">
+Photometers engineering data (FP1)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "e"</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>fp2_data</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>500</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2000</td></tr>
+<tr valign="top">
+<td colspan="2">
+Photometers engineering data (FP2)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "e"</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>err_fp1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>50</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;100</td></tr>
+<tr valign="top">
+<td colspan="2">
+Error bar for the photometers engineering data (FP1)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-1 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/10)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>err_fp2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>50</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;100</td></tr>
+<tr valign="top">
+<td colspan="2">
+Error bar for the photometers engineering data (FP2)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-1 %"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "%" (multiply by 1/10)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>pcd_spec</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2336</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4672</td></tr>
+<tr valign="top">
+<td colspan="2">
+PCD at sample level (SP) for the spectrometers. Each unsigned short integer is composed of the following bit flags: bit 0: FL_sat(k,L,f) - saturation flag for the lower band (0 = no saturation; 1 = saturated); bit 1: FL_sat(k,C,f) - saturation flag for the central band (0 = no saturation; 1 = saturated); bit 2: FL_sat(k,U,f) - saturation flag for the upper band (0 = no saturation; 1 = saturated); bit 3: FL_bad(k,L) - bad pixel flag for the lower band (0 = no bad pixel in the sample; 1 = at least one bad pixel); bit 4: FL_bad(k,C) - bad pixel flag for the central band (0 = no bad pixel in the sample; 1 = at least one bad pixel); bit 5: FL_bad(k,U) - bad pixel flag for the upper band (0 = no bad pixel in the sample; 1 = at least one bad pixel); bit 6: FL_cr(k,L,f) - cosmic ray detection for lower band (0 = no cosmic ray detected in the sample; 1 = one cosmic ray in the sample); bit 7: Fl_cr(k,C,f) - cosmic ray detection for the central band (0 = no cosmic ray detected in the sample; 1 = one cosmic ray in the sample); bit 8: FL_cr(k,U,f) - cosmic ray detection for the upper band (0 = no cosmic ray detected in the sample; 1 = one cosmic ray in the sample); bit 9-10: FL_bg(k,f) - background data flag (0 = central background computed with no flagged sample; 1 = less than 25% flagged samples; 2 = less than 50% flagged samples; 3 = more than 50% flagged samples); bit 11-12: FL_ft(k,f) - full transmission computation (0 = no problems identified; 1 = reference star spectrum value is zero; 2 = one of the spatial bands is flagged for saturation); bit 13: FL_off(k) - pixel is in an invalid spectral range (0 = pixel is in a valid range; 1 = pixel is in an invalid spectral range); bit 14: FL_rsp(k,f) - pixel has been computed with flagged data during resampling process (0 = no problem; 1 = current data computed with flagged data); bit 15: Not used anymore.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>pcd_fp</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+PCD at sample level (FP) for the fast photometers. The first integer refers to photometer 1, the second to photometer 2. Each unsigned integer contains the following information: bit 0: FL^FP_sat(fc,f,fp) - photometers saturation flag (0 = no saturation; 1 = saturated sample); bit 1-15: not used.
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

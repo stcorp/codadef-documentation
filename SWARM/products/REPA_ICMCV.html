@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>REPA_ICMCV v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>REPA_ICMCV version 0</h1>
+<h2>REPA_ICMCV</h2>
+<p>This definition is based on version 1.11 of the CVQ-DMC-ICD ST-ESA-SWARM-ICD-0001</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Earth_Explorer_File</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record&nbsp;"<a class="header" href="../types/REP_ICMCV.html">REP_ICMCV</a>"</th></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>exists</b>(/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type) <b>and</b><br /><b>at</b>(/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type,<br /><b>str</b>(.) == &quot;REPA_ICMCV&quot;)
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>

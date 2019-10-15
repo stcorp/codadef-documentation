@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>AUX_LSM_AX v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>AUX_LSM_AX version 0</h1>
+<h2>AUX_LSM_AX</h2>
+<h3>root type</h3>
+<table class="top">
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12325621</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH.html">MPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/Auxiliary_Data_SPH.html">Auxiliary_Data_SPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;98</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;array[<b>6</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1680</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;280</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>gads_surface_1deg</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>180</b>, <b>360</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;129600</td></tr>
+<tr valign="top">
+<td colspan="2">
+Land-Sea Mask GADSR 1 degree resolution [South to North, West to East]
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Surface flag [-2 = land, -1 = sea, N&gt;0 = cell not fully land nor fully sea]
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>gads_surface_0_1deg</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>9543</b>, <b>100</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3817200</td></tr>
+<tr valign="top">
+<td colspan="2">
+Land-Sea Mask GADSR 0.1 degree resolution [South to North, West to East]
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Surface flag [-2 = land, -1 = sea, N&gt;0 = cell not fully land nor fully sea]
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>gads_surface_0_01deg</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>146009</b>, <b>112</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2044126</td></tr>
+<tr valign="top">
+<td colspan="2">
+Land-Sea Mask GADSR 0.01 degree resolution [South to North, West to East] (note that the ordering of bits is inverted per byte, i.e. 7,6,5,4,3,2,1,0,15,14,13,12,11,10,9,8,...)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Surface flag [1 = land, 0 = sea]
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>gads_coastline_1deg</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>180</b>, <b>360</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;129600</td></tr>
+<tr valign="top">
+<td colspan="2">
+Coastline GADSR 1 degree resolution [South to North, West to East]
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Coastline flag [-2 = coast, -1 = not coast, N&gt;0 = cell partially covered by coastline]
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>gads_coastline_0_1deg</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>9765</b>, <b>100</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3906000</td></tr>
+<tr valign="top">
+<td colspan="2">
+Coastline GADSR 0.1 degree resolution [South to North, West to East]
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Coastline flag [-2 = coast, -1 = not coast, N&gt;0 = cell partially covered by coastline]
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>gads_coastline_0_01deg</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>164005</b>, <b>112</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2296070</td></tr>
+<tr valign="top">
+<td colspan="2">
+Coastline GADSR 0.01 degree resolution [South to North, West to East] (note that the ordering of bits is inverted per byte, i.e. 7,6,5,4,3,2,1,0,15,14,13,12,11,10,9,8,...)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Coastline flag [1 = coast, 0 = land or sea]
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;AUX_LSM_AX&quot;
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>

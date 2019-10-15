@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOME_PMA_02 v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOME_PMA_02 version 1</h1>
+<h2>GOME_PMA_02_v1</h2>
+<p>This definition is based on version 1B of the Polar Multi-Sensor Aerosol Product Product Format Specification (PFS) document (EUM/TSS/SPE/14/740198).</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>MPHR</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MPHR_v2.html">MPHR_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3307</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>SPHR</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/PMAP_SPHR_v1.html">PMAP_SPHR_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3630</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>IPR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_ipr</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/IPR.html">IPR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>GEADR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_geadr</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GEADR.html">GEADR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;120</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $num_geadr &gt; 0</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>GIADR_GOME2</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_giadr_gome2</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/PMAP_GIADR_GOME2_v1.html">PMAP_GIADR_GOME2_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;479</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>GIADR_AVHRR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_giadr_avhrr</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/PMAP_GIADR_AVHRR_v1.html">PMAP_GIADR_AVHRR_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;52</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>GIADR_IASI</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_giadr_iasi</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/PMAP_GIADR_IASI_v1.html">PMAP_GIADR_IASI_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>VEADR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_veadr</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/VEADR.html">VEADR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;120</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $num_veadr &gt; 0</span>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>VIADR_ECMWF</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_viadr_ecmwf</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/PMAP_VIADR_ECMWF_v1.html">PMAP_VIADR_ECMWF_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;96</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>MDR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_mdr</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;union&nbsp;"<a class="header" href="../types/PMAP_MDR_v1.html">PMAP_MDR_v1</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;\001\000\000\002\000\000\f\353&quot; <b>and</b><br />
+<b>bytes</b>(/,20,32) == &quot;PRODUCT_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&quot; <b>and</b><br />
+<b>bytes</b>(/,552,4) == &quot;GOME&quot; <b>and</b><br />
+<b>bytes</b>(/,625,3) == &quot;PMA&quot; <b>and</b><br />
+<b>bytes</b>(/,661,2) == &quot;02&quot; <b>and</b><br />
+<b>bytes</b>(/,1037,5) == &quot;&nbsp;&nbsp;&nbsp;10&quot; <b>and</b><br />
+<b>bytes</b>(/,1075,5) == &quot;&nbsp;&nbsp;&nbsp;&nbsp;0&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="GOME_PMA_02_v1_num_ipr">num_ipr</td><td></td><td><i>$num_ipr</i> = <b>int</b>(/MPHR/TOTAL_IPR)</td></tr>
+<tr><td id="GOME_PMA_02_v1_num_geadr">num_geadr</td><td></td><td><i>$num_geadr</i> = <b>int</b>(/MPHR/TOTAL_GEADR)</td></tr>
+<tr><td id="GOME_PMA_02_v1_num_giadr_gome2">num_giadr_gome2</td><td></td><td><i>$num_giadr_gome2</i> = <b>unboundindex</b>(/GIADR_GOME2, <b>int</b>(./RECORD_HEADER/RECORD_SUBCLASS) != 1)</td></tr>
+<tr><td id="GOME_PMA_02_v1_num_giadr_avhrr">num_giadr_avhrr</td><td></td><td><i>$num_giadr_avhrr</i> = <b>unboundindex</b>(/GIADR_AVHRR, <b>int</b>(./RECORD_HEADER/RECORD_SUBCLASS) != 2)</td></tr>
+<tr><td id="GOME_PMA_02_v1_num_giadr_iasi">num_giadr_iasi</td><td></td><td><i>$num_giadr_iasi</i> = <b>unboundindex</b>(/GIADR_IASI, <b>int</b>(./RECORD_HEADER/RECORD_SUBCLASS) != 3)</td></tr>
+<tr><td id="GOME_PMA_02_v1_num_veadr">num_veadr</td><td></td><td><i>$num_veadr</i> = <b>int</b>(/MPHR/TOTAL_VEADR)</td></tr>
+<tr><td id="GOME_PMA_02_v1_num_viadr_ecmwf">num_viadr_ecmwf</td><td></td><td><i>$num_viadr_ecmwf</i> = <b>int</b>(/MPHR/TOTAL_VIADR)</td></tr>
+<tr><td id="GOME_PMA_02_v1_num_mdr">num_mdr</td><td></td><td><i>$num_mdr</i> = <b>int</b>(/MPHR/TOTAL_MDR)</td></tr>
+<tr><td id="GOME_PMA_02_v1_mdr_bit_size">mdr_bit_size</td><td>[$num_mdr]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_mdr - 1 <b>do</b><br /><i>$mdr_bit_size</i>[<i>i</i>] = <b>bitsize</b>(/mdr[<i>i</i>])</td></tr>
+</table>
+</body>
+
+</html>

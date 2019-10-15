@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>MIP_OM2_AX v2</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>MIP_OM2_AX version 2</h1>
+<h2>MIP_OM2_AX_v2</h2>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH.html">MPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/Auxiliary_Data_SPH.html">Auxiliary_Data_SPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;98</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsd</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;280</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>occ_matrix_general_data</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+General GADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[0]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_GADS_general_v1.html">MIP_OM2_AX_GADS_general_v1</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[0] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[0]</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>pt_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+p,T Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[1]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[1] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[1]</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>h2o_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+H2O Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[2]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[2] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[2]</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>n2o_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+N2O Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[3]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[3] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[3]</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>hno3_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+HNO3 Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[4]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[4] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[4]</span>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>ch4_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+CH4 Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[5]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[5] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[5]</span>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>o3_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+O3 Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[6]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[6] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[6]</span>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>no2_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+NO2 Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[7]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[7] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[7]</span>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>f11_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+F11 Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[8]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[8] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[8]</span>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>clno_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+ClNO2 Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[9]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[9] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[9]</span>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>n2o5_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+N2O5 Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[10]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[10] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[10]</span>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>f12_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+F12 Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[11]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[11] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[11]</span>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>ccl4_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+CCL4 Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[12]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[12] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[12]</span>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>cof2_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+COF2 Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[13]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[13] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[13]</span>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>f14_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+F14 Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[14]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[14] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[14]</span>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>f22_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+F22 Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[15]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[15] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[15]</span>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>hcn_occ_matrix_priority_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+HCN Priority of retrieval occupation matrices
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[16]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_prior.html">MIP_OM2_AX_ADSR_prior</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[16] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[16]</span>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>pt_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+p,T OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[17]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[17] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[17]</span>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>h2o_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+H2O OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[18]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[18] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[18]</span>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td><b>n2o_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+N2O OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[19]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[19] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[19]</span>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td><b>hno3_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+HNO3 OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[20]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[20] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[20]</span>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td><b>ch4_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+CH4 OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[21]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[21] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[21]</span>
+</td>
+</tr>
+<tr valign="top"><td>25</td><td><b>o3_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+O3 OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[22]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[22] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[22]</span>
+</td>
+</tr>
+<tr valign="top"><td>26</td><td><b>no2_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+NO2 OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[23]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[23] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[23]</span>
+</td>
+</tr>
+<tr valign="top"><td>27</td><td><b>f11_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+F11 OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[24]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[24] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[24]</span>
+</td>
+</tr>
+<tr valign="top"><td>28</td><td><b>clno_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+ClNO2 OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[25]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[25] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[25]</span>
+</td>
+</tr>
+<tr valign="top"><td>29</td><td><b>n2o5_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+N2O5 OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[26]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[26] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[26]</span>
+</td>
+</tr>
+<tr valign="top"><td>30</td><td><b>f12_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+F12 OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[27]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[27] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[27]</span>
+</td>
+</tr>
+<tr valign="top"><td>31</td><td><b>ccl4_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+CCL4 OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[28]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[28] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[28]</span>
+</td>
+</tr>
+<tr valign="top"><td>32</td><td><b>cof2_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+COF2 OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[29]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[29] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[29]</span>
+</td>
+</tr>
+<tr valign="top"><td>33</td><td><b>f14_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+F14 OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[30]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[30] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[30]</span>
+</td>
+</tr>
+<tr valign="top"><td>34</td><td><b>f22_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+F22 OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[31]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[31] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[31]</span>
+</td>
+</tr>
+<tr valign="top"><td>35</td><td><b>hcn_occupation_matrices_ads</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+HCN OCCUPATION MATRIX ADS  
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[32]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_ADSR_occupation.html">MIP_OM2_AX_ADSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[32] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[32]</span>
+</td>
+</tr>
+<tr valign="top"><td>36</td><td><b>pt_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+p,T Occupation matrices for retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[33]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_occupation.html">MIP_OM2_AX_MDSR_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[33] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[33]</span>
+</td>
+</tr>
+<tr valign="top"><td>37</td><td><b>h2o_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+H2O Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[34]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[34] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[34]</span>
+</td>
+</tr>
+<tr valign="top"><td>38</td><td><b>n2o_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+N2O Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[35]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[35] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[35]</span>
+</td>
+</tr>
+<tr valign="top"><td>39</td><td><b>hno3_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+HNO3 Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[36]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[36] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[36]</span>
+</td>
+</tr>
+<tr valign="top"><td>40</td><td><b>ch4_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+CH4 Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[37]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[37] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[37]</span>
+</td>
+</tr>
+<tr valign="top"><td>41</td><td><b>o3_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+O3 Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[38]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[38] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[38]</span>
+</td>
+</tr>
+<tr valign="top"><td>42</td><td><b>no2_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+NO2 Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[39]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[39] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[39]</span>
+</td>
+</tr>
+<tr valign="top"><td>43</td><td><b>f11_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+F11 Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[40]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[40] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[40]</span>
+</td>
+</tr>
+<tr valign="top"><td>44</td><td><b>clno_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+ClNO2 Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[41]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[41] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[41]</span>
+</td>
+</tr>
+<tr valign="top"><td>45</td><td><b>n2o5_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+N2O5 Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[42]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[42] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[42]</span>
+</td>
+</tr>
+<tr valign="top"><td>46</td><td><b>f12_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+F12 Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[43]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[43] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[43]</span>
+</td>
+</tr>
+<tr valign="top"><td>47</td><td><b>ccl4_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+CCL4 Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[44]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[44] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[44]</span>
+</td>
+</tr>
+<tr valign="top"><td>48</td><td><b>cof2_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+COF2 Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[45]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[45] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[45]</span>
+</td>
+</tr>
+<tr valign="top"><td>49</td><td><b>f14_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+F14 Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[46]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[46] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[46]</span>
+</td>
+</tr>
+<tr valign="top"><td>50</td><td><b>f22_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+F22 Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[47]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[47] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[47]</span>
+</td>
+</tr>
+<tr valign="top"><td>51</td><td><b>hcn_occupation_matrices_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+HCN Occupation matrices for vmr retrieval MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[48]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/MIP_OM2_AX_MDSR_vmr_occupation.html">MIP_OM2_AX_MDSR_vmr_occupation</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[48] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[48]</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,8) == &quot;PRODUCT=&quot; <b>and</b><br />
+<b>bytes</b>(/,9,10) == &quot;MIP_OM2_AX&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;PO-RS-MDA-GS-2009_5/B&nbsp;&nbsp;&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="MIP_OM2_AX_v2_num_dsd">num_dsd</td><td></td><td><i>$num_dsd</i> = <b>int</b>(/mph/num_dsd)</td></tr>
+<tr><td id="MIP_OM2_AX_v2_num_ds">num_ds</td><td></td><td><i>$num_ds</i> = 49</td></tr>
+<tr><td id="MIP_OM2_AX_v2_ds_to_dsd_index">ds_to_dsd_index</td><td>[$num_ds]</td><td><i>$ds_to_dsd_index</i>[0] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;OCC&nbsp;MATRIX&nbsp;GENERAL&nbsp;DATA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[1] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;PT&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[2] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;H2O&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[3] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;N2O&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[4] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;HNO3&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[5] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CH4&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[6] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;O3&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[7] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;NO2&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[8] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F11&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[9] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CLNO&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[10] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;N2O5&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[11] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F12&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[12] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CCL4&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[13] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;COF2&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[14] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F14&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[15] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F22&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[16] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;HCN&nbsp;OCC&nbsp;MATRIX&nbsp;PRIO&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[17] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;PT&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[18] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;H2O&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[19] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;N2O&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[20] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;HNO3&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[21] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CH4&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[22] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;O3&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[23] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;NO2&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[24] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F11&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[25] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CLNO&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[26] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;N2O5&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[27] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F12&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[28] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CCL4&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[29] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;COF2&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[30] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F14&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[31] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F22&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[32] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;HCN&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;ADS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[33] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;PT&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[34] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;H2O&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[35] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;N2O&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[36] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;HNO3&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[37] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CH4&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[38] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;O3&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[39] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;NO2&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[40] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F11&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[41] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CLNO&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[42] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;N2O5&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[43] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F12&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[44] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;CCL4&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[45] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;COF2&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[46] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F14&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[47] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;F22&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[48] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;HCN&nbsp;OCCUPATION&nbsp;MATRIX&nbsp;MDS&nbsp;&nbsp;&nbsp;&quot;)</td></tr>
+<tr><td id="MIP_OM2_AX_v2_ds_available">ds_available</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_available</i>[<i>i</i>] = if($ds_to_dsd_index[<i>i</i>] != -1 <b>and</b> !(<b>bytes</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/filename,8) == &quot;NOT&nbsp;USED&quot;), 1, 0)</td></tr>
+<tr><td id="MIP_OM2_AX_v2_ds_offset">ds_offset</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_offset</i>[<i>i</i>] = 8 * <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/ds_offset)</td></tr>
+<tr><td id="MIP_OM2_AX_v2_num_dsr">num_dsr</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$num_dsr</i>[<i>i</i>] = <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/num_dsr)</td></tr>
+<tr><td id="MIP_OM2_AX_v2_species_count">species_count</td><td></td><td><i>$species_count</i> = 30</td></tr>
+</table>
+</body>
+
+</html>

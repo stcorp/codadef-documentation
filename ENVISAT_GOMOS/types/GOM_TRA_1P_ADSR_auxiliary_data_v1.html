@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOM_TRA_1P_ADSR_auxiliary_data_v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOM_TRA_1P_ADSR_auxiliary_data_v1</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GOM_TRA_1P_ADSR_auxiliary_data_v1.html">GOM_TRA_1P_ADSR_auxiliary_data_v1</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4725</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>dsr_time</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Start time of the measurement
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>attach_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Attachment flag (set to 1 if there are no Transmission MDSRs or SATU MDSRs corresponding to this ADSR, set to zero otherwise)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>spec_shift</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>2336</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4672</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spectral shift of the start spectra
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;int16 (double)</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "1e-4 nm"</span>
+<br /><br />
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "nm" (multiply by 1/10000)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>off_back</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Offset for the estimated background coding
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "e"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>gain_back</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;float</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Gain for the estimated background coding
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>pcd</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>16</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;32</td></tr>
+<tr valign="top">
+<td colspan="2">
+PCD at measurement level. The following values are reported. Despite the notation as a 'Flag' each value is in fact an integer value: 1. FLAG_DV(f) - data valid (0 = anomaly; 1 = time out; 3 = fully successful; 9 = missing packet); 2. Not used anymore; 3. FLAGS_time(f) - datation (0 = no datation problem; 1 = problem during the datation processing; 2 = invalid measurement (FLAG_DV(f) = 0 or 1); 9 = missing packet); 4. FLAG_rt(f) - ray-tracing (0 = no problem; 1 = wrong pointing (not in direction of the atmosphere); 2 = ray path across the Earth); 5. FLAG_gl(f) - geolocation (0 = no problem; 1 = geolocation problem); 6. FLAG_sat(f) - number of saturated samples per measurement; 7. FLAG_cr(f) - number of cosmic rays detected per measurement; 8. FLAG_irv(f) - vignetting correction flag (0 = no vignetting; 1 = vignetting occured during the measurement); 9. FLAG_bg(f) - number of background flagged data per measurement; 10. FLAG_out(f) - star spectrum out of band (0 = star spectrum inside central band; 1 = centre line of star spectrum image is outside the central band); 11. FLAG_ft(f) - number of samples per measurement for which full transmission flag FL_ft(k,f) has been raised; 12. FLAG^FP_sat(1,f) - number of photometer 1 saturations; 13. FLAG^FP_sat(2,f) - number of photometer 2 saturations; 14. FLAG - stability flag (0 = no measurement skipped; n = first measurement used to compute the reference star spectrum is number n (index starting at 0)); 15. FLAG mod(f) - Demodulation correction flag (0 = no problem, +1 = problem of structure for SPA1 upper band; +2 = problem of structure for SPA1 lower band; +4 = inconsistent upper and lower band structures for SPA1; +10 = problem of structure for SPA2 upper band; +20 = problem of structure for SPA2 lower band; +40 = inconsistent upper and lower band structures for SPA2); 16. FLAG_uc(f) - ratio between the averaged upper band signel and the averaged star signal over the SPA2 spectral range (n &lt; 65535 = computed ration expressed in %; 65535 = star signal is equal to 0).
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>
