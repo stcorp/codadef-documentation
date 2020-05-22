@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>AUX_NOU_1A v3</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>AUX_NOU_1A version 3</h1>
+<h2>AUX_NOU_1A_04_12</h2>
+<p>This definition is based on version 4/12 of IODD ADM-IC-52-1666</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1A_Product_04_12.html">Level_1A_Product_04_12</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+Level 1A Product
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH_v3.html">MPH_v3</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/Level_1A_SPH_04_04.html">Level_1A_SPH_04_04</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1194</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsd</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;288</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>geolocation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Geolocation ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[0]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1A_Geolocation_ADSR_04_09.html">Level_1A_Geolocation_ADSR_04_09</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;42090</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[0] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[0]</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>data_quality</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Data Quality ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[1]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1A_Data_Quality_ADSR_04_04.html">Level_1A_Data_Quality_ADSR_04_04</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1114</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[1] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[1]</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>reference_pulse</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Reference Pulse ADSR
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[2]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1A_Reference_Pulse_ADSR_04_04.html">Level_1A_Reference_Pulse_ADSR_04_04</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;48020</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[2] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[2]</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>house_keeping</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+House Keeping ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[3]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1A_Housekeeping_ADSR_04_12.html">Level_1A_Housekeeping_ADSR_04_12</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11356</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[3] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[3]</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>mie_measurement</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Mie Measurement MDSR
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[4]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1A_Mie_Measurement_MDSR_04_04.html">Level_1A_Mie_Measurement_MDSR_04_04</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30018</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[4] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[4]</span>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>rayleigh_measurement</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh Measurement MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[5]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1A_Rayleigh_Measurement_MDSR_04_04.html">Level_1A_Rayleigh_Measurement_MDSR_04_04</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30018</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[5] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[5]</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,12) == &quot;PRODUCT=\&quot;AE_&quot; <b>and</b><br />
+<b>bytes</b>(/,17,10) == &quot;AUX_NOU_1A&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;521666_IODD_4_12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="AUX_NOU_1A_04_12_num_dsd">num_dsd</td><td></td><td><i>$num_dsd</i> = <b>int</b>(/mph/num_dsd)</td></tr>
+<tr><td id="AUX_NOU_1A_04_12_num_ds">num_ds</td><td></td><td><i>$num_ds</i> = 6</td></tr>
+<tr><td id="AUX_NOU_1A_04_12_ds_to_dsd_index">ds_to_dsd_index</td><td>[$num_ds]</td><td><i>$ds_to_dsd_index</i>[0] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Geolocation_ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[1] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Data_Quality_ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[2] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Reference_Pulse_ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[3] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Housekeeping_ADS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[4] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Mie_Measurement_MDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;);<br /><i>$ds_to_dsd_index</i>[5] = <b>index</b>(/dsd, <b>str</b>(./ds_name) == &quot;Rayleigh_Measurement_MDS&nbsp;&nbsp;&nbsp;&nbsp;&quot;)</td></tr>
+<tr><td id="AUX_NOU_1A_04_12_ds_available">ds_available</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_available</i>[<i>i</i>] = if($ds_to_dsd_index[<i>i</i>] != -1 <b>and</b> <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/ds_size) != 0, 1, 0)</td></tr>
+<tr><td id="AUX_NOU_1A_04_12_ds_offset">ds_offset</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$ds_offset</i>[<i>i</i>] = 8 * <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/ds_offset)</td></tr>
+<tr><td id="AUX_NOU_1A_04_12_num_dsr">num_dsr</td><td>[$num_ds]</td><td><b>for</b> <i>i</i> = 0 <b>to</b> $num_ds - 1 <b>do</b><br /><i>$num_dsr</i>[<i>i</i>] = <b>int</b>(/dsd[$ds_to_dsd_index[<i>i</i>]]/num_dsr)</td></tr>
+</table>
+</body>
+
+</html>

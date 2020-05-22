@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_1B_Product_04_12</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_1B_Product_04_12</h1>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Product_04_12.html">Level_1B_Product_04_12</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+Level 1B Wind Measurement Product
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH_v3.html">MPH_v3</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_SPH_04_03.html">Level_1B_SPH_04_03</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1706</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsd</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;288</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>geolocation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Geolocation ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[0]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Geolocation_ADSR_04_09.html">Level_1B_Geolocation_ADSR_04_09</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[0] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[0]</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>product_confidence_data</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Product Confidence Data ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[1]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Product_Confidence_Data_ADSR_04_12.html">Level_1B_Product_Confidence_Data_ADSR_04_12</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[1] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[1]</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>ground_wind_detection</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Ground Wind Correction ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[2]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Ground_Wind_Detection_ADSR_04_09.html">Level_1B_Ground_Wind_Detection_ADSR_04_09</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[2] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[2]</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>measurement</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Measurement ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[3]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Measurement_ADSR_04_11.html">Level_1B_Measurement_ADSR_04_11</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[3] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[3]</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>mie_core_params</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Mie core parameters ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[4]</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Mie_Core_Params_ADSR_04_08.html">Level_1B_Mie_Core_Params_ADSR_04_08</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;191</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[4] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[4]</span>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>calibration_characterization_data</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Calibration Characterization Data ADS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[5]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Calibration_Characterization_Data_GADSR_04_12.html">Level_1B_Calibration_Characterization_Data_GADSR_04_12</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[5] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[5]</span>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>useful_signal</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Useful Signal MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[6]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Useful_Signal_MDSR.html">Level_1B_Useful_Signal_MDSR</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[6] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[6]</span>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>wind_velocity</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Wind Velocity MDS
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsr[7]</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Wind_Velocity_MDSR_04_11.html">Level_1B_Wind_Velocity_MDSR_04_11</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: $ds_available[7] != 0</span>
+<br /><br />
+<span class="attr_key">bit offset</span><span class="attr_value">: $ds_offset[7]</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

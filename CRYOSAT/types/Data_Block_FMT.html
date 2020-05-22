@@ -264,21 +264,20 @@ Drift of mean local solar time over 1 orbit
 <tr valign="top"><td>0</td><td><b>TAI</b></td>
 <td>
 <table>
-<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;time</th></tr>
 <tr valign="top">
 <td colspan="2">
 TAI date and time of ANX, in ASCII CCSDS time format, including time reference and microseconds
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
 <br /><br />
-<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 30) == &quot;TAI=9999-99-99T99:99:99.999999&quot;, +inf, if(<b>str</b>(., 30) == &quot;TAI=0000-00-00T00:00:00.000000&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'TAI='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'GPS='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'UT1='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))</span>
+<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 30) == &quot;TAI=9999-99-99T99:99:99.999999&quot;, +inf, if(<b>str</b>(., 30) == &quot;TAI=0000-00-00T00:00:00.000000&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'TAI='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))</span>
 <br />
 <blockquote>
 <table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
-CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss.uuuuuu". The reference RRR can be any of "UT1", "UTC", "TAI", or "GPS".
 </td>
 </tr>
 </table>
@@ -291,21 +290,20 @@ CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss.uuuuuu". The r
 <tr valign="top"><td>1</td><td><b>UTC</b></td>
 <td>
 <table>
-<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;time</th></tr>
 <tr valign="top">
 <td colspan="2">
 UTC date and time of ANX, in ASCII CCSDS time format, including time reference and microseconds
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
 <br /><br />
-<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 30) == &quot;UTC=9999-99-99T99:99:99.999999&quot;, +inf, if(<b>str</b>(., 30) == &quot;UTC=0000-00-00T00:00:00.000000&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'TAI='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'GPS='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'UT1='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))</span>
+<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 30) == &quot;UTC=9999-99-99T99:99:99.999999&quot;, +inf, if(<b>str</b>(., 30) == &quot;UTC=0000-00-00T00:00:00.000000&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))</span>
 <br />
 <blockquote>
 <table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
-CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss.uuuuuu". The reference RRR can be any of "UT1", "UTC", "TAI", or "GPS".
 </td>
 </tr>
 </table>
@@ -318,21 +316,20 @@ CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss.uuuuuu". The r
 <tr valign="top"><td>2</td><td><b>UT1</b></td>
 <td>
 <table>
-<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;time</th></tr>
 <tr valign="top">
 <td colspan="2">
 UT1 date and time of ANX, in ASCII CCSDS time format, including time reference and microseconds
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
 <br /><br />
-<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 30) == &quot;UT1=9999-99-99T99:99:99.999999&quot;, +inf, if(<b>str</b>(., 30) == &quot;UT1=0000-00-00T00:00:00.000000&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'TAI='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'GPS='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'UT1='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))</span>
+<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 30) == &quot;UT1=9999-99-99T99:99:99.999999&quot;, +inf, if(<b>str</b>(., 30) == &quot;UT1=0000-00-00T00:00:00.000000&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UT1='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))</span>
 <br />
 <blockquote>
 <table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
-CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss.uuuuuu". The reference RRR can be any of "UT1", "UTC", "TAI", or "GPS".
 </td>
 </tr>
 </table>
@@ -402,21 +399,20 @@ CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss.uuuuuu". The r
 <tr valign="top"><td>0</td><td><b>TAI</b></td>
 <td>
 <table>
-<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;time</th></tr>
 <tr valign="top">
 <td colspan="2">
 TAI date and time of OSV, in ASCII CCSDS time format, including time reference and microseconds
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
 <br /><br />
-<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 30) == &quot;TAI=9999-99-99T99:99:99.999999&quot;, +inf, if(<b>str</b>(., 30) == &quot;TAI=0000-00-00T00:00:00.000000&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'TAI='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'GPS='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'UT1='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))</span>
+<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 30) == &quot;TAI=9999-99-99T99:99:99.999999&quot;, +inf, if(<b>str</b>(., 30) == &quot;TAI=0000-00-00T00:00:00.000000&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'TAI='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))</span>
 <br />
 <blockquote>
 <table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
-CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss.uuuuuu". The reference RRR can be any of "UT1", "UTC", "TAI", or "GPS".
 </td>
 </tr>
 </table>
@@ -429,21 +425,20 @@ CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss.uuuuuu". The r
 <tr valign="top"><td>1</td><td><b>UTC</b></td>
 <td>
 <table>
-<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;time</th></tr>
 <tr valign="top">
 <td colspan="2">
 UTC date and time of OSV, in ASCII standard time format, including time reference and microseconds
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
 <br /><br />
-<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 30) == &quot;UTC=9999-99-99T99:99:99.999999&quot;, +inf, if(<b>str</b>(., 30) == &quot;UTC=0000-00-00T00:00:00.000000&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'TAI='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'GPS='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'UT1='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))</span>
+<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 30) == &quot;UTC=9999-99-99T99:99:99.999999&quot;, +inf, if(<b>str</b>(., 30) == &quot;UTC=0000-00-00T00:00:00.000000&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))</span>
 <br />
 <blockquote>
 <table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
-CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss.uuuuuu". The reference RRR can be any of "UT1", "UTC", "TAI", or "GPS".
 </td>
 </tr>
 </table>
@@ -456,21 +451,20 @@ CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss.uuuuuu". The r
 <tr valign="top"><td>2</td><td><b>UT1</b></td>
 <td>
 <table>
-<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;time</th></tr>
 <tr valign="top">
 <td colspan="2">
 This field is left empty as the information is not known at the time this file is generated. This Tag is kept to keep this format coherent with the FOS Predicted Orbit File
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
 <br /><br />
-<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 30) == &quot;UT1=9999-99-99T99:99:99.999999&quot;, +inf, if(<b>str</b>(., 30) == &quot;UT1=0000-00-00T00:00:00.000000&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'TAI='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'GPS='yyyy-MM-dd'T'HH:mm:ss.SSSSSS|'UT1='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))</span>
+<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 30) == &quot;UT1=9999-99-99T99:99:99.999999&quot;, +inf, if(<b>str</b>(., 30) == &quot;UT1=0000-00-00T00:00:00.000000&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UT1='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))</span>
 <br />
 <blockquote>
 <table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;30</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
-CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss.uuuuuu". The reference RRR can be any of "UT1", "UTC", "TAI", or "GPS".
 </td>
 </tr>
 </table>

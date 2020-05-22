@@ -100,21 +100,20 @@ A 1-line description of the file class, coherent with the File Class element in 
 <tr valign="top"><td>0</td><td><b>Validity_Start</b></td>
 <td>
 <table>
-<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;23</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;time</th></tr>
 <tr valign="top">
 <td colspan="2">
 This is the UTC Validity Start Time, coherent with the Validity Start Time in the File Name, but in CCSDS ASCII format with time reference. Note that this can have the special value indicating "beginning of mission" (without an absolute time specified)
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
 <br /><br />
-<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 23) == &quot;UTC=9999-99-99T99:99:99&quot;, +inf, if(<b>str</b>(., 23) == &quot;UTC=0000-00-00T00:00:00&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss|'TAI='yyyy-MM-dd'T'HH:mm:ss|'GPS='yyyy-MM-dd'T'HH:mm:ss|'UT1='yyyy-MM-dd'T'HH:mm:ss&quot;))))</span>
+<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 23) == &quot;UTC=9999-99-99T99:99:99&quot;, +inf, if(<b>str</b>(., 23) == &quot;UTC=0000-00-00T00:00:00&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss&quot;))))</span>
 <br />
 <blockquote>
 <table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;23</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
-CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss". The reference RRR can be any of "UT1", "UTC", "TAI", or "GPS".
 </td>
 </tr>
 </table>
@@ -127,21 +126,20 @@ CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss". The referenc
 <tr valign="top"><td>1</td><td><b>Validity_Stop</b></td>
 <td>
 <table>
-<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;23</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;time</th></tr>
 <tr valign="top">
 <td colspan="2">
 This is the UTC Validity Stop Time, coherent with the Validity Stop Time in the File Name, but in CCSDS ASCII format with time reference. Note that this can have the special value indicating "end of mission" (without an absolute time specified)
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
 <br /><br />
-<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 23) == &quot;UTC=9999-99-99T99:99:99&quot;, +inf, if(<b>str</b>(., 23) == &quot;UTC=0000-00-00T00:00:00&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss|'TAI='yyyy-MM-dd'T'HH:mm:ss|'GPS='yyyy-MM-dd'T'HH:mm:ss|'UT1='yyyy-MM-dd'T'HH:mm:ss&quot;))))</span>
+<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 23) == &quot;UTC=9999-99-99T99:99:99&quot;, +inf, if(<b>str</b>(., 23) == &quot;UTC=0000-00-00T00:00:00&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss&quot;))))</span>
 <br />
 <blockquote>
 <table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;23</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
-CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss". The reference RRR can be any of "UT1", "UTC", "TAI", or "GPS".
 </td>
 </tr>
 </table>
@@ -216,21 +214,20 @@ Version of the tool (e.g. 1.0, 2.1a ...)
 <tr valign="top"><td>3</td><td><b>Creation_Date</b></td>
 <td>
 <table>
-<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;23</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;time</th></tr>
 <tr valign="top">
 <td colspan="2">
 This is the UTC Creation Date, in CCSDS ASCII format with time reference
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
 <br /><br />
-<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 23) == &quot;UTC=9999-99-99T99:99:99&quot;, +inf, if(<b>str</b>(., 23) == &quot;UTC=0000-00-00T00:00:00&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss|'TAI='yyyy-MM-dd'T'HH:mm:ss|'GPS='yyyy-MM-dd'T'HH:mm:ss|'UT1='yyyy-MM-dd'T'HH:mm:ss&quot;))))</span>
+<span class="attr_key">value</span><span class="attr_value">: if(<b>length</b>(.) == 0, nan, if(<b>str</b>(., 23) == &quot;UTC=9999-99-99T99:99:99&quot;, +inf, if(<b>str</b>(., 23) == &quot;UTC=0000-00-00T00:00:00&quot;, -inf, <b>time</b>(<b>str</b>(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss&quot;))))</span>
 <br />
 <blockquote>
 <table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;23</td></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
-CCSDS ASCII datetime with time reference "RRR=YYYY-MM-DDThh:mm:ss". The reference RRR can be any of "UT1", "UTC", "TAI", or "GPS".
 </td>
 </tr>
 </table>

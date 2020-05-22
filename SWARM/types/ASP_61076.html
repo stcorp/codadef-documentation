@@ -11,7 +11,7 @@
 <body>
 <h1>ASP_61076</h1>
 <table class="top">
-<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ASP_61076.html">ASP_61076</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;52</td></tr>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/ASP_61076.html">ASP_61076</a>"</th></tr>
 <tr valign="top">
 <td colspan="2">
 Annotated Source Packet for SWARM STR HK
@@ -156,7 +156,7 @@ spare
 <tr valign="top"><td>6</td><td><b>source_packet</b></td>
 <td>
 <table>
-<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;32</td></tr>
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
 <tr valign="top">
 <td colspan="2">
 Instrument Source Packet
@@ -173,7 +173,7 @@ Instrument Source Packet
 <tr valign="top"><td>1</td><td><b>data</b></td>
 <td>
 <table>
-<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
 <tr valign="top">
 <td colspan="2">
 <table class="fancy" border="1" cellspacing="0" width="100%">
@@ -250,7 +250,7 @@ STRE_A_TempChu3
 <tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
-STRE_A_TempCpu
+STRE_B_TempCpu
 </td>
 </tr>
 </table>
@@ -262,7 +262,7 @@ STRE_A_TempCpu
 <tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
-STRE_A_TempChu1
+STRE_B_TempChu1
 </td>
 </tr>
 </table>
@@ -274,7 +274,7 @@ STRE_A_TempChu1
 <tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
-STRE_A_TempChu2
+STRE_B_TempChu2
 </td>
 </tr>
 </table>
@@ -286,23 +286,200 @@ STRE_A_TempChu2
 <tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
-STRE_A_TempChu3
+STRE_B_TempChu3
 </td>
 </tr>
 </table>
 </td>
 </tr>
-<tr valign="top"><td>10</td><td>Spare_47</td>
+<tr valign="top"><td>10</td><td><b>MST10104</b></td>
 <td>
 <table>
-<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+ASM_MagID
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>MST10114a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ASM_LevelofSignalLa1 (1)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>MST10114b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ASM_LevelofSignalLa1 (2)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>MST10141</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ASM_HighLevelSupState
 </td>
 </tr>
 </table>
 <br />
-<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+<span class="attr_key">available</span><span class="attr_value">: <b>int</b>(../../packet_length) == 29</span>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>MST10142</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ASM_SubLevelMagAsicState
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: <b>int</b>(../../packet_length) == 29</span>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>MST10170</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ASM_AcquisitionState
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: <b>int</b>(../../packet_length) == 29</span>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>PHT00317</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+n/a
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: <b>int</b>(../../packet_length) == 29</span>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>PHT00318</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+n/a
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: <b>int</b>(../../packet_length) == 29</span>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>PHT00319</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+PCDU__AsmHtrAStat
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: <b>int</b>(../../packet_length) == 29</span>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>PHT00320</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+PCDU__AsmHtrBStat
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: <b>int</b>(../../packet_length) == 29</span>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>PHT00321</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+PCDU__ObHtrAStat
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: <b>int</b>(../../packet_length) == 29</span>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>PHT00322</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+PCDU__ObHtrBStat
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: <b>int</b>(../../packet_length) == 29</span>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td><b>PHT00323</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+n/a
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: <b>int</b>(../../packet_length) == 29</span>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td><b>PHT00324</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;0:1</td></tr>
+<tr valign="top">
+<td colspan="2">
+n/a
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: <b>int</b>(../../packet_length) == 29</span>
 </td>
 </tr>
 </table>
