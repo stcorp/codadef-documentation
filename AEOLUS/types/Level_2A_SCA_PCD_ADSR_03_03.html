@@ -134,7 +134,7 @@ Structure containing variances of SCA products bin per bin
 <tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
 <tr valign="top">
 <td colspan="2">
-Variance of the extinction coefficient retrieved by the SCA in this bin
+Variance of the particle extinction coefficient retrieved by the SCA in this bin. Missing value: -1.
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "m^-2"</span>
 </td>
@@ -148,7 +148,7 @@ Variance of the extinction coefficient retrieved by the SCA in this bin
 <tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
 <tr valign="top">
 <td colspan="2">
-Variance of the backscatter coefficient retrieved by the SCA in this bin
+Variance of the particle backscatter coefficient retrieved by the SCA in this bin. Missing value: -1.
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "m^-2 sr^-2"</span>
 </td>
@@ -162,7 +162,7 @@ Variance of the backscatter coefficient retrieved by the SCA in this bin
 <tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
 <tr valign="top">
 <td colspan="2">
-Variance of the LOD retrieved by the SCA in this bin.
+Variance of the LOD retrieved by the SCA in this bin. Missing value: -1.
 </td>
 </tr>
 </table>
@@ -211,7 +211,7 @@ Structure containing variances of SCA products as mean over two neighbouring bin
 <tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
 <tr valign="top">
 <td colspan="2">
-Variance of the extinction coefficient retrieved by the SCA in these two neighbouring bins
+Variance of the particle extinction coefficient retrieved by the SCA in this bin. Missing value: -1.
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "m^-2"</span>
 </td>
@@ -225,7 +225,7 @@ Variance of the extinction coefficient retrieved by the SCA in these two neighbo
 <tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
 <tr valign="top">
 <td colspan="2">
-Variance of the backscatter coefficient retrieved by the SCA in these two neighbouring bins
+Variance of the particle backscatter coefficient retrieved by the SCA in this bin. Missing value: -1.
 <br /><br />
 <span class="attr_key">unit</span><span class="attr_value">: "m^-2 sr^-2"</span>
 </td>
@@ -239,7 +239,7 @@ Variance of the backscatter coefficient retrieved by the SCA in these two neighb
 <tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
 <tr valign="top">
 <td colspan="2">
-Variance of the LOD retrieved by the SCA in these two neighbouring bins
+Variance of the LOD retrieved by the SCA in this bin. Missing value: -1.
 </td>
 </tr>
 </table>
@@ -251,7 +251,7 @@ Variance of the LOD retrieved by the SCA in these two neighbouring bins
 <tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
 <tr valign="top">
 <td colspan="2">
-Variance of the BER retrieved by the SCA in these two neighbouring bins
+Variance of the backscatter-to-extinction ratio. Missing value: -1.
 </td>
 </tr>
 </table>
@@ -285,7 +285,7 @@ QC information about processing
 <tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
-Set to '1' if radiometric correction was performed, '0' otherwise
+Set to '0', '1', or '2': '0' the default Kray and Kmie values of the AUX_CAL file have been used. '1' the per orbit corrected in particle free conditions Kray and Kmie values have been calculated and used. '2' the per observation fitted Kray and Kmie values have been calculated and used.
 </td>
 </tr>
 </table>
@@ -297,7 +297,7 @@ Set to '1' if radiometric correction was performed, '0' otherwise
 <tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
 <tr valign="top">
 <td colspan="2">
-Radiometric correcion factor for the Rayleigh channel
+Radiometric correction factor for the Rayleigh channel (calculated as indicated by the setting of field Radiometric_Correction_Performed)
 </td>
 </tr>
 </table>
@@ -309,7 +309,7 @@ Radiometric correcion factor for the Rayleigh channel
 <tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
 <tr valign="top">
 <td colspan="2">
-Radiometric correcion factor for the Mie channel
+Radiometric correction factor for the Mie channel (calculated as indicated by the setting of field Radiometric_Correction_Performed)
 </td>
 </tr>
 </table>

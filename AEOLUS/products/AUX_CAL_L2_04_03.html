@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>AUX_CAL_L2 v4</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>AUX_CAL_L2 version 4</h1>
+<h2>AUX_CAL_L2_04_03</h2>
+<p>This definition is based on version 4.3 of AUX_CAL IODD AE-TN-MFG-L2P-CAL-004</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+ADM-Aeolus L2A calibration coefficients and functions
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH_v3.html">MPH_v3</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/AUX_CAL_SPH_03_03.html">AUX_CAL_SPH_03_03</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;382</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_dsd</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;288</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>cal</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Calibration Coefficients
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/CAL_DSR_04_03.html">CAL_DSR_04_03</a>"</th></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,12) == &quot;PRODUCT=\&quot;AE_&quot; <b>and</b><br />
+<b>bytes</b>(/,17,10) == &quot;AUX_CAL_L2&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;AED-TN-MFG-CAL-004&nbsp;4.3&nbsp;&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>bytes</b>(/,0,12) == &quot;PRODUCT=\&quot;AE_&quot; <b>and</b><br />
+<b>bytes</b>(/,17,10) == &quot;AUX_CAL_L2&quot; <b>and</b><br />
+<b>bytes</b>(/,95,23) == &quot;AE-TN-MFG-CAL-004&nbsp;4.3&nbsp;&nbsp;&quot;
+    </tr>
+  </td>
+</table>
+<h3>product variables</h3>
+<table class="fancy" border="1" cellspacing="0" width="600px">
+<tr><th>name</th><th>size</th><th>initialisation</th></tr>
+<tr><td id="AUX_CAL_L2_04_03_num_dsd">num_dsd</td><td></td><td><i>$num_dsd</i> = <b>int</b>(/mph/num_dsd)</td></tr>
+</table>
+</body>
+
+</html>

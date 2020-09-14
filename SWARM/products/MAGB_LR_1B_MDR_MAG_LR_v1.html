@@ -4,17 +4,17 @@
 <html>
 
 <head>
-<title>MAGC_LR_1B_MDR_MAG_LR v0</title>
+<title>MAGB_LR_1B_MDR_MAG_LR v1</title>
 <link rel="stylesheet" href="../../codadef.css" type="text/css" />
 </head>
 
 <body>
-<h1>MAGC_LR_1B_MDR_MAG_LR version 0</h1>
-<h2>MAGC_LR_1B_MDR_MAG_LR</h2>
-<p>This definition is based on version 3.10 of the SWARM L1B CDF DATA FORMAT (SW-ID-GMV-GS-0006)</p>
+<h1>MAGB_LR_1B_MDR_MAG_LR version 1</h1>
+<h2>MAGB_LR_1B_MDR_MAG_LR_v1</h2>
+<p>This definition is based on version 3.11 TBC of the SWARM L1B CDF DATA FORMAT (SW-ID-GMV-GS-0006)</p>
 <h3>root type</h3>
 <table class="top">
-<tr><th  colspan="2"align="left">cdf&nbsp;record&nbsp;"<a class="header" href="../types/MDR_MAG_LR_cdf_v0.html">MDR_MAG_LR_cdf_v0</a>"</th></tr>
+<tr><th  colspan="2"align="left">cdf&nbsp;record&nbsp;"<a class="header" href="../types/MDR_MAG_LR_cdf_v1.html">MDR_MAG_LR_cdf_v1</a>"</th></tr>
 <tr valign="top">
 <td colspan="2">
 <table style="border-style: none" cellspacing="0" width="100%">
@@ -5242,7 +5242,56 @@ Magnetic field intensity
 </table>
 </td>
 </tr>
-<tr valign="top"><td>6</td><td><b>dF_AOCS</b></td>
+<tr valign="top"><td>6</td><td><b>dF_Sun</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Magnetic stray field correction intensity of Sun ASM frame
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from cdf file</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>DESCRIPTION</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">cdf&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>UNITS</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">cdf&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">cdf&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "nT"</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>dF_AOCS</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -5291,7 +5340,7 @@ Magnetic stray field correction intensity of AOCS magneto-torquer coils
 </table>
 </td>
 </tr>
-<tr valign="top"><td>7</td><td><b>dF_other</b></td>
+<tr valign="top"><td>8</td><td><b>dF_other</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -5340,7 +5389,7 @@ Magnetic stray field correction intensity of all other sources
 </table>
 </td>
 </tr>
-<tr valign="top"><td>8</td><td><b>F_error</b></td>
+<tr valign="top"><td>9</td><td><b>F_error</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -5389,7 +5438,7 @@ Error estimate on magnetic field intensity
 </table>
 </td>
 </tr>
-<tr valign="top"><td>9</td><td><b>B_VFM</b></td>
+<tr valign="top"><td>10</td><td><b>B_VFM</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>, <b>3</b>]</th></tr>
@@ -5438,7 +5487,7 @@ Magnetic field vector, VFM frame
 </table>
 </td>
 </tr>
-<tr valign="top"><td>10</td><td><b>B_NEC</b></td>
+<tr valign="top"><td>11</td><td><b>B_NEC</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>, <b>3</b>]</th></tr>
@@ -5487,7 +5536,7 @@ Magnetic field vector, NEC frame
 </table>
 </td>
 </tr>
-<tr valign="top"><td>11</td><td><b>dB_Sun</b></td>
+<tr valign="top"><td>12</td><td><b>dB_Sun</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>, <b>3</b>]</th></tr>
@@ -5536,7 +5585,7 @@ Magnetic stray field correction vector of Sun induced perturbation, VFM frame
 </table>
 </td>
 </tr>
-<tr valign="top"><td>12</td><td><b>dB_AOCS</b></td>
+<tr valign="top"><td>13</td><td><b>dB_AOCS</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>, <b>3</b>]</th></tr>
@@ -5585,7 +5634,7 @@ Magnetic stray field correction vector of AOCS magneto-torquer coils, VFM frame
 </table>
 </td>
 </tr>
-<tr valign="top"><td>13</td><td><b>dB_other</b></td>
+<tr valign="top"><td>14</td><td><b>dB_other</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>, <b>3</b>]</th></tr>
@@ -5634,7 +5683,7 @@ Magnetic stray field correction vector of all other sources, VFM frame
 </table>
 </td>
 </tr>
-<tr valign="top"><td>14</td><td><b>B_error</b></td>
+<tr valign="top"><td>15</td><td><b>B_error</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>, <b>3</b>]</th></tr>
@@ -5683,7 +5732,7 @@ Error estimates on magnetic field, VFM frame
 </table>
 </td>
 </tr>
-<tr valign="top"><td>15</td><td><b>q_NEC_CRF</b></td>
+<tr valign="top"><td>16</td><td><b>q_NEC_CRF</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>, <b>4</b>]</th></tr>
@@ -5732,7 +5781,7 @@ Quaternion, transformation: NEC ← CRF
 </table>
 </td>
 </tr>
-<tr valign="top"><td>16</td><td><b>Att_error</b></td>
+<tr valign="top"><td>17</td><td><b>Att_error</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -5781,7 +5830,7 @@ Error estimates on attitude information
 </table>
 </td>
 </tr>
-<tr valign="top"><td>17</td><td><b>Flags_F</b></td>
+<tr valign="top"><td>18</td><td><b>Flags_F</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -5830,7 +5879,7 @@ Flags characterizing the magnetic field intensity measurement (F)
 </table>
 </td>
 </tr>
-<tr valign="top"><td>18</td><td><b>Flags_B</b></td>
+<tr valign="top"><td>19</td><td><b>Flags_B</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -5879,7 +5928,7 @@ Flags characterizing the magnetic field measurement
 </table>
 </td>
 </tr>
-<tr valign="top"><td>19</td><td><b>Flags_q</b></td>
+<tr valign="top"><td>20</td><td><b>Flags_q</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -5928,7 +5977,7 @@ Flags characterizing the attitude information
 </table>
 </td>
 </tr>
-<tr valign="top"><td>20</td><td><b>Flags_Platform</b></td>
+<tr valign="top"><td>21</td><td><b>Flags_Platform</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -5977,7 +6026,7 @@ Flags characterizing the S/C platform information
 </table>
 </td>
 </tr>
-<tr valign="top"><td>21</td><td><b>ASM_Freq_Dev</b></td>
+<tr valign="top"><td>22</td><td><b>ASM_Freq_Dev</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">cdf&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -6035,8 +6084,9 @@ ASM frequency calibration data deviation
 <table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
     <td>
 <b>substr</b>(0, 3, <b>filename</b>()) == &quot;SW_&quot; <b>and</b><br />
-<b>substr</b>(8, 10, <b>filename</b>()) == &quot;MAGC_LR_1B&quot; <b>and</b><br />
-<b>substr</b>(56, 10, <b>filename</b>()) == &quot;MDR_MAG_LR&quot;
+<b>substr</b>(8, 10, <b>filename</b>()) == &quot;MAGB_LR_1B&quot; <b>and</b><br />
+<b>substr</b>(56, 10, <b>filename</b>()) == &quot;MDR_MAG_LR&quot; <b>and</b><br />
+<b>exists</b>(/dF_Sun)
     </tr>
   </td>
 </table>
