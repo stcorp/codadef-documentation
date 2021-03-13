@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOME2_PCD_SPEC_SMR</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOME2_PCD_SPEC_SMR</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GOME2_PCD_SPEC_SMR.html">GOME2_PCD_SPEC_SMR</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;39</td></tr>
+<tr valign="top">
+<td colspan="2">
+Product Confidence Data record for Spectral Calibration with Fraunhofer algorithm
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>F_PREVCAL_AVAIL</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Availability of previous SLS spectral calibration
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>N_FITWIN</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>6</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of fitting windows for FPA and PMD channels
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>WIDTH_FITWIN</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Width (in pixel) of fitting windows for FPA channels
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>N_WINCONV</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>6</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of windows with a converging fit for FPA channels (Levenberg-Marquardt) and PMD channels (cross-correlation)
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>N_FILTERWIN</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>6</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of windows filterd out for final wavelength differences fit
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

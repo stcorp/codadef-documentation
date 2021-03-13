@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>GOME2_MDR_L1B_v6</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>GOME2_MDR_L1B_v6</h1>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;union&nbsp;"<a class="header" href="../types/GOME2_MDR_L1B_v6.html">GOME2_MDR_L1B_v6</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+Union of possible GOME L1b MDRs (format version 5). A definition for each of the record subclass values that are used in the field expression for this union can be found in the GOME-2 Level 1 PFS (EUM-MIS-SPE-97232).
+<br /><br />
+<span class="attr_key">bit&nbsp;size</span><span class="attr_value">: $mdr_bit_size[<b>index</b>(.)]</span>
+<br /><br />
+<span class="attr_key">field&nbsp;expr</span><span class="attr_value">: if(<b>int</b>(:/RECORD_HEADER/INSTRUMENT_GROUP) == 5, if(<b>int</b>(:/RECORD_HEADER/RECORD_SUBCLASS) == 6, 0, if(<b>int</b>(:/RECORD_HEADER/RECORD_SUBCLASS) == 7, 1, if(<b>int</b>(:/RECORD_HEADER/RECORD_SUBCLASS) == 8, 2, if(<b>int</b>(:/RECORD_HEADER/RECORD_SUBCLASS) == 9, 3, 5)))), if(<b>int</b>(:/RECORD_HEADER/INSTRUMENT_GROUP) == 13 <b>and</b> <b>int</b>(:/RECORD_HEADER/RECORD_SUBCLASS) == 1, 4, 5))</span>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Earthshine</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GOME2_MDR_L1B_Earthshine_v6.html">GOME2_MDR_L1B_Earthshine_v6</a>"</th></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Calibration</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GOME2_MDR_L1B_Calibration_v5.html">GOME2_MDR_L1B_Calibration_v5</a>"</th></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>Sun</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GOME2_MDR_L1B_Sun_v5.html">GOME2_MDR_L1B_Sun_v5</a>"</th></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>Moon</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GOME2_MDR_L1B_Moon_v5.html">GOME2_MDR_L1B_Moon_v5</a>"</th></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>Dummy</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/DMDR_v2.html">DMDR_v2</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>Unknown</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/GENERIC_RECORD.html">GENERIC_RECORD</a>"</th></tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>
