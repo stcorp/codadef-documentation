@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>SIR_SARN1B v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>SIR_SARN1B version 1</h1>
+<h2>SIR_SARN1B_v1</h2>
+<p>L1B binary product tot include MDSR fields</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+SIRAL L1B SAR mode root type
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/MPH.html">MPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1247</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>sph</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/SIR_L1B_SPH.html">SIR_L1B_SPH</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1112</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dsd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/mph/num_dsd)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;record&nbsp;"<a class="header" href="../types/DSD.html">DSD</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;280</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>siral_l1b_mds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+SIRAL L1B measurement data set
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/dsd[0]/num_dsr)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/SIR_L1B_SARN_MDSR_v0.html">SIR_L1B_SARN_MDSR_v0</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;16564</td></tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">bit offset</span><span class="attr_value">: 8 * <b>int</b>(/dsd[0]/ds_offset)</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>bytes</b>(/,0,12) == &quot;PRODUCT=\&quot;CS_&quot; <b>and</b><br />
+<b>bytes</b>(/,17,10) == &quot;SIR_SARN1B&quot; <b>and</b><br />
+<b>bytes</b>(/,60,1) == &quot;C&quot;
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>
