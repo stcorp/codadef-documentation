@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_2BC_Copied_BRC_Data_ADSR_03_90</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_2BC_Copied_BRC_Data_ADSR_03_90</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Copied_BRC_Data_ADSR_03_90.html">Level_2BC_Copied_BRC_Data_ADSR_03_90</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;149</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>start_of_obs_datetime</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Start date and time of Measurement
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>m1_temperature</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;123</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>aht_22</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+AHT_22 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>aht_23</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+AHT_23 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>aht_24</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+AHT_24 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>aht_25</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+AHT_25 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>aht_26</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+AHT_26 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>aht_27</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+AHT_27 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>tc_18</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+TC_18 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>tc_19</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+TC_19 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>tc_20</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+TC_20 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>tc_21</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+TC_21 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>tc_23</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+TC_23 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>tc_25</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+TC_25 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>tc_27</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+TC_27 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>tc_29</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+TC_29 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>tc_32</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+TC_32 temperature reading
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "C"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;14</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

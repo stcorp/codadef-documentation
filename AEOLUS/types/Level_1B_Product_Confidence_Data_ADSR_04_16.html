@@ -1,0 +1,1614 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_1B_Product_Confidence_Data_ADSR_04_16</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_1B_Product_Confidence_Data_ADSR_04_16</h1>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Product_Confidence_Data_ADSR_04_16.html">Level_1B_Product_Confidence_Data_ADSR_04_16</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>start_of_observation_time</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Start time at start of BRC
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>n</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of measurements
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>p</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of pulses
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>observation_pcd</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6193</td></tr>
+<tr valign="top">
+<td colspan="2">
+Level 1B Observation PCD
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>num_measurement_invalid</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+The number of measurements for which the number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>num_reference_pulse_invalid</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+The number of reference pulses with invalid status
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>num_sat_not_on_target_measurements</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of measurements with the satellite not no target status
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>num_corrupt_mie_measurements</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of corrupt Mie measurements found to be flagged invalid or missing in the L1A product.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>num_corrupt_rayleigh_measurements</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of corrupt Rayleigh measurements found to be flagged invalid or missing in the L1A product.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>num_corrupt_mie_reference_pulses</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of corrupt Mie reference pulses found to be flagged invalid or missing in the L1A product.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>num_corrupt_rayleigh_reference_pulses</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of corrupt Rayleigh reference pulses found to be flagged invalid or missing in the L1A product.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>avg_laser_frequency_offset</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of commanded laser frequency offset
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>avg_uv_energy</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average laser UV energy
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mJ"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>laser_frequency_offset_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Laser frequency offset standard deviation
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>uv_energy_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Laser pulse UV energy standard deviation of N * (P-1) pulses, regardless of the UV_Energy_OK_Status
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mJ"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>mie_ref_pulse_signal_to_noise_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Mie signal to noise ratio for coadded valid pulses of the observation
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>mie_ref_pulse_refined_signal_to_noise_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Refined Mie signal to noise ratio for coadded valid pulses of the observation
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>rayleigh_ref_pulse_signal_to_noise_ratio_channel_a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh signal to noise ratio of channel A for the coadded valid pulses of the observation
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>rayleigh_ref_pulse_signal_to_noise_ratio_channel_b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh signal to noise ratio of channel B for the coadded valid pulses of the observation
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>enc_col_ref_pulse_channel_a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Col value of the energetic centroid of the mean reference pulse of the observation for channel A. Value set to 0 if parameter couldn’t be retrieved.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "ACCD pixel index"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>enc_col_ref_pulse_channel_b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Col value of the energetic centroid of the mean reference pulse of the observation for channel B. Value set to 0 if parameter couldn’t be retrieved.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "ACCD pixel index"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>enc_col_std_dev_ref_pulse_channel_a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Energetic centroid column standard deviation for the mean reference pulse of channel A. Value set to 0 if parameter couldn’t be retrieved.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>enc_col_std_dev_ref_pulse_channel_b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Energetic centroid column standard deviation for the mean reference pulse of channel B. Value set to 0 if parameter couldn’t be retrieved.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>num_mie_peak_invalid</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of invalid Mie bin due to invalid peak fit of the measurement data or reference pulse data
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>polynomial_fit_data_used</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flag indicating if the polynomial fit data of the response errors was used for the conversion of the response into a frequency
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>corrected_mie_reference_pulse_response</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+In case the Polynomial_Fit_Data_Used flag is set to 0, this field reports the corrected response of the accumulated Mie reference pulses. Otherwise parameter set to 0.0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td><b>corrected_rayleigh_reference_pulse_response</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+In case the Polynomial_Fit_Data_Used flag is set to 0, this field reports the corrected response of the accumulated Rayleigh reference pulses. Otherwise parameter set to 0.0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td><b>observation_alt_bin_pcd</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>25</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;5675</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;227</td></tr>
+<tr valign="top">
+<td colspan="2">
+Level 1B Observation Alt Bin PCD
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>error_quantifier_mie</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Error quantifier for Mie
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>error_quantifier_rayleigh</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Error quantifier for Rayleigh
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>error_quantifier_rayleigh_channel_a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Error quantifier for Rayleigh channel A
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>error_quantifier_rayleigh_channel_b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Error quantifier for Rayleigh channel B
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>mie_wind_velocity_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Mie wind velocity standard deviation of the altitude bin
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>rayleigh_wind_velocity_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh wind velocity standard deviation of the altitude bin
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>mie_useful_signal_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Mie useful signal tandard deviation of the altitude bin
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>rayleigh_useful_signal_channel_a_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh channel A  useful signal tandard deviation of the altitude bin
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>rayleigh_useful_signal_channel_b_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh channel B  useful signal tandard deviation of the altitude bin
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>mie_core_characteristic</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_PCD_Mie_Core_characteristics_04_16.html">Level_1B_PCD_Mie_Core_characteristics_04_16</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;67</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>scattering_ratio_mie</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Scattering ratio of the altitude bin. If the scattering ratio cannot be computed, the field is set to -1.0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>refined_scattering_ratio_mie</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Refined scattering ratio of the altitude bin using the Mie Core Downhill Simplex algorithm output. If the scattering ratio cannot be computed, the field is set to -1.0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>mie_signal_to_noise_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Mie Signal-to-Noise ratio of the altitude bin. If the signal-to-noise ratio cannot be computed, the field is set to -1.0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>refined_mie_signal_to_noise_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Refined scattering ratio of the altitude bin using the Mie Core Downhill Simplex algorithm output. If the scattering ratio cannot be computed, the field is set to -1.0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>total_mie_signal_to_noise_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Total Mie Signal-to-Noise ratio of the altitude bin using the Mie Core Downhill Simplex algorithm output. If the signal-to-noise ratio cannot be computed, the field is set to -1.0.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>rayleigh_signal_to_noise_ratio_channel_a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh channel A signal-to-noise ratio of the altitude bin.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>rayleigh_signal_to_noise_ratio_channel_b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh channel B signal-to-noise ratio of the altitude bin.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>enc_col_channel_a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Col value of the energetic centroid of the observation level altitude bin signal for channel A. Value set to 0 if parameter couldn’t be retrieved.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "ACCD pixel index"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>enc_col_channel_b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Col value of the energetic centroid of the observation level altitude bin signal for channel B. Value set to 0 if parameter couldn’t be retrieved.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "ACCD pixel index"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>enc_col_std_dev_channel_a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Energetic centroid column standard deviation value for channel A. Value set to 0 if parameter couldn’t be retrieved.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>enc_col_std_dev_channel_b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Energetic centroid column standard deviation value for channel B. Value set to 0 if parameter couldn’t be retrieved.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td><b>num_mie_invalid_measurements</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of Mie invalid measurement data over all bins due to source packet invalid, data corruption, laser frequency unlocked, or satellite attitude not on target
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>25</td><td><b>num_mie_invalid_reference_pulse</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of Mie invalid measurement data over all bins due to source packet invalid, data corruption, or laser frequency unlocked
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>26</td><td><b>num_rayleigh_invalid_measurements</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of Rayleigh invalid measurement data over all bins due to source packet invalid, data corruption, laser frequency unlocked, or satellite attitude not on target
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>27</td><td><b>num_rayleigh_invalid_reference_pulse</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of Rayleigh invalid measurement data over all bins due to source packet invalid, data corruption, or laser frequency unlocked
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>28</td><td><b>mie_mean_emitted_frequency</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Emitted responses calculated using : eqn 58 from R-2 for the reference pulse of the observation : eqn 60 from R-2 for the reference pulse of a measuremen : emitted responses are then converted to emitted frequencies
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>29</td><td><b>mie_emitted_frequency_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Emitted frequencies standard deviation
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>30</td><td><b>rayleigh_mean_emitted_frequency</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Emitted responses calculated using : eqn 58 from R-2 for the reference pulse of the observation : eqn 60 from R-2 for the reference pulse of a measuremen : emitted responses are then converted to emitted frequencies
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>31</td><td><b>rayleigh_emitted_frequency_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Emitted frequencies standard deviation
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>32</td><td><b>multimode_ratio_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flag that is set if the multimode ratio falls below the multimode ratio threshold for an observation
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>33</td><td><b>txa_frequency</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Mean of up to N*P values of the TXA frequency of valid pulses
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>34</td><td><b>RSPT_Temperatures</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>6</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;192</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;32</td></tr>
+<tr valign="top">
+<td colspan="2">
+RSPT temperatures for each sensor and each time sample in the BRC
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>tc_8_rspt_1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Sensor RSPT temperature
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>tc_9_rspt_2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Sensor RSPT temperature
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>tc_10_rspt_3</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Sensor RSPT temperature
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>tc_11_rspt_4</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Sensor RSPT temperature
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>35</td><td><b>M1_Temperatures</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;120</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>aht_22_tel_m1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of Aht 22 M1 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>aht_23_tel_m1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of Aht 23 M1 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>aht_24_tel_m1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of Aht 24 M1 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>aht_25_tel_m1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of Aht 25 M1 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>aht_26_tel_m1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of Aht 26 M1 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>aht_27_tel_m1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of Aht 27 M1 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>tc_18_tel_m11</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of TC 18 Tel M1-1 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>tc_19_tel_m12</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of TC 19 Tel M1-2 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>tc_20_tel_m13</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of TC 20 Tel M1-3 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>tc_21_tel_m14</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of TC 21 Tel M1-4 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>tc_25_tm15_ths1y</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of TC 25 TM15 Ths1-Y temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>tc_27_tm16_ths1y</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of TC 27 TM16 Ths1-Y temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>tc_29_ths2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of TC 29 Ths2 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>tc_23_ths1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of TC 23 Ths1 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>tc_32_ths3</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average of TC 32 Ths3 temperatures
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>36</td><td>spare_3</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>measurement_pcd</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/sph/n_max)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3304</td></tr>
+<tr valign="top">
+<td colspan="2">
+Level 1B measurement PCD
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>num_of_mie_invalid_reference_pulse</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of Mie invalid reference pulses due to source packet invalid, data corruption, or laser frequency unlocked
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>num_of_rayleigh_invalid_reference_pulse</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Number of Rayleigh invalid reference pulses due to source packet invalid, data corruption, or laser frequency unlocked
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>avg_laser_frequency_offset</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average laser frequency offset
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>avg_uv_energy</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Average laser UV energy
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mJ"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>laser_frequency_offset_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Laser frequency offset standard deviation
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>uv_energy_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Laser pulse UV energy standard deviation
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "mJ"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>mie_ref_pulse_signal_to_noise_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Mie signal to noise ratio for coadded valid pulses of the measurement. If the signal to noise ratio cannot be computed, the field is set to -1.0.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>mie_ref_pulse_refined_signal_to_noise_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Refined Mie signal to noise ratio for coadded valid pulses of the measurement. If the refined signal to noise ratio cannot be computed, the field is set to -1.0.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>rayleigh_ref_pulse_signal_to_noise_ratio_channel_a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh signal to noise ratio of channel A for the coadded valid pulses of the measurement. If the signal to noise ratio cannot be computed, the field is set to -1.0.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>rayleigh_ref_pulse_signal_to_noise_ratio_channel_b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh signal to noise ratio of channel B for the coadded valid pulses of the measurement.If the signal to noise ratio cannot be computed, the field is set to -1.0.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>meas_alt_bin_pcd</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>25</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3175</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;127</td></tr>
+<tr valign="top">
+<td colspan="2">
+Level 1B Meas Alt Bin PCD
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mie_measurement_invalid</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Invalid Mie measurement data for the current altitude bin due to source packet invalid, data corruption, laser frequency unlocked, or satellite attitude not on target, or bin below ground
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>rayleigh_measurement_invalid</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Invalid Rayleigh measurement data for the current altitude bin due to source packet invalid, data corruption, laser frequency unlocked, or satellite attitude not on target, or bin below ground
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>mie_peak_invalid</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Invalid mie bin due to invalid peak fit of the measurement data of reference pulse data
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>mie_core_characteristic</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_PCD_Mie_Core_characteristics_04_16.html">Level_1B_PCD_Mie_Core_characteristics_04_16</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;67</td></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>scattering_ratio_mie</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Scattering ratio of the altitude bin
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>refined_scattering_ratio_mie</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Refined scattering ratio of the altitude bin using the Mie Core Downhill Simplex algorithm output. If the scattering ratio cannot be computed, this field is set to -1.0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>mie_sr_useful_signal_lower_threshold_met</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Set to true, if the useful signal derived for the current bin is above the threshold Mie_SR_Useful_Signal_Lower_Threshold. Set to false otherwise.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>mie_signal_to_noise_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Mie signal to noise ratio of the altitude bin. If the Mie Signal-to-Noise ratio cannot be computed, this field is set to -1.0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>refined_mie_signal_to_noise_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Refined Mie Signal-to-Noise ratio of the altitude bin using the Mie Core Downhill Simplex algorithm output. If the signal-to-noise ratio cannot be computed, this field is set to -1.0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>total_mie_signal_to_noise_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Total Mie Signal-to-Noise ratio of the altitude bin using the Mie Core Downhill Simplex algorithm output. If the signal-to-noise ratio cannot be computed, the field is set to -1.0.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>rayleigh_signal_to_noise_ratio_channel_a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh channel A signal to noise ratio of the altitude bin. If the Rayleigh channel A Signal-to-Noise ratio cannot be computed, this field is set to -1.0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>rayleigh_signal_to_noise_ratio_channel_b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh channel B signal to noise ratio of the altitude bin. If the Rayleigh channel B Signal-to-Noise ratio cannot be computed, this field is set to -1.0
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "AU"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>velocity_of_attitude_uncertainty_error</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Velocity of attitude uncertainty error
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>mie_mean_emitted_frequency</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+emitted responses calculated using ...
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>mie_emitted_frequency_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Emitted frequency standard deviation
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>reference_pulse_fwhm</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference pulse FWHM
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "pixel"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>rayleigh_mean_emitted_frequency</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+emitted responses calculated using - Equation 64 of 0 for the reference pulses of the observation - Equation 66 of 0 for the different reference pulses of a measurement. Emitted responses are then converted to emitted frequencies and averaged
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>rayleigh_emitted_frequency_std_dev</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh emitted frequency standard deviation
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>uv_energy_quality_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flag that shows the quality of the UV energy
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td>spare_4</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td>spare_2</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

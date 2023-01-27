@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_2B_Meas_PCD_ADSR_03_90</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_2B_Meas_PCD_ADSR_03_90</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2B_Meas_PCD_ADSR_03_90.html">Level_2B_Meas_PCD_ADSR_03_90</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1951</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>start_of_obs_datetime</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Start date and time of Measurement
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>l1b_brc_number</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+The index of the original L1B BRC from which this L2B measurement was taken.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>l1b_meas_number</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+The index of the measurement within the above mentioned original L1B BRC from which this L2B measurement was taken.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>l1b_num_meas_per_brc</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+The number of measurements present in the original L1B BRC from which this L2B measurement was taken.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>l2b_amd_collocation</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+Structure describing which AMD profile was used, and what the Match Up results are
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>matching_amd_profile</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+AMD profile number that was found to match with the current measurement
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>matchup_qc</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+code that specifies whether matchup was succesull or not, and if not it gives a reason why it failed
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>distance</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+actual distance between this measurement and the selected AuxMet profile
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "km"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>time_difference</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+actual time difference between this measurement and the selected AuxMet profile
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>l1b_input_screening</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;180</td></tr>
+<tr valign="top">
+<td colspan="2">
+Structure describing any problems found during reading of the L1B datafile
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>l1b_obs_scr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+A structure that stores L1B BRC Obs level screening results on measurement level. This is needed because a L2B group no longer corresponds by definition to a single L1B BRC
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>obs_valid</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+This flag is set to true if the L1B observation (i.e. BRC) in which the current measurement is contained is considered valid.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>obs_qc_flags1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Bit 1: L1B_Laser_Freq_Unlocked_Check failed, Bit 2: L1B_Ref_Pulses_Unlocked_Check failed, Bit 3: L1B_Laser_Freq_Offset_Check failed, Bit 4: L1B_Laser_UV_Energy_Check failed, Bit 5: L1B_Laser_Freq_Offs_Stdev_Check failed, Bit 6: L1B_Laser_UV_Energy_Stdev_Check, failed, Bit 7: L1B_Mie_Mean_Emit_Freq_Check failed, Bit 8: L1B_Mie_Emit_Freq_Stdev_Check failed
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>obs_qc_flags2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Bit 1: L1B_Rayleigh_Mean_Emit_Freq_Chk failed, Bit 2: L1B_RayleighEmitFreqStdev_Check failed, Bit 3: L1B_Sat_Not_on_Target_Check failed, Bit 4: L1B_Mie_Corrupt_Check failed, Bit 5: L1B_Rayleigh_Corrupt_Check failed, Bit 6: L1B_Mie_Ref_PulsesCorrupt_Check failed, Bit 7: L1B_Rayl_RefPulsesCorrupt_Check failed,
+Bit 8: L1B_Mie_Invalid_Meas_Check failed
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>obs_qc_flags3</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Bit 1: L1B_Mie_Invalid_RefPulses_Check failed, Bit 2: L1B_Rayl_Invalid_Meas_Check failed, Bit 3: L1B_Rayl_InvalidRefPulses_Check failed, Bit 4: reserved (always set to 0), Bit 5: reserved (always set to 0), Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>obs_qc_flags4</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+reserved
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>obs_qc_flags5</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+reserved
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>mie_meas</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;77</td></tr>
+<tr valign="top">
+<td colspan="2">
+structure describing the problems found for this Mie measurement
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>meas_valid</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+This flag is set to true if this measurement is considered valid.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>meas_qc_flags1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flags describing problems which prevent using this Mie Measurement. Bit 1: threshold check on num Mie invalid refpulses failed, Bit 2: threshold check on Mie avg. laser freq. offset failed, Bit 3: threshold check on Mie avg. UV energy failed, Bit 4: threshold check on Mie laser freq. offset stdev failed, Bit 5: threshold check on Mie UV energy stdev failed, Bit 6: threshold check on Mie velocity of attitude uncertainty error failed, Bit 7: threshold check on Mie mean emit freq. failed, Bit 8: threshold check on Mie emit freq. stdev failed
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>meas_qc_flags2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flags describing problems which prevent using this Mie Measurement. Bit 1: reserved (always set to 0), Bit 2: reserved (always set to 0), Bit 3: reserved (always set to 0), ..., Bit 8: reserved (always set to 0)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>meas_qc_flags3</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flags describing problems which prevent using this Mie Measurement. Bit 1: Moon Blinding flag was set in L1B product, Bit 2: reserved (always set to 0), ..., Bit 8: reserved (always set to 0).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>bin_screening</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>24</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;72</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>bin_valid</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+This flag is set to true if this bin is considered valid.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>bin_qc_flags1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flags describing problems which prevent using this Mie measurement bin. Bit 1: Mie_meas_invalid was set by the L1bP, Bit 2: Threshold check on scatratio failed, Bit 3: Threshold check on refined scatratio failed, Bit 4: Threshold check on SNR failed, Bit 5: Threshold check on refined SNR failed, Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>bin_qc_flags2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flags describing problems which prevent using this Mie measurement bin. Bit 1: data quality flag from L1bP bit 1 was set: overal validity: data invalid, Bit 2: data quality flag from L1bP bit 2 was set: SNR below SNR threshold, Bit 3: data quality flag from L1bP bit 3 was set: data saturation found, Bit 4: data quality flag from L1bP bit 4 was set: data spike found, Bit 5: data quality flag from L1bP bit 5 was set: spare (not used). Bit 6: data quality flag from L1bP bit 6 was set: source packet invalid, Bit 7: data quality flag from L1bP bit 7 was set: num. corresp. valid pulses is below meas. cavity lock status threshold, Bit 8: data quality flag from L1bP bit 8 was set: spacecraft attitude not on target.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>rayleigh_meas</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;77</td></tr>
+<tr valign="top">
+<td colspan="2">
+structure describing the problems found for this Rayleigh measurement
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>meas_valid</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+This flag is set to true if this measurement is considered valid.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>meas_qc_flags1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flags describing problems which prevent using this Rayleigh Measurement. Bit 1: threshold check on num Rayleigh invalid refpulses failed, Bit 2: threshold check on Rayleigh avg. laser freq. offset failed, Bit 3: threshold check on Rayleigh avg. UV energy failed, Bit 4: threshold check on Rayleigh laser freq. offset stdev failed, Bit 5: threshold check on Rayleigh UV energy stdev failed, Bit 6: threshold check on Rayleigh velocity of attitude uncertainty error failed, Bit 7: threshold check on Rayleigh mean emit freq. failed, Bit 8: threshold check on Rayleigh emit freq. stdev failed
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>meas_qc_flags2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flags describing problems which prevent using this Rayleigh Measurement. Bit 1: threshold check on Mie emit freq. stdev failed and was propagated on to the Rayleigh channel, Bit 2: reserved (always set to 0), Bit 3: reserved (always set to 0), ..., Bit 8: reserved (always set to 0)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>meas_qc_flags3</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flags describing problems which prevent using this Rayleigh Measurement. Bit 1: Moon Blinding flag was set in L1B product, Bit 2: reserved (always set to 0), ..., Bit 8: reserved (always set to 0).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>bin_screening</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>24</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;72</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>bin_valid</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+This flag is set to true if this bin is considered valid.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>bin_qc_flags1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flags describing problems which prevent using this Rayleigh measurement bin. Bit 1: Rayleigh_meas_invalid was set by the L1bP, Bit 2: Threshold check on SNR channel A failed, Bit 3: Threshold check on SNR channel B failed, Bit 4: Threshold check on meas. level Rayleigh Response failed, Bit 5: reserved (always set to 0), Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 9: reserved (always set to 0).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>bin_qc_flags2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flags describing problems which prevent using this Rayleigh measurement bin. Bit 1: data quality flag from L1bP bit 1 was set: overal validity: data invalid, Bit 2: data quality flag from L1bP bit 2 was set: SNR below SNR threshold (Note: this condition will raise this QC flag but it will not set the Bin_Valid flag to false), Bit 3: data quality flag from L1bP bit 3 was set: data saturation found, Bit 4: data quality flag from L1bP bit 4 was set: data spike found, Bit 5: data quality flag from L1bP bit 5 was set: spare (not used), Bit 6: data quality flag from L1bP bit 6 was set: source packet invalid, Bit 7: data quality flag from L1bP bit 7 was set: num. corresp. valid pulses is below meas. cavity lock status threshold, Bit 8: data quality flag from L1bP bit 8 was set: spacecraft attitude not on target.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>spare</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>l2b_mie_classification_qc</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;531</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>l2b_mie_meas_bin_classification</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>24</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;528</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
+<tr valign="top">
+<td colspan="2">
+Structure describing QC parameters resulting from the Mie Classification algorithm
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>l2b_mie_meas_bin_class_flags1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+First byte of 8 flags describing classification properties for the current Mie measurement rangebin. Bit 1 (L2B_Mie_Class_Cloud_Above) : a cloud was detected in a range bin higher than the current range bin, Bit 2 (L2B_Mie_Class_Cloud) : this rangebin contains a cloud, Bit 3 (L2B_Mie_Class_Maybe_Cloud) : this rangebin contains possibly a cloud, but the backscatter is close to the threshold, Bit 4 (L2B_Mie_Class_Aerosol) : Mie backscatter is present, but it is not a cloud, Bit 5 (L2B_Mie_Class_Precipitation) : Precipitation is present in this range bin, Bit 6 (L2B_Mie_Class_No_Extinction) : No extinction is known for this range bin, Bit 7 (L2B_Mie_Class_Unknown_Scatterer) : the value encountered in this rangebin for backscatter is unphysical for clouds, Bit 8 (L2B_Mie_Class_Broken_Clouds) : this range bin contains a broken cloud layer (currently only used for Obs range bins)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>l2b_mie_meas_bin_class_flags2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Second byte of 8 flags describing classification properties for the current Mie measurement rangebin. Bit 1 (L2B_Mie_Class_Convective_Clouds) : this range bin contains convective clouds, Bit 2 (L2B_Mie_Class_No_Cloud_Detected) : Flag indicating that no cloud or aerosol was detected in this rangebin, Bit 3 (L2B_NWP_Data_Used) : Flag indicating that NWP data was used to determine the clas- sification of this rangebin, Bit 4 : reserved (always set to 0), ..., Bit 8 : reserved (always set to 0)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>backscatter_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Backscatter ratio deduced for this rangebin
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>applied_scatratio_method</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Method applied to deduce Backscatter ratio for this rangebin
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>selected_SNR</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Signal-to-Noise ratio deduced for this rangebin
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>applied_snr_method</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Method applied to deduce SNR for this rangebin
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>applied_classification_method</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Method applied to derive the classification decision for this rangebin
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>l2b_rayleigh_classification_qc</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;530</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>l2b_rayleigh_meas_bin_classification</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>24</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;528</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
+<tr valign="top">
+<td colspan="2">
+Structure describing QC parameters resulting from the Rayleigh Classification algorithm
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>l2b_rayleigh_meas_bin_class_flags1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+First byte of 8 flags describing classification properties for the current Rayleigh measurement rangebin. Bit 1 (L2B_Rayl_Class_Cloud_Above) : a cloud was detected in a range bin higher than the current range bin, Bit 2 (L2B_Rayl_Class_Cloud) : this rangebin contains a cloud, Bit 3 (L2B_Rayl_Class_Maybe_Cloud) : this rangebin contains possibly a cloud, but the backscatter is close to the threshold, Bit 4 (L2B_Rayl_Class_Aerosol) : Mie backscatter is present, but it is not a cloud, Bit 5 (L2B_Rayl_Class_Precipitation) : Precipitation is present in this range bin, Bit 6 (L2B_Rayl_Class_No_Extinction) : No extinction is known for this range bin, Bit 7 (L2B_Rayl_Class_Unknown_Scatterer) : the value encountered in this rangebin for backscatter is unphysical for clouds, Bit 8 (L2B_Rayl_Class_Broken_Clouds) : this range bin contains a broken cloud layer (currently only used for Obs range bins)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>l2b_rayleigh_meas_bin_class_flags2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Second byte of 8 flags describing classification properties for the current Rayleigh measurement rangebin. Bit 1 (L2B_Rayl_Class_Convective_Clouds) : this range bin contains convective clouds, Bit 2 (L2B_Rayl_Class_No_Cloud_Detected) : Flag indicating that no cloud or aerosol was detected in this rangebin, Bit 3 (L2B_NWP_Data_Used) : Flag indicating that NWP data was used to determine the classification of this rangebin, Bit 4 : reserved (always set to 0), ..., Bit 8 : reserved (always set to 0)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>backscatter_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Backscatter ratio deduced for this rangebin
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>applied_scatratio_method</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Method applied to deduce Backscatter ratio for this rangebin
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>selected_mie_snr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Mie Signal-to-Noise ratio that was copied over from the matching Mie rangebin to this Rayleigh rangebin
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>applied_mie_snr_method</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Method applied to deduce the Mie SNR that was copied over from the matching Mie rangebin to this Rayleigh rangebin
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>applied_classification_method</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Method applied to derive the classification decision for this rangebin
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>opt_prop_result</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;653</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>opt_prop_meas_result</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>24</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;648</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
+<tr valign="top">
+<td colspan="2">
+Structure describing the results of the iterative Optical properties algorithm for this measurement
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>extinction_iterative</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Aerosol extinction as determined by the iterative Optical Properties Algorithm
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1/m"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>scattering_ratio_iterative</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Scattering ratio as determined by the iterative Optical Properties Algorithm
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>xtalk_detected</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Switch to indicate if cross talk was detected or not by the iterative Optical Properties Algorithm
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>layer_top</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Top of the cloud layer detected by the iterative Optical Properties Algorithm
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>layer_bottom</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Bottom of the cloud layer detected by the iterative Optical Properties Algorithm
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>layer_method</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Method used by the iterative Optical Properties Algorithm to determine the cloud layer. -1 = Layer Method Undefined; 1 = Layer Method partial bin; 2 = Layer Method filled bins
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;5</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

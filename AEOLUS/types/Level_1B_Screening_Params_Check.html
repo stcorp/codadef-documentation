@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_1B_Screening_Params_Check</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_1B_Screening_Params_Check</h1>
+<table class="top">
+<tr><th  colspan="2"align="left">xml&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Screening_Params_Check.html">Level_1B_Screening_Params_Check</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Lower_Threshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Lower threshold. If the value to be checked is below this value the check fails.
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Upper_Threshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Upper threshold. If the value to be checked is above this value the check fails.
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>Flag_Measurements_Invalid</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+If set, measurements failing the current check are flagged invalid and not considered as input to the classification algorithm.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>Flag_Wind_Invalid</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+If set, then the current wind result is flagged invalid in case any of the measurements used in the accumulation that is used to calculate this wind fails the current check.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>Abort_Processing</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+If set, then a measurement failing the current check causes the processor to abort with an error.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

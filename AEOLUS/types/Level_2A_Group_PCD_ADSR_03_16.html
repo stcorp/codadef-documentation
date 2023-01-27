@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_2A_Group_PCD_ADSR_03_16</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_2A_Group_PCD_ADSR_03_16</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2A_Group_PCD_ADSR_03_16.html">Level_2A_Group_PCD_ADSR_03_16</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;108</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>starttime</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Start date and time of the group profile covered by the present DSR. This is the centroid time of the first measurement of the profile.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>brc_start</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Brc of the first measurement of the group.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>measurement_start</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+First measurement of the group.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>brc_end</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Brc of the last measurement of the group.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>measurement_end</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Last measurement of the group.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>height_bin_index</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Index of the height level of the group in Rayleigh scale.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>particle_extinction_variance</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Variance of the particle extinction coefficient. Missing value: -1.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m^-2"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>particle_backscatter_variance</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Variance of the particle backscatter coefficient. Missing value: -1.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m^-2 sr^-2"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>particle_lod_variance</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Variance of the particle local optical depth. Missing value: -1.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>qc_flag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Bit packed quality field (data valid 1, otherwise 0): Bit 1: Extinction, Bit 2: Backscatter, Bit 3: Mie SNR, Bit 4: Rayleigh SNR, Bit 5: Extinction error bar, Bit 6: Backscatter error bar, Bit 7: Cumulative LOD, Bit 8: Spare
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>mid_particle_extinction_variance_top</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Variance of the particle extinction coefficient in this height top middle bin. Missing value: -1.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m^-2"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>mid_particle_backscatter_variance_top</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Variance of the particle backscatter coefficient in this height top middle bin. Missing value: -1.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m^-2 sr^-2"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>mid_particle_lod_variance_top</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Variance of the particle local optical depth in this height top middle bin. Missing value: -1.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>mid_particle_ber_variance_top</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Variance of the BER in this height top middle bin. Missing value: -1.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "sr^-2"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>mid_particle_extinction_variance_bot</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Variance of the particle extinction coefficient in this height top middle bin. Missing value: -1.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m^-2"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>mid_particle_backscatter_variance_bot</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Variance of the particle backscatter coefficient in this height top middle bin. Missing value: -1.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m^-2 sr^-2"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>mid_particle_lod_variance_bot</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Variance of the particle local optical depth in this height top middle bin. Missing value: -1.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>mid_particle_ber_variance_bot</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Variance of the BER in this height top middle bin. Missing value: -1.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "sr^-2"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

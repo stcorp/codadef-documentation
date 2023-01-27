@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_2A_Feature_Mask_ADSR_03_16</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_2A_Feature_Mask_ADSR_03_16</h1>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2A_Feature_Mask_ADSR_03_16.html">Level_2A_Feature_Mask_ADSR_03_16</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>starttime</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+BRC start time
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>overall_quality</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Flag set to 1 in case Feature Mask of this BRC is considered to be of good quality, otherwise 0. Currently set fixed to 0 as long as algorithm is in experimental status.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>feature_mask_indices</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>, <b>24</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_meas_max_brc</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Structure containing containing feature index for all lidar bins of each measurement of the BRC.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>feature_mask_index</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Index for specific height bin in specific measurement. For L2A products generated with the L2A prototype, all indices are set to -2, as the Feature Mask is not retrieved by the prototype.
+Possible settings:
+-3 (sub-)surface data
+-2 no retrievals
+-1 Fully Rayleigh attenuated
+0 clear sky
+1 most likely molecular
+2 very likely molecular
+3 more likely molecular
+4 likely only molecules
+5 expected low altitude aerosol (not retrieved)
+6 likely clouds or aerosols
+7 more likely clouds or aerosols
+8 very likely clouds or aerosols
+9 most likely clouds
+10 Clouds present
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

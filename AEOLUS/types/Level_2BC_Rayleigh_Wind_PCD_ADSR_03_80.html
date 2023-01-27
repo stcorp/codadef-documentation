@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_2BC_Rayleigh_Wind_PCD_ADSR_03_80</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_2BC_Rayleigh_Wind_PCD_ADSR_03_80</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Rayleigh_Wind_PCD_ADSR_03_80.html">Level_2BC_Rayleigh_Wind_PCD_ADSR_03_80</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;93</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>wind_result_id</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+unique L2B wind result identification number for this L2B file
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>start_of_obs_datetime</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Start date and time of Measurement
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>rayleigh_wind_qc</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;57</td></tr>
+<tr valign="top">
+<td colspan="2">
+Structure in which the wind retrieval output QC parameters for the Rayleigh channel are collected
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>hlos_error_estimate</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Error estimate reported by the Rayleigh processing algorithm, given in cm/s and rounded to the nearest integer
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "cm/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>reference_hlos</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference HLOS wind taken from the matching profile in the AUX_MET file that was used for processing (and as is used for calculating O-B statistics), given in cm/s and rounded to the nearest integer.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "cm/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>flags1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+First flag describing Rayleigh processing results for the current wind result. Bit 1: missing usefull reference pulse signal Rayleigh Channel A, Bit 2: missing usefull reference pulse signal Rayleigh Channel B, Bit 3: missing usefull signal Rayleigh Channel A, Bit 4: missing usefull signal Rayleigh Channel B, Bit 5: threshold check on RRmes_weighted failed, Bit 6: missing RRmes_weighted value, Bit 7: missing RR_RefPulse_weighted value, Bit 8: missing p_ref value
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>flags2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Second flag describing Rayleigh processing results for the current wind result. Bit 1: missing T_ref value, Bit 2: missing rho_weighted value, Bit 3: corr0 threshold failed, Bit 4: corr0dR threshold failed, Bit 5: corr0dT threshold failed, Bit 6: corr0dP threshold failed, Bit 7: corr0drho threshold failed, Bit 8: corr0_RefPulse threshold failed
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>flags3</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Third flag describing Rayleigh processing results for the current wind result. Bit 1: missing iliad_los_velocity value, Bit 2: missing spacecraft_los_velocity value, Bit 3: missing ground_corr_velocity value, Bit 4: missing internal_reference_los_velocity value, Bit 5: the wind was flagged invalid since it includes measurements that may have ground echoes according to the DEM as reported by the AUX_MET_12 input file, Bit 6: the wind was flagged invalid since it includes measurements that may have ground echoes according to the DEM as reported by the L1B product, Bit 7: the wind was flagged invalid since it contains measurements for which the L1B product reported ground echoes at this range bin level or above, Bit 8: the wind was flagged invalid because the classification “cloudy” is not trusted for the Rayleigh channel (the user has set Flag_Cloudy_Rayleigh_Results_Invalid to True)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>flags4</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Fourth flag describing Rayleigh processing results for the current wind result. Bit 1: the wind was manually flagged invalid since this range bin is currently untrusted due to a “hot pixel”, Bit 2: the wind was in the O-B bias check automatically flagged invalid. This range bin is currently untrusted because it may be affected by an uncorrected “hot pixel”, Bit 3: the wind result was flagged invalid due to blacklisting, Bit 4: flagged invalid due to climatological sanity check, Bit 5: The accumulated los_bias_correction was missing, indicating that one of the bias correction calculations failed, Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>input_screening_flags1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+First input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: L1B_Laser_Freq_Unlocked_Check failed (BRC level check), Bit 2: L1B_Ref_Pulses_Unlocked_Check failed (BRC level check), Bit 3: L1B_Laser_Freq_Offset_Check failed (BRC level check), Bit 4: L1B_Laser_UV_Energy_Check failed (BRC level check), Bit 5: L1B_Laser_Freq_Offs_Stdev_Check failed (BRC level check), Bit 6: L1B_Laser_UV_Energy_Stdev_Check failed (BRC level check), Bit 7: L1B_Mie_Mean_Emit_Freq_Check failed (BRC level check), Bit 8: L1B_Mie_Emit_Freq_Stdev_Check failed (BRC level check).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>input_screening_flags2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Second input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: L1B_Rayleigh_Mean_Emit_Freq_Check failed (BRC level check), Bit 2: L1B_RayleighEmitFreqStdev_Check failed (BRC level check), Bit 3: L1B_Sat_Not_on_Target_Check failed (BRC level check), Bit 4: L1B_Mie_Corrupt_Check failed (BRC level check), Bit 5: L1B_Rayleigh_Corrupt_Check failed (BRC level check), Bit 6: L1B_Mie_Ref_PulsesCorrupt_Check failed (BRC level check), Bit 7: L1B_Rayl_RefPulsesCorrupt_Check failed (BRC level check), Bit 8: L1B_Mie_Invalid_Meas_Check failed (BRC level check).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>input_screening_flags3</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Third input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: L1B_Mie_Invalid_RefPulses_Check failed (BRC level check), Bit 2: L1B_Rayl_Invalid_Meas_Check failed (BRC level check), Bit 3: L1B_Rayl_InvalidRefPulses_Check failed (BRC level check), Bit 4: num_rayleigh_invalid_ref_pulses check failed (meas level check), Bit 5: avg_laser_freq_offset check failed (meas level check), Bit 6: avg_UV_energy check failed (meas level check), Bit 7: laser_freq_offset_std_dev check failed (meas level check), Bit 8: UV_energy_std_dev check failed (meas level check).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>input_screening_flags4</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Fourth input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: vel_of_att_uncertainty_error check failed (meas level check), Bit 2: rayleigh_mean_emitted_freq check failed (meas level check), Bit 3: rayleigh_emitted_freq_std_dev check failed (meas level check), Bit 4: flag Rayl on mie_emit_freq_stdev check failed (meas level check), Bit 5: moon blinding check failed (meas level check), Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>input_screening_flags5</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Fifth input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: Rayleigh_meas_invalid check failed (meas bin level check), Bit 2: Rayleigh_snr_channel_A check failed (meas bin level check), Bit 3: Rayleigh_snr_channel_B check failed (meas bin level check), Bit 4: Rayleigh_Response on meas. level check failed (meas bin level check), Bit 5: reserved (always set to 0), Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>input_screening_flags6</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Sixth input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: Overall validity flag raised for any meas. included in this wind (copied L1B QC bit), Bit 2: SNR ratio below given threshold flag raised for any meas. included in this wind (copied L1B QC bit), Bit 3: Data saturation found flag raised for any meas. included in this wind (copied L1B QC bit), Bit 4: Data spike found flag raised for any meas. included in this wind (copied L1B QC bit), Bit 5: reserved (always set to 0), Bit 6: Source packet invalid flag raised for any meas. included in this wind (copied L1B QC bit), Bit 7: Laser frequency not locked flag raised for any meas. included in this wind (copied L1B QC bit), Bit 8: Spacecraft attitude not on target raised for any meas. included in this wind (copied L1B QC bit).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>scattering_ratio</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Scattering_Ratio. Note that this value will always be available if valid signals are present, also in case the value used in Mie decontamination for this wind result is forced to 1.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>applied_sr_method</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Scattering _Ratio_Method used to determine the Scattering_Ratio rho based on the signals used to derive this wind result as has been reported in the Scattering_Ratio field.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>applied_dsr_method</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Scattering_Ratio_Method used to determine the Scattering_Ratio rho as has been applied for Mie signal decontamination for this wind result.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>rayl_snr_a</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Estimated SNR value for the Rayleigh A channel, using the same accumulation as was used for deriving the current wind result.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>rayl_snr_b</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Estimated SNR value for the Rayleigh B channel, using the same accumulation as was used for deriving the current wind result.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>rr_measured</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh response used as input for the atmospheric path part of the wind retrieval calculation (without additional bias corrections)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>rr_refpulse</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Rayleigh response used as input for the internal reference path part of the wind retrieval calculation (without additional bias corrections)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>
