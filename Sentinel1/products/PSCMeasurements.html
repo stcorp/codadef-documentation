@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>PSCMeasurements v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>PSCMeasurements version 0</h1>
+<h2>PSCMeasurements</h2>
+<p>This definition is based on version 2.5 of the SPP File Format Specification S1PD.TCN.00095.ASRT</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>pscProduct</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>pscInputInformation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>inputCoregisteredStackProductsList</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>length</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>inputCoregisteredStackProductName</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>pid</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>inputCoregisteredStackMasterImageName</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>missionId</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Mission identifier
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>swath</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Swath identifier.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>polarisation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Polarisation.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>startTime</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>time</b>(<b>str</b>(.), &quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26</td></tr>
+<tr valign="top">
+<td colspan="2">
+CCSDS ASCII datetime "YYYY-MM-DDThh:mm:ss.uuuuuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>stopTime</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>time</b>(<b>str</b>(.), &quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26</td></tr>
+<tr valign="top">
+<td colspan="2">
+CCSDS ASCII datetime "YYYY-MM-DDThh:mm:ss.uuuuuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>absoluteOrbitNumber</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Absolute orbit number (take from the Master image).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>psCalibrationInformation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>psCalibrationInformationList</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>length</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>product</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>productName</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Name of the image contained in the input stack to which the calibration constant is referred.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>productUTCTime</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26</td></tr>
+<tr valign="top">
+<td colspan="2">
+Image UTC time (computed at mid azimuth) to which the calibration constant is referred.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>time</b>(<b>str</b>(.), &quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26</td></tr>
+<tr valign="top">
+<td colspan="2">
+CCSDS ASCII datetime "YYYY-MM-DDThh:mm:ss.uuuuuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>productANXTime</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Image ANX time (computed at mid azimuth) to which the calibration constant is referred.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>pscalibrationConstant</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Relative calibration constant retrieved by the PSC processor for this image.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "dB"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>calibrationConstantQualityIndex</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Quality index of the computed PS calibration constant [0..1].
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>deltaCalibrationConstant</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Delta calibration to be added to the constants retrieved by the PSC processor to have the absolute values. It is equal to the external calibration constant contained in the reference image (i.e. the first input image in chronological order) ADS.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "dB"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>psCalibrationParametersTrend</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>azRef</b></td>
+<td>
+<table>
+<tr><th align="left">ascii&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>time</b>(<b>str</b>(.), &quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26</td></tr>
+<tr valign="top">
+<td colspan="2">
+CCSDS ASCII datetime "YYYY-MM-DDThh:mm:ss.uuuuuu".
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>calibrationCoefficients</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>cal0</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Polynomial coefficient 0.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "dB/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>cal1</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Polynomial coefficient 1.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "dB"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>calibrationSiteInformation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>calibrationSiteName</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Calibration site name.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>calibrationSiteID</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Calibration site identifier.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>minLatitude</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Calibration site minimum latitude.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "degree_north"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>maxLatitude</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Calibration site maximum latitude.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "degree_north"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>minLongitude</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Calibration site minimum longitude.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "degree_east"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>maxLongitude</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Calibration site maximum longitude.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "degree_east"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>psMaskDescription</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>numberOfPS</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Number of PS in the map.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>globalQualityIndex</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Global quality index over selected PS.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>numberOfLines</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Total number of lines in the map.
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>numberOfSamples</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Total number of samples in the map.
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>exists</b>(/pscProduct)
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>

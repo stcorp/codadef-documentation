@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>AUX_PP0___ v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>AUX_PP0___ version 0</h1>
+<h2>AUX_PP0</h2>
+<p>This definition is based on version 1.8 of the BIOMASS L-0, OA Processors Specific ICD - BIO-FLEX-L0PF-OAPF</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Configuration</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>noNamespaceSchemaLocation</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Cfg_ID</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>BufferSize</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint64</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>uom</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>CompactCreationDate</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>ReferenceEpoch</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;time</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>time</b>(<b>str</b>(.), &quot;yyyy-MM-dd'T'HH:mm:ss&quot;)</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>L0PF_Configuration</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>L0RefDoc</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>SlicingGrid</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>SliceDuration</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>SliceStartOverlap</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>SliceStopOverlap</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>SliceMaxNumber</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>Doi</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>Products</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Standard</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>IndexData</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Sampling</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Monitoring</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>ListOfSwl</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Swl</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Gstl</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Begin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint64</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>End</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint64</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>PlatformAncillary</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>InitialMargin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>FinalMargin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>OAPF_Configuration</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>AuxRefDoc</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Doi</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>AttitudeLaw</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>NavattModification</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Enabled</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>FeedAngle</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>uom</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>ReflectorFocalLength</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>uom</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>AntennaMispointingAngle</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>uom</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>AocsInMrf</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>X</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Y</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>Z</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>FeedInMrf</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>X</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Y</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>Z</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>SarInAnt</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>X</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Y</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>Z</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>FeedToMrf</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>X1</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>X2</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>X3</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>Y1</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>Y2</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>Y3</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>Z1</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>Z2</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>Z3</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>substr</b>(0, 4, <b>filename</b>()) == &quot;bio_&quot; <b>and</b><br />
+<b>substr</b>(4, 7, <b>filename</b>()) == &quot;aux_pp0&quot; <b>and</b><br />
+<b>substr</b>(46, 11, <b>filename</b>()) == &quot;_config.xml&quot;
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>

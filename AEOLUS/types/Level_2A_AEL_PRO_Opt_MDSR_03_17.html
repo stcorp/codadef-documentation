@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_2A_AEL_PRO_Opt_MDSR_03_17</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_2A_AEL_PRO_Opt_MDSR_03_17</h1>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2A_AEL_PRO_Opt_MDSR_03_17.html">Level_2A_AEL_PRO_Opt_MDSR_03_17</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>starttime</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Start date and time of the AEL-PRO profile covered by the present DSR. This is the centroid time of the first measurement of the profile.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>measurement_ael_pro_optical_properties</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $num_meas_max_brc</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1024</td></tr>
+<tr valign="top">
+<td colspan="2">
+Structure containing AEL-PRO products for the measurements of the BRC in the Mie bins
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>tropopause_altitude</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Tropopause altitude estimates using the CALIPSO method
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>retrieved_lidar_calibration_constant</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Estimated Lidar calibration constant
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "ACCD_counts m^2 sr"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>height_bin_ael_pro_optical_properties</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;array[<b>24</b>]</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1008</td></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;42</td></tr>
+<tr valign="top">
+<td colspan="2">
+Structure containing AEL-PRO products for the Mie bins
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>extinction</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Particle extinction coefficient of the height bin. Missing value: -1e+06.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "10^-6 m^-1"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>lr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Particle lidar ratio. Missing value: -1.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "sr"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>ber</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Particle backscatter-to-extinction ratio. Missing value: -1.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "sr^-1"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>sr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Scattering ratio of the height bin. Missing value: -1.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "sr^-1"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>particle_effective_area_radius</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Particle effective area radius: Missing value: -1
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "microns"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>classification</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+0: Clear sky tropospheric
+                    100: Clear sky and used in pass 1 (tropospheric)
+                    200: Clear sky and used in pass 1 (stratospheric)
+                    1: Water cloud
+                    101: Water cloud and used in pass 1 (tropospheric)
+                    201: Water cloud and used in pass 1 (stratospheric)
+                    2: Ice cloud tropospheric
+                    102: Ice cloud and used in pass 1 (tropospheric)
+                    3: Tropospheric aerosol
+                    103: Tropospheric aerosol and used in pass 1
+                    13: Stratospheric aerosol
+                    213: Stratospheric aerosol and used in pass 1
+                    11: PSC-Type 1
+                    211: PSC-Type 1 and used in pass 1
+                    12: PSC-Type 2
+                    212: PSC-Type 2 and used in pass 1
+                    1000 &lt;= index &lt; 2000: Attenuated and is tropospheric
+                    2000 &lt;= index &lt; 10000: Attenuated and is strato-
+                    spheric
+                    10000 &lt; index: Surface
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

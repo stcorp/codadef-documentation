@@ -6235,7 +6235,235 @@ The DCO correction uses a mean offset value. If set to TRUE, imaging pixel 18 is
 </table>
 </td>
 </tr>
-<tr valign="top"><td>6</td><td><b>LOS_Velocity_Correct_Nadir</b></td>
+<tr valign="top"><td>6</td><td><b>DCMZ_Correction_Selections</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Processing parameters for the selection of pixels that shall be DCMZ corrected.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Apply_Selection_Rayleigh</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Switch on/off the selection of Rayleigh pixels that shall be DCMZ corrected
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>List_of_Rayleigh_Selections</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+A list of 24 structures with pixel selections per row. The first structure corresponds to the upper most row on the Rayleigh memory zone.
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>List_of_Rayleigh_Selections</b></td>
+<td>
+<span class="attr_key">real name</span><span class="attr_value">: <b>Rayleigh_Selection</b></span>
+<br /><br /><table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<b>24</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<b>16</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+This list contains 16 values, separated by blanks. The 16 values correspond to a specific row of the ACCD in the memory zone. Each value selects via the setting 0 (no correction) or 1 (perform correction) if the specific pixel should be DCMZ corrected. The first value corresponds to the left most useful pixel on the ACCD in a row.
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>Rayleigh_Selection_Background</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<b>16</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+This list contains 16 values, separated by blanks. The 16 values correspond to the Rayleigh background row. Each value selects via the setting 0 (no correction) or 1 (perform correction) if the specific pixel should be DCMZ corrected. The first value corresponds to the left most useful pixel on the ACCD in a row.
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>Apply_Selection_Mie</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Switch on/off the selection of Rayleigh pixels that shall be DCMZ corrected
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>List_of_Mie_Selections</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+A list of 24 structures with pixel selections per row. The first structure corresponds to the upper most row on the Mie memory zone.
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>List_of_Mie_Selections</b></td>
+<td>
+<span class="attr_key">real name</span><span class="attr_value">: <b>Mie_Selection</b></span>
+<br /><br /><table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<b>24</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<b>16</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+This list contains 16 values, separated by blanks. The 16 values correspond to a specific row of the ACCD in the memory zone. Each value selects via the setting 0 (no correction) or 1 (perform correction) if the specific pixel should be DCMZ corrected. The first value corresponds to the left most useful pixel on the ACCD in a row.
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>Mie_Selection_Background</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<b>16</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+This list contains 16 values, separated by blanks. The 16 values correspond to the Mie background row. Each value selects via the setting 0 (no correction) or 1 (perform correction) if the specific pixel should be DCMZ corrected. The first value corresponds to the left most useful pixel on the ACCD in a row.
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>LOS_Velocity_Correct_Nadir</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -6259,7 +6487,7 @@ Correct Nadir mode measured data for satellite velocity using ideal RRC/MRC resp
 </table>
 </td>
 </tr>
-<tr valign="top"><td>7</td><td><b>LOS_Velocity_Correct_Off_Nadir</b></td>
+<tr valign="top"><td>8</td><td><b>LOS_Velocity_Correct_Off_Nadir</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -6283,7 +6511,7 @@ Correct Off-Nadir mode measured data for satellite velocity
 </table>
 </td>
 </tr>
-<tr valign="top"><td>8</td><td><b>Frequency_Change_Settling_Time</b></td>
+<tr valign="top"><td>9</td><td><b>Frequency_Change_Settling_Time</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>

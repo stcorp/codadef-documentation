@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_2BC_Mie_Wind_PCD_ADSR_03_95</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_2BC_Mie_Wind_PCD_ADSR_03_95</h1>
+<table class="top">
+<tr><th align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Mie_Wind_PCD_ADSR_03_95.html">Level_2BC_Mie_Wind_PCD_ADSR_03_95</a>"</th><td style="width:10px" align="right"><i>size</i>:&nbsp;189</td></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>wind_result_id</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+unique L2B wind result identification number for this L2B file
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>start_of_observation_datetime</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Start date and time of Measurement
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>mie_wind_qc</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;153</td></tr>
+<tr valign="top">
+<td colspan="2">
+Structure in which the wind retrieval output QC parameters for the Mie channel are collected
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>hlos_error_estimate</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Error estimate reported by the Mie processing algorithm, given in cm/s and rounded to the nearest integer
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "cm/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>reference_hlos</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int16</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
+<tr valign="top">
+<td colspan="2">
+Reference HLOS wind taken from the matching profile in the AUX_MET file that was used for processing (and as is used for calculating O-B statistics), given in cm/s and rounded to the nearest integer.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "cm/s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>flags1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+First flag describing Mie processing results for the current wind result.  Bit 1: MaxItLorFit threshold reached for measurement fit, Bit 2: ResErrThresh threshold reached for measurement fit, Bit 3: MaxItNonLinOpt threshold reached for measurement fit, Bit 4: PeakHeightLoThresh threshold reached for measurement fit, Bit 5: PeakHeightUpThresh threshold reached for measurement fit, Bit 6: FWHMLoThresh threshold reached for measurement fit, Bit 7: FWHMUpThresh threshold reached for measurement fit, Bit 8: PeakLocThresh threshold reached for measurement fit
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>flags2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Second flag describing Mie processing results for the current wind result. Bit 1: MaxItLorFit threshold reached for internal reference fit, Bit 2: ResErrThresh threshold reached for internal reference fit, Bit 3: MaxItNonLinOpt threshold reached for internal reference fit, Bit 4: PeakHeightLoThresh threshold reached for internal reference fit, Bit 5: PeakHeightUpThresh threshold reached for internal reference fit, Bit 6: FWHMLoThresh threshold reached for internal reference fit, Bit 7: FWHMUpThresh threshold reached for internal reference fit, Bit 8: PeakLocThresh threshold reached for internal reference fit
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>flags3</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Third flag describing Mie processing results for the current wind result. Bit 1: SNR threshold failed for this wind result (signal was too low), Bit 2: reserved (always set to 0), Bit 3: reserved (always set to 0), Bit 4: reserved (always set to 0), Bit 5: the wind was flagged invalid since it includes measurements that may have ground echoes according to the DEM as reported by the AUX_MET_12 input file, Bit 6: the wind was flagged invalid since it includes measurements that may have ground echoes according to the DEM as reported by the L1B product, Bit 7: the wind was flagged invalid since it contains measurements for which the L1B product reported ground echoes at this range bin level or above, Bit 8: the wind was flagged invalid because the classification “clear” is not trusted for the Mie channel (the user has set Flag_Clear_Mie_Results_Invalid to True)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>flags4</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Fourth flag describing Mie processing results for the current wind result. Bit 1: the wind was manually flagged invalid since this range bin is currently untrusted due to a “hot pixel”, Bit 2: the wind was in the O-B bias check automatically flagged invalid. This range bin is currently untrusted because it may be affected by an uncorrected “hot pixel”, Bit 3: the wind result was flagged invalid due to blacklisting, Bit 4: flagged invalid due to climatological sanity check, Bit 5: flagged invalid due to large O-B bias during moonblinding, Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>input_screening_flags1</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+First input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: L1B_Laser_Freq_Unlocked_Check failed (BRC level check), Bit 2: L1B_Ref_Pulses_Unlocked_Check failed (BRC level check), Bit 3: L1B_Laser_Freq_Offset_Check failed (BRC level check), Bit 4: L1B_Laser_UV_Energy_Check failed (BRC level check), Bit 5: L1B_Laser_Freq_Offs_Stdev_Check failed (BRC level check), Bit 6: L1B_Laser_UV_Energy_Stdev_Check failed (BRC level check), Bit 7: L1B_Mie_Mean_Emit_Freq_Check failed (BRC level check), Bit 8: L1B_Mie_Emit_Freq_Stdev_Check failed (BRC level check).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>input_screening_flags2</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Second input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: L1B_Rayleigh_Mean_Emit_Freq_Chk failed (BRC level check), Bit 2: L1B_RayleighEmitFreqStdev_Check failed (BRC level check), Bit 3: L1B_Sat_Not_on_Target_Check failed (BRC level check), Bit 4: L1B_Mie_Corrupt_Check failed (BRC level check), Bit 5: L1B_Rayleigh_Corrupt_Check failed (BRC level check), Bit 6: L1B_Mie_Ref_PulsesCorrupt_Check failed (BRC level check), Bit 7: L1B_Rayl_RefPulsesCorrupt_Check failed (BRC level check), Bit 8: L1B_Mie_Invalid_Meas_Check failed (BRC level check).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>input_screening_flags3</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Third input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: L1B_Mie_Invalid_RefPulses_Check failed (BRC level check), Bit 2: L1B_Rayl_Invalid_Meas_Check failed (BRC level check), Bit 3: L1B_Rayl_InvalidRefPulses_Check failed (BRC level check), Bit 4: invalid ref. pulses check failed (meas level check), Bit 5: avg. laser freq. offset check failed (meas level check), Bit 6: avg. UV energy check failed (meas level check), Bit 7: laser freq. offset stdev check failed (meas level check), Bit 8: UV energy stdev check failed (meas level check).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>input_screening_flags4</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Fourth input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: vel_of_att_uncertainty_error check failed (meas level check), Bit 2: mie_mean_emitted_freq check failed (meas level check), Bit 3: mie_emitted_freq_std_dev check failed (meas level check), Bit 4: reserved (always set to 0), Bit 5: moon blinding check failed (meas level check), Bit 6: reserved (always set to 0),  Bit 7: reserved (always set to 0),  Bit 8: reserved (always set to 0).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>input_screening_flags5</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Fifth input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: Mie_Meas_Invalid_Check failed (meas bin level check), Bit 2: scattering ratio check failed (meas bin level check), Bit 3: refined scattering ratio check failed (meas bin level check), Bit 4: SNR check failed (meas bin level check), Bit 5: refined SNR check failed (meas bin level check), Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>input_screening_flags6</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Sixth input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: Overall validity flag raised for any meas. included in this wind (copied L1B QC bit), Bit 2: SNR ratio below given threshold flag raised for any meas. included in this wind (copied L1B QC bit), Bit 3: Data saturation found flag raised for any meas. included in this wind (copied L1B QC bit), Bit 4: Data spike found flag raised for any meas. included in this wind (copied L1B QC bit), Bit 5: reserved (always set to 0), Bit 6: Source packet invalid flag raised for any meas. included in this wind (copied L1B QC bit), Bit 7: Laser frequency not locked flag raised for any meas. included in this wind (copied L1B QC bit), Bit 8: Spacecraft attitude not on target raised for any meas. included in this wind (copied L1B QC bit).
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>intref_fitting_amplitude</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Amplitude of the curve used for fitting the internal reference spectrum
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>intref_fitting_residual</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Residual after the fit to the internal reference spectrum is performed (should also give an idea of the reliability of the fit)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>intref_fitting_offset</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Offset of the curve used for fitting the internal reference spectrum
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>intref_fitting_fwhm</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+FWHM of the curve used for fitting internal reference the spectrum.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>intref_fitting_peakloc</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Peak location result from fitting the internal reference spectrum.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>intref_fitting_offsetsub</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Offset subtraction as applied to the fit result of the internal reference spectrum.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>intref_fitting_valflag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Validity flag indicating the succes of fitting the internal reference spectrum.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>intref_fitting_mie_snr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Refined SNR value derived by fitting the internal reference spectrum.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>intref_fitting_mie_sr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Refined Scattering Ratio value derived by fitting the internal reference spectrum.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>fitting_amplitude</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Amplitude of the curve used for fitting the Mie spectrum
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td><b>fitting_residual</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Residual after the fit to the Mie spectrum is performed (should also give an idea of the reliability of the fit)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td><b>fitting_offset</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Offset of the curve used for fitting the Mie spectrum
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td><b>fitting_fwhm</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+FWHM of the curve used for fitting the Mie spectrum. This gives a measure of the wind variability in this rangebin
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>25</td><td><b>fitting_peakloc</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Peak location result from fitting the measured atmospheric Mie spectrum.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>26</td><td><b>fitting_offsetsub</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Offset subtraction as applied to the fit result of the measured atmospheric Mie spectrum.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>27</td><td><b>fitting_valflag</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Validity flag indicating the succes of fitting the measured atmospheric Mie spectrum.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>28</td><td><b>fitting_mie_snr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+SNR of the measured atmospheric Mie spectrum
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>29</td><td><b>fitting_mie_sr</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Refined Scattering ratio value derived by fitting the accumulated measured atmospheric Mie spectrum
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>30</td><td><b>extinction</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Extinction
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1/m"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>31</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td>spare</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;bytes</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

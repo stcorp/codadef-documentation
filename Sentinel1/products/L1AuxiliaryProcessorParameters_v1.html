@@ -1,0 +1,1913 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>L1AuxiliaryProcessorParameters v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>L1AuxiliaryProcessorParameters version 1</h1>
+<h2>L1AuxiliaryProcessorParameters_v1</h2>
+<p>This definition is based on both version 3.3 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>l1AuxiliaryProcessorParameters</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+L1 Processor parameters auxiliary file definition (AUX_PP1).
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>schemaVersion</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>noNamespaceSchemaLocation</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>productList</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+List of L1 products containing the applicable auxiliary parameters for each. This list contains an entry for each product the IPF is capable of generating, indexed by its unique product identifier.
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>product</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Product auxiliary parameters. This DSR contains all of the auxiliary parameters required to process a single product. The parameters are stored in structures that are grouped together by the logical processing steps used during image creation. The parameters within this DSR and its children are not polarisation dependent and in general apply to the entire product; however, in some cases a distinction must be made amongst swaths and when this is necessary the records are indexed with a swath identifier.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>productId</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Product type identifier as per S1 IPF ICD to which this set of parameters applies. The productId is used to index and find the correct set of auxiliary parameters for each product the IPF is capable of generating.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>commonProcParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Common processing auxiliary parameters. This record holds the parameters that are common among multiple steps in the image processing chain.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>correctIQBiasFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Flag to control the correction of the constant biases from the I and Q channels. IQ bias correction will be performed if and only if this flag is set to "true".
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>correctIQGainImbalanceFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Flag to control the correction of the IQ gain imbalance. IQ gain imbalance correction will be performed if and only if this flag is set to "true".
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>correctIQOrthogonalityFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Flag to control the correction of the IQ orthogonality. IQ orthorgonality correction will be performed if and only if this flag is set to "true".
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>correctBistaticDelayFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Flag to compensate for the bi-static delay. Correction will be performed if and only if this flag is set to "true".
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>correctBistaticDelayMethod</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Method used to compensate for the bi-static delay. If set to "Coarse" then only the coarse bistatic delay correction is applied; otherwise, if set to "Fine" then the full correction is applied. Flag introduced starting from IPF V290.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>correctRxVariationFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Flag to control the correction of the gain variation across the receive window. Receive variation correction will be performed if and only this flag is set to "true".
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>ellipsoidParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Ellipsoid and DEM parameters.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>ellipsoidName</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Name of the reference ellipsoid.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>ellipsoidSemiMajorAxis</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Semi-major axis of ellipsoid [m].
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>ellipsoidSemiMinorAxis</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Semi-minor axis of ellipsoid [m].
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>useDemFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+This flag is used to control the use of a DEM during processing. Set to true if a DEM is to be used during processing, false otherwise.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>aziProcBlockParamsList</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth processing block parameters record indexed by swath. There will be one record per swath.
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>aziProcBlockParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth processing block parameters record indexed by swath. There will be one record per swath.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>swath</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Swath identifier. This parameter defines the swath to which this record applies.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>aziProcBandwidth</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Total processing bandwidth [Hz] (excluding any additional bandwidth resulting from the taperBwExtentFraction). This parameter defines the bandwidth (Bw) to use during processing. The processing bandwidth (Bw) must be 0 &lt; Bw &lt;= PRF.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>aziBlockSize</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth processing block size [lines].
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>extraAziProcBlockOverlap</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Extra azimuth block overlap to account for possible variation of Doppler centroid frequency from azimuth block to azimuth block [lines].
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>maxFdc</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum expected Doppler centroid frequency [Hz]. Used to calculate the SM SLC azimuth matched filter throwaway component of azimuth block overlap as applicable to all azimuth blocks in a segment.
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: if(<b>exists</b>(@count), <b>int</b>(<b>str</b>(@count)), 1)</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>outputMeanExpected</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+This parameter specifies the expected mean of the samples in the output image and is used for verifying that the calculated mean of the output samples is within the tolerated threshold.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>outputMeanThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Threshold for setting the outputDataMeanOutsideNominalRange flag in the output product annotations. This is the value T, such that the measured mean must fall between the outputMeanExpected-T and outputMeanExpected+T.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>outputStdDevExpected</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+This parameter specifies the expected standard deviation of the samples in the output image and is used for verifying that the calculated std. dev. of the output samples is within the tolerated threshold.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>outputStdDevThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Threshold for setting the outputDataStdDevOutsideNominalRange flag in the output product annotations. This is the value D, such that the measured standard deviation must fall between the outputStdDevExpected-D and outputStdDevExpected+D.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>topsFilterConvention</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Name of the TOPS filter convention to use during processing. This field controls how the TOPS ramping/de-ramping filters are defined. If set to "Only Echo Lines" then the filter is defined using only the echo lines in a burst; otherwise, if set to "All Lines" then the filter is defined using all the lines in a burst.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>orbitModelMargin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Additional time to add to the start and end of the orbit model generated by the IPF [s]. This provides margin for performing interpolation near the boundaries of the sensing start and stop times and extrapolation beyond the boundaries of the sensing start and stop times. For example, if the sensing start time is Tstart, the sensing stop time is Tstop and orbitModelMargin is 2.0, then the orbit model generated by the IPF will range from (Tstart - 2.0) .. (Tstop + 2.0)
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>preProcParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Pre-processing auxiliary parameters. This record contains the auxiliary parameters required during image pre-processing.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>inputMeanExpected</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+This parameter specifies the expected mean of the input I and Q samples and is used in verifying that the calculated mean of the input samples is within the tolerated threshold.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>inputMeanThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Threshold for setting the inputDataMeanOutsideNominalRange flag in the output product annotations. This is the value T, such that the measured mean must fall between the inputMeanExpected-T and inputMeanExpected+T. This threshold is used for both the I and Q channels.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>inputStdDevExpected</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+This parameter specifies the expected standard deviation of the input I and Q samples and is used in verifying that the calculated std. dev. of the input samples is within the tolerated threshold.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>inputStdDevThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Threshold for setting the inputDataStdDevOutsideNominalRange flag in the output product annotations. This is the value D, such that the measured std. dev. must fall between the inputStdDevExpected-D and inputStdDevExpected+D. This threshold is used for both the I and Q channels.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>terrainHeightAziSpacing</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Spacing of terrain height estimates along azimuth [s]. The calculation, terrainHeightAziSpacing + terrainHeightAziBlockSize, defines the location (relative to the start of the segment) and size of the azimuth blocks used to generate each terrain height estimate. These two parameters should be set to ensure that there is an overlapping region within each adjacent azimuth block.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>terrainHeightAziBlockSize</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Size of the block along azimuth used to calculate an average terrain height [s]. The calculation, terrainHeightAziSpacing + terrainHeightAziBlockSize, defines the location (relative to the start of the segment) and size of the azimuth blocks used to generate each terrain height. . These parameters should be set to ensure that there is an overlapping region within each adjacent azimuth block.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>chirpReplicaSource</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Chirp replica to use during processing. The extracted replica will be used if this parameter is set to "Extracted" and the IPF determines that the reconstructed replica is valid; otherwise, the nominal chirp will be used if this field is set to "Nominal" or the reconstructed replica is deemed invalid.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>replicaThresholds</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Thresholds used to assess the quality of the replica reconstruction and the PG product.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>maxXCorrPulseIrw</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum allowable IRW (3-dB width) of the cross-correlation with the nominal replica [samples]. Used for setting the replicaReconstructionFailedFlag in the output product annotations.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>maxXCorrPulsePslr</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum allowable PSLR of the cross correlation with the nominal replica [dB]. Used for setting the replicaReconstructionFailedFlag in the output product annotations.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "dB"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>maxXCorrPulseIslr</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum allowable ISLR of the cross correlation with the nominal replica [dB]. Used for setting the replicaReconstructionFailedFlag in the output product annotations.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "dB"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>maxPgAmpStdFraction</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum deviation from the mean allowed for the PG product amplitude, measured as a fraction of the standard deviation. Relative PG product validation shall fail if this value is exceeded.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>maxPgPhaseStdFraction</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum deviation from the mean allowed for the PG product phase, measured as a fraction of the standard deviation. Relative PG product validation shall fail if this value is exceeded.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>maxPgAmpError</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum deviation allowed for a PG product amplitude from the corresponding PG product model value. Absolute PG product validation shall fail if this value is exceeded.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>maxPgPhaseError</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum deviation allowed for a PG product phase from the corresponding PG product model value [radians]. Absolute PG product validation shall fail if this value is exceeded.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "radians"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>maxNumInvalidPgValFraction</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Maximum number of invalid PG product values allowed, expressed as a fraction of the total number of PG values. The PG product model will be used instead of the extracted PG product values if this value is exceeded.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>missingLinesThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Threshold for setting the missingLinesSignificant flag in the output product annotations. This parameter ranges between 0 and 1 and specifies the percentage of missing lines to total lines [%]. For TOPS products, this threshold is relative to each individual swath, in other words the missingLinesSignificant flag is set to true if the number of missing lines in any of the swaths is above the missingLinesThreshold.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "%"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>linesPerGapThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+This parameter specifies the number of consecutive missing lines in the input data which constitute a gap [lines].
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>missingGapsThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Threshold for setting the significantGapsInInputData flag in the output product annotations. This parameter specifies the number of missing gaps permitted in the input data. For TOPS products, this threshold is relative to each individual swath, in other words the significantGapsInInputData flag is set to true if the number of missing gaps in any of the swaths is above the missingGapsThreshold.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>performInternalCalibrationFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Flag controlling the calculation of the internal calibration from the calibration pulses extracted from the downlink. If this flag is set to true then the internal calibration information will be calculated by the IPF using the calibration pulses extracted from the downlink. If this flag is set to false then the internal calibration information will not be calculated from the calibration pulses extracted from the downlink. In addition, if this flag is set to false, the values provided for chirpReplicaSource and pgSource will be ignored and set to "Nominal" and "Model" espectively.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>pgSource</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+PG source to use during processing.  The PG derived from the extracted replica will be used if this parameter is set to "Extracted" and the IPF determines that the reconstructed replica is valid; otherwise, the pgModel from the AUX_INS data will be used if this field is set to "Model" or the reconstructed replica is deemed invalid.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>estimateNoiseEquivalentPowerFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Flag introduced starting from IPF V290 to manage the new L0N products format including also noise-equivalent echoes. If set to true, then the noise power is estimated also from the noise equivalent echoes; otherwise, if set to false only pure noise echoes are used.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>dcProcParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Doppler centroid processing auxiliary parameters. This record contains the auxiliary parameters required during Doppler centroid processing.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>dcMethod</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Doppler centroid estimation method. Although the DCE from both orbit &amp; attitude and data are always performed and the results provided in the output product annotations, this parameter is used to specify exactly which Doppler centroid estimation method to use during the image focusing.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>dcInputData</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Type of input data used for Doppler centroid estimation. Options are "Raw" and "Range Compressed".
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dcPredefinedCoefficients</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Pre-defined Doppler centroid coefficients. These Doppler centroid coefficients shall be used during processing if and only if the dcMethod element is set to "Pre-defined". This parameter is an array of floating point numbers separated by spaces.
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(<b>str</b>(@count))</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>dcRmsErrorThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Doppler centroid estimation root mean squared (RMS) error threshold. If theRMS error of the Doppler centroid estimate from data is above this threshold they shall not be used during processing; instead, the Doppler centroid calculated from orbit and attitude shall be used, unless overridden by the dcMethod = Pre-defined.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>slcProcParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+SLC processing auxiliary parameters. This record contains the auxiliary parameters required during SLC image processing.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>applyElevationAntennaPatternFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Elevation antenna pattern correction flag. True if the EAP is to be applied, false otherwise.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>applyRangeSpreadingLossFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Apply range spreading loss correction flag. True if the RSL is to be applied, false otherwise.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>estimateThermalNoiseFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Thermal noise estimation flag. True if thermal noise estimation is to be performed, false otherwise.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>rrfSpectrum</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+The type of range matched filter to use during processing. "Unextended": range reference function is unextended in frequency domain; "Extended Flat": range reference function is extended and flat in frequency domain; and, "Extended Tapered": range reference function is extended and tapered in frequency domain.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>swathParamsList</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+List of swath-dependent SLC processing parameters. There is one record per swath for each mode.
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>swathParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>swath</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Swath identifier. This parameter defines the swath to which this record applies.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>gain</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Product specific gain. This parameter defines the gain that is applied to each output sample during azimuth processing.
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: if(<b>exists</b>(@count), <b>int</b>(<b>str</b>(@count)), 1)</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>instantaneousBandwidth</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth instantaneous bandwidth [Hz]. This field is applicable only to IW and EW modes.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "Hz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>nominalBeamWidth</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Nominal width of the beam [radians].
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "radians"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>postProcParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Post processing auxiliary parameters. This record contains the auxiliary parameters required during image post processing. This includes: SLC post-processing, GRD processing and Quick-look image processing.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>rangeParamsList</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Range processing parameters. This list contains the swath-dependent auxiliary parameters required for range processing. The list contains a separate record for each swath, indexed using the applicable swath identifier. For SM SLC products and SM, IW and EW GRD products there is one entry in the list. For IW and EW SLC products, there is one entry per swath (3 and 5 respectively). For all WV products there are two entries in the list.
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>rangeParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+This record contains the set of auxiliary parameters required during range processing. For each product type, there is one record for each applicable swath within the product. There will be one record per swath for each mode. For example, for S1 IW there will be 3 records, and for ASAR IM there will be 7 records.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>swath</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Swath identifier. This parameter defines the swath to which this record applies.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>weightingWindow</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Name of the weighting window to use during processing.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>windowCoefficient</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Value of the weighting window coefficient to use during processing.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>processingBandwidth</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Total processing bandwidth [Hz]. This parameter defines the bandwidth (Bw) to use during processing. For range, the processing bandwidth (Bw) must be 0 &lt; Bw &lt;= pulse Bw, for azimuth the processing bandwidth (Bw) must be 0 &lt; Bw &lt;= PRF.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "Hz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>lookBandwidth</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Look bandwidth [Hz]. This parameter defines the bandwidth to use for each look during processing.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "Hz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>numberOfLooks</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Number of looks. This parameter defines the number of looks to use during multi-look processing.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>pixelSpacing</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Spacing between pixels in the output image [m].
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>multiLookThrowaway</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Number of ground range samples to be discarded at both edges.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>azimuthParamsList</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth processing parameters. This list contains the swath-dependent auxiliary parameters required for azimuth processing. The list contains a separate record for each swath, indexed using the applicable swath identifier. For SM SLC products and SM, IW and EW GRD products there is one entry in the list. For IW and EW SLC products, there is one entry per swath (3 and 5 respectively). For all WV products there are two entries in the list.
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>azimuthParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+This record contains the set of auxiliary parameters required during azimuth processing. For each product type, there is one record for each applicable swath within the product. There will be one record per swath for each mode. For example, for S1 IW there will be 3 records, and for ASAR IM there will be 7 records.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>swath</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Swath identifier. This parameter defines the swath to which this record applies.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>weightingWindow</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Name of the weighting window to use during processing.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>windowCoefficient</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Value of the weighting window coefficient to use during processing.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>processingBandwidth</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Total processing bandwidth [Hz]. This parameter defines the bandwidth (Bw) to use during processing. For range, the processing bandwidth (Bw) must be 0 &lt; Bw &lt;= pulse Bw, for azimuth the processing bandwidth (Bw) must be 0 &lt; Bw &lt;= PRF.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "Hz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>lookBandwidth</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Look bandwidth [Hz]. This parameter defines the bandwidth to use for each look during processing.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "Hz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>numberOfLooks</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Number of looks. This parameter defines the number of looks to use during multi-look processing.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>pixelSpacing</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Spacing between pixels in the output image [m].
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "m"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>multiLookThrowaway</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Number of ground range samples to be discarded at both edges.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>annotationVectorStepSize</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+The decimation factor used on annotation vectors when written to the output product. Inside the IPF, each annotation vector could have a point for every range sample. To reduce product size, only points every annotationVectorStepSize are written to the output annotation vectors.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>generateCalibrationLutsFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Flag to control the generation of the absolute calibration LUTs. True if the calibration LUTs are to be created, false otherwise.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>applyAzimuthAntennaPatternFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth Antenna Pattern Flag. True if the AAP is to be applied, false otherwise.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>applyTopsDescallopingFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Perform de-scalloping for TOPS by applying the Azimuth Antenna Element Pattern. True if TOPS de-scalloping is to be performed by applying the AAEP, false otherwise. This flag is applicable only to IW and EW modes and is ignored for all others.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>detectFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+True to detect power and square root extract measurement data, false otherwise.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>mergeFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+True to merge the swaths of output data and annotations, false otherwise. Only valid for IW and EW, not applicable to other modes.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>createInternalSLCFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+True if the output of post-processing is an internal SLC product, in which case post-processing will pass the input SLC product through without applying further processing.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>grdProcParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+GRD processing auxiliary parameters. This record contains the auxiliary parameters required during GRD image processing.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>applySrgrConversionFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Slant Range to Ground Range (SRGR) conversion flag. True if SRGR conversion is to be performed, false otherwise.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>removeThermalNoiseFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Thermal noise removal flag. True if thermal noise removal is to be performed, false otherwise.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>createQlImageFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+Create Quick-look image flag. This flag controls the creation of a Quick-look image. It is set to true if a Quick-look image should be created; or, false otherwise.
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>qlProcParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Quick-look processing auxiliary parameters. This record contains the auxiliary parameters required during Quick-look image processing. This structure need only be present if the createQlImageFlag is true.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>rangeDecimationFactor</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Range decimation factor for the image.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>rangeAveragingFactor</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Range averaging factor for the image.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>azimuthDecimationFactor</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth decimation factor for the image.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>azimuthAveragingFactor</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth averaging factor for the image.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>applicationLutList</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+List of application LUTs. This element is a list of all available application LUTs. The application identifier used to index the list comes from the Job Order.
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>applicationLut</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Application LUT record. This element contains the information required to identify the application scaling LUT specified in the Job Order. The ICD currently defines four application scaling LUTs, one for each mode. However, more can be added, so long as the applicationLutId matches the Application_LUT processing parameter in the Job Order.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>applicationLutId</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Name of this application scaling LUT.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>scalingLutList</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+List of application scaling LUTs for this applicationLutId. There is one entry for each output pixel type.
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>scalingLut</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Application scaling LUT record. This record provides the scaling LUT for products in the format specified by the outputPixels field.
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>outputPixels</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Pixel format. Application scaling LUTs are specific to output pixel data type. This field specifies the output pixel type to which this LUT applies.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>incidenceAngleStart</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Incidence angle of the first value of the LUT [degrees].
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "degrees"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>angleIncrement</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Step size of the incidence angle between each value [degrees].
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "degrees"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>values</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+Application LUT values. This element is a vector containing attribute "count" floating point values separated by spaces [linear].
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(<b>str</b>(@count))</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>exists</b>(/l1AuxiliaryProcessorParameters@schemaVersion) <b>and</b><br /><b>at</b>(/l1AuxiliaryProcessorParameters@schemaVersion,<br /><b>str</b>(.) == &quot;3.3&quot;)
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>

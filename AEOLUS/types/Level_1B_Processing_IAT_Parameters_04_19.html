@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_1B_Processing_IAT_Parameters_04_19</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_1B_Processing_IAT_Parameters_04_19</h1>
+<table class="top">
+<tr><th  colspan="2"align="left">xml&nbsp;record&nbsp;"<a class="header" href="../types/Level_1B_Processing_IAT_Parameters_04_19.html">Level_1B_Processing_IAT_Parameters_04_19</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+Processing parameters for Instrument Auto Test
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>File_Type</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+File type string
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Sph_Descriptor</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+ASCII string describing the product
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>Lorentz_Refinement_Factor</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Lorentz refinement resolution ratio for creating the delta value of the estimate. (delta estimate = estimate / ratio) Given estimated value x, and refinement resolution r. Three adjacent points Lorentz(x), Lorentz(x+x/r), Lorentz(x-x/r) are computed for least squares fit. The refinement resolution r must be greater than 1.0
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>Lorentz_Refinement_Threshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Lorentz refinement threshold. If ratio between delta(estimate) / estimate smaller than the threshold, stop the iteration and report the value
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>Min_Num_of_Valid_Mie_Pulses</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum number of valid Mie pulses needed to generate valid output data for a frequency step
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>Min_Num_of_Valid_Rayleigh_Pulses</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Minimum number of valid Rayleigh pulses needed to generate valid output data for a frequency step
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>Mid_Frequency_Range_Lower_Limit</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Lower frequency limit that defines the Mie fit range
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>Mid_Frequency_Range_Upper_Limit</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+Upper frequency limit that defines the Mie fit range
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>

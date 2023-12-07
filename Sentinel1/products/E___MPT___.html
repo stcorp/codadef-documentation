@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>RDBE_MPT v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>RDBE_MPT version 0</h1>
+<h2>E___MPT___</h2>
+<p>This definition is based on version 1.5 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Earth_Explorer_File</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Earth_Explorer_Header</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Earth Explorer Header File
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Fixed_Header</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record&nbsp;"<a class="header" href="../types/Fixed_Header.html">Fixed_Header</a>"</th></tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Variable_Header</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Configuration_Identifier</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Data_Block</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>type</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">xml&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "xml"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Mission_Parameters_Table</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Timing_Coefficient_T1</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>Timing_Coefficient_T3</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>Timing_Coefficient_T5</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>Timing_Coefficient_T6</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>Timing_Coefficient_T7</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>Timing_Coefficient_T8</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>Timing_Coefficient_T9</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>Timing_Coefficient_T10</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>Timing_Coefficient_T11</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>Timing_Coefficient_T12</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>Timing_Coefficient_T16</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>Timing_Coefficient_T23</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>Timing_Coefficient_T24</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>Timing_Coefficient_T26</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>Timing_Coefficient_T28</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>Timing_Coefficient_T29</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td>Spare_1</td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>PRI_Delay</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td>Spare_2</td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>BAQ_Block_Size</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td>Spare_3</td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>Output_Power</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td>Spare_4</td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td><b>Total_No_Orbit_Swath_Data_Windows</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td>Spare_5</td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>25</td><td><b>CWL_Delta</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>26</td><td><b>Load_RxM_Filter_Flags</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>27</td><td><b>Test_Pattern_Generator_Data_Length</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>28</td><td><b>RxM_H_ADC_FSR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>29</td><td><b>RxM_V_ADC_FSR</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>30</td><td><b>SWST_Guard_Time</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>exists</b>(/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type) <b>and</b><br /><b>at</b>(/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type,<br /><b>str</b>(.) == &quot;EA__MPT___&quot;)
+      <br /><br /><b>or</b><br /><br />
+<b>exists</b>(/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type) <b>and</b><br /><b>at</b>(/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type,<br /><b>str</b>(.) == &quot;EB__MPT___&quot;)
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>
