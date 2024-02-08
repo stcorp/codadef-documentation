@@ -10,7 +10,7 @@
 
 <body>
 <h1>L2__BRO___ version 0</h1>
-<h2>L2__BRO___</h2>
+<h2>L2__BRO____v0</h2>
 <p>This definition is based on version 1.1.0 of the S5P L2 BrO Product Format Specification S5P-BIRA-L2-PFS-TCBRO</p>
 <h3>root type</h3>
 <table class="top">
@@ -8614,21 +8614,26 @@
 <table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
     <td>
 <b>substr</b>(0, 3, <b>filename</b>()) == &quot;S5P&quot; <b>and</b><br />
-<b>substr</b>(9, 10, <b>filename</b>()) == &quot;L2__BRO___&quot;
+<b>substr</b>(9, 10, <b>filename</b>()) == &quot;L2__BRO___&quot; <b>and</b><br />
+<b>substr</b>(60, 8, <b>filename</b>()) == &quot;_010201_&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>substr</b>(0, 3, <b>filename</b>()) == &quot;S5P&quot; <b>and</b><br />
+<b>substr</b>(9, 10, <b>filename</b>()) == &quot;L2__BRO___&quot; <b>and</b><br />
+<b>substr</b>(60, 8, <b>filename</b>()) == &quot;_010202_&quot;
     </tr>
   </td>
 </table>
 <h3>product variables</h3>
 <table class="fancy" border="1" cellspacing="0" width="600px">
 <tr><th>name</th><th>size</th><th>initialisation</th></tr>
-<tr><td id="L2__BRO____time">time</td><td></td><td><i>$time</i> = <b>dim</b>(/PRODUCT/time,0)</td></tr>
-<tr><td id="L2__BRO____scanline">scanline</td><td></td><td><i>$scanline</i> = <b>dim</b>(/PRODUCT/scanline,0)</td></tr>
-<tr><td id="L2__BRO____ground_pixel">ground_pixel</td><td></td><td><i>$ground_pixel</i> = <b>dim</b>(/PRODUCT/ground_pixel,0)</td></tr>
-<tr><td id="L2__BRO____corner">corner</td><td></td><td><i>$corner</i> = <b>dim</b>(/PRODUCT/corner,0)</td></tr>
-<tr><td id="L2__BRO____number_of_slant_columns">number_of_slant_columns</td><td></td><td><i>$number_of_slant_columns</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_slant_columns,0)</td></tr>
-<tr><td id="L2__BRO____wavelengths">wavelengths</td><td></td><td><i>$wavelengths</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/INPUT_DATA/BACKGROUND_CORRECTION/wavelengths,0)</td></tr>
-<tr><td id="L2__BRO____degrees_of_polynomial_shift">degrees_of_polynomial_shift</td><td></td><td><i>$degrees_of_polynomial_shift</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATION/degrees_of_polynomial_shift,0)</td></tr>
-<tr><td id="L2__BRO____number_of_subwindows">number_of_subwindows</td><td></td><td><i>$number_of_subwindows</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATION/number_of_subwindows,0)</td></tr>
+<tr><td id="L2__BRO____v0_time">time</td><td></td><td><i>$time</i> = <b>dim</b>(/PRODUCT/time,0)</td></tr>
+<tr><td id="L2__BRO____v0_scanline">scanline</td><td></td><td><i>$scanline</i> = <b>dim</b>(/PRODUCT/scanline,0)</td></tr>
+<tr><td id="L2__BRO____v0_ground_pixel">ground_pixel</td><td></td><td><i>$ground_pixel</i> = <b>dim</b>(/PRODUCT/ground_pixel,0)</td></tr>
+<tr><td id="L2__BRO____v0_corner">corner</td><td></td><td><i>$corner</i> = <b>dim</b>(/PRODUCT/corner,0)</td></tr>
+<tr><td id="L2__BRO____v0_number_of_slant_columns">number_of_slant_columns</td><td></td><td><i>$number_of_slant_columns</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_slant_columns,0)</td></tr>
+<tr><td id="L2__BRO____v0_wavelengths">wavelengths</td><td></td><td><i>$wavelengths</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/INPUT_DATA/BACKGROUND_CORRECTION/wavelengths,0)</td></tr>
+<tr><td id="L2__BRO____v0_degrees_of_polynomial_shift">degrees_of_polynomial_shift</td><td></td><td><i>$degrees_of_polynomial_shift</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATION/degrees_of_polynomial_shift,0)</td></tr>
+<tr><td id="L2__BRO____v0_number_of_subwindows">number_of_subwindows</td><td></td><td><i>$number_of_subwindows</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATION/number_of_subwindows,0)</td></tr>
 </table>
 </body>
 

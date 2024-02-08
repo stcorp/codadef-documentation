@@ -11,7 +11,7 @@
 <body>
 <h1>AUX_PP0___ version 0</h1>
 <h2>AUX_PP0</h2>
-<p>This definition is based on version 1.8 of the BIOMASS L-0, OA Processors Specific ICD - BIO-FLEX-L0PF-OAPF</p>
+<p>This definition is based on version 1.11 of the BIOMASS L-0, OA Processors Specific ICD - BIO-FLEX-L0PF-OAPF</p>
 <h3>root type</h3>
 <table class="top">
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -150,7 +150,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>1</td><td><b>SliceStartOverlap</b></td>
+<tr valign="top"><td>1</td><td><b>MinSliceDuration</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -161,7 +161,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>2</td><td><b>SliceStopOverlap</b></td>
+<tr valign="top"><td>2</td><td><b>SliceStartOverlap</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -172,7 +172,18 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>3</td><td><b>SliceMaxNumber</b></td>
+<tr valign="top"><td>3</td><td><b>SliceStopOverlap</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>SliceMaxNumber</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -230,6 +241,67 @@
 <tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
 <tr valign="top">
 <td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>GstlSwathIdMappingRules</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>GstlSwathIdMappingRule</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Gstl</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>SwathId</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
 </td>
 </tr>
 </table>

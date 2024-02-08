@@ -10,7 +10,7 @@
 
 <body>
 <h1>L2__SO2CBR version 0</h1>
-<h2>L2__SO2CBR</h2>
+<h2>L2__SO2CBR_v0</h2>
 <p>This definition is based on version 1.0.0 of the S5P COBRA Sulphur Dioxide Product Format
         Specification S5P-BIRA-PRF-SO2CBR
       </p>
@@ -17390,33 +17390,34 @@
 <table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
     <td>
 <b>substr</b>(0, 3, <b>filename</b>()) == &quot;S5P&quot; <b>and</b><br />
-<b>substr</b>(9, 10, <b>filename</b>()) == &quot;L2__SO2CBR&quot;
+<b>substr</b>(9, 10, <b>filename</b>()) == &quot;L2__SO2CBR&quot; <b>and</b><br />
+<b>substr</b>(60, 8, <b>filename</b>()) == &quot;_010001_&quot;
     </tr>
   </td>
 </table>
 <h3>product variables</h3>
 <table class="fancy" border="1" cellspacing="0" width="600px">
 <tr><th>name</th><th>size</th><th>initialisation</th></tr>
-<tr><td id="L2__SO2CBR_corner">corner</td><td></td><td><i>$corner</i> = <b>dim</b>(/PRODUCT/corner,0)</td></tr>
-<tr><td id="L2__SO2CBR_ground_pixel">ground_pixel</td><td></td><td><i>$ground_pixel</i> = <b>dim</b>(/PRODUCT/ground_pixel,0)</td></tr>
-<tr><td id="L2__SO2CBR_layer">layer</td><td></td><td><i>$layer</i> = <b>dim</b>(/PRODUCT/layer,0)</td></tr>
-<tr><td id="L2__SO2CBR_scanline">scanline</td><td></td><td><i>$scanline</i> = <b>dim</b>(/PRODUCT/scanline,0)</td></tr>
-<tr><td id="L2__SO2CBR_time">time</td><td></td><td><i>$time</i> = <b>dim</b>(/PRODUCT/time,0)</td></tr>
-<tr><td id="L2__SO2CBR_detector_rows">detector_rows</td><td></td><td><i>$detector_rows</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/INPUT_DATA/BACKGROUND_CORRECTION/detector_rows,0)</td></tr>
-<tr><td id="L2__SO2CBR_lat_grid">lat_grid</td><td></td><td><i>$lat_grid</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/INPUT_DATA/BACKGROUND_CORRECTION/lat_grid,0)</td></tr>
-<tr><td id="L2__SO2CBR_wavelengths">wavelengths</td><td></td><td><i>$wavelengths</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/INPUT_DATA/BACKGROUND_CORRECTION/wavelengths,0)</td></tr>
-<tr><td id="L2__SO2CBR_number_of_doas_polynomial_coefficients_win2">number_of_doas_polynomial_coefficients_win2</td><td></td><td><i>$number_of_doas_polynomial_coefficients_win2</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_doas_polynomial_coefficients_win2,0)</td></tr>
-<tr><td id="L2__SO2CBR_number_of_doas_polynomial_coefficients_win3">number_of_doas_polynomial_coefficients_win3</td><td></td><td><i>$number_of_doas_polynomial_coefficients_win3</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_doas_polynomial_coefficients_win3,0)</td></tr>
-<tr><td id="L2__SO2CBR_number_of_slant_columns_win1">number_of_slant_columns_win1</td><td></td><td><i>$number_of_slant_columns_win1</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_slant_columns_win1,0)</td></tr>
-<tr><td id="L2__SO2CBR_number_of_slant_columns_win2">number_of_slant_columns_win2</td><td></td><td><i>$number_of_slant_columns_win2</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_slant_columns_win2,0)</td></tr>
-<tr><td id="L2__SO2CBR_number_of_slant_columns_win3">number_of_slant_columns_win3</td><td></td><td><i>$number_of_slant_columns_win3</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_slant_columns_win3,0)</td></tr>
-<tr><td id="L2__SO2CBR_degrees_of_polynomial_shift_win1">degrees_of_polynomial_shift_win1</td><td></td><td><i>$degrees_of_polynomial_shift_win1</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/degrees_of_polynomial_shift_win1,0)</td></tr>
-<tr><td id="L2__SO2CBR_degrees_of_polynomial_shift_win2">degrees_of_polynomial_shift_win2</td><td></td><td><i>$degrees_of_polynomial_shift_win2</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/degrees_of_polynomial_shift_win2,0)</td></tr>
-<tr><td id="L2__SO2CBR_degrees_of_polynomial_shift_win3">degrees_of_polynomial_shift_win3</td><td></td><td><i>$degrees_of_polynomial_shift_win3</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/degrees_of_polynomial_shift_win3,0)</td></tr>
-<tr><td id="L2__SO2CBR_number_of_calibrations">number_of_calibrations</td><td></td><td><i>$number_of_calibrations</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/number_of_calibrations,0)</td></tr>
-<tr><td id="L2__SO2CBR_number_of_subwindows_win1">number_of_subwindows_win1</td><td></td><td><i>$number_of_subwindows_win1</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/number_of_subwindows_win1,0)</td></tr>
-<tr><td id="L2__SO2CBR_number_of_subwindows_win2">number_of_subwindows_win2</td><td></td><td><i>$number_of_subwindows_win2</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/number_of_subwindows_win2,0)</td></tr>
-<tr><td id="L2__SO2CBR_number_of_subwindows_win3">number_of_subwindows_win3</td><td></td><td><i>$number_of_subwindows_win3</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/number_of_subwindows_win3,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_corner">corner</td><td></td><td><i>$corner</i> = <b>dim</b>(/PRODUCT/corner,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_ground_pixel">ground_pixel</td><td></td><td><i>$ground_pixel</i> = <b>dim</b>(/PRODUCT/ground_pixel,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_layer">layer</td><td></td><td><i>$layer</i> = <b>dim</b>(/PRODUCT/layer,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_scanline">scanline</td><td></td><td><i>$scanline</i> = <b>dim</b>(/PRODUCT/scanline,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_time">time</td><td></td><td><i>$time</i> = <b>dim</b>(/PRODUCT/time,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_detector_rows">detector_rows</td><td></td><td><i>$detector_rows</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/INPUT_DATA/BACKGROUND_CORRECTION/detector_rows,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_lat_grid">lat_grid</td><td></td><td><i>$lat_grid</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/INPUT_DATA/BACKGROUND_CORRECTION/lat_grid,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_wavelengths">wavelengths</td><td></td><td><i>$wavelengths</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/INPUT_DATA/BACKGROUND_CORRECTION/wavelengths,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_number_of_doas_polynomial_coefficients_win2">number_of_doas_polynomial_coefficients_win2</td><td></td><td><i>$number_of_doas_polynomial_coefficients_win2</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_doas_polynomial_coefficients_win2,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_number_of_doas_polynomial_coefficients_win3">number_of_doas_polynomial_coefficients_win3</td><td></td><td><i>$number_of_doas_polynomial_coefficients_win3</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_doas_polynomial_coefficients_win3,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_number_of_slant_columns_win1">number_of_slant_columns_win1</td><td></td><td><i>$number_of_slant_columns_win1</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_slant_columns_win1,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_number_of_slant_columns_win2">number_of_slant_columns_win2</td><td></td><td><i>$number_of_slant_columns_win2</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_slant_columns_win2,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_number_of_slant_columns_win3">number_of_slant_columns_win3</td><td></td><td><i>$number_of_slant_columns_win3</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_slant_columns_win3,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_degrees_of_polynomial_shift_win1">degrees_of_polynomial_shift_win1</td><td></td><td><i>$degrees_of_polynomial_shift_win1</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/degrees_of_polynomial_shift_win1,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_degrees_of_polynomial_shift_win2">degrees_of_polynomial_shift_win2</td><td></td><td><i>$degrees_of_polynomial_shift_win2</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/degrees_of_polynomial_shift_win2,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_degrees_of_polynomial_shift_win3">degrees_of_polynomial_shift_win3</td><td></td><td><i>$degrees_of_polynomial_shift_win3</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/degrees_of_polynomial_shift_win3,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_number_of_calibrations">number_of_calibrations</td><td></td><td><i>$number_of_calibrations</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/number_of_calibrations,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_number_of_subwindows_win1">number_of_subwindows_win1</td><td></td><td><i>$number_of_subwindows_win1</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/number_of_subwindows_win1,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_number_of_subwindows_win2">number_of_subwindows_win2</td><td></td><td><i>$number_of_subwindows_win2</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/number_of_subwindows_win2,0)</td></tr>
+<tr><td id="L2__SO2CBR_v0_number_of_subwindows_win3">number_of_subwindows_win3</td><td></td><td><i>$number_of_subwindows_win3</i> = <b>dim</b>(/PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/WAVELENGTH_CALIBRATIONS/number_of_subwindows_win3,0)</td></tr>
 </table>
 </body>
 

@@ -11,7 +11,7 @@
 <body>
 <h1>L2__AER_OT version 1</h1>
 <h2>L2__AER_OT_v1</h2>
-<p>This definition is based on version 1.1.0 of the S5P L2 AOT Product User Manual S5P-KNMI-L2-0034-MA</p>
+<p>This definition is based on version 2.0.0 of the S5P L2 AOT Product User Manual S5P-KNMI-L2-0034-MA</p>
 <h3>root type</h3>
 <table class="top">
 <tr><th  colspan="2"align="left">hdf5&nbsp;record</th></tr>
@@ -581,7 +581,7 @@
 <td colspan="2">
 <table class="fancy" border="1" cellspacing="0" width="100%">
 <tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
-<tr valign="top"><td>0</td><td><b>aerosol_reflectance</b></td>
+<tr valign="top"><td>0</td><td><b>single_scattering_albedo</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>, <i><b>dim_3</b></i>]</th></tr>
@@ -657,9 +657,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -669,9 +670,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;116</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Single&nbsp;scattering&nbsp;albedo;&nbsp;fraction&nbsp;of&nbsp;the&nbsp;aerosol&nbsp;scattering&nbsp;and&nbsp;absorption,&nbsp;according&nbsp;to&nbsp;the&nbsp;selected&nbsp;aerosol&nbsp;type."</span>
 </td>
 </tr>
 </table>
@@ -681,9 +683,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;24</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "single_scattering_albedo"</span>
 </td>
 </tr>
 </table>
@@ -693,9 +696,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;32</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol&nbsp;single&nbsp;scattering&nbsp;albedo"</span>
 </td>
 </tr>
 </table>
@@ -705,9 +709,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -729,7 +734,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>1</td><td><b>surface_reflectance_diffuse</b></td>
+<tr valign="top"><td>1</td><td><b>aerosol_reflectance</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>, <i><b>dim_3</b></i>]</th></tr>
@@ -805,9 +810,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -816,10 +822,24 @@
 </table>
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;148</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "The&nbsp;aerosol&nbsp;reflectance&nbsp;is&nbsp;the&nbsp;measured&nbsp;toa_bidrectional&nbsp;reflectance&nbsp;minus&nbsp;the&nbsp;modelled&nbsp;aerosol-free&nbsp;reflectance&nbsp;computed&nbsp;using&nbsp;the&nbsp;lut&nbsp;reflectance."</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;19</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol_reflectance"</span>
 </td>
 </tr>
 </table>
@@ -829,9 +849,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "measured&nbsp;reflectance&nbsp;corrected&nbsp;for&nbsp;Rayleigh&nbsp;scattering&nbsp;(aerosol&nbsp;reflectance)"</span>
 </td>
 </tr>
 </table>
@@ -841,9 +862,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -865,7 +887,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>2</td><td><b>surface_reflectance_direct</b></td>
+<tr valign="top"><td>2</td><td><b>surface_reflectance_diffuse</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>, <i><b>dim_3</b></i>]</th></tr>
@@ -941,9 +963,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -953,9 +976,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;94</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Cox&nbsp;and&nbsp;Munk&nbsp;ocean&nbsp;reflectance&nbsp;over&nbsp;ocean,&nbsp;Lambertian&nbsp;Equivalent&nbsp;Reflectance&nbsp;minimum&nbsp;over&nbsp;land"</span>
 </td>
 </tr>
 </table>
@@ -965,9 +989,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;44</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "diffuse&nbsp;component&nbsp;of&nbsp;the&nbsp;surface&nbsp;reflectance"</span>
 </td>
 </tr>
 </table>
@@ -977,9 +1002,150 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>surface_reflectance_direct</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>, <i><b>dim_3</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
+<br /><br />
+<span class="attr_key">dim_2</span><span class="attr_value">: $ground_pixel</span>
+<br /><br />
+<span class="attr_key">dim_3</span><span class="attr_value">: $wavelength</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>4</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;112</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Not&nbsp;set;&nbsp;equal&nbsp;to&nbsp;Cox&nbsp;and&nbsp;Munk&nbsp;ocean&nbsp;reflectance&nbsp;over&nbsp;ocean,&nbsp;Lambertian&nbsp;Equivalent&nbsp;Reflectance&nbsp;minimum&nbsp;over&nbsp;land"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;43</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "direct&nbsp;component&nbsp;of&nbsp;the&nbsp;surface&nbsp;reflectance"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -1066,9 +1232,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "status_flag"</span>
 </td>
 </tr>
 </table>
@@ -1078,9 +1245,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;25</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "ground&nbsp;pixel&nbsp;quality&nbsp;flag"</span>
 </td>
 </tr>
 </table>
@@ -1112,9 +1280,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>flag_meanings</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;98</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "no_error&nbsp;solar_eclipse&nbsp;sun_glint_possible&nbsp;descending&nbsp;night&nbsp;geo_boundary_crossing&nbsp;geolocation_error"</span>
 </td>
 </tr>
 </table>
@@ -1146,9 +1315,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -1158,9 +1328,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -1258,9 +1429,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;13</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "degrees_north"</span>
 </td>
 </tr>
 </table>
@@ -1270,9 +1442,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "pixel&nbsp;corner&nbsp;latitude"</span>
 </td>
 </tr>
 </table>
@@ -1282,9 +1455,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "latitude"</span>
 </td>
 </tr>
 </table>
@@ -1427,9 +1601,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "degrees_east"</span>
 </td>
 </tr>
 </table>
@@ -1439,9 +1614,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;9</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "longitude"</span>
 </td>
 </tr>
 </table>
@@ -1451,9 +1627,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "pixel&nbsp;corner&nbsp;longitude"</span>
 </td>
 </tr>
 </table>
@@ -1592,9 +1769,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m"</span>
 </td>
 </tr>
 </table>
@@ -1604,9 +1782,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;18</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "satellite&nbsp;altitude"</span>
 </td>
 </tr>
 </table>
@@ -1660,9 +1839,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;112</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "The&nbsp;altitude&nbsp;of&nbsp;the&nbsp;satellite&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;geodetic&nbsp;sub-satellite&nbsp;point&nbsp;on&nbsp;the&nbsp;WGS84&nbsp;reference&nbsp;ellipsoid."</span>
 </td>
 </tr>
 </table>
@@ -1672,9 +1852,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -1769,9 +1950,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;13</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "degrees_north"</span>
 </td>
 </tr>
 </table>
@@ -1781,9 +1963,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "sub-satellite&nbsp;latitude"</span>
 </td>
 </tr>
 </table>
@@ -1837,9 +2020,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;78</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Latitude&nbsp;of&nbsp;the&nbsp;geodetic&nbsp;sub-satellite&nbsp;point&nbsp;on&nbsp;the&nbsp;WGS84&nbsp;reference&nbsp;ellipsoid."</span>
 </td>
 </tr>
 </table>
@@ -1849,9 +2033,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -1946,9 +2131,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "degrees_east"</span>
 </td>
 </tr>
 </table>
@@ -1958,9 +2144,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;23</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "sub-satellite&nbsp;longitude"</span>
 </td>
 </tr>
 </table>
@@ -2014,9 +2201,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;79</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Longitude&nbsp;of&nbsp;the&nbsp;geodetic&nbsp;sub-satellite&nbsp;point&nbsp;on&nbsp;the&nbsp;WGS84&nbsp;reference&nbsp;ellipsoid."</span>
 </td>
 </tr>
 </table>
@@ -2026,9 +2214,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -2123,9 +2312,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -2135,9 +2325,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;32</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "fractional&nbsp;satellite&nbsp;orbit&nbsp;phase"</span>
 </td>
 </tr>
 </table>
@@ -2191,9 +2382,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;64</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Relative&nbsp;offset&nbsp;[0.0,&nbsp;...,&nbsp;1.0]&nbsp;of&nbsp;the&nbsp;measurement&nbsp;in&nbsp;the&nbsp;orbit."</span>
 </td>
 </tr>
 </table>
@@ -2203,9 +2395,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -2302,9 +2495,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "degrees"</span>
 </td>
 </tr>
 </table>
@@ -2358,9 +2552,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;19</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "solar&nbsp;azimuth&nbsp;angle"</span>
 </td>
 </tr>
 </table>
@@ -2370,9 +2565,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;19</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "solar_azimuth_angle"</span>
 </td>
 </tr>
 </table>
@@ -2382,9 +2578,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -2481,9 +2678,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "degrees"</span>
 </td>
 </tr>
 </table>
@@ -2493,9 +2691,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;18</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "solar&nbsp;zenith&nbsp;angle"</span>
 </td>
 </tr>
 </table>
@@ -2505,9 +2704,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;18</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "solar_zenith_angle"</span>
 </td>
 </tr>
 </table>
@@ -2561,9 +2761,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -2660,9 +2861,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "degrees"</span>
 </td>
 </tr>
 </table>
@@ -2672,9 +2874,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "viewing&nbsp;azimuth&nbsp;angle"</span>
 </td>
 </tr>
 </table>
@@ -2728,9 +2931,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "viewing_azimuth_angle"</span>
 </td>
 </tr>
 </table>
@@ -2740,9 +2944,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -2839,9 +3044,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "degrees"</span>
 </td>
 </tr>
 </table>
@@ -2851,9 +3057,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "viewing&nbsp;zenith&nbsp;angle"</span>
 </td>
 </tr>
 </table>
@@ -2863,9 +3070,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "viewing_zenith_angle"</span>
 </td>
 </tr>
 </table>
@@ -2919,9 +3127,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -3032,9 +3241,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -3044,9 +3254,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;86</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "S5P_PAL__L2__SCNLER_20240101T074458_20240101T092629_32219_03_020100_20240110T000409.nc"</span>
 </td>
 </tr>
 </table>
@@ -3056,9 +3267,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;25</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "ultraviolet_aerosol_index"</span>
 </td>
 </tr>
 </table>
@@ -3068,9 +3280,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;41</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "absorbing&nbsp;aerosol&nbsp;index&nbsp;at&nbsp;354&nbsp;and&nbsp;388&nbsp;nm"</span>
 </td>
 </tr>
 </table>
@@ -3080,9 +3293,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;42</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Absorbing&nbsp;aerosol&nbsp;index&nbsp;at&nbsp;354&nbsp;and&nbsp;388&nbsp;nm."</span>
 </td>
 </tr>
 </table>
@@ -3092,9 +3306,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -3190,9 +3405,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m"</span>
 </td>
 </tr>
 </table>
@@ -3202,9 +3418,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;86</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "S5P_PAL__L2__SCNLER_20240101T074458_20240101T092629_32219_03_020100_20240110T000409.nc"</span>
 </td>
 </tr>
 </table>
@@ -3214,9 +3431,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol_layer_height"</span>
 </td>
 </tr>
 </table>
@@ -3226,9 +3444,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;51</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "height&nbsp;at&nbsp;center&nbsp;of&nbsp;aerosol&nbsp;layer&nbsp;relative&nbsp;to&nbsp;geoid"</span>
 </td>
 </tr>
 </table>
@@ -3238,9 +3457,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;53</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Aerosol&nbsp;layer&nbsp;height&nbsp;from&nbsp;the&nbsp;TROPOMI&nbsp;AER_LH&nbsp;product."</span>
 </td>
 </tr>
 </table>
@@ -3250,9 +3470,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -3348,9 +3569,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Pa"</span>
 </td>
 </tr>
 </table>
@@ -3360,9 +3582,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol_layer_pressure"</span>
 </td>
 </tr>
 </table>
@@ -3372,9 +3595,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;35</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol_cams_3d_climatology_47r1.nc"</span>
 </td>
 </tr>
 </table>
@@ -3384,9 +3608,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol&nbsp;layer&nbsp;pressure"</span>
 </td>
 </tr>
 </table>
@@ -3396,9 +3621,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;49</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Aerosol&nbsp;layer&nbsp;pressure&nbsp;from&nbsp;the&nbsp;CAMS&nbsp;climatology."</span>
 </td>
 </tr>
 </table>
@@ -3408,9 +3634,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -3506,9 +3733,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "mg&nbsp;m-3"</span>
 </td>
 </tr>
 </table>
@@ -3518,9 +3746,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit_long</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;40</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "milligram&nbsp;of&nbsp;chlorophyll&nbsp;per&nbsp;cubic&nbsp;meter"</span>
 </td>
 </tr>
 </table>
@@ -3530,9 +3759,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;48</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "mass_concentration_of_chlorophyll_a_in_sea_water"</span>
 </td>
 </tr>
 </table>
@@ -3542,9 +3772,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;42</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "total&nbsp;ocean&nbsp;chlorophyll&nbsp;mass&nbsp;concentration"</span>
 </td>
 </tr>
 </table>
@@ -3554,9 +3785,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;143</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Total&nbsp;mass&nbsp;concentration&nbsp;of&nbsp;chlorophyll&nbsp;a&nbsp;in&nbsp;sea&nbsp;water&nbsp;in&nbsp;milligram&nbsp;per&nbsp;cubic&nbsp;meter&nbsp;from&nbsp;the&nbsp;CMEMS&nbsp;GLOBAL-REANALYSIS-BIO-001-029-DAILY&nbsp;product."</span>
 </td>
 </tr>
 </table>
@@ -3566,9 +3798,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;66</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "global-analysis-forecast-bio-001-028-daily-20240101-surface-chl.nc"</span>
 </td>
 </tr>
 </table>
@@ -3578,9 +3811,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -3676,9 +3910,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -3688,9 +3923,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;86</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "S5P_PAL__L2__SCNLER_20240101T074458_20240101T092629_32219_03_020100_20240110T000409.nc"</span>
 </td>
 </tr>
 </table>
@@ -3700,9 +3936,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "geometrical&nbsp;cloud&nbsp;fraction"</span>
 </td>
 </tr>
 </table>
@@ -3712,9 +3949,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;167</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Geometrical&nbsp;cloud&nbsp;fraction&nbsp;from&nbsp;NPP-VIIRS&nbsp;regridded&nbsp;observations.&nbsp;Geometrical&nbsp;cloud&nbsp;fraction&nbsp;is&nbsp;defined&nbsp;as&nbsp;(probably+confidently&nbsp;cloudy)/(total)&nbsp;for&nbsp;nominal&nbsp;footprint."</span>
 </td>
 </tr>
 </table>
@@ -3724,9 +3962,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;26</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "geometrical_cloud_fraction"</span>
 </td>
 </tr>
 </table>
@@ -3736,9 +3975,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -3834,9 +4074,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;17</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "molecules&nbsp;per&nbsp;cm2"</span>
 </td>
 </tr>
 </table>
@@ -3846,9 +4087,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;86</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "S5P_PAL__L2__SCNLER_20240101T074458_20240101T092629_32219_03_020100_20240110T000409.nc"</span>
 </td>
 </tr>
 </table>
@@ -3858,9 +4100,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "carbon&nbsp;monoxide&nbsp;total&nbsp;column"</span>
 </td>
 </tr>
 </table>
@@ -3870,9 +4113,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;42</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "atmosphere_mole_content_of_carbon_monoxide"</span>
 </td>
 </tr>
 </table>
@@ -3882,9 +4126,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -3982,9 +4227,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -3994,9 +4240,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;86</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "S5P_PAL__L2__SCNLER_20240101T074458_20240101T092629_32219_03_020100_20240110T000409.nc"</span>
 </td>
 </tr>
 </table>
@@ -4006,9 +4253,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;29</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "toa_bidirectional_reflectance"</span>
 </td>
 </tr>
 </table>
@@ -4018,9 +4266,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "measured&nbsp;reflectance"</span>
 </td>
 </tr>
 </table>
@@ -4030,9 +4279,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -4128,9 +4378,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -4140,9 +4391,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "status_flag"</span>
 </td>
 </tr>
 </table>
@@ -4152,9 +4404,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;43</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "snow/ice&nbsp;information&nbsp;from&nbsp;the&nbsp;NISE&nbsp;database"</span>
 </td>
 </tr>
 </table>
@@ -4164,9 +4417,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>flag_meanings</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1986</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "snow-free_land&nbsp;sea_ice_1_percent&nbsp;sea_ice_2_percent&nbsp;sea_ice_3_percent&nbsp;sea_ice_4_percent&nbsp;sea_ice_5_percent&nbsp;sea_ice_6_percent&nbsp;sea_ice_7_percent&nbsp;sea_ice_8_percent&nbsp;sea_ice_9_percent&nbsp;sea_ice_10_percent&nbsp;sea_ice_11_percent&nbsp;sea_ice_12_percent&nbsp;sea_ice_13_percent&nbsp;sea_ice_14_percent&nbsp;sea_ice_15_percent&nbsp;sea_ice_16_percent&nbsp;sea_ice_17_percent&nbsp;sea_ice_18_percent&nbsp;sea_ice_19_percent&nbsp;sea_ice_20_percent&nbsp;sea_ice_21_percent&nbsp;sea_ice_22_percent&nbsp;sea_ice_23_percent&nbsp;sea_ice_24_percent&nbsp;sea_ice_25_percent&nbsp;sea_ice_26_percent&nbsp;sea_ice_27_percent&nbsp;sea_ice_28_percent&nbsp;sea_ice_29_percent&nbsp;sea_ice_30_percent&nbsp;sea_ice_31_percent&nbsp;sea_ice_32_percent&nbsp;sea_ice_33_percent&nbsp;sea_ice_34_percent&nbsp;sea_ice_35_percent&nbsp;sea_ice_36_percent&nbsp;sea_ice_37_percent&nbsp;sea_ice_38_percent&nbsp;sea_ice_39_percent&nbsp;sea_ice_40_percent&nbsp;sea_ice_41_percent&nbsp;sea_ice_42_percent&nbsp;sea_ice_43_percent&nbsp;sea_ice_44_percent&nbsp;sea_ice_45_percent&nbsp;sea_ice_46_percent&nbsp;sea_ice_47_percent&nbsp;sea_ice_48_percent&nbsp;sea_ice_49_percent&nbsp;sea_ice_50_percent&nbsp;sea_ice_51_percent&nbsp;sea_ice_52_percent&nbsp;sea_ice_53_percent&nbsp;sea_ice_54_percent&nbsp;sea_ice_55_percent&nbsp;sea_ice_56_percent&nbsp;sea_ice_57_percent&nbsp;sea_ice_58_percent&nbsp;sea_ice_59_percent&nbsp;sea_ice_60_percent&nbsp;sea_ice_61_percent&nbsp;sea_ice_62_percent&nbsp;sea_ice_63_percent&nbsp;sea_ice_64_percent&nbsp;sea_ice_65_percent&nbsp;sea_ice_66_percent&nbsp;sea_ice_67_percent&nbsp;sea_ice_68_percent&nbsp;sea_ice_69_percent&nbsp;sea_ice_70_percent&nbsp;sea_ice_71_percent&nbsp;sea_ice_72_percent&nbsp;sea_ice_73_percent&nbsp;sea_ice_74_percent&nbsp;sea_ice_75_percent&nbsp;sea_ice_76_percent&nbsp;sea_ice_77_percent&nbsp;sea_ice_78_percent&nbsp;sea_ice_79_percent&nbsp;sea_ice_80_percent&nbsp;sea_ice_81_percent&nbsp;sea_ice_82_percent&nbsp;sea_ice_83_percent&nbsp;sea_ice_84_percent&nbsp;sea_ice_85_percent&nbsp;sea_ice_86_percent&nbsp;sea_ice_87_percent&nbsp;sea_ice_88_percent&nbsp;sea_ice_89_percent&nbsp;sea_ice_90_percent&nbsp;sea_ice_91_percent&nbsp;sea_ice_92_percent&nbsp;sea_ice_93_percent&nbsp;sea_ice_94_percent&nbsp;sea_ice_95_percent&nbsp;sea_ice_96_percent&nbsp;sea_ice_97_percent&nbsp;sea_ice_98_percent&nbsp;sea_ice_99_percent&nbsp;sea_ice_100_percent&nbsp;permanent_ice&nbsp;snow&nbsp;mixed_pixels_at_coastlines&nbsp;suspect_ice_value&nbsp;undefined&nbsp;ocean"</span>
 </td>
 </tr>
 </table>
@@ -4176,9 +4430,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>flag_masks</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;637</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "0UB,&nbsp;1UB,&nbsp;2UB,&nbsp;3UB,&nbsp;4UB,&nbsp;5UB,&nbsp;6UB,&nbsp;7UB,&nbsp;8UB,&nbsp;9UB,&nbsp;10UB,&nbsp;11UB,&nbsp;12UB,&nbsp;13UB,&nbsp;14UB,&nbsp;15UB,&nbsp;16UB,&nbsp;17UB,&nbsp;18UB,&nbsp;19UB,&nbsp;20UB,&nbsp;21UB,&nbsp;22UB,&nbsp;23UB,&nbsp;24UB,&nbsp;25UB,&nbsp;26UB,&nbsp;27UB,&nbsp;28UB,&nbsp;29UB,&nbsp;30UB,&nbsp;31UB,&nbsp;32UB,&nbsp;33UB,&nbsp;34UB,&nbsp;35UB,&nbsp;36UB,&nbsp;37UB,&nbsp;38UB,&nbsp;39UB,&nbsp;40UB,&nbsp;41UB,&nbsp;42UB,&nbsp;43UB,&nbsp;44UB,&nbsp;45UB,&nbsp;46UB,&nbsp;47UB,&nbsp;48UB,&nbsp;49UB,&nbsp;50UB,&nbsp;51UB,&nbsp;52UB,&nbsp;53UB,&nbsp;54UB,&nbsp;55UB,&nbsp;56UB,&nbsp;57UB,&nbsp;58UB,&nbsp;59UB,&nbsp;60UB,&nbsp;61UB,&nbsp;62UB,&nbsp;63UB,&nbsp;64UB,&nbsp;65UB,&nbsp;66UB,&nbsp;67UB,&nbsp;68UB,&nbsp;69UB,&nbsp;70UB,&nbsp;71UB,&nbsp;72UB,&nbsp;73UB,&nbsp;74UB,&nbsp;75UB,&nbsp;76UB,&nbsp;77UB,&nbsp;78UB,&nbsp;79UB,&nbsp;80UB,&nbsp;81UB,&nbsp;82UB,&nbsp;83UB,&nbsp;84UB,&nbsp;85UB,&nbsp;86UB,&nbsp;87UB,&nbsp;88UB,&nbsp;89UB,&nbsp;90UB,&nbsp;91UB,&nbsp;92UB,&nbsp;93UB,&nbsp;94UB,&nbsp;95UB,&nbsp;96UB,&nbsp;97UB,&nbsp;98UB,&nbsp;99UB,&nbsp;100UB,&nbsp;101UB,&nbsp;103UB,&nbsp;252UB,&nbsp;253UB,&nbsp;254UB,&nbsp;255UB"</span>
 </td>
 </tr>
 </table>
@@ -4188,9 +4443,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>description</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;53</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Flag&nbsp;indicating&nbsp;snow&nbsp;and&nbsp;ice&nbsp;fraction&nbsp;of&nbsp;the&nbsp;surface."</span>
 </td>
 </tr>
 </table>
@@ -4200,9 +4456,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;86</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "S5P_PAL__L2__SCNLER_20240101T074458_20240101T092629_32219_03_020100_20240110T000409.nc"</span>
 </td>
 </tr>
 </table>
@@ -4212,9 +4469,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -4310,9 +4568,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -4322,9 +4581,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;11</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "status_flag"</span>
 </td>
 </tr>
 </table>
@@ -4334,9 +4594,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;69</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "land-water&nbsp;mask&nbsp;and&nbsp;surface&nbsp;classification&nbsp;based&nbsp;on&nbsp;a&nbsp;static&nbsp;database"</span>
 </td>
 </tr>
 </table>
@@ -4346,9 +4607,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>flag_values</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;212</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "0UB,&nbsp;1UB,&nbsp;2UB,&nbsp;3UB,&nbsp;4UB,&nbsp;9UB,&nbsp;17UB,&nbsp;25UB,&nbsp;33UB,&nbsp;41UB,&nbsp;49UB,&nbsp;57UB,&nbsp;8UB,&nbsp;16UB,&nbsp;24UB,&nbsp;32UB,&nbsp;40UB,&nbsp;48UB,&nbsp;56UB,&nbsp;64UB,&nbsp;72UB,&nbsp;80UB,&nbsp;88UB,&nbsp;96UB,&nbsp;104UB,&nbsp;112UB,&nbsp;120UB,&nbsp;128UB,&nbsp;136UB,&nbsp;144UB,&nbsp;152UB,&nbsp;160UB,&nbsp;168UB,&nbsp;176UB,&nbsp;184UB"</span>
 </td>
 </tr>
 </table>
@@ -4358,9 +4620,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>flag_meanings</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;849</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "land&nbsp;water&nbsp;some_water&nbsp;coast&nbsp;value_covers_majority_of_pixel&nbsp;water+shallow_ocean&nbsp;water+shallow_inland_water&nbsp;water+ocean_coastline-lake_shoreline&nbsp;water+intermittent_water&nbsp;water+deep_inland_water&nbsp;water+continental_shelf_ocean&nbsp;water+deep_ocean&nbsp;land+urban_and_built-up_land&nbsp;land+dryland_cropland_and_pasture&nbsp;land+irrigated_cropland_and_pasture&nbsp;land+mixed_dryland-irrigated_cropland_and_pasture&nbsp;land+cropland-grassland_mosaic&nbsp;land+cropland-woodland_mosaic&nbsp;land+grassland&nbsp;land+shrubland&nbsp;land+mixed_shrubland-grassland&nbsp;land+savanna&nbsp;land+deciduous_broadleaf_forest&nbsp;land+deciduous_needleleaf_forest&nbsp;land+evergreen_broadleaf_forest&nbsp;land+evergreen_needleleaf_forest&nbsp;land+mixed_forest&nbsp;land+herbaceous_wetland&nbsp;land+wooded_wetland&nbsp;land+barren_or_sparsely_vegetated&nbsp;land+herbaceous_tundra&nbsp;land+wooded_tundra&nbsp;land+mixed_tundra&nbsp;land+bare_ground_tundra&nbsp;land+snow_or_ice"</span>
 </td>
 </tr>
 </table>
@@ -4370,9 +4633,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>flag_masks</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;233</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "3UB,&nbsp;3UB,&nbsp;3UB,&nbsp;3UB,&nbsp;4UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB,&nbsp;249UB"</span>
 </td>
 </tr>
 </table>
@@ -4382,9 +4646,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>description</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;84</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Flag&nbsp;indicating&nbsp;land/water&nbsp;and&nbsp;further&nbsp;surface&nbsp;classifications&nbsp;for&nbsp;the&nbsp;ground&nbsp;pixel."</span>
 </td>
 </tr>
 </table>
@@ -4394,9 +4659,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;86</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "S5P_PAL__L2__SCNLER_20240101T074458_20240101T092629_32219_03_020100_20240110T000409.nc"</span>
 </td>
 </tr>
 </table>
@@ -4406,9 +4672,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -4504,9 +4771,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Pa"</span>
 </td>
 </tr>
 </table>
@@ -4516,9 +4784,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "surface_air_pressure"</span>
 </td>
 </tr>
 </table>
@@ -4528,9 +4797,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;86</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "S5P_PAL__L2__SCNLER_20240101T074458_20240101T092629_32219_03_020100_20240110T000409.nc"</span>
 </td>
 </tr>
 </table>
@@ -4540,9 +4810,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "surface&nbsp;air&nbsp;pressure"</span>
 </td>
 </tr>
 </table>
@@ -4552,9 +4823,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -4650,9 +4922,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;5</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m&nbsp;s-1"</span>
 </td>
 </tr>
 </table>
@@ -4662,9 +4935,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;55</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "absolute&nbsp;wind&nbsp;speed&nbsp;from&nbsp;ECMWF&nbsp;at&nbsp;10&nbsp;meter&nbsp;height&nbsp;level"</span>
 </td>
 </tr>
 </table>
@@ -4674,9 +4948,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>source</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;86</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "S5P_PAL__L2__SCNLER_20240101T074458_20240101T092629_32219_03_020100_20240110T000409.nc"</span>
 </td>
 </tr>
 </table>
@@ -4686,9 +4961,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;118</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Absolute&nbsp;wind&nbsp;speed&nbsp;computed&nbsp;from&nbsp;the&nbsp;north&nbsp;and&nbsp;east&nbsp;component&nbsp;of&nbsp;the&nbsp;wind&nbsp;vector&nbsp;from&nbsp;ECMWF&nbsp;at&nbsp;10&nbsp;meter&nbsp;height&nbsp;level."</span>
 </td>
 </tr>
 </table>
@@ -4698,9 +4974,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "wind_speed"</span>
 </td>
 </tr>
 </table>
@@ -4710,9 +4987,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -4822,9 +5100,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -4834,9 +5113,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;25</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol&nbsp;optical&nbsp;thickness"</span>
 </td>
 </tr>
 </table>
@@ -4846,9 +5126,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;58</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Total&nbsp;aerosol&nbsp;optical&nbsp;thickness&nbsp;of&nbsp;the&nbsp;atmospheric&nbsp;column."</span>
 </td>
 </tr>
 </table>
@@ -4858,9 +5139,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;25</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol_optical_thickness"</span>
 </td>
 </tr>
 </table>
@@ -4870,9 +5152,23 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>ancillary_variables</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;35</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol_optical_thickness_precision"</span>
 </td>
 </tr>
 </table>
@@ -4894,1027 +5190,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>2</td><td><b>aerosol_subtype</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
-<br /><br />
-<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
-<br /><br />
-<span class="attr_key">dim_2</span><span class="attr_value">: $ground_pixel</span>
-<br /><br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>3</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>3</td><td><b>aerosol_type</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
-<br /><br />
-<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
-<br /><br />
-<span class="attr_key">dim_2</span><span class="attr_value">: $ground_pixel</span>
-<br /><br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int8</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>3</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int8</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>4</td><td><b>corner</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from hdf5 file</span>
-<br /><br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>CLASS</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>NAME</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>5</td><td><b>delta_time</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
-<br /><br />
-<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
-<br /><br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>2</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>6</td><td><b>ground_pixel</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from hdf5 file</span>
-<br /><br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>CLASS</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>NAME</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>axis</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>7</td><td><b>latitude</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
-<br /><br />
-<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
-<br /><br />
-<span class="attr_key">dim_2</span><span class="attr_value">: $ground_pixel</span>
-<br /><br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>3</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>valid_min</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>valid_max</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>bounds</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float (double)</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "" (set 9.969209999999998e+36 to NaN)</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>8</td><td><b>longitude</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
-<br /><br />
-<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
-<br /><br />
-<span class="attr_key">dim_2</span><span class="attr_value">: $ground_pixel</span>
-<br /><br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>3</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>valid_min</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>valid_max</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>bounds</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float (double)</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "" (set 9.969209999999998e+36 to NaN)</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>9</td><td><b>qa_value</b></td>
+<tr valign="top"><td>2</td><td><b>aerosol_optical_thickness_precision</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>, <i><b>dim_3</b></i>]</th></tr>
@@ -5990,9 +5266,1285 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;38</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "precision&nbsp;of&nbsp;aerosol&nbsp;optical&nbsp;thickness"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;75</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Precision&nbsp;of&nbsp;the&nbsp;total&nbsp;aerosol&nbsp;optical&nbsp;thickness&nbsp;of&nbsp;the&nbsp;atmospheric&nbsp;column."</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>aerosol_subtype</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
+<br /><br />
+<span class="attr_key">dim_2</span><span class="attr_value">: $ground_pixel</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>3</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;15</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol_subtype"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;96</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Selected&nbsp;subtype,&nbsp;out&nbsp;of&nbsp;seven&nbsp;defined,&nbsp;representing&nbsp;the&nbsp;amount&nbsp;of&nbsp;absorption&nbsp;for&nbsp;the&nbsp;main&nbsp;type."</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;15</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol&nbsp;subtype"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>aerosol_type</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
+<br /><br />
+<span class="attr_key">dim_2</span><span class="attr_value">: $ground_pixel</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>3</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;106</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Selected&nbsp;aerosol&nbsp;type,&nbsp;based&nbsp;on&nbsp;location,&nbsp;absorbing&nbsp;aerosol&nbsp;index&nbsp;and&nbsp;carbon&nbsp;monoxide.&nbsp;Default&nbsp;value&nbsp;is&nbsp;3."</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol_type"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;82</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "aerosol&nbsp;type;&nbsp;1=desert&nbsp;dust,&nbsp;2=biomass&nbsp;burning&nbsp;aerosol,&nbsp;3=weakly&nbsp;absorbing&nbsp;aerosol"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>corner</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from hdf5 file</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>CLASS</b></td><td style="border-width: 2px"><table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>NAME</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;186</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "This&nbsp;coordinate&nbsp;variable&nbsp;defines&nbsp;the&nbsp;indices&nbsp;for&nbsp;the&nbsp;pixel&nbsp;corners;&nbsp;index&nbsp;starts&nbsp;at&nbsp;0&nbsp;(counter-clockwise,&nbsp;starting&nbsp;from&nbsp;south-western&nbsp;corner&nbsp;of&nbsp;the&nbsp;pixel&nbsp;in&nbsp;ascending&nbsp;part&nbsp;of&nbsp;the&nbsp;orbit)."</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;18</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "pixel&nbsp;corner&nbsp;index"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>delta_time</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>2</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;38</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "milliseconds&nbsp;since&nbsp;2024-01-01&nbsp;00:00:00"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;47</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "offset&nbsp;from&nbsp;reference&nbsp;start&nbsp;time&nbsp;of&nbsp;measurement"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "delta_time"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>time_utc</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>2</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;48</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "time&nbsp;of&nbsp;observation&nbsp;as&nbsp;ISO&nbsp;8601&nbsp;date-time&nbsp;string"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "scanline"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>ground_pixel</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from hdf5 file</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>CLASS</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>NAME</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>axis</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "X"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;96</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "This&nbsp;coordinate&nbsp;variable&nbsp;defines&nbsp;the&nbsp;indices&nbsp;across&nbsp;track,&nbsp;from&nbsp;west&nbsp;to&nbsp;east;&nbsp;index&nbsp;starts&nbsp;at&nbsp;0."</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;28</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "across-track&nbsp;dimension&nbsp;index"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>latitude</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
+<br /><br />
+<span class="attr_key">dim_2</span><span class="attr_value">: $ground_pixel</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>3</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;13</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "degrees_north"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;21</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "pixel&nbsp;center&nbsp;latitude"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "latitude"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>valid_min</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>valid_max</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>bounds</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;50</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/SUPPORT_DATA/GEOLOCATIONS/latitude_bounds"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float (double)</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "" (set 9.969209999999998e+36 to NaN)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>longitude</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
+<br /><br />
+<span class="attr_key">dim_2</span><span class="attr_value">: $ground_pixel</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>3</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "degrees_east"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;9</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "longitude"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;22</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "pixel&nbsp;center&nbsp;longitude"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>valid_min</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>valid_max</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>bounds</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;51</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/SUPPORT_DATA/GEOLOCATIONS/longitude_bounds"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float (double)</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "" (set 9.969209999999998e+36 to NaN)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>qa_value</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>, <i><b>dim_3</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
+<br /><br />
+<span class="attr_key">dim_2</span><span class="attr_value">: $ground_pixel</span>
+<br /><br />
+<span class="attr_key">dim_3</span><span class="attr_value">: $wavelength</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>4</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -6090,9 +6642,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;18</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "data&nbsp;quality&nbsp;value"</span>
 </td>
 </tr>
 </table>
@@ -6102,9 +6655,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;133</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "A&nbsp;continuous&nbsp;quality&nbsp;descriptor,&nbsp;varying&nbsp;between&nbsp;0&nbsp;(no&nbsp;data)&nbsp;and&nbsp;1&nbsp;(full&nbsp;quality&nbsp;data).&nbsp;Recommend&nbsp;to&nbsp;ignore&nbsp;data&nbsp;with&nbsp;qa_value&nbsp;&lt;&nbsp;0.5."</span>
 </td>
 </tr>
 </table>
@@ -6114,9 +6668,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;36</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "/PRODUCT/longitude&nbsp;/PRODUCT/latitude"</span>
 </td>
 </tr>
 </table>
@@ -6138,7 +6693,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>10</td><td><b>scanline</b></td>
+<tr valign="top"><td>12</td><td><b>scanline</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -6209,9 +6764,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "1"</span>
 </td>
 </tr>
 </table>
@@ -6221,9 +6777,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>axis</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "Y"</span>
 </td>
 </tr>
 </table>
@@ -6233,9 +6790,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;76</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "This&nbsp;coordinate&nbsp;variable&nbsp;defines&nbsp;the&nbsp;indices&nbsp;along&nbsp;track;&nbsp;index&nbsp;starts&nbsp;at&nbsp;0."</span>
 </td>
 </tr>
 </table>
@@ -6245,9 +6803,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;27</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "along-track&nbsp;dimension&nbsp;index"</span>
 </td>
 </tr>
 </table>
@@ -6269,155 +6828,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>11</td><td><b>single_scattering_albedo</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>, <i><b>dim_2</b></i>, <i><b>dim_3</b></i>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">dim_0</span><span class="attr_value">: $time</span>
-<br /><br />
-<span class="attr_key">dim_1</span><span class="attr_value">: $scanline</span>
-<br /><br />
-<span class="attr_key">dim_2</span><span class="attr_value">: $ground_pixel</span>
-<br /><br />
-<span class="attr_key">dim_3</span><span class="attr_value">: $wavelength</span>
-<br /><br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>4</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Dimid</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>coordinates</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>12</td><td><b>time</b></td>
+<tr valign="top"><td>13</td><td><b>time</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -6488,9 +6899,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;33</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "seconds&nbsp;since&nbsp;2010-01-01&nbsp;00:00:00"</span>
 </td>
 </tr>
 </table>
@@ -6500,9 +6912,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "time"</span>
 </td>
 </tr>
 </table>
@@ -6512,9 +6925,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>axis</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "T"</span>
 </td>
 </tr>
 </table>
@@ -6524,9 +6938,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;89</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "The&nbsp;time&nbsp;in&nbsp;this&nbsp;variable&nbsp;corresponds&nbsp;to&nbsp;the&nbsp;time&nbsp;in&nbsp;the&nbsp;time_reference&nbsp;global&nbsp;attribute."</span>
 </td>
 </tr>
 </table>
@@ -6536,9 +6951,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;34</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "reference&nbsp;time&nbsp;of&nbsp;the&nbsp;measurements"</span>
 </td>
 </tr>
 </table>
@@ -6560,7 +6976,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>13</td><td><b>wavelength</b></td>
+<tr valign="top"><td>14</td><td><b>wavelength</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -6608,9 +7024,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;2</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "nm"</span>
 </td>
 </tr>
 </table>
@@ -6620,9 +7037,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>axis</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "W"</span>
 </td>
 </tr>
 </table>
@@ -6632,9 +7050,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>comment</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;79</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "This&nbsp;variable&nbsp;defines&nbsp;the&nbsp;wavelengths&nbsp;at&nbsp;which&nbsp;the&nbsp;main&nbsp;products&nbsp;are&nbsp;retrieved."</span>
 </td>
 </tr>
 </table>
@@ -6644,9 +7063,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>long_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;20</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "wavelength&nbsp;dimension"</span>
 </td>
 </tr>
 </table>
@@ -6656,9 +7076,10 @@
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>standard_name</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;10</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "wavelength"</span>
 </td>
 </tr>
 </table>

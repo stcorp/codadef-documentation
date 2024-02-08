@@ -10,7 +10,7 @@
 
 <body>
 <h1>AUX_BGBRO_ version 0</h1>
-<h2>AUX_BGBRO_</h2>
+<h2>AUX_BGBRO__v0</h2>
 <p>This definition is based on version 1.0.0 of the S5P L2 BrO Product Format Specification S5P-BIRA-L2-PFS-TCBRO</p>
 <h3>root type</h3>
 <table class="top">
@@ -552,14 +552,15 @@
 <table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
     <td>
 <b>substr</b>(0, 3, <b>filename</b>()) == &quot;S5P&quot; <b>and</b><br />
-<b>substr</b>(9, 10, <b>filename</b>()) == &quot;AUX_BGBRO_&quot;
+<b>substr</b>(9, 10, <b>filename</b>()) == &quot;AUX_BGBRO_&quot; <b>and</b><br />
+<b>substr</b>(60, 8, <b>filename</b>()) == &quot;_010201_&quot;
     </tr>
   </td>
 </table>
 <h3>product variables</h3>
 <table class="fancy" border="1" cellspacing="0" width="600px">
 <tr><th>name</th><th>size</th><th>initialisation</th></tr>
-<tr><td id="AUX_BGBRO__ground_pixel">ground_pixel</td><td></td><td><i>$ground_pixel</i> = <b>dim</b>(/ground_pixel,0)</td></tr>
+<tr><td id="AUX_BGBRO__v0_ground_pixel">ground_pixel</td><td></td><td><i>$ground_pixel</i> = <b>dim</b>(/ground_pixel,0)</td></tr>
 </table>
 </body>
 
