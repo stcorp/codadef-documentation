@@ -100,6 +100,20 @@
 </span>
 </td></tr>
 </table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>ContentID</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
 <br /><br />
 <table class="fancy" border="1" cellspacing="0" width="100%">
 <tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
@@ -110,6 +124,34 @@
 <tr valign="top">
 <td colspan="2">
 Information regarding binary file format and time coordinates of the image
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Number</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Total</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
 <br /><br />
 <table class="fancy" border="1" cellspacing="0" width="100%">
 <tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
@@ -327,6 +369,44 @@ Raster Format of the Data. One of ARESYS_RASTER (default), ARESYS_GEOTIFF, RASTE
 <span class="attr_key">available</span><span class="attr_value">: optional</span>
 </td>
 </tr>
+<tr valign="top"><td>12</td><td><b>InvalidValue</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>RealValue</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>ImaginaryValue</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
 </table>
 </td>
 </tr>
@@ -515,6 +595,34 @@ Information regarding the region of interest related to the raster data
 <td colspan="2">
 Information regarding the dataset
 <br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Number</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Total</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br /><br />
 <table class="fancy" border="1" cellspacing="0" width="100%">
 <tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
 <tr valign="top"><td>0</td><td><b>SensorName</b></td>
@@ -645,7 +753,20 @@ Image projection: SLANT RANGE, GROUND RANGE
 </table>
 </td>
 </tr>
-<tr valign="top"><td>6</td><td><b>AcquisitionStation</b></td>
+<tr valign="top"><td>6</td><td><b>ProjectionParameters</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>AcquisitionStation</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -671,7 +792,7 @@ Image acquisition station
 </table>
 </td>
 </tr>
-<tr valign="top"><td>7</td><td><b>ProcessingCenter</b></td>
+<tr valign="top"><td>8</td><td><b>ProcessingCenter</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -697,7 +818,7 @@ Image processing center
 </table>
 </td>
 </tr>
-<tr valign="top"><td>8</td><td><b>ProcessingDate</b></td>
+<tr valign="top"><td>9</td><td><b>ProcessingDate</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -723,7 +844,7 @@ Image processing date
 </table>
 </td>
 </tr>
-<tr valign="top"><td>9</td><td><b>ProcessingSoftware</b></td>
+<tr valign="top"><td>10</td><td><b>ProcessingSoftware</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -749,7 +870,7 @@ Image processing software
 </table>
 </td>
 </tr>
-<tr valign="top"><td>10</td><td><b>fc_hz</b></td>
+<tr valign="top"><td>11</td><td><b>fc_hz</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
@@ -777,7 +898,7 @@ Radar carrier frequency
 </table>
 </td>
 </tr>
-<tr valign="top"><td>11</td><td><b>SideLooking</b></td>
+<tr valign="top"><td>12</td><td><b>SideLooking</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -789,7 +910,7 @@ Radar side looking: LEFT, RIGHT
 </table>
 </td>
 </tr>
-<tr valign="top"><td>12</td><td><b>ExternalCalibrationFactor</b></td>
+<tr valign="top"><td>13</td><td><b>ExternalCalibrationFactor</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
@@ -803,7 +924,7 @@ External calibration factor
 <span class="attr_key">available</span><span class="attr_value">: optional</span>
 </td>
 </tr>
-<tr valign="top"><td>13</td><td><b>DataTakeID</b></td>
+<tr valign="top"><td>14</td><td><b>DataTakeID</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
@@ -816,7 +937,7 @@ External calibration factor
 <span class="attr_key">available</span><span class="attr_value">: optional</span>
 </td>
 </tr>
-<tr valign="top"><td>14</td><td><b>InstrumentConfID</b></td>
+<tr valign="top"><td>15</td><td><b>InstrumentConfID</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
@@ -843,6 +964,34 @@ External calibration factor
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
 <tr valign="top">
 <td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Number</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Total</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br /><br />
 <table class="fancy" border="1" cellspacing="0" width="100%">
 <tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
 <tr valign="top"><td>0</td><td><b>Swath</b></td>
@@ -1409,7 +1558,236 @@ Azimuth relative times for each missing line
 </table>
 </td>
 </tr>
-<tr valign="top"><td>2</td><td><b>Swst_changes_number</b></td>
+<tr valign="top"><td>2</td><td><b>DuplicatedLines_number</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Number of duplicated lines
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>DuplicatedLines_azimuthtimes</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth relative times for each duplicated line
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>val</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>N</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>PRF_changes_number</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+Number of PRF changes
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>PRF_changes_azimuthtimes</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+Azimuth relative times for each PRF change
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>val</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>N</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>PRF_changes_values</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+PRF changes values
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>val</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>N</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>Swst_changes_number</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
@@ -1421,7 +1799,7 @@ Number of SWST changes
 </table>
 </td>
 </tr>
-<tr valign="top"><td>3</td><td><b>Swst_changes_azimuthtimes</b></td>
+<tr valign="top"><td>8</td><td><b>Swst_changes_azimuthtimes</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -1486,7 +1864,7 @@ Azimuth relative times for each SWST change
 </table>
 </td>
 </tr>
-<tr valign="top"><td>4</td><td><b>Swst_changes_values</b></td>
+<tr valign="top"><td>9</td><td><b>Swst_changes_values</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -1551,7 +1929,7 @@ SWST changes values
 </table>
 </td>
 </tr>
-<tr valign="top"><td>5</td><td><b>noise_packets_number</b></td>
+<tr valign="top"><td>10</td><td><b>noise_packets_number</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
@@ -1563,7 +1941,7 @@ Number of noise packets
 </table>
 </td>
 </tr>
-<tr valign="top"><td>6</td><td><b>noise_packets_azimuthtimes</b></td>
+<tr valign="top"><td>11</td><td><b>noise_packets_azimuthtimes</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -1628,7 +2006,7 @@ Azimuth relative times for each noise packet
 </table>
 </td>
 </tr>
-<tr valign="top"><td>7</td><td><b>Internal_calibration_number</b></td>
+<tr valign="top"><td>12</td><td><b>Internal_calibration_number</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
@@ -1640,7 +2018,7 @@ Number of internal calibration packets
 </table>
 </td>
 </tr>
-<tr valign="top"><td>8</td><td><b>Internal_calibration_azimuthtimes</b></td>
+<tr valign="top"><td>13</td><td><b>Internal_calibration_azimuthtimes</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -1705,7 +2083,7 @@ Azimuth relative times for each internal calibration packet
 </table>
 </td>
 </tr>
-<tr valign="top"><td>9</td><td><b>Swl_changes_number</b></td>
+<tr valign="top"><td>14</td><td><b>Swl_changes_number</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
@@ -1718,7 +2096,7 @@ Azimuth relative times for each internal calibration packet
 <span class="attr_key">available</span><span class="attr_value">: optional</span>
 </td>
 </tr>
-<tr valign="top"><td>10</td><td><b>Swl_changes_azimuthtimes</b></td>
+<tr valign="top"><td>15</td><td><b>Swl_changes_azimuthtimes</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -1783,7 +2161,7 @@ Azimuth relative times for each internal calibration packet
 <span class="attr_key">available</span><span class="attr_value">: optional</span>
 </td>
 </tr>
-<tr valign="top"><td>11</td><td><b>Swl_changes_values</b></td>
+<tr valign="top"><td>16</td><td><b>Swl_changes_values</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -1841,6 +2219,20 @@ Azimuth relative times for each internal calibration packet
 </td>
 </tr>
 </table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>ChirpPeriod</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Periodic list of chirp indexes related to multi-chirp image acquisition
 </td>
 </tr>
 </table>
@@ -2533,9 +2925,60 @@ Number of lines in each burst
 </td>
 </tr>
 </table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
 </td>
 </tr>
-<tr valign="top"><td>2</td><td><b>BurstRepetitionFrequency</b></td>
+<tr valign="top"><td>2</td><td><b>LinesPerBurstChangeList</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>Lines</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FromBurst</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>BurstRepetitionFrequency</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
@@ -2563,7 +3006,7 @@ Burst repetition frequency
 </table>
 </td>
 </tr>
-<tr valign="top"><td>3</td><td><b>Burst</b></td>
+<tr valign="top"><td>4</td><td><b>Burst</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -5143,7 +5586,21 @@ Attitude type: NOMINAL, REFINED
 <br /><br />
 <table class="fancy" border="1" cellspacing="0" width="100%">
 <tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
-<tr valign="top"><td>0</td><td><b>PulseLength</b></td>
+<tr valign="top"><td>0</td><td><b>Direction</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+Pulse direction (UP, DOWN
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>PulseLength</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
@@ -5171,7 +5628,7 @@ Pulse length
 </table>
 </td>
 </tr>
-<tr valign="top"><td>1</td><td><b>Bandwidth</b></td>
+<tr valign="top"><td>2</td><td><b>Bandwidth</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
@@ -5199,7 +5656,7 @@ Pulse bandwidth
 </table>
 </td>
 </tr>
-<tr valign="top"><td>2</td><td><b>PulseEnergy</b></td>
+<tr valign="top"><td>3</td><td><b>PulseEnergy</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
@@ -5227,7 +5684,7 @@ Pulse energy
 </table>
 </td>
 </tr>
-<tr valign="top"><td>3</td><td><b>PulseSamplingRate</b></td>
+<tr valign="top"><td>4</td><td><b>PulseSamplingRate</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
@@ -5255,7 +5712,7 @@ Pulse sampling rate
 </table>
 </td>
 </tr>
-<tr valign="top"><td>4</td><td><b>PulseStartFrequency</b></td>
+<tr valign="top"><td>5</td><td><b>PulseStartFrequency</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
@@ -5285,7 +5742,7 @@ Pulse start frequency
 <span class="attr_key">available</span><span class="attr_value">: optional</span>
 </td>
 </tr>
-<tr valign="top"><td>5</td><td><b>PulseStartPhase</b></td>
+<tr valign="top"><td>6</td><td><b>PulseStartPhase</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>

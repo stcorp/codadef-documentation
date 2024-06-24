@@ -11,7 +11,7 @@
 <body>
 <h1>Antenna_Patterns version 0</h1>
 <h2>Antenna_Patterns</h2>
-<p>This definition is based on version 3.2.1 of the BPS Auxiliary Products Format - BIO-BPS-AUX-FMT-ARE-010163</p>
+<p>This definition is based on version 3.2.5 of the BPS Auxiliary Products Format - BIO-BPS-AUX-FMT-ARE-010163</p>
 <h3>root type</h3>
 <table class="top">
 <tr><th  colspan="2"align="left">hdf5&nbsp;record</th></tr>
@@ -150,7 +150,7 @@
 <td colspan="2">
 <table class="fancy" border="1" cellspacing="0" width="100%">
 <tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
-<tr valign="top"><td>0</td><td><b>patternD1H</b></td>
+<tr valign="top"><td>0</td><td><b>patternD1HH</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
@@ -234,7 +234,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>1</td><td><b>patternD1V</b></td>
+<tr valign="top"><td>1</td><td><b>patternD1HV</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
@@ -318,7 +318,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>2</td><td><b>patternD2H</b></td>
+<tr valign="top"><td>2</td><td><b>patternD1VH</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
@@ -402,7 +402,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>3</td><td><b>patternD2V</b></td>
+<tr valign="top"><td>3</td><td><b>patternD1VV</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
@@ -486,7 +486,343 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>4</td><td><b>pixelType</b></td>
+<tr valign="top"><td>4</td><td><b>patternD2HH</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $elevationAngle</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $azimuthAngle</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>2</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>description</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>real</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>imag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>patternD2HV</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $elevationAngle</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $azimuthAngle</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>2</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>description</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>real</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>imag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>patternD2VH</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $elevationAngle</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $azimuthAngle</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>2</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>description</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>real</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>imag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>patternD2VV</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $elevationAngle</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $azimuthAngle</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>Netcdf4Coordinates</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>2</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>description</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>real</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>imag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>pixelType</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[]</th></tr>
@@ -506,7 +842,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>5</td><td><b>noDataValue</b></td>
+<tr valign="top"><td>9</td><td><b>noDataValue</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[]</th></tr>
