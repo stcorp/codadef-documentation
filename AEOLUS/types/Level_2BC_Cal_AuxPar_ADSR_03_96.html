@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level_2BC_Cal_AuxPar_ADSR_03_96</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level_2BC_Cal_AuxPar_ADSR_03_96</h1>
+<table class="top">
+<tr><th  colspan="2"align="left">binary&nbsp;record&nbsp;"<a class="header" href="../types/Level_2BC_Cal_AuxPar_ADSR_03_96.html">Level_2BC_Cal_AuxPar_ADSR_03_96</a>"</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>start_of_observation_datetime</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;time</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+Date and time of first measurement used for this L2B or L2C product
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s since 2000-01-01"</span>
+<br /><br />
+<span class="attr_key">value</span><span class="attr_value">: <b>float</b>(./days) * 86400 + <b>float</b>(./seconds) + <b>float</b>(./microseconds) / 1000000</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;12</td></tr>
+<tr valign="top">
+<td colspan="2">
+ENVISAT binary datetime
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>days</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;int32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+days since January 1st, 2000 (may be negative)
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "days since 2000-01-01"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>seconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+seconds since start of day
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>microseconds</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint32</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+microseconds since start of second
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1e-6 s"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td>spare_1</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;4</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>mie_algo_params</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+ Structure containing the calibration values and algorithm parameters as
+        used by the Mie wind retrievalFitting_ValFlag algorithm. 
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>enforce_fixed_intref_peakPos</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+If set to True then a fixed value was used for the peak position
+            for the internal reference wind by the Mie processing algorithm. This value
+            is copied from the AUX_PAR_2B file. 
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>fixed_intref_peakpos_value</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+In case Enforce_Fixed_IntRef_PeakPos is set to true, then this
+            value will be used to fill the peak position for the internal reference wind
+            by the Mie processing algorithm. This value is copied from the AUX_PAR_2B
+            file.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "ACCD pixel index"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>override_slope_intercept_intref</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ In case Enforce_Fixed_IntRef_PeakPos is set to true, then this value will
+            be used to fill the peak position for the internal reference wind by the Mie processing
+            algorithm. This value is copied from the AUX_PAR_2B file.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>mie_slope_intref</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+ Slope to use to calculate the internal reference Mie wind in case
+            Override_Slope_Intercept_IntRef is set to True. This value is copied from the
+            AUX_PAR_2B file.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "ACCD pixel index"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>mie_intercept_intref</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+ Intercept to use to calculate the internal reference Mie wind in
+            case Override_Slope_Intercept_IntRef is set to True. This value is copied from the
+            AUX_PAR_2B file.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "ACCD pixel index"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>mie_slope_intercept_src_intref</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ actual source was for the above defined Mie_Slope_IntRef and
+            Mie_Intercept_IntRef values.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>override_slope_intercept_atmpath</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ If set to True then the slope and intercept to calculate the atmospheric
+            path Mie wind will be taken from the AUX_PAR_2B file in stead of from the L1B product.
+            Note that the values from the optional AUX_MRC_1B input file will take priority in case
+            that one is used. This value is copied from the AUX_PAR_2B file.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>mie_slope_atmpath</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+ Intercept to use to calculate the atmospheric path Mie wind in case
+            Override_Slope_Intercept_AtmPath is set to True. This value is copied from the
+            AUX_PAR_2B file.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "ACCD pixel index/GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>mie_intercept_atmpath</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+ Intercept to use to calculate the atmospheric path Mie wind in case
+            Override_Slope_Intercept_AtmPath is set to True. This value is copied from the
+            AUX_PAR_2B file.
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "ACCD pixel index"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>mie_slope_intercept_src_atmpath</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ This parameter describes what the actual source was for the above defined
+            Mie_Slope_AtmPath and Mie_Intercept_AtmPath values.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td>spare_2</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;6</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>use_fitted_nonlinear_correction</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ If set to True then the L2BP will use the fitted Mie nonlinear correction
+            table from the L1B product in stead of the regular table. This fitted table is defined
+            in the AUX_PAR_1B file as used by the L1B processor. This value is copied from the
+            AUX_PAR_2B file
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>override_fitted_nl_corr_int_ref</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ If set to True then the L2BP will use the NWP based Mie nonlinear
+            correction
+            table as defined in the AUX_PAR_2B file for the internal reference calculation.. This
+            overrides the values given in the L1B product. But note that using the optional
+            AUX_MRC_1B input file for the L2BP has priority and will in turn override this current
+            setting. This value is copied from the AUX_PAR_2B file.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>pixel_position_int_ref</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+ An array of values defining the pixel positions on which the Mie
+            nonlinear
+            correction for the internal reference is defined. This array has length NumFreqIntRef
+            which value is defined in the SPH header
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/sph/NumFreqIntRefprofiles)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>fitted_mie_nl_corr_int_ref</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+ An array of values defining the Mie nonlinear correction for the internal
+            reference. This array has length NumFreqIntRef which value is defined in the SPH header
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/sph/NumFreqIntRefprofiles)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>mie_nonlin_source_intref</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ This parameter describes what the actual source was for the above defined
+            Pixel_Position_IntRef and Fitted_Mie_NL_Corr_IntRef values.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>override_fitted_nl_corr_arm_path</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+If set to True then the L2BP will use the NWP based Mie nonlinear
+            correction
+            table as defined in the AUX_PAR_2B file for the atmospheric path calculation. This
+            overrides the values given in the L1B product. But note that using the optional
+            AUX_MRC_1B input file for the L2BP has priority and will in turn override this current
+            setting.
+          
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>pixel_position_atm_path</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+
+            An array of values defining the pixel positions on which the Mie nonlinear correction
+            for the atmospheric path is defined. This array has length NumFreqAtmPath which value
+            is defined in the SPH header 
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/sph/NumFreqAtmPath)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>fitted_mie_nl_corr_arm_path</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">binary&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+ An array of values defining the Mie nonlinear correction for the
+            atmospheric path. This array has length NumFreqAtmPath which value is defined in the
+            SPH header
+<br /><br />
+<span class="attr_key">dim_0</span><span class="attr_value">: <b>int</b>(/sph/NumFreqAtmPath)</span>
+<br />
+<blockquote>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>mie_nonlin_source_atmpath</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ This parameter describes what the actual source was for the above
+            defined
+            Pixel_Position_AtmPath and Fitted_Mie_NL_Corr_AtmPath values.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>rbc_algo_params</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;record</th><td style="width:10px" align="right"><i>size</i>:&nbsp;32</td></tr>
+<tr valign="top">
+<td colspan="2">
+ Structure containing the calibration values and algorithm parameters as used
+        by the Rayleigh wind retrieval algorithm 
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>rr_ref_method</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;uint8</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+ Method for calculating the reference Rayleigh response. This value is
+            copied from the AUX_PAR_2B file.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td>spare_3</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;7</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>fixed_rr_intref_value</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+ Constant value used to define the reference Rayleigh Response in case the
+            RR_Ref_Method is set to RR_Ref_Fixed_Method
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>mierespfreq_to_rr_offset</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+ Offset value used to calculate the reference Rayleigh response value
+            based
+            on the observed Mie response frequency in case the RR_Ref_Method is set to
+            RR_Ref_from_MieEmitFreq_Method
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>mierespfreq_to_rr_slope</b></td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;double</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Slope value used to calculate the reference Rayleigh response value based
+            on the observed Mie response frequency in case the RR_Ref_Method is set to
+            RR_Ref_from_MieEmitFreq_Method
+<br /><br />
+<span class="attr_key">unit</span><span class="attr_value">: "1/GHz"</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td>spare_4</td>
+<td>
+<table>
+<tr><th align="left">binary&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;8</td></tr>
+<tr valign="top">
+<td colspan="2">
+Spare
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+
+</html>
