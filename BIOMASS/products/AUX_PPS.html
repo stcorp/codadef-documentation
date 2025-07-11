@@ -11,7 +11,7 @@
 <body>
 <h1>AUX_PPS___ version 0</h1>
 <h2>AUX_PPS</h2>
-<p>This definition is based on version 3.2.1 of the BPS Auxiliary Products Format - BIO-BPS-AUX-FMT-ARE-010163</p>
+<p>This definition is based on version 3.4.1 of the BPS Auxiliary Products Format - BIO-BPS-AUX-FMT-ARE-010163</p>
 <h3>root type</h3>
 <table class="top">
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -25,6 +25,18 @@
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
 <tr valign="top">
 <td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>noNamespaceSchemaLocation</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
 <table class="fancy" border="1" cellspacing="0" width="100%">
 <tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
 <tr valign="top"><td>0</td><td><b>staProductList</b></td>
@@ -74,7 +86,18 @@
 <td colspan="2">
 <table class="fancy" border="1" cellspacing="0" width="100%">
 <tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
-<tr valign="top"><td>0</td><td><b>polarisationsUsed</b></td>
+<tr valign="top"><td>0</td><td><b>polarisationCombinationMethod</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>outerParallelizationMaxCores</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
@@ -85,84 +108,29 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>1</td><td><b>polarisationCombinationMethod</b></td>
+<tr valign="top"><td>2</td><td><b>allowDuplicateImagesFlag</b></td>
 <td>
 <table>
-<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
 </td>
 </tr>
 </table>
 </td>
 </tr>
-<tr valign="top"><td>2</td><td><b>heightModel</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>version</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>3</td><td><b>backgeocodingPosting</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>4</td><td><b>brkFilesFormat</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>5</td><td><b>outerParallelizationMaxCores</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>6</td><td><b>allowDuplicateImagesFlag</b></td>
+<tr valign="top"><td>3</td><td><b>flatteningPhaseBiasCompensationFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -256,7 +224,29 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>1</td><td><b>residualShiftsQualityThreshold</b></td>
+<tr valign="top"><td>1</td><td><b>rangeSpectralFilteringFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>residualShiftsQualityThreshold</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
@@ -267,7 +257,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>2</td><td><b>polarizationUsed</b></td>
+<tr valign="top"><td>3</td><td><b>polarisationUsed</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -278,7 +268,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>3</td><td><b>blockQualityThreshold</b></td>
+<tr valign="top"><td>4</td><td><b>blockQualityThreshold</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
@@ -289,7 +279,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>4</td><td><b>fittingQualityThreshold</b></td>
+<tr valign="top"><td>5</td><td><b>fittingQualityThreshold</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
@@ -300,10 +290,65 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>5</td><td><b>minValidBlocks</b></td>
+<tr valign="top"><td>6</td><td><b>minValidBlocks</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;int16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>azimuthMaxShift</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>rangeMaxShift</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>exportDebugProductsFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>coregistrationExecutionPolicy</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
 </td>
@@ -383,6 +428,72 @@
 </table>
 </td>
 </tr>
+<tr valign="top"><td>1</td><td><b>usePrimaryWeightingWindowFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>spectralWeightingWindow</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>spectralWeightingWindowParameter</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>use32bitFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
 </table>
 </td>
 </tr>
@@ -441,7 +552,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>2</td><td><b>polarizationUsed</b></td>
+<tr valign="top"><td>2</td><td><b>polarisationUsed</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -488,73 +599,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>1</td><td><b>rangeLookBandwidth</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>2</td><td><b>rangeLookFrequency</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>3</td><td><b>filterType</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>4</td><td><b>kaiserWindowParameter</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>5</td><td><b>rangeFilterSize</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>6</td><td><b>azimuthFilterSize</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>7</td><td><b>phaseUnwrappingFlag</b></td>
+<tr valign="top"><td>1</td><td><b>compensateL1IonoPhaseScreenFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -576,7 +621,51 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>8</td><td><b>latitudeThreshold</b></td>
+<tr valign="top"><td>2</td><td><b>rangeLookBandwidth</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>rangeLookFrequency</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>phaseUnwrappingFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>latitudeThreshold</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
@@ -584,9 +673,10 @@
 <td colspan="2">
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "deg"</span>
 </td>
 </tr>
 </table>
@@ -598,7 +688,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>9</td><td><b>baselineMethod</b></td>
+<tr valign="top"><td>6</td><td><b>baselineMethod</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -609,7 +699,107 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>10</td><td><b>unweightedMultiBaselineEstimation</b></td>
+<tr valign="top"><td>7</td><td><b>unweightedMultiBaselineEstimation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>slowIonosphereQualityThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>sublookWindowAzimuthSize</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>sublookWindowRangeSize</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>multiBaselineCriticalBaselineThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>maxDeltaPhaseUnwrapTest</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "rad"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>minValidPhaseUnwrapRatio</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>use32bitFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -810,6 +1000,50 @@
 </table>
 </td>
 </tr>
+<tr valign="top"><td>10</td><td><b>baselineErrorQualityThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>multiBaselineCriticalBaselineThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>use32bitFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
 </table>
 </td>
 </tr>
@@ -898,9 +1132,10 @@
 <td colspan="2">
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m"</span>
 </td>
 </tr>
 </table>
@@ -920,9 +1155,10 @@
 <td colspan="2">
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m"</span>
 </td>
 </tr>
 </table>
@@ -942,9 +1178,10 @@
 <td colspan="2">
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m"</span>
 </td>
 </tr>
 </table>
@@ -964,9 +1201,10 @@
 <td colspan="2">
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m"</span>
 </td>
 </tr>
 </table>
@@ -997,9 +1235,10 @@
 <td colspan="2">
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "deg"</span>
 </td>
 </tr>
 </table>
@@ -1034,6 +1273,72 @@
 </td>
 </tr>
 <tr valign="top"><td>13</td><td><b>unweightedMultiBaselineEstimation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>maxRangeBlockEstimationFailures</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>overallProductQualityThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>use32bitEstimationFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>use32bitCorrectionFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -1121,9 +1426,10 @@
 <td colspan="2">
 <table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
 <tr valign="top">
 <td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m"</span>
 </td>
 </tr>
 </table>
@@ -1135,12 +1441,112 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>3</td><td><b>groundPhasesScreenQualityThreshold</b></td>
+<tr valign="top"><td>3</td><td><b>skpCalibrationPhasesScreenQualityThreshold</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
 <tr valign="top">
 <td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>overallProductQualityThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>medianFilterFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>medianFilterWindowSize</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>flatteningPhaseCorrectionFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>use32bitFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
 </td>
 </tr>
 </table>
@@ -1182,7 +1588,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>2</td><td><b>pixelType</b></td>
+<tr valign="top"><td>2</td><td><b>pixelQuantity</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -1193,7 +1599,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>3</td><td><b>pixelQuantity</b></td>
+<tr valign="top"><td>3</td><td><b>absCompressionMethod</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -1204,7 +1610,29 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>4</td><td><b>absCompressionMethod</b></td>
+<tr valign="top"><td>4</td><td><b>absMaxZError</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>absMaxZErrorPercentile</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>phaseCompressionMethod</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -1215,7 +1643,30 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>5</td><td><b>absMaxZError</b></td>
+<tr valign="top"><td>7</td><td><b>phaseMaxZError</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "rad"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>phaseMaxZErrorPercentile</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
@@ -1226,7 +1677,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>6</td><td><b>absMaxZErrorPercentile</b></td>
+<tr valign="top"><td>9</td><td><b>noPixelValue</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
@@ -1237,51 +1688,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>7</td><td><b>phaseCompressionMethod</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>8</td><td><b>phaseMaxZError</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>9</td><td><b>phaseMaxZErrorPercentile</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>10</td><td><b>noPixelValue</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>11</td><td><b>lutRangeDecimationFactor</b></td>
+<tr valign="top"><td>10</td><td><b>qlRangeDecimationFactor</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
@@ -1292,7 +1699,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>12</td><td><b>lutAzimuthDecimationFactor</b></td>
+<tr valign="top"><td>11</td><td><b>qlRangeAveragingFactor</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
@@ -1303,7 +1710,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>13</td><td><b>qlRangeDecimationFactor</b></td>
+<tr valign="top"><td>12</td><td><b>qlAzimuthDecimationFactor</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
@@ -1314,7 +1721,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>14</td><td><b>qlRangeAveragingFactor</b></td>
+<tr valign="top"><td>13</td><td><b>qlAzimuthAveragingFactor</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
@@ -1325,29 +1732,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>15</td><td><b>qlAzimuthDecimationFactor</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>16</td><td><b>qlAzimuthAveragingFactor</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>17</td><td><b>qlAbsoluteScalingFactor</b></td>
+<tr valign="top"><td>14</td><td><b>qlAbsoluteScalingFactor</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>

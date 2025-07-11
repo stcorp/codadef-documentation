@@ -11,7 +11,7 @@
 <body>
 <h1>AUX_PP2_2A version 0</h1>
 <h2>AUX_PP2_2A</h2>
-<p>This definition is based on version 3.2.1 of the BPS Auxiliary Products Format - BIO-BPS-AUX-FMT-ARE-010163</p>
+<p>This definition is based on version 3.2.6 of the BPS Auxiliary Products Format - BIO-BPS-AUX-FMT-ARE-010163</p>
 <h3>root type</h3>
 <table class="top">
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -25,6 +25,18 @@
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
 <tr valign="top">
 <td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>noNamespaceSchemaLocation</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
 <table class="fancy" border="1" cellspacing="0" width="100%">
 <tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
 <tr valign="top"><td>0</td><td><b>general</b></td>
@@ -38,20 +50,9 @@
 <tr valign="top"><td>0</td><td><b>applyCalibrationScreen</b></td>
 <td>
 <table>
-<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
-<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
-<br /><br />
-<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
-<br /><br />
-<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
-<br /><br />
-<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
-<br /><br />
-<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
-<br /><br />
-<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
 </td>
 </tr>
 </table>
@@ -345,18 +346,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>5</td><td><b>decimationFactor</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>6</td><td><b>compressionOptions</b></td>
+<tr valign="top"><td>5</td><td><b>compressionOptions</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -512,6 +502,17 @@
 </td>
 </tr>
 </table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>upsamplingFactor</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
 </td>
 </tr>
 </table>
@@ -751,18 +752,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>7</td><td><b>decimationFactor</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>8</td><td><b>compressionOptions</b></td>
+<tr valign="top"><td>7</td><td><b>compressionOptions</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -1000,6 +990,17 @@
 </table>
 </td>
 </tr>
+<tr valign="top"><td>8</td><td><b>upsamplingFactor</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
 </table>
 </td>
 </tr>
@@ -1172,7 +1173,29 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>8</td><td><b>normalisedHeightEstimationRange</b></td>
+<tr valign="top"><td>8</td><td><b>correctTerrainSlopesFlag</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>normalisedHeightEstimationRange</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -1208,101 +1231,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>9</td><td><b>normalisedWavenumberEstimationRange</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table class="fancy" border="1" cellspacing="0" width="100%">
-<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
-<tr valign="top"><td>0</td><td><b>min</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>1</td><td><b>max</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>2</td><td><b>num</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>10</td><td><b>groundToVolumeRatioRange</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table class="fancy" border="1" cellspacing="0" width="100%">
-<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
-<tr valign="top"><td>0</td><td><b>min</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>1</td><td><b>max</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>2</td><td><b>num</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>11</td><td><b>temporalDecorrelationEstimationRange</b></td>
+<tr valign="top"><td>10</td><td><b>normalisedWavenumberEstimationRange</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -1349,40 +1278,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>12</td><td><b>residualDecorrelation</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>13</td><td><b>productResolution</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>14</td><td><b>uncertaintyValidvaluesLimits</b></td>
+<tr valign="top"><td>11</td><td><b>groundToVolumeRatioRange</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -1412,93 +1308,7 @@
 </table>
 </td>
 </tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>15</td><td><b>verticalWavenumberValidvaluesLimits</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table class="fancy" border="1" cellspacing="0" width="100%">
-<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
-<tr valign="top"><td>0</td><td><b>min</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>1</td><td><b>max</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>16</td><td><b>lowerHeightLimit</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>17</td><td><b>decimationFactor</b></td>
+<tr valign="top"><td>2</td><td><b>num</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
@@ -1509,7 +1319,242 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>18</td><td><b>compressionOptions</b></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>temporalDecorrelationEstimationRange</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>min</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>max</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>num</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint16</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>temporalDecorrelationGroundToVolumeRatio</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>residualDecorrelation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>productResolution</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>uncertaintyValidvaluesLimits</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>min</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>max</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>verticalWavenumberValidvaluesLimits</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>min</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>max</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>lowerHeightLimit</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>compressionOptions</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -1561,7 +1606,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>1</td><td><b>FHquality</b></td>
+<tr valign="top"><td>1</td><td><b>Quality</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -1667,6 +1712,17 @@
 </td>
 </tr>
 </table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>upsamplingFactor</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
 </td>
 </tr>
 </table>

@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>SETAPAuxiliaryConfiguration v1</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>SETAPAuxiliaryConfiguration version 1</h1>
+<h2>SETAPAuxiliaryConfiguration_v1</h2>
+<p>This definition is based on version 1.20 of the Sentinel-1 ETAD Auxiliary Product Specification ESA-EOPG-CSCOP-TN-80</p>
+<h3>root type</h3>
+<table class="top">
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>setapConf</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>schemaVersion</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>noNamespaceSchemaLocation</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>generalProcessorConf</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>listOfGlobalParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>troposphericDelayCorrection</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>ionosphericDelayCorrection</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>solidEarthTideCorrection</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>oceanTidalLoadingCorrection</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>orbitStateVectorExtractionExtension</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>ionosphereScalingFactorOrbitHeight</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>troposphereIntegrationStepSizeTropopause</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>troposphereIntegrationStepSizeStratosphere</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>troposphereIntegrationStepSizeMesosphere</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>troposphereModelLayerReductionFactor</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>etadProductNetcdfCompression</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>etadProductNetcdfCompressionLevel</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>etadProductNetcdfQuantization</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>etadProductNetcdfNSDLocation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>etadProductNetcdfNSDHeight</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>etadProductNetcdfNSDAzCorrection</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>etadProductNetcdfNSDRgCorrection</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>fDcRmsThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>listOfCorrectionQualityLimits</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>dTauTropoDelayMin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>dTauTropoDelayMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>dTauTropoDelayGradientMin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>dTauTropoDelayGradientMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>dTauIonoDelayMin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>5</td><td><b>dTauIonoDelayMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>dTauAccuracyIonoDelayMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>dTauSolidEarthTideMin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>dTauSolidEarthTideMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>dTSolidEarthTideMin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>dTSolidEarthTideMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>11</td><td><b>dTauOceanTidalLoadingMin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>dTauOceanTidalLoadingMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>dTOceanTidalLoadingMin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>14</td><td><b>dTOceanTidalLoadingMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>15</td><td><b>dTBistaticAzShiftMin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>16</td><td><b>dTBistaticAzShiftMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>dTauDopplerRgShiftMin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>dTauDopplerRgShiftMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>19</td><td><b>dTFmRateMismatchMin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>dTFmRateMismatchMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>21</td><td><b>dTauSumCorrectionRgMin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>22</td><td><b>dTauSumCorrectionRgMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>23</td><td><b>dTSumCorrectionAzMin</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>24</td><td><b>dTSumCorrectionAzMax</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>modeRelatedConf</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>listOfModes</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>count</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br /><br />
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>mode</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>name</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>listOfModeParams</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table class="fancy" border="1" cellspacing="0" width="100%">
+<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
+<tr valign="top"><td>0</td><td><b>correctionGridRangeSampling</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int16</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>correctionGridAzimuthSampling</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;int16</th></tr>
+<tr valign="top">
+<td colspan="2">
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>unit</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">ascii&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>bistaticAzimuthCorrection</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>dopplerShiftRangeCorrection</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>fmMismatchAzimuthCorrection</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>exists</b>(/setapConf@schemaVersion) <b>and</b><br /><b>at</b>(/setapConf@schemaVersion,<br /><b>str</b>(.) == &quot;1.20&quot;)
+      <br /><br /><b>or</b><br /><br />
+<b>exists</b>(/setapConf@schemaVersion) <b>and</b><br /><b>at</b>(/setapConf@schemaVersion,<br /><b>str</b>(.) == &quot;1.21&quot;)
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>
