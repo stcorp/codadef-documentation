@@ -8067,15 +8067,19 @@
     <td>
 <b>substr</b>(0, 4, <b>filename</b>()) == &quot;s1a-&quot; <b>and</b><br />
 <b>substr</b>(4, 7, <b>filename</b>()) == &quot;ew-ocn-&quot; <b>and</b><br />
-<b>exists</b>(@IPFversion)
+<b>exists</b>(@IPFversion) <b>and</b><br /><b>at</b>(@IPFversion,<br /><b>substr</b>(0, 4, <b>str</b>(.)) == &quot;003.&quot;)
       <br /><br /><b>or</b><br /><br />
 <b>substr</b>(0, 4, <b>filename</b>()) == &quot;s1b-&quot; <b>and</b><br />
 <b>substr</b>(4, 7, <b>filename</b>()) == &quot;ew-ocn-&quot; <b>and</b><br />
-<b>exists</b>(@IPFversion)
+<b>exists</b>(@IPFversion) <b>and</b><br /><b>at</b>(@IPFversion,<br /><b>substr</b>(0, 4, <b>str</b>(.)) == &quot;003.&quot;)
       <br /><br /><b>or</b><br /><br />
 <b>substr</b>(0, 4, <b>filename</b>()) == &quot;s1c-&quot; <b>and</b><br />
 <b>substr</b>(4, 7, <b>filename</b>()) == &quot;ew-ocn-&quot; <b>and</b><br />
-<b>exists</b>(@IPFversion)
+<b>exists</b>(@IPFversion) <b>and</b><br /><b>at</b>(@IPFversion,<br /><b>substr</b>(0, 4, <b>str</b>(.)) == &quot;003.&quot;)
+      <br /><br /><b>or</b><br /><br />
+<b>substr</b>(0, 4, <b>filename</b>()) == &quot;s1d-&quot; <b>and</b><br />
+<b>substr</b>(4, 7, <b>filename</b>()) == &quot;ew-ocn-&quot; <b>and</b><br />
+<b>exists</b>(@IPFversion) <b>and</b><br /><b>at</b>(@IPFversion,<br /><b>substr</b>(0, 4, <b>str</b>(.)) == &quot;003.&quot;)
     </tr>
   </td>
 </table>

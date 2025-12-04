@@ -11,7 +11,7 @@
 <body>
 <h1>Biomass_MPH version 0</h1>
 <h2>Biomass_MPH</h2>
-<p>This definition is based on version 2.3 of the BIOMASS Main Product Header Definition - BIO-ESA-EOPG-EEGS-TN-0051</p>
+<p>This definition is based on version 2.11 of the BIOMASS Main Product Header Definition - BIO-ESA-EOPG-EEGS-TN-0051</p>
 <h3>root type</h3>
 <table class="top">
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -834,6 +834,30 @@
 </td>
 </tr>
 <tr valign="top"><td>19</td><td><b>basinID</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: determined automatically from xml file</span>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</td>
+</tr>
+<tr valign="top"><td>20</td><td><b>stackID</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;array[<i><b>dim_0</b></i>]</th></tr>
@@ -1773,6 +1797,30 @@
 </td>
 </tr>
 </table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>isCoregistrationPrimary</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
 </td>
 </tr>
 </table>

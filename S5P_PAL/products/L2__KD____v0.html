@@ -10,8 +10,8 @@
 
 <body>
 <h1>L2__KD____ version 0</h1>
-<h2>L2__KD____</h2>
-<p>This definition is based on version 1.1.0 of the S5P KD Product User Manual
+<h2>L2__KD____v0</h2>
+<p>This definition is based on version 1.0 of the S5P KD Product User Manual
         Product Format Specifications PAL-S5POC-PUM-v1
       </p>
 <h3>root type</h3>
@@ -5458,17 +5458,26 @@
 <table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
     <td>
 <b>substr</b>(0, 3, <b>filename</b>()) == &quot;S5P&quot; <b>and</b><br />
-<b>substr</b>(9, 10, <b>filename</b>()) == &quot;L2__KD____&quot;
+<b>substr</b>(9, 10, <b>filename</b>()) == &quot;L2__KD____&quot; <b>and</b><br />
+<b>substr</b>(60, 8, <b>filename</b>()) == &quot;_010000_&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>substr</b>(0, 3, <b>filename</b>()) == &quot;S5P&quot; <b>and</b><br />
+<b>substr</b>(9, 10, <b>filename</b>()) == &quot;L2__KD____&quot; <b>and</b><br />
+<b>substr</b>(60, 8, <b>filename</b>()) == &quot;_010001_&quot;
+      <br /><br /><b>or</b><br /><br />
+<b>substr</b>(0, 3, <b>filename</b>()) == &quot;S5P&quot; <b>and</b><br />
+<b>substr</b>(9, 10, <b>filename</b>()) == &quot;L2__KD____&quot; <b>and</b><br />
+<b>substr</b>(60, 8, <b>filename</b>()) == &quot;_010002_&quot;
     </tr>
   </td>
 </table>
 <h3>product variables</h3>
 <table class="fancy" border="1" cellspacing="0" width="600px">
 <tr><th>name</th><th>size</th><th>initialisation</th></tr>
-<tr><td id="L2__KD_____time">time</td><td></td><td><i>$time</i> = <b>dim</b>(/PRODUCT/time,0)</td></tr>
-<tr><td id="L2__KD_____scanline">scanline</td><td></td><td><i>$scanline</i> = <b>dim</b>(/PRODUCT/scanline,0)</td></tr>
-<tr><td id="L2__KD_____ground_pixel">ground_pixel</td><td></td><td><i>$ground_pixel</i> = <b>dim</b>(/PRODUCT/ground_pixel,0)</td></tr>
-<tr><td id="L2__KD_____corner">corner</td><td></td><td><i>$corner</i> = <b>dim</b>(/PRODUCT/corner,0)</td></tr>
+<tr><td id="L2__KD____v0_time">time</td><td></td><td><i>$time</i> = <b>dim</b>(/PRODUCT/time,0)</td></tr>
+<tr><td id="L2__KD____v0_scanline">scanline</td><td></td><td><i>$scanline</i> = <b>dim</b>(/PRODUCT/scanline,0)</td></tr>
+<tr><td id="L2__KD____v0_ground_pixel">ground_pixel</td><td></td><td><i>$ground_pixel</i> = <b>dim</b>(/PRODUCT/ground_pixel,0)</td></tr>
+<tr><td id="L2__KD____v0_corner">corner</td><td></td><td><i>$corner</i> = <b>dim</b>(/PRODUCT/corner,0)</td></tr>
 </table>
 </body>
 

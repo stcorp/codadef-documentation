@@ -11,7 +11,7 @@
 <body>
 <h1>L1C_LUT_ADS version 0</h1>
 <h2>L1C_LUT_ADS</h2>
-<p>This definition is based on version 1.4.3 of the BIOMASS L1a/b/c Products Format Specification - BIO-BPS-L1PFD-ARE-010076</p>
+<p>This definition is based on version 1.4.4 of the BIOMASS L1a/b/c Products Format Specification - BIO-BPS-L1PFD-ARE-010076</p>
 <h3>root type</h3>
 <table class="top">
 <tr><th  colspan="2"align="left">hdf5&nbsp;record</th></tr>
@@ -287,7 +287,7 @@
 <td colspan="2">
 <blockquote>
 <table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;uint16</th></tr>
+<tr><th  colspan="2"align="left">hdf5&nbsp;uint32</th></tr>
 <tr valign="top">
 <td colspan="2">
 <span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
@@ -2355,7 +2355,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>1</td><td><b>azimuthCoregistrationShifts</b></td>
+<tr valign="top"><td>1</td><td><b>rangeOrbitCoregistrationShifts</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
@@ -2470,7 +2470,237 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>2</td><td><b>coregistrationShiftsQuality</b></td>
+<tr valign="top"><td>2</td><td><b>azimuthCoregistrationShifts</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $relative_azimuth_time</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $slant_range_time</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: Netcdf4Coordinates</td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>2</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: Netcdf4Dimid</td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+<br /><br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>description</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float (double)</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "" (set -9999 to NaN)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>azimuthOrbitCoregistrationShifts</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">dim_0</span><span class="attr_value">: $relative_azimuth_time</span>
+<br /><br />
+<span class="attr_key">dim_1</span><span class="attr_value">: $slant_range_time</span>
+<br /><br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: Netcdf4Coordinates</td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>2</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: Netcdf4Dimid</td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+<br />
+<span class="attr_key">hidden</span><span class="attr_value">: true</span>
+<br /><br />
+<span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>description</b></td><td style="border-width: 2px"><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float (double)</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">converted&nbsp;unit</span><span class="attr_value">: "" (set -9999 to NaN)</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>4</td><td><b>coregistrationShiftsQuality</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
@@ -2572,7 +2802,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>3</td><td><b>flatteningPhasesScreen</b></td>
+<tr valign="top"><td>5</td><td><b>flatteningPhaseScreen</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
@@ -2687,7 +2917,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>4</td><td><b>waveNumbers</b></td>
+<tr valign="top"><td>6</td><td><b>waveNumbers</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
@@ -2808,7 +3038,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>8</td><td><b>fastIonosphereRemoval</b></td>
+<tr valign="top"><td>8</td><td><b>skpPhaseCalibration</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;record</th></tr>
@@ -2816,179 +3046,7 @@
 <td colspan="2">
 <table class="fancy" border="1" cellspacing="0" width="100%">
 <tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
-<tr valign="top"><td>0</td><td><b>fastIonospherePhasesScreen</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">dim_0</span><span class="attr_value">: $ionosphere_centered_azimuth_time</span>
-<br /><br />
-<span class="attr_key">dim_1</span><span class="attr_value">: $ionosphere_relative_range_time</span>
-<br /><br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: Netcdf4Coordinates</td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>2</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-<br />
-<span class="attr_key">hidden</span><span class="attr_value">: true</span>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: Netcdf4Dimid</td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-<br />
-<span class="attr_key">hidden</span><span class="attr_value">: true</span>
-<br /><br />
-<span class="attr_key">available</span><span class="attr_value">: optional</span>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>description</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>1</td><td><b>fastIonospherePhasesScreenQuality</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">dim_0</span><span class="attr_value">: $ionosphere_centered_azimuth_time</span>
-<br /><br />
-<span class="attr_key">dim_1</span><span class="attr_value">: $ionosphere_relative_range_time</span>
-<br /><br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: Netcdf4Coordinates</td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Coordinates</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>2</b>]</th></tr>
-<tr valign="top">
-<td colspan="2">
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-<br />
-<span class="attr_key">hidden</span><span class="attr_value">: true</span>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: Netcdf4Dimid</td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_Netcdf4Dimid</b></span>
-<br /><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;int32</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-<br />
-<span class="attr_key">hidden</span><span class="attr_value">: true</span>
-<br /><br />
-<span class="attr_key">available</span><span class="attr_value">: optional</span>
-</span>
-</td></tr>
-</table>
-<br />
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>description</b></td><td style="border-width: 2px"><table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-<br />
-<blockquote>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-</td>
-</tr>
-</table>
-</blockquote>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-<br />
-<span class="attr_key">available</span><span class="attr_value">: optional</span>
-</td>
-</tr>
-<tr valign="top"><td>9</td><td><b>skpPhaseCalibration</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">hdf5&nbsp;record</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table class="fancy" border="1" cellspacing="0" width="100%">
-<tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
-<tr valign="top"><td>0</td><td><b>groundPhasesScreen</b></td>
+<tr valign="top"><td>0</td><td><b>skpCalibrationPhaseScreen</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
@@ -3041,6 +3099,42 @@
 </table>
 <br />
 <table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
+<tr><th align="left">hdf5&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "rad"</span>
+</td>
+</tr>
+</table>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
 <tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>description</b></td><td style="border-width: 2px"><table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;string</th></tr>
 <tr valign="top">
@@ -3066,7 +3160,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>1</td><td><b>groundPhasesScreenQuality</b></td>
+<tr valign="top"><td>1</td><td><b>skpCalibrationPhaseScreenQuality</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">hdf5&nbsp;array[<i><b>dim_0</b></i>, <i><b>dim_1</b></i>]</th></tr>
@@ -3114,6 +3208,29 @@
 <span class="attr_key">hidden</span><span class="attr_value">: true</span>
 <br /><br />
 <span class="attr_key">available</span><span class="attr_value">: optional</span>
+</span>
+</td></tr>
+</table>
+<br />
+<table style="border-style: none" cellspacing="0" width="100%">
+<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>FillValue</b></td><td style="border-width: 2px"><span class="attr_key">real name</span><span class="attr_value">: <b>_FillValue</b></span>
+<br /><table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;array[<b>1</b>]</th></tr>
+<tr valign="top">
+<td colspan="2">
+<blockquote>
+<table>
+<tr><th  colspan="2"align="left">hdf5&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">endianness</span><span class="attr_value">: little endian</span>
+</td>
+</tr>
+</table>
+</blockquote>
+</td>
+</tr>
+</table>
 </span>
 </td></tr>
 </table>
@@ -3171,8 +3288,6 @@
 <tr><th>name</th><th>size</th><th>initialisation</th></tr>
 <tr><td id="L1C_LUT_ADS_slant_range_time">slant_range_time</td><td></td><td><i>$slant_range_time</i> = <b>dim</b>(/slantRangeTime,0)</td></tr>
 <tr><td id="L1C_LUT_ADS_relative_azimuth_time">relative_azimuth_time</td><td></td><td><i>$relative_azimuth_time</i> = <b>dim</b>(/relativeAzimuthTime,0)</td></tr>
-<tr><td id="L1C_LUT_ADS_ionosphere_relative_range_time">ionosphere_relative_range_time</td><td></td><td><i>$ionosphere_relative_range_time</i> = <b>dim</b>(/ionosphereRelativeRangeTime,0)</td></tr>
-<tr><td id="L1C_LUT_ADS_ionosphere_centered_azimuth_time">ionosphere_centered_azimuth_time</td><td></td><td><i>$ionosphere_centered_azimuth_time</i> = <b>dim</b>(/ionosphereCenteredAzimuthTime,0)</td></tr>
 </table>
 </body>
 

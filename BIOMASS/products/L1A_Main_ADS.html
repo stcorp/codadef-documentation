@@ -11,7 +11,7 @@
 <body>
 <h1>L1A_Main_ADS version 0</h1>
 <h2>L1A_Main_ADS</h2>
-<p>This definition is based on version 1.4.3 of the BIOMASS L1a/b/c Products Format Specification - BIO-BPS-L1PFD-ARE-010076</p>
+<p>This definition is based on version 1.5.0 of the BIOMASS L1a/b/c Products Format Specification - BIO-BPS-L1PFD-ARE-010076</p>
 <h3>root type</h3>
 <table class="top">
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -2129,7 +2129,29 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>11</td><td><b>internalCalibrationEstimationFlag</b></td>
+<tr valign="top"><td>11</td><td><b>rfiFMChirpSource</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>12</td><td><b>rfiFMMitigationMethod</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>13</td><td><b>internalCalibrationEstimationFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2151,7 +2173,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>12</td><td><b>internalCalibrationCorrectionFlag</b></td>
+<tr valign="top"><td>14</td><td><b>internalCalibrationCorrectionFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2173,7 +2195,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>13</td><td><b>rangeReferenceFunctionSource</b></td>
+<tr valign="top"><td>15</td><td><b>rangeReferenceFunctionSource</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -2184,7 +2206,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>14</td><td><b>rangeCompressionMethod</b></td>
+<tr valign="top"><td>16</td><td><b>rangeCompressionMethod</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -2195,7 +2217,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>15</td><td><b>extendedSwathProcessingFlag</b></td>
+<tr valign="top"><td>17</td><td><b>extendedSwathProcessingFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2217,7 +2239,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>16</td><td><b>dcMethod</b></td>
+<tr valign="top"><td>18</td><td><b>dcMethod</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -2228,7 +2250,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>17</td><td><b>dcValue</b></td>
+<tr valign="top"><td>19</td><td><b>dcValue</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
@@ -2251,7 +2273,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>18</td><td><b>antennaPatternCorrection1Flag</b></td>
+<tr valign="top"><td>20</td><td><b>antennaPatternCorrection1Flag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2273,7 +2295,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>19</td><td><b>antennaPatternCorrection2Flag</b></td>
+<tr valign="top"><td>21</td><td><b>antennaPatternCorrection2Flag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2295,7 +2317,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>20</td><td><b>antennaCrossTalkCorrectionFlag</b></td>
+<tr valign="top"><td>22</td><td><b>antennaCrossTalkCorrectionFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2317,7 +2339,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>21</td><td><b>rangeProcessingParameters</b></td>
+<tr valign="top"><td>23</td><td><b>rangeProcessingParameters</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -2456,7 +2478,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>22</td><td><b>azimuthProcessingParameters</b></td>
+<tr valign="top"><td>24</td><td><b>azimuthProcessingParameters</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -2595,7 +2617,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>23</td><td><b>bistaticDelayCorrectionFlag</b></td>
+<tr valign="top"><td>25</td><td><b>bistaticDelayCorrectionFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2617,7 +2639,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>24</td><td><b>bistaticDelayCorrectionMethod</b></td>
+<tr valign="top"><td>26</td><td><b>bistaticDelayCorrectionMethod</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -2628,7 +2650,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>25</td><td><b>rangeSpreadingLossCompensationFlag</b></td>
+<tr valign="top"><td>27</td><td><b>rangeSpreadingLossCompensationFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2650,7 +2672,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>26</td><td><b>referenceRange</b></td>
+<tr valign="top"><td>28</td><td><b>referenceRange</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;double</th></tr>
@@ -2673,7 +2695,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>27</td><td><b>processingGainList</b></td>
+<tr valign="top"><td>29</td><td><b>processingGainList</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -2732,7 +2754,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>28</td><td><b>polarimetricCorrectionFlag</b></td>
+<tr valign="top"><td>30</td><td><b>polarimetricCorrectionFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2754,7 +2776,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>29</td><td><b>ionosphereHeightDefocusingFlag</b></td>
+<tr valign="top"><td>31</td><td><b>ionosphereHeightDefocusingFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2776,7 +2798,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>30</td><td><b>ionosphereHeightEstimationMethod</b></td>
+<tr valign="top"><td>32</td><td><b>ionosphereHeightEstimationMethod</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -2787,7 +2809,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>31</td><td><b>faradayRotationCorrectionFlag</b></td>
+<tr valign="top"><td>33</td><td><b>faradayRotationCorrectionFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2809,7 +2831,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>32</td><td><b>ionosphericPhaseScreenCorrectionFlag</b></td>
+<tr valign="top"><td>34</td><td><b>ionosphericPhaseScreenCorrectionFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2831,7 +2853,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>33</td><td><b>groupDelayCorrectionFlag</b></td>
+<tr valign="top"><td>35</td><td><b>groupDelayCorrectionFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2853,7 +2875,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>34</td><td><b>autofocusFlag</b></td>
+<tr valign="top"><td>36</td><td><b>autofocusFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2875,7 +2897,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>35</td><td><b>autofocusMethod</b></td>
+<tr valign="top"><td>37</td><td><b>autofocusMethod</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -2886,7 +2908,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>36</td><td><b>detectionFlag</b></td>
+<tr valign="top"><td>38</td><td><b>detectionFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2908,7 +2930,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>37</td><td><b>thermalDenoisingFlag</b></td>
+<tr valign="top"><td>39</td><td><b>thermalDenoisingFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -2930,7 +2952,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>38</td><td><b>noiseGainList</b></td>
+<tr valign="top"><td>40</td><td><b>noiseGainList</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -2989,7 +3011,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>39</td><td><b>groundProjectionFlag</b></td>
+<tr valign="top"><td>41</td><td><b>groundProjectionFlag</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
@@ -3962,6 +3984,17 @@
 </table>
 </td>
 </tr>
+<tr valign="top"><td>2</td><td><b>avgPercentageAffectedBW</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
 </table>
 </td>
 </tr>
@@ -4027,7 +4060,29 @@
 <br /><br />
 <table class="fancy" border="1" cellspacing="0" width="100%">
 <tr><th class="subhdr">id</th><th class="subhdr">field&nbsp;name</th><th class="subhdr">definition</th></tr>
-<tr valign="top"><td>0</td><td><b>rfiPersistentBWPercentage</b></td>
+<tr valign="top"><td>0</td><td><b>maxPercentageAffectedBW</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>1</td><td><b>avgPercentageAffectedBW</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>2</td><td><b>percentageAffectedLines</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>

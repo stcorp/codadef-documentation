@@ -11,7 +11,7 @@
 <body>
 <h1>AUX_PP1___ version 0</h1>
 <h2>AUX_PP1</h2>
-<p>This definition is based on version 3.4.1 of the BPS Auxiliary Products Format - BIO-BPS-AUX-FMT-ARE-010163</p>
+<p>This definition is based on version 3.5.0 of the BPS Auxiliary Products Format - BIO-BPS-AUX-FMT-ARE-010163</p>
 <h3>root type</h3>
 <table class="top">
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -429,29 +429,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>1</td><td><b>rfiCorrectionFlag</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
-<br /><br />
-<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
-<br /><br />
-<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
-<br /><br />
-<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
-<br /><br />
-<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
-<br /><br />
-<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>2</td><td><b>rfiMitigationMethod</b></td>
+<tr valign="top"><td>1</td><td><b>rfiMitigationMode</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -462,7 +440,18 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>3</td><td><b>rfiMask</b></td>
+<tr valign="top"><td>2</td><td><b>rfiActivationMaskThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>3</td><td><b>rfiMitigationMethod</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -473,7 +462,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>4</td><td><b>rfiMaskGenerationMethod</b></td>
+<tr valign="top"><td>4</td><td><b>rfiMask</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
@@ -484,7 +473,18 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>5</td><td><b>rfiTMProcessingParameters</b></td>
+<tr valign="top"><td>5</td><td><b>rfiMaskGenerationMethod</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>rfiTMProcessingParameters</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -608,7 +608,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>6</td><td><b>rfiFMProcessingParameters</b></td>
+<tr valign="top"><td>7</td><td><b>rfiFMProcessingParameters</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">xml&nbsp;record</th></tr>
@@ -675,6 +675,72 @@
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>6</td><td><b>periodgramSize</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>7</td><td><b>enablePowerLossCompensation</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint8</th></tr>
+<tr valign="top">
+<td colspan="2">
+<span class="attr_key">mapping</span><span class="attr_value">: "FALSE"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "False"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "false"&nbsp;-&gt;&nbsp;0</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "TRUE"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
+<br /><br />
+<span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>8</td><td><b>powerLossThreshold</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>9</td><td><b>chirpSource</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>10</td><td><b>mitigationMethod</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">xml&nbsp;string</th></tr>
 <tr valign="top">
 <td colspan="2">
 </td>
@@ -1252,53 +1318,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>3</td><td><b>lutTopographySpan</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m"</span>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>4</td><td><b>lutTopographySampling</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;1</td></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "m"</span>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>5</td><td><b>lutOffNadirSpan</b></td>
+<tr valign="top"><td>3</td><td><b>elevationMispointingBias</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
@@ -1321,53 +1341,7 @@
 </table>
 </td>
 </tr>
-<tr valign="top"><td>6</td><td><b>lutOffNadirSampling</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "deg"</span>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>7</td><td><b>elevationMispointingBias</b></td>
-<td>
-<table>
-<tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
-<tr valign="top">
-<td colspan="2">
-<table style="border-style: none" cellspacing="0" width="100%">
-<tr valign="top"><td style="border-style: none"><span class="attr_key">attribute</span><span class="attr_value">: <b>units</b></td><td style="border-width: 2px"><table>
-<tr><th align="left">ascii&nbsp;string</th><td style="width:10px" align="right"><i>size</i>:&nbsp;3</td></tr>
-<tr valign="top">
-<td colspan="2">
-<span class="attr_key">fixed&nbsp;value</span><span class="attr_value">: "deg"</span>
-</td>
-</tr>
-</table>
-</span>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<tr valign="top"><td>8</td><td><b>azimuthMispointingBias</b></td>
+<tr valign="top"><td>4</td><td><b>azimuthMispointingBias</b></td>
 <td>
 <table>
 <tr><th  colspan="2"align="left">ascii&nbsp;float</th></tr>
@@ -2625,6 +2599,28 @@
 <span class="attr_key">mapping</span><span class="attr_value">: "True"&nbsp;-&gt;&nbsp;1</span>
 <br /><br />
 <span class="attr_key">mapping</span><span class="attr_value">: "true"&nbsp;-&gt;&nbsp;1</span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>17</td><td><b>blockLines</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top"><td>18</td><td><b>blockOverlapLines</b></td>
+<td>
+<table>
+<tr><th  colspan="2"align="left">ascii&nbsp;uint32</th></tr>
+<tr valign="top">
+<td colspan="2">
 </td>
 </tr>
 </table>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+<title>Level2OSWDataIW v0</title>
+<link rel="stylesheet" href="../../codadef.css" type="text/css" />
+</head>
+
+<body>
+<h1>Level2OSWDataIW version 0</h1>
+<h2>Level2OSWDataIW_v0</h2>
+<p>This definition is based on version 3.16 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</p>
+<h3>detection rule</h3>
+<p>This product definition is applicable if a product matches the following rule:</p>
+<table class="fancy" border="1" cellspacing="0" width="600px">  <tr>
+    <td>
+<b>substr</b>(0, 4, <b>filename</b>()) == &quot;s1a-&quot; <b>and</b><br />
+<b>substr</b>(4, 2, <b>filename</b>()) == &quot;iw&quot; <b>and</b><br />
+<b>substr</b>(7, 5, <b>filename</b>()) == &quot;-osw-&quot; <b>and</b><br />
+<b>exists</b>(@IPFversion)
+      <br /><br /><b>or</b><br /><br />
+<b>substr</b>(0, 4, <b>filename</b>()) == &quot;s1b-&quot; <b>and</b><br />
+<b>substr</b>(4, 2, <b>filename</b>()) == &quot;iw&quot; <b>and</b><br />
+<b>substr</b>(7, 5, <b>filename</b>()) == &quot;-osw-&quot; <b>and</b><br />
+<b>exists</b>(@IPFversion)
+      <br /><br /><b>or</b><br /><br />
+<b>substr</b>(0, 4, <b>filename</b>()) == &quot;s1c-&quot; <b>and</b><br />
+<b>substr</b>(4, 2, <b>filename</b>()) == &quot;iw&quot; <b>and</b><br />
+<b>substr</b>(7, 5, <b>filename</b>()) == &quot;-osw-&quot; <b>and</b><br />
+<b>exists</b>(@IPFversion)
+      <br /><br /><b>or</b><br /><br />
+<b>substr</b>(0, 4, <b>filename</b>()) == &quot;s1d-&quot; <b>and</b><br />
+<b>substr</b>(4, 2, <b>filename</b>()) == &quot;iw&quot; <b>and</b><br />
+<b>substr</b>(7, 5, <b>filename</b>()) == &quot;-osw-&quot; <b>and</b><br />
+<b>exists</b>(@IPFversion)
+    </tr>
+  </td>
+</table>
+</body>
+
+</html>
